@@ -1,0 +1,31 @@
+{
+  "name": "mind-and-cancer-daily",
+  "version": "0.1.0",
+  "description": "A daily briefing on medical science, with a focus on cancer and the mind. Swept by free scripts, written by a Claude Code scheduled task.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "validate": "node scripts/validate.mjs",
+    "sweep": "node scripts/sweep.mjs",
+    "prune": "node scripts/prune.mjs",
+    "shoot": "node scripts/shoot.mjs",
+    "check": "node scripts/validate.mjs && astro build"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.5",
+    "@fontsource-variable/source-serif-4": "^5.2.5",
+    "@fontsource-variable/jetbrains-mono": "^5.2.5",
+    "astro": "^5.18.2",
+    "fast-xml-parser": "^5.2.5",
+    "sharp": "^0.34.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.8.0"
+  }
+}
