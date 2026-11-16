@@ -1,0 +1,39 @@
+name: Source test
+
+# Reads every source once from a GitHub Actions runner (a datacenter address, which is what the
+# daily sweep uses) and prints which ones work. Many sites answer 403 to datacenter addresses and
+# that never shows from a laptop. Run it after changing config/sources.json.
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: 'Only sources whose name contains this text (optional)'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: 'true'
+      - name: Test every source
+        env:
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+          ONLY: ${{ github.event.inputs.only }}
+        run: |
+          if [ -n "$ONLY" ]; then node scripts/sweep.mjs --test --only "$ONLY"; else node scripts/sweep.mjs --test; fi | tee "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source-test
+          path: inbox/source-test.json

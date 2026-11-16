@@ -1,0 +1,59 @@
+{
+  "$comment": "What the sweep scores against. Edit freely. Keywords match from the start of a word, case-insensitively (so 'pancrea' matches pancreas and pancreatic). share is the target percentage of each issue; weight multiplies keyword hits. niche is boosted inside cancer: strong items surface without a quota. negative keywords subtract points. jobs lists skills and fields for the jobs section. The daily run may not edit this file; the owner does.",
+  "areas": {
+    "cancer": {
+      "share": 35,
+      "weight": 1,
+      "keywords": ["cancer", "tumor", "tumour", "oncolog", "carcinoma", "neoplasm", "metasta", "chemotherap", "immunotherap", "checkpoint inhibitor", "CAR-T", "CAR T", "leukemia", "leukaemia", "lymphoma", "glioma", "glioblastoma", "melanoma", "sarcoma", "myeloma", "radiotherap", "radiation therapy", "biopsy", "liquid biopsy", "ctDNA", "tumor microenvironment", "tumour microenvironment", "early detection", "KRAS", "PD-1", "PD-L1", "antibody-drug conjugate", "clinical trial"]
+    },
+    "mind": {
+      "share": 35,
+      "weight": 1,
+      "keywords": ["neuroscien", "brain", "neuron", "cognit", "memory", "psychiatr", "psycholog", "depress", "anxiety", "schizophren", "bipolar", "autism", "ADHD", "dementia", "alzheimer", "parkinson", "neurodegenerat", "synap", "cortex", "hippocamp", "sleep", "consciousness", "mental health", "behaviour", "behavior", "psychedelic", "psilocybin", "neuroimaging", "fMRI", "EEG", "stroke", "epilep", "microglia", "connectome", "addiction"]
+    },
+    "rare": {
+      "share": 15,
+      "weight": 1,
+      "keywords": ["rare disease", "orphan drug", "orphan disease", "gene therapy", "cell therapy", "antisense", "inborn error", "lysosomal", "cystic fibrosis", "muscular dystrophy", "spinal muscular atrophy", "huntington", "newborn screening", "natural history", "ultra-rare", "genetic disorder", "mitochondrial disease", "CRISPR", "base editing", "enzyme replacement"]
+    },
+    "curiosity": {
+      "share": 10,
+      "weight": 0.6,
+      "keywords": ["surprising", "unexpected", "first time", "strange", "curious", "bizarre", "mystery", "never before", "accidentally", "evolution", "ancient", "octopus", "bees", "dogs", "microbiome", "placebo"]
+    },
+    "other": {
+      "share": 5,
+      "weight": 0.6,
+      "keywords": ["medicine", "medical", "patient", "diagnos", "vaccine", "infection", "antibiotic", "diabetes", "cardio", "genom", "mRNA", "randomised", "randomized", "meta-analysis", "FDA approv", "EMA approv"]
+    }
+  },
+  "niche": {
+    "weight": 1.5,
+    "keywords": ["nanoparticle", "nanomedicine", "nanocarrier", "liposom", "nanoformulation", "photodynamic", "photothermal", "phototherap", "photosensitiz", "photosensitis", "near-infrared", "NIR-II", "upconversion", "singlet oxygen", "light dosimetry", "theranostic", "enhanced permeability", "EPR effect", "stroma", "desmoplas", "pancrea", "PDAC", "KPC mice", "organoid", "dense stroma", "drug delivery", "zeta potential", "dynamic light scattering", "cryo-EM", "gold nanoparticle", "mesoporous silica", "polymeric micelle", "tumor penetration", "tumour penetration", "photoimmunotherap"]
+  },
+  "negative": {
+    "penalty": 3,
+    "keywords": ["supplement", "detox", "weight loss", "horoscope", "diet hack", "CBD oil", "essential oil", "miracle", "anti-aging cream", "sponsored", "advertorial", "giveaway", "casino", "cryptocurrency"]
+  },
+  "sections": {
+    "methods": ["protocol", "method", "assay", "staining", "imaging", "culture", "isolation", "preparation", "quantification", "analysis pipeline", "spectroscop", "microscop", "flow cytometry", "single-cell", "sequencing", "mouse model", "organoid"],
+    "funding": ["grant", "funding", "fellowship", "call for", "award", "prize", "programme", "program", "RFA", "NOFO", "cancer", "neuro", "rare", "mental health", "nanomedicine"],
+    "jobs": ["postdoc", "post-doc", "postdoctoral", "PhD", "research fellow", "scientist", "research associate", "group leader", "oncolog", "cancer", "neuroscien", "nanomedicine", "nanoparticle", "drug delivery", "biomedical engineering", "tumour", "tumor", "immunolog", "photonics", "biophotonic", "imaging", "organoid", "pancrea"]
+  },
+  "jobs": {
+    "$comment": "Worldwide. Postings that state a salary rank higher; salary is only ever shown when the posting states it. Add your CV skills here later (generic skill words only: this repository is public).",
+    "salaryBoost": 1.2,
+    "levels": ["phd", "postdoc", "fellow", "staff-scientist", "faculty", "industry"]
+  },
+  "windows": {
+    "news": 48,
+    "chatter": 48,
+    "research": 168,
+    "trials": 168,
+    "methods": 1440,
+    "funding": 720,
+    "jobs": 720,
+    "curiosity": 96
+  },
+  "requireTopic": ["research", "news", "chatter", "funding", "jobs"]
+}

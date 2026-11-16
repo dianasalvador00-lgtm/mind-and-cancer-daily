@@ -1,0 +1,45 @@
+name: Sweep
+
+# The free first pass, 20 minutes before the daily run: read every source, score and dedupe with
+# fixed rules (no AI, no API key), and commit inbox/<date>.json and inbox/<date>.brief.json.
+# The daily Claude Code run starts from the brief.
+on:
+  schedule:
+    # 06:40 UTC (GMT all year)
+    - cron: '40 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sweep
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: 'true'
+      - name: UTC date
+        run: echo "TODAY=$(date -u +%F)" >> "$GITHUB_ENV"
+      - name: Sweep
+        run: node scripts/sweep.mjs --date "$TODAY" | tee "$GITHUB_STEP_SUMMARY"
+        env:
+          # Optional free key from ncbi.nlm.nih.gov; PubMed works without it, only slower.
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+      - name: Commit the inbox
+        run: |
+          git config user.name "sweep-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add inbox
+          git diff --cached --quiet || git commit -m "inbox: candidates for $TODAY"
+          for i in 1 2 3; do git pull --rebase origin main && git push && break; sleep 5; done
