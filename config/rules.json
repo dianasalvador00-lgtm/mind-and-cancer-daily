@@ -1,0 +1,49 @@
+{
+  "$comment": "Rules the validator enforces on every issue and week. Patterns are JavaScript regular expressions, matched case-insensitively. The daily run may not edit this file.",
+  "bannedWords": [
+    "breakthrough",
+    "breakthroughs",
+    "cure",
+    "cures",
+    "cured",
+    "revolutionary",
+    "revolutionise",
+    "revolutionize",
+    "game-changing",
+    "game-changer",
+    "miracle",
+    "groundbreaking",
+    "unprecedented",
+    "paradigm-shifting",
+    "holy grail"
+  ],
+  "medicalAdvicePatterns": [
+    "\\byou should (take|stop|start|use|try|avoid)\\b",
+    "\\bpatients should\\b",
+    "\\bask your (doctor|physician|gp)\\b",
+    "\\bconsult your\\b",
+    "\\bwe recommend (that )?(patients|you)\\b"
+  ],
+  "privatePatterns": [
+    "\\bDiana Salvador\\b",
+    "\\bmy (lab|thesis|phd|project|group|institution|university|supervisor|unpublished)\\b",
+    "\\bour (lab|group|institution|unpublished)\\b",
+    "\\bunpublished (data|results|work|findings) (from|of) (my|our)\\b"
+  ],
+  "publicReaderPatterns": [
+    "\\b(this reader|the reader's|dear reader|one reader)\\b",
+    "\\byour (lab|thesis|phd|supervisor|nanoparticles?|project|experiments?)\\b"
+  ],
+  "preprintHosts": [
+    "biorxiv.org",
+    "medrxiv.org",
+    "arxiv.org",
+    "psyarxiv.com",
+    "osf.io",
+    "researchsquare.com",
+    "ssrn.com",
+    "preprints.org",
+    "chemrxiv.org"
+  ],
+  "acronymAllowlist": ["DNA", "RNA", "MRI", "US", "UK", "EU", "FDA", "EMA", "NIH", "NCI", "CT", "PET", "AI", "HIV", "COVID", "II", "III", "IV", "NCT", "PDAC", "mRNA"]
+}
