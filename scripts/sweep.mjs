@@ -67,11 +67,12 @@ function topicInfo(title, summary, src) {
   if (src.area) topic = Math.max(topic, 1);
   const extra = SECTION_KW[src.section];
   if (extra) topic = Math.min(3, topic + Math.min(2, 0.6 * hits(extra, `${title} ${summary}`).size));
+  const areaTopic = Math.min(3, ranked.reduce((sum, [, v]) => sum + v, 0)) || (src.area ? 1 : 0);
   const n = hits(NICHE, `${title} ${summary}`).size;
   const niche = n === 0 ? 0 : n === 1 ? topics.niche.weight : topics.niche.weight * 1.5;
   const negative = hits(NEG, `${title} ${summary}`).size > 0;
   if (n > 0 && !src.area) area = area ?? 'cancer';
-  return { topic, area, niche, negative, nicheHits: n };
+  return { topic, areaTopic, area, niche, negative, nicheHits: n };
 }
 
 // ------------------------------------------------------------ already featured
@@ -162,6 +163,9 @@ for (const { it, src, ts } of raw) {
   const summary = clip(it.summary ?? '', 700);
   const info = topicInfo(it.title, summary, src);
   if (topics.requireTopic.includes(src.section) && info.topic === 0 && info.niche === 0) continue;
+  // Jobs must match a real topic (cancer, brain, rare disease, nanomedicine...), not just the words
+  // "postdoc" or "PhD", or every hiring post from any field gets through.
+  if (src.section === 'jobs' && info.areaTopic === 0 && info.niche === 0) continue;
   if (src.section === 'curiosity' && !info.area) info.area = 'curiosity';
   const ageH = (now - ts) / 3600_000;
   const recency = 1.5 * Math.max(0, 1 - ageH / windowHours(src));
@@ -177,7 +181,7 @@ for (const { it, src, ts } of raw) {
     doi: it.doi,
     pmid: it.pmid,
     nct: it.nct,
-    source: it.sourceLabel ?? it.venue ?? src.name,
+    source: it.sourceLabel || it.venue || src.name,
     srcName: src.name,
     host: it.hostGroup ?? hostOf(url),
     published: new Date(ts).toISOString(),
