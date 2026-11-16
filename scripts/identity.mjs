@@ -28,7 +28,7 @@ export function keysOf(url, title, extra = {}) {
     if (pmid) keys.add(`pmid:${pmid}`);
     const arx = s.match(/arxiv\.org\/(?:abs|pdf)\/([\w.\-/]+?)(?:v\d+)?(?:\.pdf)?$/i)?.[1];
     if (arx) keys.add(`arxiv:${arx.toLowerCase()}`);
-    const rx = s.match(/(?:biorxiv|medrxiv)\.org\/content\/(10\.\d{4,9}\/[^v?#]+?)(?:v\d+)?(?:\.|$|\/|\?|#)/i)?.[1];
+    const rx = s.match(/(?:biorxiv|medrxiv)\.org\/content\/(?:early\/\d{4}\/\d{2}\/\d{2}\/)?(10\.\d{4,9}\/[^\s?#]+?)(?:v\d+)?(?:\.full(?:\.pdf)?)?(?:[?#]|$)/i)?.[1];
     if (rx) keys.add(`doi:${rx.toLowerCase()}`);
     const nct = s.match(/\b(NCT\d{8})\b/i)?.[1];
     if (nct) keys.add(`nct:${nct.toUpperCase()}`);
