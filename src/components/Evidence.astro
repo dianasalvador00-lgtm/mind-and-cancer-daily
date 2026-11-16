@@ -1,0 +1,15 @@
+---
+import T from './T.astro';
+import Inline from './Inline.astro';
+type E = { type: string; model?: string; n?: string; phase?: string; status?: string; limitation?: string; conflicts?: string };
+const { e, hideLimitation = false } = Astro.props as { e: E; hideLimitation?: boolean };
+const meta = [e.model, e.n, e.phase && `Phase ${e.phase}`, e.status].filter(Boolean) as string[];
+---
+<div class="evidence">
+  <p class="ev-line">
+    <span class={`ev ev-${e.type}`}><T k={`ev_${e.type}`} /></span>
+    {meta.length > 0 && <span class="ev-meta">{meta.join(' · ')}</span>}
+  </p>
+  {e.limitation && !hideLimitation && <p class="ev-note"><strong><T k="limitations" />.</strong> <Inline text={e.limitation} /></p>}
+  {e.conflicts && <p class="ev-note"><strong>Funding or conflicts.</strong> <Inline text={e.conflicts} /></p>}
+</div>

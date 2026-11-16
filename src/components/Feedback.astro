@@ -1,0 +1,15 @@
+---
+// "More like this" / "Less like this" links and the private angle. Both stay hidden unless the
+// owner has opened the site once with ?tune=1. This is not secret: it is in the page source.
+import T from './T.astro';
+import Inline from './Inline.astro';
+import { REPO } from '../kit/data';
+const { id, section, title, area, date, forYou } = Astro.props as { id: string; section: string; title: string; area?: string; date: string; forYou?: string };
+const link = (dir: string) =>
+  `${REPO}/issues/new?labels=feedback&title=${encodeURIComponent(`${dir} like this: ${title}`.slice(0, 120))}&body=${encodeURIComponent(`date: ${date}\nsection: ${section}\nitem: ${id}\narea: ${area ?? ''}\ntitle: ${title}\n\nWhy (optional):\n`)}`;
+---
+{forYou && <p class="foryou"><strong><T k="forYou" />.</strong> <Inline text={forYou} /></p>}
+<p class="tune">
+  <a href={link('More')} rel="noopener noreferrer" target="_blank"><T k="moreLike" /></a>
+  <a href={link('Less')} rel="noopener noreferrer" target="_blank"><T k="lessLike" /></a>
+</p>

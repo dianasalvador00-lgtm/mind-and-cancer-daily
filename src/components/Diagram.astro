@@ -1,0 +1,26 @@
+---
+// A clear diagram drawn from data: flow, layers, hub or cycle. HTML and CSS, so it stays
+// legible and wraps cleanly on a phone.
+import Inline from './Inline.astro';
+type N = { label: string; note?: string; key?: boolean };
+const { d } = Astro.props as { d: { layout: 'flow' | 'layers' | 'hub' | 'cycle'; nodes: N[]; links?: string[]; caption: string } };
+---
+<figure class={`diagram diagram-${d.layout}`}>
+  <ol class="nodes">
+    {d.nodes.map((n, i) => (
+      <>
+        <li class={n.key ? 'node key' : 'node'}>
+          <span class="node-label">{n.label}</span>
+          {n.note && <span class="node-note">{n.note}</span>}
+        </li>
+        {(d.layout === 'flow' || d.layout === 'cycle') && (i < d.nodes.length - 1 || d.layout === 'cycle') && (
+          <li class="arrow" aria-hidden="true">
+            <span class="arrow-glyph">{d.layout === 'cycle' && i === d.nodes.length - 1 ? '↺' : '→'}</span>
+            {d.links?.[i] && <span class="arrow-label">{d.links[i]}</span>}
+          </li>
+        )}
+      </>
+    ))}
+  </ol>
+  <figcaption><Inline text={d.caption} /></figcaption>
+</figure>

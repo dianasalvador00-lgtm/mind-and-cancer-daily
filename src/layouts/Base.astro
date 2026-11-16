@@ -1,0 +1,101 @@
+---
+import '@fontsource-variable/inter';
+import '@fontsource-variable/source-serif-4';
+import '@fontsource-variable/jetbrains-mono';
+import '../styles/site.css';
+import T from '../components/T.astro';
+import { UI, LANGS } from '../kit/i18n.mjs';
+import { PALETTES, getPalette } from '../kit/palette.mjs';
+import { href } from '../kit/data';
+
+const { title, description = 'A daily briefing on medical science, with a focus on cancer and the mind.', palette = PALETTES[0].id } = Astro.props as { title?: string; description?: string; palette?: string };
+const pal = getPalette(palette) ?? PALETTES[0];
+const style = `--a-l:${pal.light[0]};--b-l:${pal.light[1]};--a-d:${pal.dark[0]};--b-d:${pal.dark[1]}`;
+const pageTitle = title ? `${title} | Mind and Cancer Daily` : 'Mind and Cancer Daily';
+const uiJson = JSON.stringify(UI).replace(/</g, '\\u003c');
+---
+<!doctype html>
+<html lang="en" style={style} data-palette={pal.id}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href={href('favicon.svg')} type="image/svg+xml" />
+    <script is:inline>
+      (function () {
+        try {
+          var q = new URLSearchParams(location.search);
+          if (q.get('tune') === '1') localStorage.setItem('tune', '1');
+          if (q.get('tune') === '0') localStorage.removeItem('tune');
+          if (localStorage.getItem('tune') === '1') document.documentElement.classList.add('tune-on');
+          var th = localStorage.getItem('theme');
+          if (th === 'light' || th === 'dark') document.documentElement.dataset.theme = th;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main"><T k="skip" /></a>
+    <header class="masthead">
+      <div class="wrap masthead-inner">
+        <a class="brand" href={href('')}>
+          <span class="brand-name"><T k="siteName" /></span>
+          <span class="brand-tag"><T k="tagline" /></span>
+        </a>
+        <nav class="topnav" aria-label="Site">
+          <a href={href('')}><T k="latest" /></a>
+          <a href={href('archive/')}><T k="archive" /></a>
+        </nav>
+        <div class="toggles">
+          <button type="button" id="lang-btn" aria-label="Language">EN</button>
+          <button type="button" id="theme-btn" aria-label="Theme"><T k="theme" /></button>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="wrap">
+      <slot />
+    </main>
+    <footer class="wrap footer">
+      <p><T k="footer" /></p>
+    </footer>
+    <script type="application/json" id="ui-strings" set:html={uiJson} />
+    <script is:inline>
+      (function () {
+        var UI = JSON.parse(document.getElementById('ui-strings').textContent);
+        var langBtn = document.getElementById('lang-btn');
+        var themeBtn = document.getElementById('theme-btn');
+        function setLang(l) {
+          document.documentElement.lang = l === 'pt-PT' ? 'pt-PT' : 'en';
+          document.querySelectorAll('[data-t]').forEach(function (el) {
+            var v = UI[l] && UI[l][el.getAttribute('data-t')];
+            if (v) el.textContent = v;
+          });
+          document.querySelectorAll('time[data-date]').forEach(function (el) {
+            try {
+              el.textContent = new Intl.DateTimeFormat(l === 'pt-PT' ? 'pt-PT' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(el.getAttribute('data-date') + 'T12:00:00Z'));
+            } catch (e) {}
+          });
+          langBtn.textContent = l === 'pt-PT' ? 'PT' : 'EN';
+          langBtn.setAttribute('data-lang', l);
+        }
+        var cur = 'en';
+        try { cur = localStorage.getItem('lang') === 'pt-PT' ? 'pt-PT' : 'en'; } catch (e) {}
+        setLang(cur);
+        langBtn.addEventListener('click', function () {
+          cur = cur === 'en' ? 'pt-PT' : 'en';
+          try { localStorage.setItem('lang', cur); } catch (e) {}
+          setLang(cur);
+        });
+        themeBtn.addEventListener('click', function () {
+          var root = document.documentElement;
+          var now = root.dataset.theme;
+          var next = now === 'dark' ? 'light' : now === 'light' ? 'auto' : 'dark';
+          if (next === 'auto') delete root.dataset.theme; else root.dataset.theme = next;
+          try { next === 'auto' ? localStorage.removeItem('theme') : localStorage.setItem('theme', next); } catch (e) {}
+        });
+      })();
+    </script>
+  </body>
+</html>

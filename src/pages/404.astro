@@ -1,0 +1,10 @@
+---
+import Base from '../layouts/Base.astro';
+import { href } from '../kit/data';
+---
+<Base title="Not found">
+  <section class="block">
+    <h1>Page not found</h1>
+    <p>Only the last seven daily issues and four weekly summaries are kept. <a href={href('archive/')}>See what is available</a>.</p>
+  </section>
+</Base>

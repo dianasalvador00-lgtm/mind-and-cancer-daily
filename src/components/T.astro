@@ -1,0 +1,8 @@
+---
+// A translatable UI string: English is rendered, and the language switch swaps in pt-PT.
+import { UI } from '../kit/i18n.mjs';
+const { k } = Astro.props as { k: string };
+const en: Record<string, string> = UI.en;
+const text = en[k] ?? k;
+---
+<span data-t={k}>{text}</span>

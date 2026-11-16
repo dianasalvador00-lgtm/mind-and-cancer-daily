@@ -1,0 +1,53 @@
+---
+import Base from '../../layouts/Base.astro';
+import T from '../../components/T.astro';
+import Inline from '../../components/Inline.astro';
+import Sources from '../../components/Sources.astro';
+import Evidence from '../../components/Evidence.astro';
+import { getWeeks, formatDate } from '../../kit/data';
+export function getStaticPaths() {
+  return getWeeks().map((week) => ({ params: { id: week.id }, props: { week } }));
+}
+const { week } = Astro.props;
+---
+<Base title={week.title} palette={week.palette} description={week.dek}>
+  <article class="issue week">
+    <header class="issue-head">
+      <p class="kicker"><T k="week" /> {week.id} <span class="dot">&middot;</span> <time data-date={week.from} datetime={week.from}>{formatDate(week.from)}</time> to <time data-date={week.to} datetime={week.to}>{formatDate(week.to)}</time></p>
+      <h1><Inline text={week.title} /></h1>
+      <p class="dek"><Inline text={week.dek} /></p>
+    </header>
+    <section class="block">
+      {week.threads.map((t) => (
+        <article class="item">
+          <p class="kicker"><span class="area" data-area={t.area}><T k={`area_${t.area}`} /></span></p>
+          <h3><Inline text={t.title} /></h3>
+          <p><Inline text={t.text} /></p>
+        </article>
+      ))}
+    </section>
+    {week.numbers.length > 0 && (
+      <section class="block">
+        <ul class="numbers">
+          {week.numbers.map((n) => (
+            <li><span class="num">{n.value}</span><span class="num-label">{n.label}</span><a href={n.source.url} rel="noopener noreferrer" target="_blank">{n.source.label}</a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+    <section class="block">
+      <article class="item">
+        <h2>Deep read</h2>
+        <h3><Inline text={week.deepRead.title} /></h3>
+        <p class="paper-title"><span class="authors">{week.deepRead.authors}</span> {week.deepRead.venue}</p>
+        <Evidence e={week.deepRead.evidence} />
+        {week.deepRead.body.map((p) => <p><Inline text={p} terms={week.deepRead.terms} /></p>)}
+        <Sources list={week.deepRead.sources} />
+      </article>
+    </section>
+    <section class="block">
+      <h2>Watch next week</h2>
+      <ul>{week.watch.map((w) => <li><Inline text={w} /></li>)}</ul>
+    </section>
+  </article>
+</Base>

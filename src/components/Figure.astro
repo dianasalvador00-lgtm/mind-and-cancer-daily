@@ -1,0 +1,12 @@
+---
+// A real figure from open-access content: always credited, with its licence.
+import T from './T.astro';
+import { href } from '../kit/data';
+const { img } = Astro.props as { img: { src: string; alt: string; credit: string; creditUrl: string; licence: string; fit?: string } };
+---
+<figure class="figure">
+  <a href={href(img.src)} target="_blank" rel="noopener"><img src={href(img.src)} alt={img.alt} loading="lazy" class={`fit-${img.fit ?? 'contain'}`} /></a>
+  <figcaption>
+    <T k="credit" />: <a href={img.creditUrl} rel="noopener noreferrer" target="_blank">{img.credit}</a>. <T k="licence" />: {img.licence}.
+  </figcaption>
+</figure>

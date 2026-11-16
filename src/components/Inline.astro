@@ -1,0 +1,5 @@
+---
+import { inline, type TermDef } from '../kit/inline';
+const { text, terms = [] } = Astro.props as { text: string; terms?: TermDef[] };
+---
+<Fragment set:html={inline(text, terms)} />

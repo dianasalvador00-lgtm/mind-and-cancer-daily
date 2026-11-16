@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import T from '../components/T.astro';
+import Inline from '../components/Inline.astro';
+import { getIssues, getWeeks, formatDate, href } from '../kit/data';
+const issues = getIssues();
+const weeks = getWeeks();
+---
+<Base title="Archive">
+  <section class="block archive">
+    <h1><T k="archive" /></h1>
+    {issues.length === 0 && <p class="empty"><T k="noIssue" /></p>}
+    <ul class="archive-list">
+      {issues.map((i) => (
+        <li>
+          <a href={href(`${i.date}/`)}><time data-date={i.date} datetime={i.date}>{formatDate(i.date)}</time></a>
+          <span class="muted"> <T k="issue" /> {i.number}</span>
+          <p><Inline text={i.title} /></p>
+        </li>
+      ))}
+    </ul>
+    {weeks.length > 0 && <h2><T k="weeks" /></h2>}
+    <ul class="archive-list">
+      {weeks.map((w) => (
+        <li>
+          <a href={href(`week/${w.id}/`)}>{w.id}</a>
+          <p><Inline text={w.title} /></p>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Base>
