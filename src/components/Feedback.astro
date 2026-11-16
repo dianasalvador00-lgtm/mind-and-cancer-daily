@@ -8,7 +8,7 @@ const { id, section, title, area, date, forYou } = Astro.props as { id: string; 
 const link = (dir: string) =>
   `${REPO}/issues/new?labels=feedback&title=${encodeURIComponent(`${dir} like this: ${title}`.slice(0, 120))}&body=${encodeURIComponent(`date: ${date}\nsection: ${section}\nitem: ${id}\narea: ${area ?? ''}\ntitle: ${title}\n\nWhy (optional):\n`)}`;
 ---
-{forYou && <p class="foryou"><strong><T k="forYou" />.</strong> <Inline text={forYou} /></p>}
+{forYou && <p class="foryou"><strong><T k="forYou" />.</strong>{' '}<Inline text={forYou} /></p>}
 <p class="tune">
   <a href={link('More')} rel="noopener noreferrer" target="_blank"><T k="moreLike" /></a>
   <a href={link('Less')} rel="noopener noreferrer" target="_blank"><T k="lessLike" /></a>

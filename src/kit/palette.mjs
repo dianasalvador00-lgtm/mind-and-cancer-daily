@@ -7,6 +7,7 @@
 
 export const PAPER = { light: '#fbfaf6', dark: '#12161c' };
 export const INK = { light: '#1b2430', dark: '#e8ecf1' };
+export const CARD = { light: '#ffffff', dark: '#171c24' };
 
 export const PALETTES = [
   { id: 'teal-amber', name: 'Teal and amber', light: ['#0b6e6e', '#9a5208'], dark: ['#4fc3c3', '#f0a24b'] },
@@ -66,11 +67,12 @@ export function checkPalettes() {
     if (ids.has(p.id)) problems.push(`palette ${p.id}: duplicate id`);
     ids.add(p.id);
     for (const mode of ['light', 'dark']) {
-      const paper = PAPER[mode];
-      p[mode].forEach((c, i) => {
-        const r = contrast(c, paper);
-        if (r < 4.5) problems.push(`palette ${p.id} ${mode} accent ${i + 1} ${c}: contrast ${r.toFixed(2)} on ${paper} (needs 4.5)`);
-      });
+      for (const [surfaceName, paper] of [['paper', PAPER[mode]], ['card', CARD[mode]]]) {
+        p[mode].forEach((c, i) => {
+          const r = contrast(c, paper);
+          if (r < 4.5) problems.push(`palette ${p.id} ${mode} accent ${i + 1} ${c}: contrast ${r.toFixed(2)} on ${surfaceName} ${paper} (needs 4.5)`);
+        });
+      }
       for (const kind of Object.keys(SIM)) {
         const d = deltaE(lab(simulate(hex(p[mode][0]), kind)), lab(simulate(hex(p[mode][1]), kind)));
         if (d < 20) problems.push(`palette ${p.id} ${mode}: accents too close under ${kind} (delta E ${d.toFixed(1)}, needs 20)`);

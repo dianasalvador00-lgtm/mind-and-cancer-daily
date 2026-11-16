@@ -7,12 +7,14 @@ import Feedback from './Feedback.astro';
 import Diagram from './Diagram.astro';
 import Figure from './Figure.astro';
 import { formatDate, type IssueT } from '../kit/data';
+import { spans, TOP_ROWS, PAIR_ROWS, TILE_ROWS } from '../kit/bento';
 const { issue, sample = false } = Astro.props as { issue: IssueT; sample?: boolean };
 const d = issue.date;
-const nav = [
-  ['top', 'top'], ['bench', 'bench'], ['method', 'method'], ['learn', 'learn'],
-  ['trials', 'trials'], ['chatter', 'chatter'], ['curiosity', 'curiosity'], ['jobs', 'jobs'],
-] as const;
+const nav = ['top', 'bench', 'method', 'learn', 'trials', 'chatter', 'curiosity', 'jobs'] as const;
+const topSpans = spans(issue.top.length, TOP_ROWS);
+const benchSpans = spans(issue.bench.length, PAIR_ROWS);
+const trialItems = [...issue.trials.trials.map((t) => ({ kind: 'trial' as const, t })), ...issue.trials.funding.map((c) => ({ kind: 'call' as const, c }))];
+const chatterSpans = spans(issue.chatter.length, TILE_ROWS, false);
 const glossary = (terms?: { term: string; def: string }[]) => terms ?? [];
 ---
 <article class="issue">
@@ -24,184 +26,236 @@ const glossary = (terms?: { term: string; def: string }[]) => terms ?? [];
   </header>
 
   <nav class="sections" aria-label="Sections">
-    {nav.map(([id, key]) => <a href={`#${id}`}><T k={key} /></a>)}
+    {nav.map((id) => <a href={`#${id}`}><T k={id} /></a>)}
   </nav>
 
   <section class="tldr" aria-labelledby="tldr-h">
     <h2 id="tldr-h"><T k="todayInShort" /></h2>
-    <ul>
+    <ul class="tldr-grid" style={`--n:${issue.tldr.length}`}>
       {issue.tldr.map((t) => (
-        <li><span class="area" data-area={t.area}><T k={`area_${t.area}`} /></span> <Inline text={t.text} /></li>
+        <li class="tldr-tile" data-area={t.area}>
+          <span class="area" data-area={t.area}><T k={`area_${t.area}`} /></span>
+          <span class="tldr-text"><Inline text={t.text} /></span>
+        </li>
       ))}
     </ul>
   </section>
 
   <section id="top" class="block">
     <h2><T k="top" /></h2>
-    {issue.top.map((s) => (
-      <article class="item" id={s.id}>
-        <p class="kicker"><span class="area" data-area={s.area}><T k={`area_${s.area}`} /></span></p>
-        <h3><Inline text={s.title} /></h3>
-        <p class="gist"><Inline text={s.gist} terms={s.terms} /></p>
-        <Evidence e={s.evidence} />
-        <p class="why"><strong><T k="why" />.</strong> <Inline text={s.why} terms={s.terms} /></p>
-        {s.didNotShow && <p class="ev-note"><strong><T k="didNotShow" />.</strong> <Inline text={s.didNotShow} /></p>}
-        {s.image && <Figure img={s.image} />}
-        {(s.details || glossary(s.terms).length > 0) && (
-          <details>
+    <div class="bento">
+      {issue.top.map((s, i) => (
+        <article class={`card story${i === 0 ? ' feature' : ''}`} data-area={s.area} style={`--span:${topSpans[i]}`} id={s.id}>
+          <header class="card-head">
+            <span class="area" data-area={s.area}><T k={`area_${s.area}`} /></span>
+            <span class={`ev ev-${s.evidence.type}`}><T k={`ev_${s.evidence.type}`} /></span>
+          </header>
+          <h3><Inline text={s.title} /></h3>
+          <p class="gist"><Inline text={s.gist} terms={s.terms} /></p>
+          <p class="why"><strong><T k="why" />.</strong> <Inline text={s.why} terms={s.terms} /></p>
+          {s.image && <Figure img={s.image} />}
+          <details class="more" open={i === 0}>
             <summary><T k="details" /></summary>
-            {s.details?.map((p) => <p><Inline text={p} terms={s.terms} /></p>)}
+            <Evidence e={s.evidence} mode="detail" />
+            {s.didNotShow && <p class="ev-note"><strong><T k="didNotShow" />.</strong> <Inline text={s.didNotShow} /></p>}
+            {s.details?.map((p) => <p class="small"><Inline text={p} terms={s.terms} /></p>)}
             {glossary(s.terms).length > 0 && (
               <dl class="glossary">{glossary(s.terms).map((t) => <><dt>{t.term}</dt><dd>{t.def}</dd></>)}</dl>
             )}
           </details>
-        )}
-        <Sources list={s.sources} />
-        <Feedback id={s.id} section="top" title={s.title} area={s.area} date={d} forYou={s.forYou} />
-      </article>
-    ))}
+          <footer class="card-foot">
+            <Sources list={s.sources} />
+            <Feedback id={s.id} section="top" title={s.title} area={s.area} date={d} forYou={s.forYou} />
+          </footer>
+        </article>
+      ))}
+    </div>
   </section>
 
   <section id="bench" class="block">
     <h2><T k="bench" /></h2>
-    {issue.bench.map((b) => (
-      <article class="item bench" id={b.id}>
-        <p class="kicker"><span class="area" data-area={b.area}><T k={`area_${b.area}`} /></span> <span class="dot">&middot;</span> {b.venue}, <time datetime={b.published}>{formatDate(b.published)}</time></p>
-        <h3><Inline text={b.headline} /></h3>
-        <p class="paper-title"><Inline text={b.title} /> <span class="authors">{b.authors}</span></p>
-        <Evidence e={b.evidence} hideLimitation />
-        <dl class="bench-grid">
-          <dt><T k="question" /></dt><dd><Inline text={b.question} terms={b.terms} /></dd>
-          <dt><T k="approach" /></dt><dd><Inline text={b.approach} terms={b.terms} /></dd>
-          <dt><T k="model" /></dt><dd><Inline text={b.model} terms={b.terms} /></dd>
-          <dt><T k="result" /></dt><dd class="result"><Inline text={b.result} terms={b.terms} /></dd>
-          <dt><T k="limitations" /></dt><dd><Inline text={b.limitations} terms={b.terms} /></dd>
-          <dt><T k="meaning" /></dt><dd><Inline text={b.meaning} terms={b.terms} /></dd>
-        </dl>
-        {b.image && <Figure img={b.image} />}
-        {b.diagram && <Diagram d={b.diagram} />}
-        <Sources list={b.sources} />
-        <Feedback id={b.id} section="bench" title={b.title} area={b.area} date={d} forYou={b.forYou} />
-      </article>
-    ))}
+    <div class="bento">
+      {issue.bench.map((b, i) => (
+        <article class="card bench" data-area={b.area} style={`--span:${benchSpans[i]}`} id={b.id}>
+          <header class="card-head">
+            <span class="area" data-area={b.area}><T k={`area_${b.area}`} /></span>
+          </header>
+          <h3><Inline text={b.headline} /></h3>
+          <p class="paper-title"><Inline text={b.title} /></p>
+          <p class="paper-meta">{b.authors} &middot; {b.venue}, <time datetime={b.published}>{formatDate(b.published)}</time></p>
+          <Evidence e={b.evidence} mode="line" />
+          <div class="keyresult">
+            <span class="keyresult-label"><T k="result" /></span>
+            <p><Inline text={b.result} terms={b.terms} /></p>
+          </div>
+          {b.image && <Figure img={b.image} />}
+          <details class="more">
+            <summary><T k="details" /></summary>
+            <dl class="bench-grid">
+              <dt><T k="question" /></dt><dd><Inline text={b.question} terms={b.terms} /></dd>
+              <dt><T k="approach" /></dt><dd><Inline text={b.approach} terms={b.terms} /></dd>
+              <dt><T k="model" /></dt><dd><Inline text={b.model} terms={b.terms} /></dd>
+              <dt><T k="limitations" /></dt><dd><Inline text={b.limitations} terms={b.terms} /></dd>
+              <dt><T k="meaning" /></dt><dd><Inline text={b.meaning} terms={b.terms} /></dd>
+            </dl>
+            <Evidence e={b.evidence} mode="notes" hideLimitation />
+            {b.diagram && <Diagram d={b.diagram} />}
+          </details>
+          <footer class="card-foot">
+            <Sources list={b.sources} />
+            <Feedback id={b.id} section="bench" title={b.title} area={b.area} date={d} forYou={b.forYou} />
+          </footer>
+        </article>
+      ))}
+    </div>
   </section>
 
-  <section id="method" class="block">
-    <h2><T k="method" /></h2>
-    <article class="item" id={issue.method.id}>
-      <p class="kicker"><span class="area" data-area={issue.method.field}><T k={`area_${issue.method.field}`} /></span></p>
+  <div class="bento pair">
+    <section id="method" class="card method block-card" data-area={issue.method.field} style="--span:3">
+      <h2 class="card-title"><T k="method" /></h2>
       <h3><Inline text={issue.method.title} /></h3>
       <p class="gist"><Inline text={issue.method.gist} terms={issue.method.terms} /></p>
-      <p><strong><T k="useWhen" />.</strong> <Inline text={issue.method.useWhen} /></p>
-      <h4><T k="steps" /></h4>
-      <ol class="steps">
-        {issue.method.steps.map((s) => <li><strong>{s.title}.</strong> <Inline text={s.text} terms={issue.method.terms} /></li>)}
-      </ol>
-      {issue.method.pitfalls && (
-        <>
-          <h4><T k="pitfalls" /></h4>
-          <ul>{issue.method.pitfalls.map((p) => <li><Inline text={p} /></li>)}</ul>
-        </>
-      )}
+      <p class="small"><strong><T k="useWhen" />.</strong> <Inline text={issue.method.useWhen} /></p>
+      <details class="more" open>
+        <summary><T k="steps" /></summary>
+        <ol class="steps">
+          {issue.method.steps.map((s) => <li><strong>{s.title}.</strong> <Inline text={s.text} terms={issue.method.terms} /></li>)}
+        </ol>
+        {issue.method.pitfalls && (
+          <>
+            <h4><T k="pitfalls" /></h4>
+            <ul class="small">{issue.method.pitfalls.map((p) => <li><Inline text={p} /></li>)}</ul>
+          </>
+        )}
+      </details>
       <p class="safety"><strong><T k="safety" />.</strong> <Inline text={issue.method.safety} /></p>
-      <Sources list={[issue.method.source]} label="source" />
-      <Feedback id={issue.method.id} section="method" title={issue.method.title} area={issue.method.field} date={d} forYou={issue.method.forYou} />
-    </article>
-  </section>
+      <footer class="card-foot">
+        <Sources list={[issue.method.source]} label="source" />
+        <Feedback id={issue.method.id} section="method" title={issue.method.title} area={issue.method.field} date={d} forYou={issue.method.forYou} />
+      </footer>
+    </section>
 
-  <section id="learn" class="block">
-    <h2><T k="learn" /></h2>
-    <article class="item learn">
+    <section id="learn" class="card learn block-card" data-area="other" style="--span:3">
+      <h2 class="card-title"><T k="learn" /></h2>
       <h3><Inline text={issue.learn.question} /></h3>
       <p class="gist"><Inline text={issue.learn.answer} terms={issue.learn.terms} /></p>
-      {issue.learn.analogy && <p class="analogy"><strong><T k="analogy" />:</strong> <Inline text={issue.learn.analogy} /></p>}
       {issue.learn.diagram && <Diagram d={issue.learn.diagram} />}
       {issue.learn.image && <Figure img={issue.learn.image} />}
-      {issue.learn.body.map((p) => <p><Inline text={p} terms={issue.learn.terms} /></p>)}
-      {issue.learn.seenIn && issue.learn.seenIn.length > 0 && (
-        <p class="seen-in"><T k="seenIn" />: {issue.learn.seenIn.map((id, i) => <>{i > 0 && ', '}<a href={`#${id}`}>{id}</a></>)}</p>
-      )}
-      <Sources list={issue.learn.sources} />
-      <Feedback id="learn" section="learn" title={issue.learn.question} date={d} />
-    </article>
-  </section>
+      {issue.learn.analogy && <p class="analogy"><strong><T k="analogy" />:</strong> <Inline text={issue.learn.analogy} /></p>}
+      <details class="more" open>
+        <summary><T k="details" /></summary>
+        {issue.learn.body.map((p) => <p class="small"><Inline text={p} terms={issue.learn.terms} /></p>)}
+        {issue.learn.seenIn && issue.learn.seenIn.length > 0 && (
+          <p class="small"><T k="seenIn" />: {issue.learn.seenIn.map((id, i) => <>{i > 0 && ', '}<a href={`#${id}`}>{id}</a></>)}</p>
+        )}
+      </details>
+      <footer class="card-foot">
+        <Sources list={issue.learn.sources} />
+        <Feedback id="learn" section="learn" title={issue.learn.question} date={d} />
+      </footer>
+    </section>
+  </div>
 
   <section id="trials" class="block">
     <h2><T k="trials" /></h2>
-    {issue.trials.trials.length > 0 && <h3 class="sub"><T k="trialsOnly" /></h3>}
-    {issue.trials.trials.map((t) => (
-      <article class="item compact" id={t.id}>
-        <p class="kicker"><span class="area" data-area={t.area}><T k={`area_${t.area}`} /></span> <span class="dot">&middot;</span> <span class={`chg chg-${t.change}`}><T k={`change_${t.change}`} /></span></p>
-        <h4><Inline text={t.title} /></h4>
-        <p><Inline text={t.what} /></p>
-        <p class="facts"><span><T k="phase" /> {t.phase}</span> <span><T k="status" />: {t.status}</span> <span>{t.nct}</span> <span><T k="sponsor" />: {t.sponsor}</span></p>
-        <p class="facts"><span>{t.who}</span></p>
-        <Sources list={t.sources} />
-        <Feedback id={t.id} section="trials" title={t.title} area={t.area} date={d} />
-      </article>
-    ))}
-    {issue.trials.funding.length > 0 && <h3 class="sub"><T k="funding" /></h3>}
-    {issue.trials.funding.map((c) => (
-      <article class="item compact" id={c.id}>
-        <p class="kicker"><span class="area" data-area={c.area}><T k={`area_${c.area}`} /></span></p>
-        <h4><Inline text={c.title} /></h4>
-        <p class="facts">
-          <span><T k="funder" />: {c.funder}</span>
-          {c.deadline && <span><T k="deadline" />: <time data-date={c.deadline} datetime={c.deadline}>{formatDate(c.deadline)}</time></span>}
-          {c.amount && <span><T k="amount" />: {c.amount}</span>}
-        </p>
-        <p><strong><T k="eligibility" />.</strong> <Inline text={c.eligibility} /></p>
-        <Sources list={c.sources} />
-        <Feedback id={c.id} section="funding" title={c.title} area={c.area} date={d} />
-      </article>
-    ))}
+    <div class="bento tiles">
+      {trialItems.map((it) =>
+        it.kind === 'trial' ? (
+          <article class="card tile" data-area={it.t.area} style="--span:2" id={it.t.id}>
+            <header class="card-head">
+              <span class="area" data-area={it.t.area}><T k={`area_${it.t.area}`} /></span>
+              <span class={`chg chg-${it.t.change}`}><T k={`change_${it.t.change}`} /></span>
+            </header>
+            <h3><Inline text={it.t.title} /></h3>
+            <p class="small"><Inline text={it.t.what} /></p>
+            <p class="facts"><span><T k="phase" /> {it.t.phase}</span><span><T k="status" />: {it.t.status}</span><span>{it.t.nct}</span></p>
+            <p class="facts"><span>{it.t.who}</span><span><T k="sponsor" />: {it.t.sponsor}</span></p>
+            <footer class="card-foot">
+              <Sources list={it.t.sources} />
+              <Feedback id={it.t.id} section="trials" title={it.t.title} area={it.t.area} date={d} />
+            </footer>
+          </article>
+        ) : (
+          <article class="card tile funding" data-area={it.c.area} style="--span:2" id={it.c.id}>
+            <header class="card-head">
+              <span class="area" data-area={it.c.area}><T k={`area_${it.c.area}`} /></span>
+              <span class="chg"><T k="funding" /></span>
+            </header>
+            <h3><Inline text={it.c.title} /></h3>
+            <p class="facts">
+              <span><T k="funder" />: {it.c.funder}</span>
+              {it.c.deadline && <span><T k="deadline" />: <time data-date={it.c.deadline} datetime={it.c.deadline}>{formatDate(it.c.deadline)}</time></span>}
+              {it.c.amount && <span><T k="amount" />: {it.c.amount}</span>}
+            </p>
+            <p class="small"><strong><T k="eligibility" />.</strong> <Inline text={it.c.eligibility} /></p>
+            <footer class="card-foot">
+              <Sources list={it.c.sources} />
+              <Feedback id={it.c.id} section="funding" title={it.c.title} area={it.c.area} date={d} />
+            </footer>
+          </article>
+        ),
+      )}
+    </div>
   </section>
 
   <section id="chatter" class="block">
     <h2><T k="chatter" /></h2>
-    {issue.chatter.map((c) => (
-      <article class="item compact" id={c.id}>
-        <p class="kicker"><span class="area" data-area={c.area}><T k={`area_${c.area}`} /></span> <span class="dot">&middot;</span> <T k={`kind_${c.kind}`} /> <span class="dot">&middot;</span> {c.where}</p>
-        <h4><Inline text={c.title} /></h4>
-        <p><Inline text={c.gist} /></p>
-        <p class="signal">{c.signal}</p>
-        <Sources list={c.sources} />
-        <Feedback id={c.id} section="chatter" title={c.title} area={c.area} date={d} />
-      </article>
-    ))}
+    <div class="bento tiles">
+      {issue.chatter.map((c, i) => (
+        <article class="card tile" data-area={c.area} style={`--span:${chatterSpans[i]}`} id={c.id}>
+          <header class="card-head">
+            <span class="area" data-area={c.area}><T k={`area_${c.area}`} /></span>
+            <span class="chg"><T k={`kind_${c.kind}`} /></span>
+          </header>
+          <h3><Inline text={c.title} /></h3>
+          <p class="small"><Inline text={c.gist} /></p>
+          <p class="signal">{c.where}: {c.signal}</p>
+          <footer class="card-foot">
+            <Sources list={c.sources} />
+            <Feedback id={c.id} section="chatter" title={c.title} area={c.area} date={d} />
+          </footer>
+        </article>
+      ))}
+    </div>
   </section>
 
-  <section id="curiosity" class="block">
-    <h2><T k="curiosity" /></h2>
-    <article class="item" id={issue.curiosity.id}>
+  <div class="bento pair">
+    <section id="curiosity" class="card curiosity block-card" data-area="curiosity" style="--span:4">
+      <h2 class="card-title"><T k="curiosity" /></h2>
       <h3><Inline text={issue.curiosity.title} /></h3>
       <p class="gist"><Inline text={issue.curiosity.gist} /></p>
-      <Evidence e={issue.curiosity.evidence} />
+      <Evidence e={issue.curiosity.evidence} mode="line" />
       {issue.curiosity.image && <Figure img={issue.curiosity.image} />}
-      {issue.curiosity.body.map((p) => <p><Inline text={p} /></p>)}
-      <Sources list={issue.curiosity.sources} />
-      <Feedback id={issue.curiosity.id} section="curiosity" title={issue.curiosity.title} area={issue.curiosity.area} date={d} />
-    </article>
-  </section>
+      <details class="more">
+        <summary><T k="details" /></summary>
+        {issue.curiosity.body.map((p) => <p class="small"><Inline text={p} /></p>)}
+        <Evidence e={issue.curiosity.evidence} mode="notes" />
+      </details>
+      <footer class="card-foot">
+        <Sources list={issue.curiosity.sources} />
+        <Feedback id={issue.curiosity.id} section="curiosity" title={issue.curiosity.title} area={issue.curiosity.area} date={d} />
+      </footer>
+    </section>
 
-  <section id="jobs" class="block">
-    <h2><T k="jobs" /></h2>
-    {issue.jobs.length === 0 && <p class="muted">No matching openings today.</p>}
-    {issue.jobs.map((j) => (
-      <article class="item compact" id={j.id}>
-        <p class="kicker"><T k={`level_${j.level}`} /> <span class="dot">&middot;</span> {j.location}</p>
-        <h4><Inline text={j.title} /></h4>
-        <p class="facts">
-          <span>{j.employer}</span>
-          {j.salary ? <span><T k="salary" />: {j.salary}</span> : <span class="muted"><T k="salaryNotStated" /></span>}
-          {j.deadline && <span><T k="deadline" />: <time data-date={j.deadline} datetime={j.deadline}>{formatDate(j.deadline)}</time></span>}
-        </p>
-        <p><strong><T k="fit" />.</strong> <Inline text={j.fit} /></p>
-        <Sources list={j.sources} label="source" />
-        <Feedback id={j.id} section="jobs" title={j.title} date={d} />
-      </article>
-    ))}
-  </section>
+    <section id="jobs" class="card jobs block-card" data-area="other" style="--span:2">
+      <h2 class="card-title"><T k="jobs" /></h2>
+      {issue.jobs.length === 0 && <p class="muted small">No matching openings today.</p>}
+      {issue.jobs.map((j) => (
+        <div class="job" id={j.id}>
+          <p class="kicker"><T k={`level_${j.level}`} /> <span class="dot">&middot;</span> {j.location}</p>
+          <h3><Inline text={j.title} /></h3>
+          <p class="facts">
+            <span>{j.employer}</span>
+            {j.salary ? <span><T k="salary" />: {j.salary}</span> : <span class="muted"><T k="salaryNotStated" /></span>}
+            {j.deadline && <span><T k="deadline" />: <time data-date={j.deadline} datetime={j.deadline}>{formatDate(j.deadline)}</time></span>}
+          </p>
+          <p class="small"><strong><T k="fit" />.</strong> <Inline text={j.fit} /></p>
+          <Sources list={j.sources} label="source" />
+          <Feedback id={j.id} section="jobs" title={j.title} date={d} />
+        </div>
+      ))}
+    </section>
+  </div>
 
   {issue.note && <p class="colophon"><Inline text={issue.note} /></p>}
 </article>
