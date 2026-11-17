@@ -5,11 +5,26 @@
   "dek": "Interferon signalling emerges as a clue to resistance in pancreatic cancer, a depression drug reports late-stage results with safety questions, and two studies map how autism-linked genes act in the brain.",
   "palette": "indigo-coral",
   "tldr": [
-    { "text": "A study of 242 patient-derived organoids links weak interferon signalling to resistance to KRAS G12D drugs in pancreatic cancer.", "area": "cancer" },
-    { "text": "A psychedelic depression drug beat placebo in a phase 3 trial, according to the company, while serious adverse events raise safety questions.", "area": "mind" },
-    { "text": "Turning up the healthy copy of two autism-linked genes rescued features of human brain organoids, but only in a dish so far.", "area": "mind" },
-    { "text": "A 12,434-person trial found lower blood pressure did not significantly cut dementia or mild cognitive impairment in people with diabetes.", "area": "mind" },
-    { "text": "NORD opens six rare disease seed grants worth 452,000 dollars in total, with a deadline of 19 January 2027.", "area": "rare" }
+    {
+      "text": "A study of 242 patient-derived organoids links weak interferon signalling to resistance to KRAS G12D drugs in pancreatic cancer.",
+      "area": "cancer"
+    },
+    {
+      "text": "A psychedelic depression drug beat placebo in a phase 3 trial, according to the company, while serious adverse events raise safety questions.",
+      "area": "mind"
+    },
+    {
+      "text": "Turning up the healthy copy of two autism-linked genes rescued features of human brain organoids, but only in a dish so far.",
+      "area": "mind"
+    },
+    {
+      "text": "A 12,434-person trial found lower blood pressure did not significantly cut dementia or mild cognitive impairment in people with diabetes.",
+      "area": "mind"
+    },
+    {
+      "text": "NORD opens six rare disease seed grants worth 452,000 dollars in total, with a deadline of 19 January 2027.",
+      "area": "rare"
+    }
   ],
   "top": [
     {
@@ -26,11 +41,20 @@
       "why": "Late-stage results in earlier bladder cancer help decide whether a treatment can move beyond surgery and surveillance, but only the full data can show how large and durable the benefit is.",
       "didNotShow": "Not confirmed here: how many patients were treated, how long they were followed, how safe the treatment was, and whether the benefit held in every subgroup.",
       "terms": [
-        { "term": "oncolytic immunotherapy", "def": "A treatment that uses a virus engineered to infect and kill tumour cells and to draw the immune system to them." }
+        {
+          "term": "oncolytic immunotherapy",
+          "def": "A treatment that uses a virus engineered to infect and kill tumour cells and to draw the immune system to them."
+        }
       ],
       "sources": [
-        { "label": "Endpoints News", "url": "https://endpoints.news/cg-oncologys-bladder-cancer-treatment-beats-expectations-in-phase-3/" },
-        { "label": "STAT", "url": "https://www.statnews.com/2026/11/16/bladder-cancer-immunotherapy-reduced-tumor-recurrence-cg-oncology/" }
+        {
+          "label": "Endpoints News",
+          "url": "https://endpoints.news/cg-oncologys-bladder-cancer-treatment-beats-expectations-in-phase-3/"
+        },
+        {
+          "label": "STAT",
+          "url": "https://www.statnews.com/2026/11/16/bladder-cancer-immunotherapy-reduced-tumor-recurrence-cg-oncology/"
+        }
       ]
     },
     {
@@ -47,8 +71,14 @@
       "why": "Psychedelic drugs are reaching late-stage testing, so how serious adverse events are counted and explained will shape whether regulators and clinicians trust the results.",
       "didNotShow": "Not confirmed here: the size of the benefit, how many people had serious adverse events, and whether those events were judged related to the drug.",
       "sources": [
-        { "label": "Endpoints News", "url": "https://endpoints.news/helus-pharma-notches-successful-phase-3-depression-readout/" },
-        { "label": "STAT", "url": "https://www.statnews.com/2026/11/16/helus-psychedelics-depression-phase-3-trial/" }
+        {
+          "label": "Endpoints News",
+          "url": "https://endpoints.news/helus-pharma-notches-successful-phase-3-depression-readout/"
+        },
+        {
+          "label": "STAT",
+          "url": "https://www.statnews.com/2026/11/16/helus-psychedelics-depression-phase-3-trial/"
+        }
       ]
     },
     {
@@ -62,12 +92,19 @@
         "limitation": "The guidance is a draft still open to consultation. The trial figure is as reported by Cancer Research UK.",
         "conflicts": "Cancer Research UK funded the trials it describes."
       },
-      "why": "A test given in a GP surgery instead of an endoscopy could widen early detection, and the BEST3 trial is reported to have found about ten times more Barrett's cases than current care.",
+      "why": "A test given in a GP surgery instead of an endoscopy could widen early detection. The BEST3 trial is reported to have found about ten times more Barrett's cases than current care.",
       "terms": [
-        { "term": "Barrett's oesophagus", "def": "A condition in which stomach acid damages the cells lining the food pipe, which can move towards cancer." }
+        {
+          "term": "Barrett's oesophagus",
+          "def": "A condition in which stomach acid damages the cells lining the food pipe, which can move towards cancer."
+        }
       ],
       "sources": [
-        { "label": "Cancer Research UK", "url": "https://news.cancerresearchuk.org/2026/11/16/capsule-sponge-recommended-for-thousands-more-people-on-the-nhs/" }
+        {
+          "label": "Cancer Research UK",
+          "url": "https://news.cancerresearchuk.org/2026/11/16/capsule-sponge-recommended-for-thousands-more-people-on-the-nhs/",
+          "access": "open"
+        }
       ]
     },
     {
@@ -87,11 +124,25 @@
         "IL-18 acted through STAT1 to raise CD47, a signal that tells macrophages not to eat a cell. Removing IL-18 increased macrophages with stronger antigen-presenting features (more MHCII and CD11c). KRAS inhibitor treatment raised IL-18 in the cancer cells, and deleting IL-18 improved clearance of treated cells."
       ],
       "terms": [
-        { "term": "macrophage", "def": "An immune cell that engulfs and digests other cells and debris." },
-        { "term": "KRAS", "def": "A growth-driving protein that is a main driver of pancreatic cancer." }
+        {
+          "term": "IL-18",
+          "def": "Interleukin-18, an immune signalling protein (a cytokine) of the IL-1 family."
+        },
+        {
+          "term": "macrophage",
+          "def": "An immune cell that engulfs and digests other cells and debris."
+        },
+        {
+          "term": "KRAS",
+          "def": "A growth-driving protein that is a main driver of pancreatic cancer."
+        }
       ],
       "sources": [
-        { "label": "Gastroenterology", "url": "https://doi.org/10.1053/j.gastro.2026.10.383", "doi": "10.1053/j.gastro.2026.10.383" }
+        {
+          "label": "Gastroenterology",
+          "url": "https://doi.org/10.1053/j.gastro.2026.10.383",
+          "doi": "10.1053/j.gastro.2026.10.383"
+        }
       ],
       "forYou": "Relevant to how macrophage activity in dense pancreatic stroma could affect particle uptake and combination design."
     },
@@ -115,10 +166,18 @@
         "Related adverse events were all grade 1 to 2. The median anti-survivin antibody titre rose from 20 to a peak of 81,920, and T cell responses (interferon-gamma ELISpot) rose from 16.7 to 504.6 spot-forming units per million cells. Patients with stable disease had higher antibody titres than those whose disease progressed (p = 0.0418). The trial is registered as NCT05104515."
       ],
       "terms": [
-        { "term": "survivin", "def": "A protein made by many tumours that the immune system normally tolerates as 'self'." }
+        {
+          "term": "survivin",
+          "def": "A protein made by many tumours that the immune system normally tolerates as 'self'."
+        }
       ],
       "sources": [
-        { "label": "medRxiv preprint", "url": "https://www.medrxiv.org/content/10.64898/2026.11.08.26367556", "doi": "10.64898/2026.11.08.26367556" }
+        {
+          "label": "medRxiv preprint",
+          "url": "https://www.medrxiv.org/content/10.64898/2026.11.08.26367556",
+          "doi": "10.64898/2026.11.08.26367556",
+          "access": "open"
+        }
       ]
     },
     {
@@ -139,11 +198,22 @@
         "Of the 51 patients, 25 had FOLFIRINOX and 20 had gemcitabine-based therapy. Mass spectrometry found 2,089 vesicle proteins and 26 changed after treatment. Higher ITGB1 before treatment was linked to longer survival (hazard ratio 0.112), and a larger fall in a seven-protein platelet score was linked to shorter survival (hazard ratio 0.56 per unit, p = 0.030)."
       ],
       "terms": [
-        { "term": "extracellular vesicle", "def": "A tiny bubble released by cells that carries proteins and other molecules through the blood." },
-        { "term": "FOLFIRINOX", "def": "A combination chemotherapy regimen used for pancreatic cancer." }
+        {
+          "term": "extracellular vesicle",
+          "def": "A tiny bubble released by cells that carries proteins and other molecules through the blood."
+        },
+        {
+          "term": "FOLFIRINOX",
+          "def": "A combination chemotherapy regimen used for pancreatic cancer."
+        }
       ],
       "sources": [
-        { "label": "bioRxiv preprint", "url": "https://www.biorxiv.org/content/10.64898/2026.11.06.764966", "doi": "10.64898/2026.11.06.764966" }
+        {
+          "label": "bioRxiv preprint",
+          "url": "https://www.biorxiv.org/content/10.64898/2026.11.06.764966",
+          "doi": "10.64898/2026.11.06.764966",
+          "access": "open"
+        }
       ],
       "forYou": "Relevant to nanoscale vesicle characterisation and liquid biopsy readouts in pancreatic cancer."
     },
@@ -160,13 +230,29 @@
       "why": "Matching the tau type of a rare disease to a better-studied one gives researchers a shared biology to work from, even though the cause of Guam ALS/PDC is still unknown.",
       "didNotShow": "It did not identify the cause of the disease or test any treatment.",
       "terms": [
-        { "term": "ALS/PDC", "def": "Amyotrophic lateral sclerosis/parkinsonism-dementia complex, a fatal neurodegenerative disease once very common on Guam." },
-        { "term": "CTE", "def": "Chronic traumatic encephalopathy, a brain disease marked by deposits of tau protein." },
-        { "term": "tau", "def": "A brain protein that clumps into harmful deposits in several neurodegenerative diseases." },
-        { "term": "seeding", "def": "The ability of a small clump of misfolded protein to make normal protein of the same kind clump too." }
+        {
+          "term": "ALS/PDC",
+          "def": "Amyotrophic lateral sclerosis/parkinsonism-dementia complex, a fatal neurodegenerative disease once very common on Guam."
+        },
+        {
+          "term": "CTE",
+          "def": "Chronic traumatic encephalopathy, a brain disease marked by deposits of tau protein."
+        },
+        {
+          "term": "tau",
+          "def": "A brain protein that clumps into harmful deposits in several neurodegenerative diseases."
+        },
+        {
+          "term": "seeding",
+          "def": "The ability of a small clump of misfolded protein to make normal protein of the same kind clump too."
+        }
       ],
       "sources": [
-        { "label": "Brain", "url": "https://doi.org/10.1093/brain/awag405", "doi": "10.1093/brain/awag405" }
+        {
+          "label": "Brain",
+          "url": "https://doi.org/10.1093/brain/awag405",
+          "doi": "10.1093/brain/awag405"
+        }
       ]
     },
     {
@@ -183,11 +269,25 @@
       "why": "Autism-linked genes act in many places, so finding where their effects converge can narrow where to look for shared mechanisms.",
       "didNotShow": "It did not test whether changing these genes affects behaviour or symptoms.",
       "terms": [
-        { "term": "striatum", "def": "A deep brain region involved in movement and reward; the putamen is part of it." },
-        { "term": "spiny projection neuron", "def": "The main output neuron of the striatum." }
+        {
+          "term": "EGR1 and EGR3",
+          "def": "Two early growth response genes, which switch on other genes when brain cells are active."
+        },
+        {
+          "term": "striatum",
+          "def": "A deep brain region involved in movement and reward; the putamen is part of it."
+        },
+        {
+          "term": "spiny projection neuron",
+          "def": "The main output neuron of the striatum."
+        }
       ],
       "sources": [
-        { "label": "Cell", "url": "https://doi.org/10.1016/j.cell.2026.10.027", "doi": "10.1016/j.cell.2026.10.027" }
+        {
+          "label": "Cell",
+          "url": "https://doi.org/10.1016/j.cell.2026.10.027",
+          "doi": "10.1016/j.cell.2026.10.027"
+        }
       ]
     },
     {
@@ -208,11 +308,21 @@
         "The weighted hazard ratio for psychiatric hospitalisation was 0.76 (95 percent interval 0.71 to 0.82) against non-initiation, 0.82 (0.75 to 0.90) against DPP-4 inhibitors and 0.83 (0.78 to 0.88) against SGLT2 inhibitors. For emergency department presentation it was 0.71 (0.65 to 0.77) against non-initiation."
       ],
       "terms": [
-        { "term": "hazard ratio", "def": "How much more or less often an event happens in one group than another; below 1 means less often." },
-        { "term": "GLP-1 receptor agonist", "def": "A class of drugs for type 2 diabetes and weight loss." }
+        {
+          "term": "hazard ratio",
+          "def": "How much more or less often an event happens in one group than another; below 1 means less often."
+        },
+        {
+          "term": "GLP-1 receptor agonist",
+          "def": "A class of drugs for type 2 diabetes and weight loss."
+        }
       ],
       "sources": [
-        { "label": "The Lancet Psychiatry", "url": "https://doi.org/10.1016/S2215-0366(26)00276-2", "doi": "10.1016/S2215-0366(26)00276-2" }
+        {
+          "label": "The Lancet Psychiatry",
+          "url": "https://doi.org/10.1016/S2215-0366(26)00276-2",
+          "doi": "10.1016/S2215-0366(26)00276-2"
+        }
       ]
     },
     {
@@ -229,10 +339,17 @@
         "The two cancer medicines are aumolertinib (Aumseqa) and sintilimab (Zybrivo, for non-squamous disease). The other recommendations were for hypertension, diabetes (two insulin aspart biosimilars), a fondaparinux generic and a ruxolitinib generic. None of the seven was for a neurological or psychiatric condition, and none is marked orphan on the page."
       ],
       "terms": [
-        { "term": "CHMP", "def": "The European Medicines Agency committee that assesses medicines for human use." }
+        {
+          "term": "CHMP",
+          "def": "The European Medicines Agency committee that assesses medicines for human use."
+        }
       ],
       "sources": [
-        { "label": "EMA meeting highlights", "url": "https://www.ema.europa.eu/en/news/meeting-highlights-committee-medicinal-products-human-use-chmp-9-12-november-2026" }
+        {
+          "label": "EMA meeting highlights",
+          "url": "https://www.ema.europa.eu/en/news/meeting-highlights-committee-medicinal-products-human-use-chmp-9-12-november-2026",
+          "access": "open"
+        }
       ]
     }
   ],
@@ -259,12 +376,26 @@
       "limitations": "No patient treatment data are reported, effect sizes are not in the abstract, and sustained MYC activity is linked to resistance but not shown to cause it.",
       "meaning": "If tumour interferon status predicts response, it could help sort patients for KRAS drugs, and getting interferon-based partners into dense pancreatic tissue becomes a delivery question for carriers.",
       "terms": [
-        { "term": "patient-derived organoid", "def": "A small three-dimensional culture grown from a patient's tumour cells that keeps some of the tumour's features." },
-        { "term": "interferon", "def": "A signalling protein that switches on the body's antiviral and immune defences." }
+        {
+          "term": "patient-derived organoid",
+          "def": "A small three-dimensional culture grown from a patient's tumour cells that keeps some of the tumour's features."
+        },
+        {
+          "term": "interferon",
+          "def": "A signalling protein that switches on the body's antiviral and immune defences."
+        }
       ],
       "sources": [
-        { "label": "Cancer Cell", "url": "https://doi.org/10.1016/j.ccell.2026.10.003", "doi": "10.1016/j.ccell.2026.10.003" },
-        { "label": "Cancer Cell commentary", "url": "https://doi.org/10.1016/j.ccell.2026.10.001", "doi": "10.1016/j.ccell.2026.10.001" }
+        {
+          "label": "Cancer Cell",
+          "url": "https://doi.org/10.1016/j.ccell.2026.10.003",
+          "doi": "10.1016/j.ccell.2026.10.003"
+        },
+        {
+          "label": "Cancer Cell commentary",
+          "url": "https://doi.org/10.1016/j.ccell.2026.10.001",
+          "doi": "10.1016/j.ccell.2026.10.001"
+        }
       ],
       "forYou": "Relevant to carrying interferon or MYC-targeting agents into dense pancreatic stroma with nanocarriers."
     },
@@ -288,11 +419,21 @@
       "limitations": "Patient numbers and effect sizes are not in the abstract, and the targeting was genetic, so no drug against these cells was tested.",
       "meaning": "Because albumin-bound paclitaxel is itself a nanoparticle drug, the work shows a carrier's payload can remodel the tissue it must cross, which matters for designing combinations.",
       "terms": [
-        { "term": "cancer-associated fibroblast", "def": "A supporting connective tissue cell in the tumour stroma that can shield tumour cells." },
-        { "term": "neoadjuvant", "def": "Given before surgery to shrink or control a tumour." }
+        {
+          "term": "cancer-associated fibroblast",
+          "def": "A supporting connective tissue cell in the tumour stroma that can shield tumour cells."
+        },
+        {
+          "term": "neoadjuvant",
+          "def": "Given before surgery to shrink or control a tumour."
+        }
       ],
       "sources": [
-        { "label": "Science Translational Medicine", "url": "https://doi.org/10.1126/scitranslmed.aee4086", "doi": "10.1126/scitranslmed.aee4086" }
+        {
+          "label": "Science Translational Medicine",
+          "url": "https://doi.org/10.1126/scitranslmed.aee4086",
+          "doi": "10.1126/scitranslmed.aee4086"
+        }
       ],
       "forYou": "Relevant to nanoparticle penetration of dense stroma and how chemotherapy remodels it."
     },
@@ -317,11 +458,21 @@
       "limitations": "Only two genes and only lab models, the abstract gives no effect sizes, and delivery to neurons in a living brain is not addressed.",
       "meaning": "A route for conditions caused by one faulty gene copy: turn up the healthy copy. The reported 15 percent of autism genetic susceptibility from such mutations shows how many genes could be candidates.",
       "terms": [
-        { "term": "haploinsufficiency", "def": "A problem that arises when one working copy of a gene is not enough." },
-        { "term": "enhancer", "def": "A stretch of DNA that helps switch a gene on." }
+        {
+          "term": "haploinsufficiency",
+          "def": "A problem that arises when one working copy of a gene is not enough."
+        },
+        {
+          "term": "enhancer",
+          "def": "A stretch of DNA that helps switch a gene on."
+        }
       ],
       "sources": [
-        { "label": "Nature Neuroscience", "url": "https://doi.org/10.1038/s41593-026-02504-9", "doi": "10.1038/s41593-026-02504-9" }
+        {
+          "label": "Nature Neuroscience",
+          "url": "https://doi.org/10.1038/s41593-026-02504-9",
+          "doi": "10.1038/s41593-026-02504-9"
+        }
       ]
     },
     {
@@ -346,11 +497,22 @@
       "limitations": "The main outcome was not significantly different, the MRI result is a secondary finding in a subset, and follow-up was under four years.",
       "meaning": "Strong blood pressure lowering did not show a clear cognitive benefit within about four years, and the MRI finding needs testing in longer studies.",
       "terms": [
-        { "term": "white matter lesion", "def": "A patch of damage in the brain's wiring tissue seen on MRI, linked to vascular problems." }
+        {
+          "term": "white matter lesion",
+          "def": "A patch of damage in the brain's wiring tissue seen on MRI, linked to vascular problems."
+        }
       ],
       "sources": [
-        { "label": "BMJ", "url": "https://doi.org/10.1136/bmj-2026-101209", "doi": "10.1136/bmj-2026-101209" },
-        { "label": "ClinicalTrials.gov NCT03808311", "url": "https://clinicaltrials.gov/study/NCT03808311" }
+        {
+          "label": "BMJ",
+          "url": "https://doi.org/10.1136/bmj-2026-101209",
+          "doi": "10.1136/bmj-2026-101209"
+        },
+        {
+          "label": "ClinicalTrials.gov NCT03808311",
+          "url": "https://clinicaltrials.gov/study/NCT03808311",
+          "access": "open"
+        }
       ]
     }
   ],
@@ -361,12 +523,30 @@
     "field": "cancer",
     "useWhen": "When you want to test brain tumour cells or their immune interactions in a human brain tissue model for drug screening or mechanism studies lasting about three to four weeks.",
     "steps": [
-      { "title": "Process the tumour fast", "text": "Record the tumour weight, appearance and sample ID, and process the tissue as soon as possible. If you must wait, keep it on ice in sterile medium or at 4 degrees Celsius for up to 12 to 18 hours, accepting progressive loss of viability." },
-      { "title": "Prepare the enzymes", "text": "Add 5 mL EBSS to the papain bottle and incubate at 37 degrees Celsius for 10 minutes, reconstitute the DNase in 500 microlitres EBSS and add 250 microlitres to the papain. Plan two papain bottles per gram of tumour." },
-      { "title": "Mince and set aside samples", "text": "Keep the tumour on ice in a 10 cm dish. Before dissociation, set aside tissue for other uses, for example 50 to 100 mg snap frozen for single-nucleus RNA sequencing or about 0.5 cubic centimetres fixed in 4 percent PFA for immunostaining." },
-      { "title": "Dissociate with papain", "text": "Digest the minced tumour enzymatically with papain to get a single-cell suspension. Optionally label the cells with a fluorescent marker." },
-      { "title": "Transplant onto organoids", "text": "Place the tumour cells onto mature human cortical organoids (grown from stem cells over 8 to 12 weeks) by the hanging drop method, leaving them overnight." },
-      { "title": "Culture and add immune cells", "text": "Move the transplanted organoids to multi-well plates. For the immune version, patient peripheral blood mononuclear cells are isolated by density gradient centrifugation. Co-culture lasts 3 to 4 weeks." }
+      {
+        "title": "Process the tumour fast",
+        "text": "Record the tumour weight, appearance and sample ID, and process the tissue as soon as possible. If you must wait, keep it on ice in sterile medium or at 4 degrees Celsius for up to 12 to 18 hours, accepting progressive loss of viability."
+      },
+      {
+        "title": "Prepare the enzymes",
+        "text": "Add 5 mL EBSS to the papain bottle and incubate at 37 degrees Celsius for 10 minutes, reconstitute the DNase in 500 microlitres EBSS and add 250 microlitres to the papain. Plan two papain bottles per gram of tumour."
+      },
+      {
+        "title": "Mince and set aside samples",
+        "text": "Keep the tumour on ice in a 10 cm dish. Before dissociation, set aside tissue for other uses, for example 50 to 100 mg snap frozen for single-nucleus RNA sequencing or about 0.5 cubic centimetres fixed in 4 percent PFA for immunostaining."
+      },
+      {
+        "title": "Dissociate with papain",
+        "text": "Digest the minced tumour enzymatically with papain to get a single-cell suspension. Optionally label the cells with a fluorescent marker."
+      },
+      {
+        "title": "Transplant onto organoids",
+        "text": "Place the tumour cells onto mature human cortical organoids (grown from stem cells over 8 to 12 weeks) by the hanging drop method, leaving them overnight."
+      },
+      {
+        "title": "Culture and add immune cells",
+        "text": "Move the transplanted organoids to multi-well plates. For the immune version, patient peripheral blood mononuclear cells are isolated by density gradient centrifugation. Co-culture lasts 3 to 4 weeks."
+      }
     ],
     "pitfalls": [
       "Some tumour cell states, such as oligodendrocyte-like cells, are not consistently kept.",
@@ -374,10 +554,21 @@
       "The model does not support long-term expansion or serial passaging of tumour cells."
     ],
     "safety": "Patient tumour tissue and blood are biohazardous human samples that need ethical approval and consent. Follow your institution's biosafety, human tissue and ethics rules, and ask your safety officer if unsure.",
-    "source": { "label": "STAR Protocols (open access)", "url": "https://doi.org/10.1016/j.xpro.2026.104925", "doi": "10.1016/j.xpro.2026.104925" },
+    "source": {
+      "label": "STAR Protocols (open access)",
+      "url": "https://doi.org/10.1016/j.xpro.2026.104925",
+      "doi": "10.1016/j.xpro.2026.104925",
+      "access": "open"
+    },
     "terms": [
-      { "term": "hanging drop", "def": "A culture method in which cells sit in a droplet hanging from a lid so they gather together." },
-      { "term": "organoid", "def": "A small three-dimensional tissue culture grown from stem cells that copies some features of an organ." }
+      {
+        "term": "hanging drop",
+        "def": "A culture method in which cells sit in a droplet hanging from a lid so they gather together."
+      },
+      {
+        "term": "organoid",
+        "def": "A small three-dimensional tissue culture grown from stem cells that copies some features of an organ."
+      }
     ]
   },
   "learn": {
@@ -392,22 +583,53 @@
     "diagram": {
       "layout": "flow",
       "nodes": [
-        { "label": "Particle in the blood" },
-        { "label": "Tumour vessel wall", "note": "gaps or active transport" },
-        { "label": "Stroma", "note": "denser in most human tumours" },
-        { "label": "Cancer cell", "key": true }
+        {
+          "label": "Particle in the blood"
+        },
+        {
+          "label": "Tumour vessel wall",
+          "note": "gaps or active transport"
+        },
+        {
+          "label": "Stroma",
+          "note": "denser in most human tumours"
+        },
+        {
+          "label": "Cancer cell",
+          "key": true
+        }
       ],
-      "links": ["circulates", "crosses", "must spread"],
+      "links": [
+        "circulates",
+        "crosses",
+        "must spread"
+      ],
       "caption": "Simplified route from blood to tumour cell. The review argues each step is less certain in human tumours than in rodent xenografts."
     },
     "terms": [
-      { "term": "xenograft", "def": "A tumour grown in a mouse from human cells." },
-      { "term": "transcytosis", "def": "A cell carrying material across itself in small bubbles." },
-      { "term": "stroma", "def": "The supporting tissue around and inside a tumour, made of fibres and non-cancer cells." }
+      {
+        "term": "xenograft",
+        "def": "A tumour grown in a mouse from human cells."
+      },
+      {
+        "term": "transcytosis",
+        "def": "A cell carrying material across itself in small bubbles."
+      },
+      {
+        "term": "stroma",
+        "def": "The supporting tissue around and inside a tumour, made of fibres and non-cancer cells."
+      }
     ],
-    "seenIn": ["tmem100-fibroblasts-chemoresistance"],
+    "seenIn": [
+      "tmem100-fibroblasts-chemoresistance"
+    ],
     "sources": [
-      { "label": "Review: nanocarriers crossing biological barriers (Int J Pharm X)", "url": "https://doi.org/10.1016/j.ijpx.2026.100691", "doi": "10.1016/j.ijpx.2026.100691" }
+      {
+        "label": "Review: nanocarriers crossing biological barriers (Int J Pharm X)",
+        "url": "https://doi.org/10.1016/j.ijpx.2026.100691",
+        "doi": "10.1016/j.ijpx.2026.100691",
+        "access": "open"
+      }
     ]
   },
   "trials": {
@@ -423,7 +645,13 @@
         "what": "Tests the safety and feasibility of adding a GLP-1 receptor agonist to standard first-line chemotherapy; the primary outcome is treatment-emergent adverse events.",
         "who": "Adults with metastatic pancreatic, colorectal or hepatocellular cancer; 30 planned",
         "sponsor": "University of Arizona",
-        "sources": [{ "label": "ClinicalTrials.gov record", "url": "https://clinicaltrials.gov/study/NCT07627191" }]
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov record",
+            "url": "https://clinicaltrials.gov/study/NCT07627191",
+            "access": "open"
+          }
+        ]
       },
       {
         "id": "nct02839707-pld-atezolizumab",
@@ -436,7 +664,13 @@
         "what": "A randomised phase 2/3 trial comparing pegylated liposomal doxorubicin (a chemotherapy drug packaged in a lipid nanoparticle) with atezolizumab, with bevacizumab, or with both.",
         "who": "Adults with platinum-resistant recurrent ovarian, fallopian tube or primary peritoneal cancer; 444 enrolled",
         "sponsor": "National Cancer Institute (NCI)",
-        "sources": [{ "label": "ClinicalTrials.gov record", "url": "https://clinicaltrials.gov/study/NCT02839707" }]
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov record",
+            "url": "https://clinicaltrials.gov/study/NCT02839707",
+            "access": "open"
+          }
+        ]
       },
       {
         "id": "nct07721467-nectar-psilocybin",
@@ -449,7 +683,13 @@
         "what": "Compares cognitive training alone with cognitive training plus psilocybin; the primary outcome is a neuroplasticity composite score.",
         "who": "People aged 65 or older with mild cognitive impairment or early Alzheimer's disease, plus healthy older adults; 200 planned",
         "sponsor": "National Institute on Aging (NIA)",
-        "sources": [{ "label": "ClinicalTrials.gov record", "url": "https://clinicaltrials.gov/study/NCT07721467" }]
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov record",
+            "url": "https://clinicaltrials.gov/study/NCT07721467",
+            "access": "open"
+          }
+        ]
       },
       {
         "id": "nct06748950-ketogenic-psychiatry",
@@ -462,7 +702,13 @@
         "what": "A randomised trial of a ketogenic diet with deep omic profiling; primary outcomes are well-being, functioning and quality of life scores.",
         "who": "Adults with serious mental illness (schizophrenia, bipolar disorder or major depression); 120 planned",
         "sponsor": "Stanford University",
-        "sources": [{ "label": "ClinicalTrials.gov record", "url": "https://clinicaltrials.gov/study/NCT06748950" }]
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov record",
+            "url": "https://clinicaltrials.gov/study/NCT06748950",
+            "access": "open"
+          }
+        ]
       }
     ],
     "funding": [
@@ -475,8 +721,16 @@
         "amount": "Up to 50,000 dollars per grant, 152,000 for Peutz-Jeghers syndrome",
         "eligibility": "Studies of one of six named diseases, including Beckwith-Wiedemann syndrome, pheochromocytoma and appendix cancer. The page says only qualified investigators, so read each call.",
         "sources": [
-          { "label": "NORD requests for proposals", "url": "https://rarediseases.org/advancing-research/request-for-proposals/" },
-          { "label": "NORD announcement", "url": "https://rarediseases.org/nord-announces-annual-seed-grant-rfps-totaling-452000-to-accelerate-research-for-six-rare-diseases/" }
+          {
+            "label": "NORD requests for proposals",
+            "url": "https://rarediseases.org/advancing-research/request-for-proposals/",
+            "access": "open"
+          },
+          {
+            "label": "NORD announcement",
+            "url": "https://rarediseases.org/nord-announces-annual-seed-grant-rfps-totaling-452000-to-accelerate-research-for-six-rare-diseases/",
+            "access": "open"
+          }
         ]
       }
     ]
@@ -490,7 +744,13 @@
       "where": "Lustgarten Foundation summary",
       "signal": "Over 600 attendees from 18 countries, recap written by a funder of the work",
       "gist": "The recap covers RAS-targeted therapies, mouse work where KRAS blocking cut precancerous lesions, and a talk noting Black patients were 1.7 percent of single-cell samples analysed.",
-      "sources": [{ "label": "Lustgarten Foundation", "url": "https://lustgarten.org/new-frontiers-inside-aacrs-2026-pancreatic-cancer-conference/" }]
+      "sources": [
+        {
+          "label": "Lustgarten Foundation",
+          "url": "https://lustgarten.org/new-frontiers-inside-aacrs-2026-pancreatic-cancer-conference/",
+          "access": "open"
+        }
+      ]
     },
     {
       "id": "parkinsons-cell-replacement-post",
@@ -500,7 +760,13 @@
       "where": "Mastodon",
       "signal": "2 favourites and 12 boosts on Mastodon (#neuroscience)",
       "gist": "The post says trials are transplanting lab-grown dopamine-cell precursors, that Japan gave one therapy conditional approval in 2026, and that results are promising but early. It was not checked against a primary source here.",
-      "sources": [{ "label": "Mastodon post", "url": "https://mastodon.social/@nexthorizonspace/117621071334401341" }]
+      "sources": [
+        {
+          "label": "Mastodon post",
+          "url": "https://mastodon.social/@nexthorizonspace/117621071334401341",
+          "access": "open"
+        }
+      ]
     },
     {
       "id": "deseq2-batch-covariate-question",
@@ -510,7 +776,13 @@
       "where": "Reddit r/bioinformatics",
       "signal": "#1 of the day's top posts on r/bioinformatics",
       "gist": "A researcher asks whether to add a batch covariate for patient samples sequenced in two batches at the same centre with the same technology.",
-      "sources": [{ "label": "Reddit thread", "url": "https://www.reddit.com/r/bioinformatics/comments/1xxtlxz/should_i_add_a_batch_covariate_term_in_dge_for/" }]
+      "sources": [
+        {
+          "label": "Reddit thread",
+          "url": "https://www.reddit.com/r/bioinformatics/comments/1xxtlxz/should_i_add_a_batch_covariate_term_in_dge_for/",
+          "access": "open"
+        }
+      ]
     }
   ],
   "curiosity": {
@@ -529,8 +801,17 @@
       "limitation": "Correlational, caregiver-reported training, and no measure of practice intensity. Summarised from a news report of the paper; the paper itself was not read."
     },
     "sources": [
-      { "label": "Developmental Cognitive Neuroscience", "url": "https://doi.org/10.1016/j.dcn.2026.101813", "doi": "10.1016/j.dcn.2026.101813" },
-      { "label": "PsyPost report", "url": "https://www.psypost.org/musically-trained-children-score-higher-on-tests-of-intelligence-working-memory-and-reading/" }
+      {
+        "label": "Developmental Cognitive Neuroscience",
+        "url": "https://doi.org/10.1016/j.dcn.2026.101813",
+        "doi": "10.1016/j.dcn.2026.101813",
+        "access": "open"
+      },
+      {
+        "label": "PsyPost report",
+        "url": "https://www.psypost.org/musically-trained-children-score-higher-on-tests-of-intelligence-working-memory-and-reading/",
+        "access": "open"
+      }
     ]
   },
   "jobs": [],

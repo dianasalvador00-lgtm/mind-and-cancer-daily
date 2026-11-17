@@ -11,14 +11,18 @@ const escapeHtml = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-export function inline(src: string, terms: TermDef[] = []): string {
+/**
+ * `seen` is shared by every text of one card, so each term is underlined only at its first use in
+ * the card, even when it appears again in a later field.
+ */
+export function inline(src: string, terms: TermDef[] = [], seen?: Set<string>): string {
   let out = escapeHtml(String(src ?? ''));
   out = out.replace(/\[([^\]]+)\]\((https:\/\/[^\s)]+)\)/g, (_m, label, url) => `<a href="${url}" rel="noopener noreferrer" target="_blank">${label}</a>`);
   out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   out = out.replace(/`([^`]+)`/g, '<code>$1</code>');
   if (!terms.length) return out;
 
-  const used = new Set<string>();
+  const used = seen ?? new Set<string>();
   let inAnchor = 0;
   return out
     .split(/(<[^>]+>)/g)
@@ -37,7 +41,7 @@ export function inline(src: string, terms: TermDef[] = []): string {
         if (re.test(text)) {
           used.add(key);
           const def = escapeHtml(t.def);
-          text = text.replace(re, (_m, pre, word) => `${pre}<abbr class="term" tabindex="0" title="${def}" data-def="${def}">${word}</abbr>`);
+          text = text.replace(re, (_m, pre, word) => `${pre}<abbr class="term" tabindex="0" role="button" title="${def}" data-def="${def}">${word}</abbr>`);
         }
       }
       return text;

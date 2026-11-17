@@ -5,3 +5,9 @@ dist/
 *.log
 .DS_Store
 inbox/source-test.json
+# The full sweep output stays out of git (about 300 KB a day); only the brief the daily run reads is
+# committed. The full file is kept for 7 days as a GitHub Actions artifact.
+inbox/????-??-??.json
+# Locally installed agent skills (large, third-party); skills-lock.json records how to reinstall them.
+.claude/skills/
+.taste-skill/

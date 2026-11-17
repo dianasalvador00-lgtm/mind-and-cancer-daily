@@ -1,0 +1,33 @@
+---
+// The way to the full source: one clear button to the primary source (labelled by what it opens),
+// whether it is free to read, its DOI, and the other sources as plain links.
+import T from './T.astro';
+type S = { label: string; url: string; doi?: string; access?: 'open' | 'paywall' };
+export type CtaKind = 'paper' | 'article' | 'trial' | 'protocol' | 'posting' | 'call' | 'post' | 'review';
+const { list, kind = 'article' } = Astro.props as { list: S[]; kind?: CtaKind };
+const [first, ...rest] = list;
+const key = { paper: 'readPaper', article: 'readArticle', trial: 'openTrial', protocol: 'openProtocol', posting: 'seePosting', call: 'seeCall', post: 'openPost', review: 'readReview' }[kind];
+---
+<div class="cta">
+  <a class="cta-btn" href={first.url} rel="noopener noreferrer" target="_blank">
+    <span><T k={key} /></span>
+    <span class="cta-src">{first.label}</span>
+  </a>
+  <p class="cta-meta">
+    {first.access === 'open' && <span class="acc acc-open"><T k="freeToRead" /></span>}
+    {first.access === 'paywall' && <span class="acc acc-pay"><T k="paywalled" /></span>}
+    {first.doi && <a class="doi" href={`https://doi.org/${first.doi}`} rel="noopener noreferrer" target="_blank">DOI {first.doi}</a>}
+    {rest.length > 0 && (
+      <span class="cta-rest">
+        <T k="alsoSee" />:{' '}
+        {rest.map((s, i) => (
+          <>
+            {i > 0 && ', '}
+            <a href={s.url} rel="noopener noreferrer" target="_blank">{s.label}</a>
+            {s.access === 'open' && <span class="acc acc-open acc-mini"><T k="freeToRead" /></span>}
+          </>
+        ))}
+      </span>
+    )}
+  </p>
+</div>

@@ -1,27 +1,62 @@
 ---
 import T from './T.astro';
 import Inline from './Inline.astro';
-import Sources from './Sources.astro';
+import Cta, { type CtaKind } from './Cta.astro';
 import Evidence from './Evidence.astro';
 import Feedback from './Feedback.astro';
 import Diagram from './Diagram.astro';
 import Figure from './Figure.astro';
 import { formatDate, type IssueT } from '../kit/data';
 import { spans, TOP_ROWS, PAIR_ROWS, TILE_ROWS } from '../kit/bento';
+import { strings } from '../kit/schema.mjs';
 const { issue, sample = false } = Astro.props as { issue: IssueT; sample?: boolean };
 const d = issue.date;
-const nav = ['top', 'bench', 'method', 'learn', 'trials', 'chatter', 'curiosity', 'jobs'] as const;
+const nav = ['top', 'bench', 'method', 'learn', 'trials', 'chatter', 'curiosity', 'jobs', 'glossary'] as const;
 const topSpans = spans(issue.top.length, TOP_ROWS);
 const benchSpans = spans(issue.bench.length, PAIR_ROWS);
 const trialItems = [...issue.trials.trials.map((t) => ({ kind: 'trial' as const, t })), ...issue.trials.funding.map((c) => ({ kind: 'call' as const, c }))];
 const chatterSpans = spans(issue.chatter.length, TILE_ROWS, false);
-const glossary = (terms?: { term: string; def: string }[]) => terms ?? [];
+
+// Every term defined anywhere in the issue is underlined (first use per card) everywhere it appears,
+// and listed once in the glossary at the end.
+type Term = { term: string; def: string };
+const byKey = new Map<string, Term>();
+for (const t of [
+  ...issue.top.flatMap((x) => x.terms ?? []),
+  ...issue.bench.flatMap((x) => x.terms ?? []),
+  ...(issue.method.terms ?? []),
+  ...(issue.learn.terms ?? []),
+  ...(issue.curiosity.terms ?? []),
+]) if (!byKey.has(t.term.toLowerCase())) byKey.set(t.term.toLowerCase(), t);
+const glossary = [...byKey.values()].sort((a, b) => a.term.localeCompare(b.term, 'en', { sensitivity: 'base' }));
+const termsFor = (own?: Term[]) => [...(own ?? []), ...glossary];
+
+// Reading time from the visible words (links and ids left out).
+let words = 0;
+for (const [path, s] of strings(issue)) {
+  if (/(url|creditUrl|doi|src|id|nct|palette|date|published|deadline|area|type|kind|change|level|layout|forYou)$/.test(path)) continue;
+  words += s.split(/\s+/).filter(Boolean).length;
+}
+const minutes = Math.max(1, Math.round(words / 230));
+
+const paperTypes = ['peer-reviewed', 'preprint', 'meta-analysis', 'human-observational', 'human-rct', 'animal', 'organoid', 'in-vitro', 'computational'];
+const ctaKind = (srcs: { url: string; doi?: string }[], evType?: string): CtaKind => {
+  const u = srcs[0].url;
+  if (/clinicaltrials\.gov/.test(u)) return 'trial';
+  if (evType === 'review') return 'review';
+  if (evType === 'news' || evType === 'press-release' || evType === 'commentary') return 'article';
+  if ((evType && paperTypes.includes(evType)) || srcs[0].doi || /doi\.org|rxiv\.org|pubmed|europepmc/.test(u)) return 'paper';
+  if (/bsky\.app|mastodon|reddit\.com|fediscience|sciences\.social|mstdn/.test(u)) return 'post';
+  return 'article';
+};
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 ---
 <article class="issue">
   <header class="issue-head">
-    <p class="kicker"><T k="issue" /> {issue.number} <span class="dot">&middot;</span> <time data-date={d} datetime={d}>{formatDate(d)}</time></p>
+    <p class="kicker"><T k="issue" /> {issue.number} <span class="dot">&middot;</span> <time data-date={d} datetime={d}>{formatDate(d)}</time> <span class="dot">&middot;</span> {minutes} <T k="minRead" /></p>
     <h1><Inline text={issue.title} /></h1>
     <p class="dek"><Inline text={issue.dek} /></p>
+    <p class="howto"><T k="howToRead" /></p>
     {sample && <p class="sample-note"><T k="sample" /></p>}
   </header>
 
@@ -35,7 +70,7 @@ const glossary = (terms?: { term: string; def: string }[]) => terms ?? [];
       {issue.tldr.map((t) => (
         <li class="tldr-tile" data-area={t.area}>
           <span class="area" data-area={t.area}><T k={`area_${t.area}`} /></span>
-          <span class="tldr-text"><Inline text={t.text} /></span>
+          <span class="tldr-text"><Inline text={t.text} terms={glossary} /></span>
         </li>
       ))}
     </ul>
@@ -44,116 +79,134 @@ const glossary = (terms?: { term: string; def: string }[]) => terms ?? [];
   <section id="top" class="block">
     <h2><T k="top" /></h2>
     <div class="bento">
-      {issue.top.map((s, i) => (
-        <article class={`card story${i === 0 ? ' feature' : ''}`} data-area={s.area} style={`--span:${topSpans[i]}`} id={s.id}>
-          <header class="card-head">
-            <span class="area" data-area={s.area}><T k={`area_${s.area}`} /></span>
-            <span class={`ev ev-${s.evidence.type}`}><T k={`ev_${s.evidence.type}`} /></span>
-          </header>
-          <h3><Inline text={s.title} /></h3>
-          <p class="gist"><Inline text={s.gist} terms={s.terms} /></p>
-          <p class="why"><strong><T k="why" />.</strong> <Inline text={s.why} terms={s.terms} /></p>
-          {s.image && <Figure img={s.image} />}
-          <details class="more" open={i === 0}>
-            <summary><T k="details" /></summary>
-            <Evidence e={s.evidence} mode="detail" />
-            {s.didNotShow && <p class="ev-note"><strong><T k="didNotShow" />.</strong> <Inline text={s.didNotShow} /></p>}
-            {s.details?.map((p) => <p class="small"><Inline text={p} terms={s.terms} /></p>)}
-            {glossary(s.terms).length > 0 && (
-              <dl class="glossary">{glossary(s.terms).map((t) => <><dt>{t.term}</dt><dd>{t.def}</dd></>)}</dl>
-            )}
-          </details>
-          <footer class="card-foot">
-            <Sources list={s.sources} />
-            <Feedback id={s.id} section="top" title={s.title} area={s.area} date={d} forYou={s.forYou} />
-          </footer>
-        </article>
-      ))}
+      {issue.top.map((s, i) => {
+        const seen = new Set();
+        const tt = termsFor(s.terms);
+        return (
+          <article class={`card story${i === 0 ? ' feature' : ''}`} data-area={s.area} style={`--span:${topSpans[i]}`} id={s.id}>
+            <header class="card-head">
+              <span class="area" data-area={s.area}><T k={`area_${s.area}`} /></span>
+              <span class={`ev ev-${s.evidence.type}`}><T k={`ev_${s.evidence.type}`} /></span>
+            </header>
+            <h3><Inline text={s.title} /></h3>
+            <p class="gist"><Inline text={s.gist} terms={tt} seen={seen} /></p>
+            <p class="why"><strong><T k="why" />.</strong> <Inline text={s.why} terms={tt} seen={seen} /></p>
+            {s.image && <Figure img={s.image} />}
+            {s.diagram && <Diagram d={s.diagram} />}
+            <details class="more" open={i === 0}>
+              <summary><T k="details" /></summary>
+              <Evidence e={s.evidence} mode="detail" />
+              {s.didNotShow && <p class="ev-note"><strong><T k="didNotShow" />.</strong> <Inline text={s.didNotShow} terms={tt} seen={seen} /></p>}
+              {s.details?.map((p) => <p class="small"><Inline text={p} terms={tt} seen={seen} /></p>)}
+            </details>
+            <footer class="card-foot">
+              <Cta list={s.sources} kind={ctaKind(s.sources, s.evidence.type)} />
+              <Feedback id={s.id} section="top" title={s.title} area={s.area} date={d} forYou={s.forYou} />
+            </footer>
+          </article>
+        );
+      })}
     </div>
   </section>
 
   <section id="bench" class="block">
     <h2><T k="bench" /></h2>
     <div class="bento">
-      {issue.bench.map((b, i) => (
-        <article class="card bench" data-area={b.area} style={`--span:${benchSpans[i]}`} id={b.id}>
-          <header class="card-head">
-            <span class="area" data-area={b.area}><T k={`area_${b.area}`} /></span>
-          </header>
-          <h3><Inline text={b.headline} /></h3>
-          <p class="paper-title"><Inline text={b.title} /></p>
-          <p class="paper-meta">{b.authors} &middot; {b.venue}, <time datetime={b.published}>{formatDate(b.published)}</time></p>
-          <Evidence e={b.evidence} mode="line" />
-          <div class="keyresult">
-            <span class="keyresult-label"><T k="result" /></span>
-            <p><Inline text={b.result} terms={b.terms} /></p>
-          </div>
-          {b.image && <Figure img={b.image} />}
-          <details class="more">
-            <summary><T k="details" /></summary>
-            <dl class="bench-grid">
-              <dt><T k="question" /></dt><dd><Inline text={b.question} terms={b.terms} /></dd>
-              <dt><T k="approach" /></dt><dd><Inline text={b.approach} terms={b.terms} /></dd>
-              <dt><T k="model" /></dt><dd><Inline text={b.model} terms={b.terms} /></dd>
-              <dt><T k="limitations" /></dt><dd><Inline text={b.limitations} terms={b.terms} /></dd>
-              <dt><T k="meaning" /></dt><dd><Inline text={b.meaning} terms={b.terms} /></dd>
-            </dl>
-            <Evidence e={b.evidence} mode="notes" hideLimitation />
+      {issue.bench.map((b, i) => {
+        const seen = new Set();
+        const tt = termsFor(b.terms);
+        return (
+          <article class="card bench" data-area={b.area} style={`--span:${benchSpans[i]}`} id={b.id}>
+            <header class="card-head">
+              <span class="area" data-area={b.area}><T k={`area_${b.area}`} /></span>
+            </header>
+            <h3><Inline text={b.headline} terms={tt} seen={seen} /></h3>
+            <p class="paper-title"><Inline text={b.title} /></p>
+            <p class="paper-meta">{b.authors} &middot; {b.venue}, <time datetime={b.published}>{formatDate(b.published)}</time></p>
+            <Evidence e={b.evidence} mode="line" />
+            <div class="keyresult">
+              <span class="keyresult-label"><T k="result" /></span>
+              <p><Inline text={b.result} terms={tt} seen={seen} /></p>
+            </div>
+            {b.image && <Figure img={b.image} />}
             {b.diagram && <Diagram d={b.diagram} />}
-          </details>
-          <footer class="card-foot">
-            <Sources list={b.sources} />
-            <Feedback id={b.id} section="bench" title={b.title} area={b.area} date={d} forYou={b.forYou} />
-          </footer>
-        </article>
-      ))}
+            <details class="more">
+              <summary><T k="details" /></summary>
+              <dl class="bench-grid">
+                <dt><T k="question" /></dt><dd><Inline text={b.question} terms={tt} seen={seen} /></dd>
+                <dt><T k="approach" /></dt><dd><Inline text={b.approach} terms={tt} seen={seen} /></dd>
+                <dt><T k="model" /></dt><dd><Inline text={b.model} terms={tt} seen={seen} /></dd>
+                <dt><T k="limitations" /></dt><dd><Inline text={b.limitations} terms={tt} seen={seen} /></dd>
+                <dt><T k="meaning" /></dt><dd><Inline text={b.meaning} terms={tt} seen={seen} /></dd>
+              </dl>
+              <Evidence e={b.evidence} mode="notes" hideLimitation />
+            </details>
+            <footer class="card-foot">
+              <Cta list={b.sources} kind="paper" />
+              <Feedback id={b.id} section="bench" title={b.title} area={b.area} date={d} forYou={b.forYou} />
+            </footer>
+          </article>
+        );
+      })}
     </div>
   </section>
 
   <div class="bento pair">
-    <section id="method" class="card method block-card" data-area={issue.method.field} style="--span:3">
-      <h2 class="card-title"><T k="method" /></h2>
-      <h3><Inline text={issue.method.title} /></h3>
-      <p class="gist"><Inline text={issue.method.gist} terms={issue.method.terms} /></p>
-      <p class="small"><strong><T k="useWhen" />.</strong> <Inline text={issue.method.useWhen} /></p>
-      <details class="more" open>
-        <summary><T k="steps" /></summary>
-        <ol class="steps">
-          {issue.method.steps.map((s) => <li><strong>{s.title}.</strong> <Inline text={s.text} terms={issue.method.terms} /></li>)}
-        </ol>
-        {issue.method.pitfalls && (
-          <>
-            <h4><T k="pitfalls" /></h4>
-            <ul class="small">{issue.method.pitfalls.map((p) => <li><Inline text={p} /></li>)}</ul>
-          </>
-        )}
-      </details>
-      <p class="safety"><strong><T k="safety" />.</strong> <Inline text={issue.method.safety} /></p>
-      <footer class="card-foot">
-        <Sources list={[issue.method.source]} label="source" />
-        <Feedback id={issue.method.id} section="method" title={issue.method.title} area={issue.method.field} date={d} forYou={issue.method.forYou} />
-      </footer>
-    </section>
+    {(() => {
+      const seen = new Set();
+      const tt = termsFor(issue.method.terms);
+      return (
+        <section id="method" class="card method block-card" data-area={issue.method.field} style="--span:3">
+          <h2 class="card-title"><T k="method" /></h2>
+          <h3><Inline text={issue.method.title} /></h3>
+          <p class="gist"><Inline text={issue.method.gist} terms={tt} seen={seen} /></p>
+          <p class="small"><strong><T k="useWhen" />.</strong> <Inline text={issue.method.useWhen} terms={tt} seen={seen} /></p>
+          <details class="more" open>
+            <summary><T k="steps" /></summary>
+            <ol class="steps">
+              {issue.method.steps.map((s) => <li><strong>{s.title}.</strong> <Inline text={s.text} terms={tt} seen={seen} /></li>)}
+            </ol>
+            {issue.method.pitfalls && (
+              <>
+                <h4><T k="pitfalls" /></h4>
+                <ul class="small">{issue.method.pitfalls.map((p) => <li><Inline text={p} terms={tt} seen={seen} /></li>)}</ul>
+              </>
+            )}
+          </details>
+          <p class="safety"><strong><T k="safety" />.</strong> <Inline text={issue.method.safety} /></p>
+          <footer class="card-foot">
+            <Cta list={[issue.method.source]} kind="protocol" />
+            <Feedback id={issue.method.id} section="method" title={issue.method.title} area={issue.method.field} date={d} forYou={issue.method.forYou} />
+          </footer>
+        </section>
+      );
+    })()}
 
-    <section id="learn" class="card learn block-card" data-area="other" style="--span:3">
-      <h2 class="card-title"><T k="learn" /></h2>
-      <h3><Inline text={issue.learn.question} /></h3>
-      <p class="gist"><Inline text={issue.learn.answer} terms={issue.learn.terms} /></p>
-      {issue.learn.diagram && <Diagram d={issue.learn.diagram} />}
-      {issue.learn.image && <Figure img={issue.learn.image} />}
-      {issue.learn.analogy && <p class="analogy"><strong><T k="analogy" />:</strong> <Inline text={issue.learn.analogy} /></p>}
-      <details class="more" open>
-        <summary><T k="details" /></summary>
-        {issue.learn.body.map((p) => <p class="small"><Inline text={p} terms={issue.learn.terms} /></p>)}
-        {issue.learn.seenIn && issue.learn.seenIn.length > 0 && (
-          <p class="small"><T k="seenIn" />: {issue.learn.seenIn.map((id, i) => <>{i > 0 && ', '}<a href={`#${id}`}>{id}</a></>)}</p>
-        )}
-      </details>
-      <footer class="card-foot">
-        <Sources list={issue.learn.sources} />
-        <Feedback id="learn" section="learn" title={issue.learn.question} date={d} />
-      </footer>
-    </section>
+    {(() => {
+      const seen = new Set();
+      const tt = termsFor(issue.learn.terms);
+      return (
+        <section id="learn" class="card learn block-card" data-area="other" style="--span:3">
+          <h2 class="card-title"><T k="learn" /></h2>
+          <h3><Inline text={issue.learn.question} /></h3>
+          <p class="gist"><Inline text={issue.learn.answer} terms={tt} seen={seen} /></p>
+          {issue.learn.diagram && <Diagram d={issue.learn.diagram} />}
+          {issue.learn.image && <Figure img={issue.learn.image} />}
+          {issue.learn.analogy && <p class="analogy"><strong><T k="analogy" />:</strong> <Inline text={issue.learn.analogy} /></p>}
+          <details class="more" open>
+            <summary><T k="details" /></summary>
+            {issue.learn.body.map((p) => <p class="small"><Inline text={p} terms={tt} seen={seen} /></p>)}
+            {issue.learn.seenIn && issue.learn.seenIn.length > 0 && (
+              <p class="small"><T k="seenIn" />: {issue.learn.seenIn.map((id, i) => <>{i > 0 && ', '}<a href={`#${id}`}>{id}</a></>)}</p>
+            )}
+          </details>
+          <footer class="card-foot">
+            <Cta list={issue.learn.sources} kind={ctaKind(issue.learn.sources)} />
+            <Feedback id="learn" section="learn" title={issue.learn.question} date={d} />
+          </footer>
+        </section>
+      );
+    })()}
   </div>
 
   <section id="trials" class="block">
@@ -167,11 +220,11 @@ const glossary = (terms?: { term: string; def: string }[]) => terms ?? [];
               <span class={`chg chg-${it.t.change}`}><T k={`change_${it.t.change}`} /></span>
             </header>
             <h3><Inline text={it.t.title} /></h3>
-            <p class="small"><Inline text={it.t.what} /></p>
+            <p class="small"><Inline text={it.t.what} terms={glossary} /></p>
             <p class="facts"><span><T k="phase" /> {it.t.phase}</span><span><T k="status" />: {it.t.status}</span><span>{it.t.nct}</span></p>
             <p class="facts"><span>{it.t.who}</span><span><T k="sponsor" />: {it.t.sponsor}</span></p>
             <footer class="card-foot">
-              <Sources list={it.t.sources} />
+              <Cta list={it.t.sources} kind="trial" />
               <Feedback id={it.t.id} section="trials" title={it.t.title} area={it.t.area} date={d} />
             </footer>
           </article>
@@ -189,7 +242,7 @@ const glossary = (terms?: { term: string; def: string }[]) => terms ?? [];
             </p>
             <p class="small"><strong><T k="eligibility" />.</strong> <Inline text={it.c.eligibility} /></p>
             <footer class="card-foot">
-              <Sources list={it.c.sources} />
+              <Cta list={it.c.sources} kind="call" />
               <Feedback id={it.c.id} section="funding" title={it.c.title} area={it.c.area} date={d} />
             </footer>
           </article>
@@ -208,10 +261,10 @@ const glossary = (terms?: { term: string; def: string }[]) => terms ?? [];
             <span class="chg"><T k={`kind_${c.kind}`} /></span>
           </header>
           <h3><Inline text={c.title} /></h3>
-          <p class="small"><Inline text={c.gist} /></p>
+          <p class="small"><Inline text={c.gist} terms={glossary} /></p>
           <p class="signal">{c.where}: {c.signal}</p>
           <footer class="card-foot">
-            <Sources list={c.sources} />
+            <Cta list={c.sources} kind={ctaKind(c.sources)} />
             <Feedback id={c.id} section="chatter" title={c.title} area={c.area} date={d} />
           </footer>
         </article>
@@ -220,22 +273,29 @@ const glossary = (terms?: { term: string; def: string }[]) => terms ?? [];
   </section>
 
   <div class="bento pair">
-    <section id="curiosity" class="card curiosity block-card" data-area="curiosity" style="--span:4">
-      <h2 class="card-title"><T k="curiosity" /></h2>
-      <h3><Inline text={issue.curiosity.title} /></h3>
-      <p class="gist"><Inline text={issue.curiosity.gist} /></p>
-      <Evidence e={issue.curiosity.evidence} mode="line" />
-      {issue.curiosity.image && <Figure img={issue.curiosity.image} />}
-      <details class="more">
-        <summary><T k="details" /></summary>
-        {issue.curiosity.body.map((p) => <p class="small"><Inline text={p} /></p>)}
-        <Evidence e={issue.curiosity.evidence} mode="notes" />
-      </details>
-      <footer class="card-foot">
-        <Sources list={issue.curiosity.sources} />
-        <Feedback id={issue.curiosity.id} section="curiosity" title={issue.curiosity.title} area={issue.curiosity.area} date={d} />
-      </footer>
-    </section>
+    {(() => {
+      const seen = new Set();
+      const tt = termsFor(issue.curiosity.terms);
+      return (
+        <section id="curiosity" class="card curiosity block-card" data-area="curiosity" style="--span:4">
+          <h2 class="card-title"><T k="curiosity" /></h2>
+          <h3><Inline text={issue.curiosity.title} /></h3>
+          <p class="gist"><Inline text={issue.curiosity.gist} terms={tt} seen={seen} /></p>
+          <Evidence e={issue.curiosity.evidence} mode="line" />
+          {issue.curiosity.image && <Figure img={issue.curiosity.image} />}
+          {issue.curiosity.diagram && <Diagram d={issue.curiosity.diagram} />}
+          <details class="more">
+            <summary><T k="details" /></summary>
+            {issue.curiosity.body.map((p) => <p class="small"><Inline text={p} terms={tt} seen={seen} /></p>)}
+            <Evidence e={issue.curiosity.evidence} mode="notes" />
+          </details>
+          <footer class="card-foot">
+            <Cta list={issue.curiosity.sources} kind={ctaKind(issue.curiosity.sources, issue.curiosity.evidence.type)} />
+            <Feedback id={issue.curiosity.id} section="curiosity" title={issue.curiosity.title} area={issue.curiosity.area} date={d} />
+          </footer>
+        </section>
+      );
+    })()}
 
     <section id="jobs" class="card jobs block-card" data-area="other" style="--span:2">
       <h2 class="card-title"><T k="jobs" /></h2>
@@ -250,12 +310,27 @@ const glossary = (terms?: { term: string; def: string }[]) => terms ?? [];
             {j.deadline && <span><T k="deadline" />: <time data-date={j.deadline} datetime={j.deadline}>{formatDate(j.deadline)}</time></span>}
           </p>
           <p class="small"><strong><T k="fit" />.</strong> <Inline text={j.fit} /></p>
-          <Sources list={j.sources} label="source" />
+          <Cta list={j.sources} kind="posting" />
           <Feedback id={j.id} section="jobs" title={j.title} date={d} />
         </div>
       ))}
     </section>
   </div>
+
+  {glossary.length > 0 && (
+    <section id="glossary" class="block glossary-block">
+      <h2><T k="glossary" /></h2>
+      <p class="glossary-intro"><T k="glossaryIntro" /></p>
+      <dl class="glossary-list">
+        {glossary.map((t) => (
+          <div class="gl-entry" id={`term-${slug(t.term)}`}>
+            <dt>{t.term}</dt>
+            <dd>{t.def}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  )}
 
   {issue.note && <p class="colophon"><Inline text={issue.note} /></p>}
 </article>

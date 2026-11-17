@@ -29,6 +29,8 @@ const rules = JSON.parse(readFileSync(join(root, 'config', 'rules.json'), 'utf8'
 const topics = existsSync(join(root, 'config', 'topics.json')) ? JSON.parse(readFileSync(join(root, 'config', 'topics.json'), 'utf8')) : null;
 const re = (list) => list.map((p) => new RegExp(p, 'i'));
 const BANNED = new RegExp(`\\b(${rules.bannedWords.map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`, 'i');
+const FILLER = new RegExp(`\\b(${(rules.fillerWords ?? ['seamless']).map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`, 'i');
+const PLAIN_FIELDS = /(^|\.)(gist|why|answer|headline|text)$/; // tldr text too
 const ADVICE = re(rules.medicalAdvicePatterns);
 const PRIVATE = re(rules.privatePatterns);
 const READER = re(rules.publicReaderPatterns);
@@ -57,7 +59,7 @@ const isRealTitle = (path) => /(^|\.)bench\[\d+\]\.title$/.test(path) || /\.sour
 // ------------------------------------------------------------ source files and catalogues
 function* walk(dir) {
   for (const name of readdirSync(dir)) {
-    if (['node_modules', 'dist', '.git', '.astro', '.cache', 'inbox', 'package-lock.json'].includes(name)) continue;
+    if (['node_modules', 'dist', '.git', '.astro', '.cache', '.claude', '.taste-skill', 'inbox', 'package-lock.json'].includes(name)) continue;
     const p = join(dir, name);
     const st = statSync(p);
     if (st.isDirectory()) yield* walk(p);
@@ -81,6 +83,11 @@ function checkText(label, doc, { isIssue }) {
   for (const [path, s] of strings(doc)) {
     if (path.endsWith('.url') || path.endsWith('.creditUrl') || path.endsWith('.doi') || path.endsWith('.src') || path.endsWith('.nct')) continue;
     if (!isRealTitle(path) && BANNED.test(s)) err(`${label} ${path}: hype word "${s.match(BANNED)[0]}"`);
+    if (!isRealTitle(path) && FILLER.test(s)) warn(`${label} ${path}: filler word "${s.match(FILLER)[0]}" (say what it does instead)`);
+    if (PLAIN_FIELDS.test(path) && !/steps\[\d+\]\.text$/.test(path)) {
+      const long = s.split(/(?<=[.!?])\s+/).find((x) => x.split(/\s+/).length > 32);
+      if (long) warn(`${label} ${path}: a sentence of ${long.split(/\s+/).length} words; split it (aim under 20)`);
+    }
     for (const r of ADVICE) if (r.test(s)) err(`${label} ${path}: reads like medical advice (${r})`);
     for (const r of PRIVATE) if (r.test(s)) err(`${label} ${path}: private detail matches ${r}`);
     if (!isForYou(path)) for (const r of READER) if (r.test(s)) err(`${label} ${path}: public text addresses a single reader (${r}); move it to forYou`);
@@ -92,7 +99,8 @@ function checkText(label, doc, { isIssue }) {
   // evidence agrees with sources
   const items = [...doc.top.map((x, i) => [`top[${i}]`, x]), ...doc.bench.map((x, i) => [`bench[${i}]`, x]), ['curiosity', doc.curiosity]];
   for (const [p, it] of items) {
-    const pre = it.sources.some((s) => hostIn(host(s.url), rules.preprintHosts));
+    const preDoi = (s) => (rules.preprintDoiPrefixes ?? []).some((x) => (s.doi ?? s.url.replace(/^https:\/\/(dx\.)?doi\.org\//, '')).toLowerCase().startsWith(x));
+    const pre = it.sources.some((s) => hostIn(host(s.url), rules.preprintHosts) || preDoi(s));
     if (pre && !['preprint', 'news', 'press-release', 'commentary'].includes(it.evidence.type)) err(`${label} ${p}: cites a preprint server but evidence is "${it.evidence.type}"`);
     if (!pre && it.evidence.type === 'preprint' && it.sources.length === 1 && !/rxiv|arxiv|preprint/i.test(it.sources[0].url)) warn(`${label} ${p}: labelled preprint but the source is not a preprint server`);
   }
@@ -116,11 +124,17 @@ function checkText(label, doc, { isIssue }) {
   if (!getPalette(doc.palette)) err(`${label}: unknown palette "${doc.palette}"`);
   // readability warnings
   const defined = (item) => new Set((item.terms ?? []).map((t) => t.term.toLowerCase()));
+  // The page underlines terms defined anywhere in the issue, so count those too.
+  const glossaryTerms = [...doc.top, ...doc.bench, doc.method, doc.learn, doc.curiosity].flatMap((x) => (x.terms ?? []).map((t) => t.term.toLowerCase()));
   for (const s of doc.top) {
     if (s.gist.split(/\s+/).length > 32) warn(`${label} ${s.id}: gist over 32 words`);
-    const d = defined(s);
-    for (const m of new Set(s.gist.match(/\b[A-Z]{2,6}[a-z]?\b/g) ?? [])) {
-      if (!rules.acronymAllowlist.includes(m) && !d.has(m.toLowerCase())) warn(`${label} ${s.id}: acronym ${m} in the gist is not defined in terms`);
+    // Whole tokens such as IL-18, GLP-1, TROP-2 or ALS/PDC; defined when a term contains the token.
+    const d = [...defined(s), ...glossaryTerms];
+    for (const m of new Set(s.gist.match(/(?<![\w-])[A-Z]{2,6}[a-z]?(?:[-/][A-Z0-9]{1,6})*(?![\w-]*[a-z])/g) ?? [])) {
+      const base = m.split(/[-/]/)[0];
+      if (rules.acronymAllowlist.includes(m) || rules.acronymAllowlist.includes(base)) continue;
+      if (d.some((t) => t.includes(m.toLowerCase()))) continue;
+      warn(`${label} ${s.id}: acronym ${m} in the gist is not defined in terms`);
     }
   }
 }

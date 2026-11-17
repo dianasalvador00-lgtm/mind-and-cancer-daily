@@ -27,7 +27,8 @@ Read first:
 ## Budget (this runs on a Pro subscription, so stay lean)
 
 - The sweep already did all fetching, filtering, scoring and dedupe. Read `inbox/<today>.brief.json`
-  only. Do not read the full `inbox/<today>.json`.
+  only. The full `inbox/<today>.json` is not in the repository (it is kept as a 7-day GitHub Actions
+  artifact) and you do not need it.
 - You (Sonnet) do the editing and writing. Use **at most 3 helper subagents, each with
   `model: "haiku"`**, for reading sources. Do not use any other model for helpers.
 - Open a source only when the item may go into the issue. Prefer `node scripts/read-paper.mjs`
@@ -104,11 +105,18 @@ limitations of the bench papers), because the issue is published without human r
 - Choose 6 to 10 top stories, 2 to 4 bench papers, 1 method, 1 learn concept, trials and funding
   (at least one entry), 3 to 6 chatter items, 1 curiosity, and 0 to 8 jobs.
 - Check the area mix of the whole issue against the targets. Lead with the day's strongest item.
-- Write following `routine/WRITING.md`: gist first, evidence label, limitation, "what it did not show",
-  jargon defined in `terms`, depth in `details`, `forYou` generic.
+- Write following `routine/WRITING.md`, especially "Plain language": one idea per sentence, the gist
+  answers what, in whom, what was found (with the number and unit) and how strong the evidence is,
+  every technical word defined once in `terms` (2 to 6 a card; the page underlines them and builds the
+  Key terms list), depth in `details`, `forYou` generic.
+- Put the primary source first on every card with its `doi`, and set `access` ("open" or "paywall")
+  from what you read: the page turns it into a "Read the paper" button with a Free to read tag.
 - Pick a `palette` id from `src/kit/palette.mjs` that was not used in the last 7 issues.
-- Images: at most a few, only open-licence figures (see WRITING.md). A diagram for Learn one thing.
-  Otherwise no picture. Open every preview in `.cache/preview/` and look at it.
+- Visuals: 2 to 4 an issue (see "Pictures and diagrams" in WRITING.md). Always a diagram for Learn one
+  thing; add a `compare` diagram for a headline number against its control, a `timeline` for a trial or
+  disease course, or a `flow` for a mechanism, on the top story or bench paper it explains. Real images
+  only with an allowed licence, found with `node scripts/find-images.mjs paper|page|commons ...`. Open
+  every preview in `.cache/preview/` and look at it.
 
 ## 5. Write the files
 

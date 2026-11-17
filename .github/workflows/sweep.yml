@@ -36,10 +36,18 @@ jobs:
         env:
           # Optional free key from ncbi.nlm.nih.gov; PubMed works without it, only slower.
           NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
-      - name: Commit the inbox
+      - name: Keep the full sweep for 7 days (not committed)
+        uses: actions/upload-artifact@v4
+        with:
+          name: inbox-${{ env.TODAY }}
+          path: inbox/${{ env.TODAY }}.json
+          retention-days: 7
+      - name: Retention (7 issues, 4 weeks, 7 days of inbox and images)
+        run: node scripts/prune.mjs
+      - name: Commit the brief and any pruning
         run: |
           git config user.name "sweep-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add inbox
+          git add -A inbox data public/img
           git diff --cached --quiet || git commit -m "inbox: candidates for $TODAY"
           for i in 1 2 3; do git pull --rebase origin main && git push && break; sleep 5; done

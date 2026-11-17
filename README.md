@@ -37,8 +37,7 @@ data/issues/<date>.json     one issue per day (kept 7)
 data/weeks/<id>.json        Sunday summary (kept 4)
 data/seen.json              90 day memory of featured items, so nothing repeats
 public/img/<date>/          open-licence figures, always credited
-inbox/<date>.json           full sweep output (kept 7 days)
-inbox/<date>.brief.json     the shortlist the daily run reads
+inbox/<date>.brief.json     the shortlist the daily run reads (kept 7 days; the full sweep is a 7-day Actions artifact, not committed)
 editorial/taste.md          the reader profile: what earns a place
 editorial/feedback.md       More/Less like this feedback, folded in each morning
 editorial/notebook.md       the daily run's craft memory
@@ -49,8 +48,27 @@ routine/PROMPT.md           the daily procedure
 routine/WRITING.md          section formats and the science writing rules
 src/kit/schema.mjs          the issue contract (enforced at validate and build)
 src/kit/palette.mjs         the daily colour pairs, checked for contrast and colour blindness
-scripts/                    sweep, validate, prune, shoot, read-paper, fetch-image
+scripts/                    sweep, validate, prune, shoot, read-paper, find-images, fetch-image
 ```
+
+## Reading the site
+
+- Every card opens with one plain sentence, then why it matters. **Details** opens the evidence label,
+  sample size, limitations and what the study did not show.
+- **Underlined words** show a one-sentence definition on hover, keyboard focus or tap. Every term of
+  the issue is also listed under **Key terms** at the end.
+- The button at the bottom of each card opens the **full source** (Read the paper, Open the trial
+  record, Read the article), with a **Free to read** tag when the full text is open access, and its DOI.
+- Pictures are real figures from the sources or Wikimedia Commons, used only under an open licence and
+  credited, or diagrams drawn from the source's own numbers (flow, cycle, layers, hub, timeline,
+  compare). Nothing is generated.
+
+## Retention
+
+The site keeps the last 7 daily issues and 4 Sunday summaries. The sweep prunes every morning, so this
+holds even when a daily run fails: issues, images and shortlists older than 7 days are deleted, and the
+full sweep output is never committed (it is a GitHub Actions artifact that expires after 7 days).
+`data/seen.json` keeps only the identifiers of featured items for 90 days, so nothing repeats.
 
 ## Working on it
 

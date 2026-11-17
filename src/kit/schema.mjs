@@ -14,7 +14,8 @@ const doi = z.string().regex(/^10\.\d{4,9}\/\S+$/, 'bare DOI like 10.1000/xyz');
 const imagePath = z.string().regex(/^img\/\d{4}-\d{2}-\d{2}\/[a-z0-9-]+\.webp$/, 'img/<date>/<slug>.webp');
 
 export const Area = z.enum(AREAS);
-export const Source = z.object({ label: text(80), url, doi: doi.optional() }).strict();
+// access: 'open' when the full text is free to read (open access), 'paywall' when it is not.
+export const Source = z.object({ label: text(80), url, doi: doi.optional(), access: z.enum(['open', 'paywall']).optional() }).strict();
 export const Term = z.object({ term: text(40), def: text(200) }).strict();
 
 export const EVIDENCE_TYPES = [
@@ -45,19 +46,24 @@ export const Image = z
     alt: text(200),
     credit: text(160),
     creditUrl: url,
-    licence: z.enum(['CC-BY', 'CC-BY-SA', 'CC0', 'public-domain', 'US-gov']),
+    // NC licences are allowed because this site is non-commercial (no ads, no sales). Never ND.
+    licence: z.enum(['CC-BY', 'CC-BY-SA', 'CC-BY-NC', 'CC-BY-NC-SA', 'CC0', 'public-domain', 'US-gov']),
     fit: z.enum(['contain', 'cover']).default('contain'),
   })
   .strict();
 
+// flow: steps left to right; layers: a stack; hub: a centre (key) and its parts; cycle: a loop;
+// timeline: dated steps (label = the date or phase); compare: 2 to 4 things side by side
+// (label = the short value or name, note = what it is).
 export const Diagram = z
   .object({
-    layout: z.enum(['flow', 'layers', 'hub', 'cycle']),
+    layout: z.enum(['flow', 'layers', 'hub', 'cycle', 'timeline', 'compare']),
     nodes: z.array(z.object({ label: text(30), note: text(80).optional(), key: z.boolean().optional() }).strict()).min(2).max(8),
     links: z.array(text(30)).max(8).optional(),
     caption: text(200),
   })
-  .strict();
+  .strict()
+  .refine((d) => d.layout !== 'compare' || d.nodes.length <= 4, { message: 'a compare diagram holds 2 to 4 nodes', path: ['nodes'] });
 
 const forYou = text(240).optional();
 const terms = z.array(Term).max(6).optional();
@@ -76,6 +82,7 @@ export const TopStory = z
     didNotShow: text(240).optional(),
     terms,
     image: Image.optional(),
+    diagram: Diagram.optional(),
     sources: sources(4),
     forYou,
   })
@@ -189,7 +196,9 @@ export const Curiosity = z
     gist: text(240),
     body: paras(2, 500),
     evidence: Evidence,
+    terms,
     image: Image.optional(),
+    diagram: Diagram.optional(),
     sources: sources(3),
   })
   .strict();

@@ -6,6 +6,20 @@ the repo from it, in the order of section 12, committing after each step.
 
 Owner: Diana Salvador (PhD researcher). Site text in English; interface switchable to PT-PT.
 
+## Changes since the build (the schema and `routine/` files win over this plan)
+
+- 2026-11-16: bento layout (6-column grid of cards, `src/kit/bento.ts`).
+- 2026-11-17: readability pass. Terms defined anywhere in an issue are underlined at first use in
+  every card with a positioned tooltip (hover, focus, tap), and listed in a Key terms section. Each
+  card ends with a button to its primary source (`Cta.astro`) and a Free to read tag (`access` on
+  `Source`). Diagrams gain `timeline` and `compare` layouts and are allowed on top stories and the
+  curiosity. Image licences gain CC-BY-NC and CC-BY-NC-SA (the site is non-commercial).
+  `scripts/find-images.mjs` finds licensed images (paper figures, source pages, Wikimedia Commons).
+  The full sweep output is no longer committed (7-day Actions artifact) and the sweep runs prune
+  daily. Violet palettes were replaced. Design rules taken from the taste-skill where they fit a
+  reading site (plain copy, one card system, no all-caps labels, 44px targets); its landing-page
+  rules (one section per screen, hero entrance, stand-in photographs, effects) do not apply.
+
 ---
 
 ## 1. Goal and reader

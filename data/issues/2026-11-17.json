@@ -3,13 +3,28 @@
   "number": 2,
   "title": "A TGF-beta trap for fibrotic tumours, and sleep-like brain waves in Parkinson's",
   "dek": "A drug anchored to tumour matrix wakes up T cells in mice, a blood marker for pancreatic cancer recurrence shows up months before scans, and daytime slow waves track hallucinations in Parkinson's disease.",
-  "palette": "moss-violet",
+  "palette": "pine-copper",
   "tldr": [
-    { "text": "A TGF-beta trap that sticks to tumour matrix cleared fibrotic mouse tumours and left lasting immune memory, with less whole-body effect than the free drug.", "area": "cancer" },
-    { "text": "In a pancreatic cancer preprint, KRAS DNA in blood after surgery flagged recurrence a median 7.6 months before imaging did.", "area": "cancer" },
-    { "text": "In 84 people with Parkinson's, more daytime sleep-like slow waves went with more hallucinations and poorer cognition.", "area": "mind" },
-    { "text": "A phase 3 lung cancer trial reports median PFS of 15 months with a TROP-2 drug plus pembrolizumab, versus 5.7 with chemotherapy.", "area": "cancer" },
-    { "text": "A vagus nerve and liver route that raises blood creatine drove manic-like behaviour in mice, and creatine was also higher in people with bipolar disorder.", "area": "mind" }
+    {
+      "text": "A TGF-beta trap that sticks to tumour matrix cleared fibrotic mouse tumours and left lasting immune memory, with less whole-body effect than the free drug.",
+      "area": "cancer"
+    },
+    {
+      "text": "In a pancreatic cancer preprint, KRAS DNA in blood after surgery flagged recurrence a median 7.6 months before imaging did.",
+      "area": "cancer"
+    },
+    {
+      "text": "In 84 people with Parkinson's, more daytime sleep-like slow waves went with more hallucinations and poorer cognition.",
+      "area": "mind"
+    },
+    {
+      "text": "A phase 3 lung cancer trial reports median PFS of 15 months with a TROP-2 drug plus pembrolizumab, versus 5.7 with chemotherapy.",
+      "area": "cancer"
+    },
+    {
+      "text": "A vagus nerve and liver route that raises blood creatine drove manic-like behaviour in mice, and creatine was also higher in people with bipolar disorder.",
+      "area": "mind"
+    }
   ],
   "top": [
     {
@@ -30,11 +45,21 @@
       ],
       "didNotShow": "It did not show benefit in people, in pancreatic cancer specifically, or how big the effect was, since numbers were not in the abstract.",
       "terms": [
-        { "term": "TGF-beta", "def": "A signalling protein that, in tumours, helps scar-like tissue form and keeps immune cells quiet." },
-        { "term": "immune excluded", "def": "A tumour pattern where T cells gather at the edge but cannot get inside." }
+        {
+          "term": "TGF-beta",
+          "def": "A signalling protein that, in tumours, helps scar-like tissue form and keeps immune cells quiet."
+        },
+        {
+          "term": "immune excluded",
+          "def": "A tumour pattern where T cells gather at the edge but cannot get inside."
+        }
       ],
       "sources": [
-        { "label": "Cancer Cell, Kang et al.", "url": "https://doi.org/10.1016/j.ccell.2026.10.007", "doi": "10.1016/j.ccell.2026.10.007" }
+        {
+          "label": "Cancer Cell, Kang et al.",
+          "url": "https://doi.org/10.1016/j.ccell.2026.10.007",
+          "doi": "10.1016/j.ccell.2026.10.007"
+        }
       ],
       "forYou": "Relevant to targeting payloads to dense tumour stroma and to combining stroma remodelling with immunotherapy."
     },
@@ -51,13 +76,42 @@
       "why": "If the full data hold up, a TROP-2 antibody-drug conjugate could replace platinum chemotherapy in this group, which has few good options beyond chemotherapy with an immune checkpoint drug.",
       "didNotShow": "Not confirmed here: overall survival, toxicity compared with chemotherapy, and how the result looks across subgroups.",
       "terms": [
-        { "term": "antibody-drug conjugate", "def": "An antibody that carries a toxic drug and delivers it to cells that carry the antibody's target." },
-        { "term": "progression-free survival", "def": "The time patients live without their cancer growing or spreading." }
+        {
+          "term": "antibody-drug conjugate",
+          "def": "An antibody that carries a toxic drug and delivers it to cells that carry the antibody's target."
+        },
+        {
+          "term": "progression-free survival",
+          "def": "The time patients live without their cancer growing or spreading."
+        },
+        {
+          "term": "pembrolizumab",
+          "def": "An immune checkpoint drug that blocks PD-1 so T cells can attack tumour cells."
+        }
       ],
       "sources": [
-        { "label": "Cancer Discovery news", "url": "https://doi.org/10.1158/2159-8290.cd-nw2026-0107", "doi": "10.1158/2159-8290.cd-nw2026-0107" }
+        {
+          "label": "Cancer Discovery news",
+          "url": "https://doi.org/10.1158/2159-8290.cd-nw2026-0107",
+          "doi": "10.1158/2159-8290.cd-nw2026-0107"
+        }
       ],
-      "forYou": "Relevant to antibody-targeted payload delivery and to how combinations with checkpoint blockade are judged."
+      "forYou": "Relevant to antibody-targeted payload delivery and to how combinations with checkpoint blockade are judged.",
+      "diagram": {
+        "layout": "compare",
+        "nodes": [
+          {
+            "label": "15 months",
+            "note": "antibody-drug conjugate plus pembrolizumab",
+            "key": true
+          },
+          {
+            "label": "5.7 months",
+            "note": "chemotherapy plus pembrolizumab"
+          }
+        ],
+        "caption": "Median progression-free survival in the Opti-TROP-Lung06 trial, as reported by Cancer Discovery news."
+      }
     },
     {
       "id": "metronidazole-fusobacterium-crc",
@@ -72,10 +126,17 @@
       "why": "Antibiotics usually blunt checkpoint drugs. A narrow, timed course aimed at one bacterial network is a different bet, and it makes tumour microbes a possible way to pick patients.",
       "didNotShow": "Not confirmed here: sample size, how PFS compares with a control group, and whether the benefit came from the antibiotic.",
       "terms": [
-        { "term": "microsatellite-stable", "def": "A colorectal tumour type with intact DNA mismatch repair, which usually responds poorly to checkpoint drugs." }
+        {
+          "term": "microsatellite-stable",
+          "def": "A colorectal tumour type with intact DNA mismatch repair, which usually responds poorly to checkpoint drugs."
+        }
       ],
       "sources": [
-        { "label": "Cancer Cell commentary", "url": "https://doi.org/10.1016/j.ccell.2026.10.013", "doi": "10.1016/j.ccell.2026.10.013" }
+        {
+          "label": "Cancer Cell commentary",
+          "url": "https://doi.org/10.1016/j.ccell.2026.10.013",
+          "doi": "10.1016/j.ccell.2026.10.013"
+        }
       ]
     },
     {
@@ -96,10 +157,17 @@
       ],
       "didNotShow": "It did not show lower risk for blood cancers, and it covers women only.",
       "terms": [
-        { "term": "standardised incidence ratio", "def": "Observed cancers divided by the number expected in the general population of the same age and sex." }
+        {
+          "term": "standardised incidence ratio",
+          "def": "Observed cancers divided by the number expected in the general population of the same age and sex."
+        }
       ],
       "sources": [
-        { "label": "Journal of Clinical Oncology", "url": "https://doi.org/10.1200/jco-26-00418", "doi": "10.1200/jco-26-00418" }
+        {
+          "label": "Journal of Clinical Oncology",
+          "url": "https://doi.org/10.1200/jco-26-00418",
+          "doi": "10.1200/jco-26-00418"
+        }
       ]
     },
     {
@@ -119,10 +187,17 @@
       ],
       "didNotShow": "It did not show when the signal first appears over time, or how it would perform in people without symptoms.",
       "terms": [
-        { "term": "extracellular vesicles", "def": "Tiny membrane packages that cells release, carrying RNA and proteins to other cells." }
+        {
+          "term": "extracellular vesicles",
+          "def": "Tiny membrane packages that cells release, carrying RNA and proteins to other cells."
+        }
       ],
       "sources": [
-        { "label": "The Conversation", "url": "https://theconversation.com/early-changes-linked-to-ovarian-cancer-may-leave-a-trace-in-the-blood-new-study-296527" }
+        {
+          "label": "The Conversation",
+          "url": "https://theconversation.com/early-changes-linked-to-ovarian-cancer-may-leave-a-trace-in-the-blood-new-study-296527",
+          "access": "open"
+        }
       ]
     },
     {
@@ -138,10 +213,17 @@
       "why": "Delirium is common in hospitals and linked to later dementia and death. A shared brain signature could give researchers a measurable target for trials.",
       "didNotShow": "A review does not test any treatment, and the abstract says the neurobiology is still not well understood.",
       "terms": [
-        { "term": "EEG slowing", "def": "A shift of brain electrical rhythms toward slower frequencies, seen on scalp recordings." }
+        {
+          "term": "EEG slowing",
+          "def": "A shift of brain electrical rhythms toward slower frequencies, seen on scalp recordings."
+        }
       ],
       "sources": [
-        { "label": "Nature Reviews Neuroscience, Cunningham and Kimchi", "url": "https://doi.org/10.1038/s41583-026-01092-8", "doi": "10.1038/s41583-026-01092-8" }
+        {
+          "label": "Nature Reviews Neuroscience, Cunningham and Kimchi",
+          "url": "https://doi.org/10.1038/s41583-026-01092-8",
+          "doi": "10.1038/s41583-026-01092-8"
+        }
       ]
     },
     {
@@ -156,7 +238,11 @@
       "why": "The hippocampus is the usual early site in Alzheimer's imaging studies. An earlier marker could help find people for prevention trials.",
       "didNotShow": "Not confirmed here: which regions, how many people were scanned, and whether the signal predicts who develops symptoms.",
       "sources": [
-        { "label": "Medical Xpress", "url": "https://medicalxpress.com/news/2026-11-brain-scans-reveal-regions-hippocampus.html" }
+        {
+          "label": "Medical Xpress",
+          "url": "https://medicalxpress.com/news/2026-11-brain-scans-reveal-regions-hippocampus.html",
+          "access": "open"
+        }
       ]
     },
     {
@@ -171,7 +257,10 @@
       "why": "Repurposed drugs are cheap to test, and a weak result tells researchers how much to trust real-world associations as a guide to what works in a trial.",
       "didNotShow": "Not confirmed here: the trial design, the dose, the size of the effect or safety findings.",
       "sources": [
-        { "label": "Endpoints News", "url": "https://endpoints.news/aribios-repurposing-of-ed-drug-for-alzheimers-yields-tepid-results/" }
+        {
+          "label": "Endpoints News",
+          "url": "https://endpoints.news/aribios-repurposing-of-ed-drug-for-alzheimers-yields-tepid-results/"
+        }
       ]
     },
     {
@@ -186,7 +275,10 @@
       "why": "Gene therapy for rare diseases is held back by delivery and manufacturing. Funding of this size shows where investors think those bottlenecks can be fixed.",
       "didNotShow": "Not confirmed here: what problem the startup targets, which diseases or what technology it uses.",
       "sources": [
-        { "label": "STAT+", "url": "https://www.statnews.com/2026/11/16/versant-lilly-put-100-million-behind-new-startup-aimed-at-solving-one-of-gene-therapys-thorniest-issues/" }
+        {
+          "label": "STAT+",
+          "url": "https://www.statnews.com/2026/11/16/versant-lilly-put-100-million-behind-new-startup-aimed-at-solving-one-of-gene-therapys-thorniest-issues/"
+        }
       ]
     }
   ],
@@ -212,12 +304,26 @@
       "limitations": "Association only, from the abstract. Effect sizes, medication effects and whether the findings hold in patients with dementia were not reported.",
       "meaning": "Slow-wave activity during waking could become a measurable marker of psychiatric and cognitive risk in Parkinson's, and a target for studies of sleep-like intrusions.",
       "terms": [
-        { "term": "slow waves", "def": "Large, slow electrical oscillations of the brain that dominate deep sleep." },
-        { "term": "EEG", "def": "A recording of the brain's electrical activity from electrodes on the scalp." }
+        {
+          "term": "slow waves",
+          "def": "Large, slow electrical oscillations of the brain that dominate deep sleep."
+        },
+        {
+          "term": "EEG",
+          "def": "A recording of the brain's electrical activity from electrodes on the scalp."
+        }
       ],
       "sources": [
-        { "label": "Science Translational Medicine", "url": "https://doi.org/10.1126/scitranslmed.aec1215", "doi": "10.1126/scitranslmed.aec1215" },
-        { "label": "Medical Xpress coverage", "url": "https://medicalxpress.com/news/2026-11-daytime-brain-resembling-deep-hallucinations.html" }
+        {
+          "label": "Science Translational Medicine",
+          "url": "https://doi.org/10.1126/scitranslmed.aec1215",
+          "doi": "10.1126/scitranslmed.aec1215"
+        },
+        {
+          "label": "Medical Xpress coverage",
+          "url": "https://medicalxpress.com/news/2026-11-daytime-brain-resembling-deep-hallucinations.html",
+          "access": "open"
+        }
       ],
       "forYou": "Relevant to how sleep-related brain dynamics link to cognitive and psychiatric symptoms."
     },
@@ -243,13 +349,47 @@
       "limitations": "Wide confidence intervals from 55 patients. Positive patients still did badly after adjuvant chemotherapy, but nothing here shows that changing treatment helps.",
       "meaning": "Blood KRAS monitoring could help sort high-risk patients and time trials of added treatment, if larger, peer-reviewed studies confirm it.",
       "terms": [
-        { "term": "ctDNA", "def": "Fragments of tumour DNA that circulate in the blood." },
-        { "term": "droplet digital PCR", "def": "A method that splits a sample into thousands of droplets to count very rare DNA variants." }
+        {
+          "term": "ctDNA",
+          "def": "Fragments of tumour DNA that circulate in the blood."
+        },
+        {
+          "term": "droplet digital PCR",
+          "def": "A method that splits a sample into thousands of droplets to count very rare DNA variants."
+        }
       ],
       "sources": [
-        { "label": "Research Square preprint", "url": "https://doi.org/10.21203/rs.3.rs-10942935/v1", "doi": "10.21203/rs.3.rs-10942935/v1" }
+        {
+          "label": "Research Square preprint",
+          "url": "https://doi.org/10.21203/rs.3.rs-10942935/v1",
+          "doi": "10.21203/rs.3.rs-10942935/v1",
+          "access": "open"
+        }
       ],
-      "forYou": "Relevant to pancreatic cancer biomarkers and to selecting patients for combination approaches."
+      "forYou": "Relevant to pancreatic cancer biomarkers and to selecting patients for combination approaches.",
+      "diagram": {
+        "layout": "timeline",
+        "nodes": [
+          {
+            "label": "Chemotherapy",
+            "note": "neoadjuvant treatment before surgery"
+          },
+          {
+            "label": "Surgery",
+            "note": "tumour removed"
+          },
+          {
+            "label": "ctDNA detected",
+            "note": "KRAS tumour DNA appears in blood",
+            "key": true
+          },
+          {
+            "label": "7.6 months later",
+            "note": "median time until imaging shows recurrence"
+          }
+        ],
+        "caption": "In this preprint, blood tests found tumour DNA a median 7.6 months before scans showed the cancer had come back."
+      }
     },
     {
       "id": "redaporfin-micelle-pdt-icd",
@@ -273,24 +413,57 @@
       "limitations": "One tumour line, no human data, and the abstract does not give group sizes or statistics. The micelle carrier is shown to matter, but the mechanism links are correlative.",
       "meaning": "Carrier choice may decide whether a clinical photosensitizer produces an immune-stimulating form of cell death, which is a design question for light-based combinations.",
       "terms": [
-        { "term": "triplet state", "def": "A long-lived excited state of a photosensitizer that can pass energy to oxygen." },
-        { "term": "immunogenic cell death", "def": "Cell death that exposes signals such as calreticulin so the immune system reacts to the dying tumour." },
-        { "term": "micelle", "def": "A tiny sphere formed by detergent-like molecules that can hold a drug inside." }
+        {
+          "term": "triplet state",
+          "def": "A long-lived excited state of a photosensitizer that can pass energy to oxygen."
+        },
+        {
+          "term": "immunogenic cell death",
+          "def": "Cell death that exposes signals such as calreticulin so the immune system reacts to the dying tumour."
+        },
+        {
+          "term": "micelle",
+          "def": "A tiny sphere formed by detergent-like molecules that can hold a drug inside."
+        }
       ],
       "diagram": {
         "layout": "flow",
         "nodes": [
-          { "label": "Micelle carrier", "note": "P123 Pluronic" },
-          { "label": "Longer triplet life", "note": "7x vs ethanol" },
-          { "label": "ER-linked ROS damage" },
-          { "label": "Immunogenic death", "note": "calreticulin, HMGB1", "key": true },
-          { "label": "Plus PD-1/PD-L1 blockade", "note": "up to 50% complete responses" }
+          {
+            "label": "Micelle carrier",
+            "note": "P123 Pluronic"
+          },
+          {
+            "label": "Longer triplet life",
+            "note": "7x vs ethanol"
+          },
+          {
+            "label": "ER-linked ROS damage"
+          },
+          {
+            "label": "Immunogenic death",
+            "note": "calreticulin, HMGB1",
+            "key": true
+          },
+          {
+            "label": "Plus PD-1/PD-L1 blockade",
+            "note": "up to 50% complete responses"
+          }
         ],
-        "links": ["prolongs", "targets", "exposes signals", "primes"],
+        "links": [
+          "prolongs",
+          "targets",
+          "exposes signals",
+          "primes"
+        ],
         "caption": "How the paper links formulation to immune response in mice. Steps follow the abstract; causality is not proven."
       },
       "sources": [
-        { "label": "Biomedicine & Pharmacotherapy", "url": "https://doi.org/10.1016/j.biopha.2026.120054", "doi": "10.1016/j.biopha.2026.120054" }
+        {
+          "label": "Biomedicine & Pharmacotherapy",
+          "url": "https://doi.org/10.1016/j.biopha.2026.120054",
+          "doi": "10.1016/j.biopha.2026.120054"
+        }
       ],
       "forYou": "Relevant to formulation of photosensitizers, light dosimetry and photodynamic immunotherapy combinations."
     },
@@ -316,11 +489,21 @@
       "limitations": "Causal claims rest on a mouse proxy model, and the abstract gives no effect sizes. Whether blocking this axis helps people is untested.",
       "meaning": "It points to body-brain metabolism, not only brain circuits, as a source of mood-state biology and a possible drug target, pending replication.",
       "terms": [
-        { "term": "vagotomy", "def": "Cutting the vagus nerve, which links organs like the liver to the brainstem." },
-        { "term": "MMP19", "def": "A matrix metalloproteinase, an enzyme that remodels tissue around cells." }
+        {
+          "term": "vagotomy",
+          "def": "Cutting the vagus nerve, which links organs like the liver to the brainstem."
+        },
+        {
+          "term": "MMP19",
+          "def": "A matrix metalloproteinase, an enzyme that remodels tissue around cells."
+        }
       ],
       "sources": [
-        { "label": "Molecular Psychiatry", "url": "https://doi.org/10.1038/s41380-026-03938-0", "doi": "10.1038/s41380-026-03938-0" }
+        {
+          "label": "Molecular Psychiatry",
+          "url": "https://doi.org/10.1038/s41380-026-03938-0",
+          "doi": "10.1038/s41380-026-03938-0"
+        }
       ],
       "forYou": "Relevant to systemic metabolism and neuroimmune signalling as drivers of brain states."
     }
@@ -332,20 +515,45 @@
     "field": "cancer",
     "useWhen": "When you want a preclinical head and neck squamous cell carcinoma model that grows in the oral mucosa, in a syngeneic setting or with patient-derived cells in immunocompromised mice.",
     "steps": [
-      { "title": "Anaesthetise the mouse", "text": "Mice are anaesthetised before the injection." },
-      { "title": "Inject near the tongue edge", "text": "A small volume of cancer cell suspension is injected near the lateral border of the tongue, right under the mucous membrane." },
-      { "title": "Give analgesia and soft food", "text": "After injection, give appropriate analgesia and provide soft food for the whole experiment so the mice can eat freely." },
-      { "title": "Dissect tissues", "text": "At the endpoint, dissect the tongue and any organs where metastases may have formed." },
-      { "title": "Profile the tumour", "text": "Analyse samples with the methods described in the paper: atomic force microscopy for elasticity on fresh tissue, H&E staining, standard immunohistochemistry and confocal microscopy on paraffin sections." }
+      {
+        "title": "Anaesthetise the mouse",
+        "text": "Mice are anaesthetised before the injection."
+      },
+      {
+        "title": "Inject near the tongue edge",
+        "text": "A small volume of cancer cell suspension is injected near the lateral border of the tongue, right under the mucous membrane."
+      },
+      {
+        "title": "Give analgesia and soft food",
+        "text": "After injection, give appropriate analgesia and provide soft food for the whole experiment so the mice can eat freely."
+      },
+      {
+        "title": "Dissect tissues",
+        "text": "At the endpoint, dissect the tongue and any organs where metastases may have formed."
+      },
+      {
+        "title": "Profile the tumour",
+        "text": "Analyse samples with the methods described in the paper: atomic force microscopy for elasticity on fresh tissue, H&E staining, standard immunohistochemistry and confocal microscopy on paraffin sections."
+      }
     ],
     "pitfalls": [
       "Quantities, cell numbers and timings are in the full protocol and are not repeated here: read it before use."
     ],
     "safety": "Animal work needs ethical approval and trained staff. Follow your institution's animal welfare, anaesthesia, analgesia and biosafety rules, and ask your safety officer if unsure.",
-    "source": { "label": "Bio-protocol, Follain et al.", "url": "https://doi.org/10.21769/bioprotoc.5861", "doi": "10.21769/bioprotoc.5861" },
+    "source": {
+      "label": "Bio-protocol, Follain et al.",
+      "url": "https://doi.org/10.21769/bioprotoc.5861",
+      "doi": "10.21769/bioprotoc.5861"
+    },
     "terms": [
-      { "term": "orthotopic", "def": "Placing tumour cells in the organ or tissue where that cancer normally arises." },
-      { "term": "syngeneic", "def": "Using cells and a host from the same genetic strain, so the immune system stays intact." }
+      {
+        "term": "orthotopic",
+        "def": "Placing tumour cells in the organ or tissue where that cancer normally arises."
+      },
+      {
+        "term": "syngeneic",
+        "def": "Using cells and a host from the same genetic strain, so the immune system stays intact."
+      }
     ],
     "forYou": "Relevant to orthotopic models and tissue stiffness measurements in tumour studies."
   },
@@ -360,22 +568,50 @@
     "diagram": {
       "layout": "flow",
       "nodes": [
-        { "label": "Fibrotic matrix" },
-        { "label": "TGF-beta builds up", "key": true },
-        { "label": "Fibroblasts, myeloid cells" },
-        { "label": "T cells stay outside" },
-        { "label": "Blockade lets T cells in" }
+        {
+          "label": "Fibrotic matrix"
+        },
+        {
+          "label": "TGF-beta builds up",
+          "key": true
+        },
+        {
+          "label": "Fibroblasts, myeloid cells"
+        },
+        {
+          "label": "T cells stay outside"
+        },
+        {
+          "label": "Blockade lets T cells in"
+        }
       ],
-      "links": ["produces", "shapes", "block", "reverses"],
+      "links": [
+        "produces",
+        "shapes",
+        "block",
+        "reverses"
+      ],
       "caption": "A simplified path from tumour matrix to immune exclusion and how local TGF-beta blockade reverses it in mice."
     },
     "terms": [
-      { "term": "cancer-associated fibroblast", "def": "A tumour-supporting connective tissue cell that builds matrix and releases signals." },
-      { "term": "myeloid cells", "def": "A family of immune cells, including macrophages, that can calm or boost immune attack." }
+      {
+        "term": "cancer-associated fibroblast",
+        "def": "A tumour-supporting connective tissue cell that builds matrix and releases signals."
+      },
+      {
+        "term": "myeloid cells",
+        "def": "A family of immune cells, including macrophages, that can calm or boost immune attack."
+      }
     ],
-    "seenIn": ["tgfb-trap-fn-edb"],
+    "seenIn": [
+      "tgfb-trap-fn-edb"
+    ],
     "sources": [
-      { "label": "Cancer Cell, Kang et al.", "url": "https://doi.org/10.1016/j.ccell.2026.10.007", "doi": "10.1016/j.ccell.2026.10.007" }
+      {
+        "label": "Cancer Cell, Kang et al.",
+        "url": "https://doi.org/10.1016/j.ccell.2026.10.007",
+        "doi": "10.1016/j.ccell.2026.10.007"
+      }
     ]
   },
   "trials": {
@@ -391,7 +627,13 @@
         "what": "Tests the safety and feasibility of continuing GLP-1 drugs during first-line chemotherapy. The primary outcome is treatment-emergent adverse events.",
         "who": "About 30 patients (estimated) with metastatic pancreatic, colorectal or hepatocellular cancer, in three arms.",
         "sponsor": "University of Arizona",
-        "sources": [ { "label": "ClinicalTrials.gov", "url": "https://clinicaltrials.gov/study/NCT07627191" } ]
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov",
+            "url": "https://clinicaltrials.gov/study/NCT07627191",
+            "access": "open"
+          }
+        ]
       },
       {
         "id": "nct06748950-keto-mental-illness",
@@ -404,7 +646,13 @@
         "what": "A randomised trial of a ketogenic diet, with a drug-diet crossover arm, on well-being, functioning and quality of life, with deep omic profiling.",
         "who": "About 120 people (estimated) with serious mental illness.",
         "sponsor": "Stanford University",
-        "sources": [ { "label": "ClinicalTrials.gov", "url": "https://clinicaltrials.gov/study/NCT06748950" } ]
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov",
+            "url": "https://clinicaltrials.gov/study/NCT06748950",
+            "access": "open"
+          }
+        ]
       },
       {
         "id": "nct07721467-nectar-psilocybin",
@@ -417,7 +665,13 @@
         "what": "Tests whether psilocybin added to tablet-based cognitive training raises a neuroplasticity composite score in older adults.",
         "who": "About 200 people (estimated) aged 65 and over, with early Alzheimer's disease or normal cognition.",
         "sponsor": "National Institute on Aging",
-        "sources": [ { "label": "ClinicalTrials.gov", "url": "https://clinicaltrials.gov/study/NCT07721467" } ]
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov",
+            "url": "https://clinicaltrials.gov/study/NCT07721467",
+            "access": "open"
+          }
+        ]
       }
     ],
     "funding": []
@@ -431,7 +685,13 @@
       "where": "Retraction Watch",
       "signal": "Retraction Watch report on 16 November 2026",
       "gist": "The notice says the first author changed data points to cut variability, affecting in vitro figures but not the main in vivo conclusions. The company said it was isolated.",
-      "sources": [ { "label": "Retraction Watch", "url": "https://retractionwatch.com/2026/11/16/cell-reports-denali-therapeutics-neurodegeneration/" } ]
+      "sources": [
+        {
+          "label": "Retraction Watch",
+          "url": "https://retractionwatch.com/2026/11/16/cell-reports-denali-therapeutics-neurodegeneration/",
+          "access": "open"
+        }
+      ]
     },
     {
       "id": "reddit-autism-brain-variability",
@@ -441,7 +701,13 @@
       "where": "r/psychology",
       "signal": "#1 of the day's top posts on r/psychology",
       "gist": "The post says adults with autism spectrum disorder vary more from one another in auditory, visual and social brain activity than comparison adults do. The linked study was not read.",
-      "sources": [ { "label": "r/psychology post", "url": "https://www.reddit.com/r/psychology/comments/1xxmt4a/people_with_autism_show_remarkable_variability_in/" } ]
+      "sources": [
+        {
+          "label": "r/psychology post",
+          "url": "https://www.reddit.com/r/psychology/comments/1xxmt4a/people_with_autism_show_remarkable_variability_in/",
+          "access": "open"
+        }
+      ]
     },
     {
       "id": "reddit-open-cancer-map",
@@ -451,7 +717,13 @@
       "where": "r/Oncology",
       "signal": "#2 of the day's top posts on r/Oncology",
       "gist": "A person built an open source interactive map to make cancer information easier to navigate after a family diagnosis. We did not open or assess the tool.",
-      "sources": [ { "label": "r/Oncology post", "url": "https://www.reddit.com/r/Oncology/comments/1xxredx/after_my_wifes_cancer_diagnosis_i_built_a/" } ]
+      "sources": [
+        {
+          "label": "r/Oncology post",
+          "url": "https://www.reddit.com/r/Oncology/comments/1xxredx/after_my_wifes_cancer_diagnosis_i_built_a/",
+          "access": "open"
+        }
+      ]
     },
     {
       "id": "mastodon-stuttering-podcast",
@@ -461,7 +733,16 @@
       "where": "Mastodon",
       "signal": "4 favourites and 2 boosts on one Mastodon post",
       "gist": "A small post shares a Scientific American podcast episode on the neuroscience of stuttering. A modest signal, and we did not listen to the episode.",
-      "sources": [ { "label": "Mastodon post", "url": "https://mastodonapp.uk/@brainsmatter/117623994289719182" }, { "label": "Scientific American", "url": "https://www.scientificamerican.com/podcast/episode/the-neuroscience-behind-stuttering/" } ]
+      "sources": [
+        {
+          "label": "Mastodon post",
+          "url": "https://mastodonapp.uk/@brainsmatter/117623994289719182"
+        },
+        {
+          "label": "Scientific American",
+          "url": "https://www.scientificamerican.com/podcast/episode/the-neuroscience-behind-stuttering/"
+        }
+      ]
     }
   ],
   "curiosity": {
@@ -478,8 +759,16 @@
       "limitation": "Read only the abstracts. This is a proposal for tests, not results from experiments."
     },
     "sources": [
-      { "label": "Neuron, Melloni and Dehaene", "url": "https://doi.org/10.1016/j.neuron.2026.10.009", "doi": "10.1016/j.neuron.2026.10.009" },
-      { "label": "Science feature", "url": "https://doi.org/10.1126/science.aeo0641", "doi": "10.1126/science.aeo0641" }
+      {
+        "label": "Neuron, Melloni and Dehaene",
+        "url": "https://doi.org/10.1016/j.neuron.2026.10.009",
+        "doi": "10.1016/j.neuron.2026.10.009"
+      },
+      {
+        "label": "Science feature",
+        "url": "https://doi.org/10.1126/science.aeo0641",
+        "doi": "10.1126/science.aeo0641"
+      }
     ]
   },
   "jobs": [],

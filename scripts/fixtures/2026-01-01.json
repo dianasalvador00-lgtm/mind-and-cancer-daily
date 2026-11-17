@@ -5,97 +5,250 @@
   "dek": "This is a layout fixture with invented placeholder text. Nothing in it is a real finding, trial, job or link. It exists so the site can be built, photographed and checked before real issues arrive.",
   "palette": "teal-amber",
   "tldr": [
-    { "text": "A placeholder cancer story shows how an evidence label and a limitation sit under a plain sentence.", "area": "cancer" },
-    { "text": "A placeholder mind story tests a longer title that has to wrap on a phone screen without breaking the page.", "area": "mind" },
-    { "text": "A placeholder rare disease story and a curiosity fill the remaining rows of the tl;dr list.", "area": "rare" }
+    {
+      "text": "A placeholder cancer story shows how an evidence label and a limitation sit under a plain sentence.",
+      "area": "cancer"
+    },
+    {
+      "text": "A placeholder mind story tests a longer title that has to wrap on a phone screen without breaking the page.",
+      "area": "mind"
+    },
+    {
+      "text": "A placeholder rare disease story and a curiosity fill the remaining rows of the tl;dr list.",
+      "area": "rare"
+    }
   ],
   "top": [
     {
-      "id": "sample-cancer-one", "area": "cancer",
+      "id": "sample-cancer-one",
+      "area": "cancer",
       "title": "Sample: a nanoparticle design reaches deeper into a dense tumour model than a plain drug",
       "gist": "In a placeholder mouse study, a small particle carrying a drug spread further into a stiff tumour than the free drug did.",
-      "evidence": { "type": "animal", "model": "Placeholder mouse model", "n": "n = 8 per arm", "limitation": "One tumour type, small groups, and no comparison with a standard clinical regimen.", "conflicts": "Placeholder: funded by a public grant." },
+      "evidence": {
+        "type": "animal",
+        "model": "Placeholder mouse model",
+        "n": "n = 8 per arm",
+        "limitation": "One tumour type, small groups, and no comparison with a standard clinical regimen.",
+        "conflicts": "Placeholder: funded by a public grant."
+      },
       "why": "Dense tissue around some tumours blocks drugs, so a design that gets deeper is worth knowing about, if it holds up in larger studies.",
-      "details": ["This paragraph is placeholder detail that sits inside the folded Details section. It is longer than the gist so the fold has something to hide and the page can show how much space it saves."],
+      "details": [
+        "This paragraph is placeholder detail that sits inside the folded Details section. It is longer than the gist so the fold has something to hide and the page can show how much space it saves."
+      ],
       "didNotShow": "It did not test survival, repeated dosing, or any human tissue.",
-      "terms": [{ "term": "stroma", "def": "The supporting tissue around and inside a tumour, made of fibres and non-cancer cells." }],
-      "sources": [{ "label": "Placeholder journal article", "url": "https://doi.org/10.1000/sample-1", "doi": "10.1000/sample-1" }]
+      "terms": [
+        {
+          "term": "stroma",
+          "def": "The supporting tissue around and inside a tumour, made of fibres and non-cancer cells."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Placeholder journal article",
+          "url": "https://doi.org/10.1000/sample-1",
+          "doi": "10.1000/sample-1"
+        }
+      ],
+      "diagram": {
+        "layout": "compare",
+        "nodes": [
+          {
+            "label": "120 µm",
+            "note": "small particle, mean depth",
+            "key": true
+          },
+          {
+            "label": "45 µm",
+            "note": "large particle, mean depth"
+          }
+        ],
+        "caption": "Placeholder comparison of penetration depth in the sample study."
+      }
     },
     {
-      "id": "sample-mind-one", "area": "mind",
+      "id": "sample-mind-one",
+      "area": "mind",
       "title": "Sample: sleep timing in a placeholder cohort tracks with next-day attention scores",
       "gist": "A placeholder study of 412 adults linked later bedtimes with slightly lower attention scores the next day.",
-      "evidence": { "type": "human-observational", "model": "Adult volunteers", "n": "n = 412", "limitation": "Observational, so it cannot show that sleep timing causes the change.", "conflicts": "No conflicts declared in the placeholder." },
+      "evidence": {
+        "type": "human-observational",
+        "model": "Adult volunteers",
+        "n": "n = 412",
+        "limitation": "Observational, so it cannot show that sleep timing causes the change.",
+        "conflicts": "No conflicts declared in the placeholder."
+      },
       "why": "Attention tasks are common outcome measures, so the size of a link like this helps researchers plan studies.",
       "didNotShow": "It did not test whether changing bedtime changes attention.",
-      "sources": [{ "label": "Placeholder journal article", "url": "https://doi.org/10.1000/sample-2", "doi": "10.1000/sample-2" }]
+      "sources": [
+        {
+          "label": "Placeholder journal article",
+          "url": "https://doi.org/10.1000/sample-2",
+          "doi": "10.1000/sample-2"
+        }
+      ]
     },
     {
-      "id": "sample-rare-one", "area": "rare",
+      "id": "sample-rare-one",
+      "area": "rare",
       "title": "Sample: a placeholder gene therapy trial reports early safety data in a very rare disease",
       "gist": "A placeholder phase 1 trial in a handful of children reports no serious safety events at the first dose level.",
-      "evidence": { "type": "clinical-trial", "phase": "1", "status": "Recruiting", "n": "n = 6", "limitation": "Six patients and a short follow-up cannot show lasting benefit or rare side effects." },
+      "evidence": {
+        "type": "clinical-trial",
+        "phase": "1",
+        "status": "Recruiting",
+        "n": "n = 6",
+        "limitation": "Six patients and a short follow-up cannot show lasting benefit or rare side effects."
+      },
       "why": "Early safety data decide whether a rare disease programme moves to the next dose.",
-      "sources": [{ "label": "Placeholder trial record", "url": "https://clinicaltrials.gov/study/NCT00000001" }]
+      "sources": [
+        {
+          "label": "Placeholder trial record",
+          "url": "https://clinicaltrials.gov/study/NCT00000001"
+        }
+      ]
     },
     {
-      "id": "sample-cancer-two", "area": "cancer",
+      "id": "sample-cancer-two",
+      "area": "cancer",
       "title": "Sample: a preprint reports an imaging marker that may flag early pancreatic lesions",
       "gist": "A placeholder preprint says a scan feature separated early lesions from healthy tissue in a small retrospective set.",
-      "evidence": { "type": "preprint", "model": "Retrospective scans", "n": "n = 96", "limitation": "Not peer reviewed, single centre, and no validation set." },
+      "evidence": {
+        "type": "preprint",
+        "model": "Retrospective scans",
+        "n": "n = 96",
+        "limitation": "Not peer reviewed, single centre, and no validation set."
+      },
       "why": "Early detection is the main weakness in pancreatic cancer, so even small signals get attention.",
       "didNotShow": "It did not test the marker prospectively.",
-      "sources": [{ "label": "Placeholder preprint", "url": "https://www.biorxiv.org/content/10.1101/2026.01.01.000001v1" }]
+      "sources": [
+        {
+          "label": "Placeholder preprint",
+          "url": "https://www.biorxiv.org/content/10.1101/2026.01.01.000001v1"
+        }
+      ]
     },
     {
-      "id": "sample-mind-two", "area": "mind",
+      "id": "sample-mind-two",
+      "area": "mind",
       "title": "Sample: an imaging dataset of placeholder brain scans is released with open access",
       "gist": "A placeholder consortium released scans from 5,000 volunteers so other labs can reuse them.",
-      "evidence": { "type": "news", "limitation": "A news summary only; the data paper has not been read for this placeholder." },
+      "evidence": {
+        "type": "news",
+        "limitation": "A news summary only; the data paper has not been read for this placeholder."
+      },
       "why": "Large open datasets let small groups test ideas without collecting their own scans.",
-      "sources": [{ "label": "Placeholder news report", "url": "https://example.org/news/sample-dataset" }]
+      "sources": [
+        {
+          "label": "Placeholder news report",
+          "url": "https://example.org/news/sample-dataset"
+        }
+      ]
     },
     {
-      "id": "sample-other-one", "area": "other",
+      "id": "sample-other-one",
+      "area": "other",
       "title": "Sample: a placeholder review compares two common ways to measure particle size",
       "gist": "A placeholder review explains why two instruments can give different answers for the same particle sample.",
-      "evidence": { "type": "review", "limitation": "A narrative review, so the choice of studies was not systematic." },
+      "evidence": {
+        "type": "review",
+        "limitation": "A narrative review, so the choice of studies was not systematic."
+      },
       "why": "A materials scientist and an oncologist often read the same number differently, so knowing how it was measured matters.",
-      "terms": [{ "term": "dynamic light scattering", "def": "A way to estimate particle size by how fast the particles jiggle in liquid." }],
-      "sources": [{ "label": "Placeholder review", "url": "https://doi.org/10.1000/sample-3", "doi": "10.1000/sample-3" }]
+      "terms": [
+        {
+          "term": "dynamic light scattering",
+          "def": "A way to estimate particle size by how fast the particles jiggle in liquid."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Placeholder review",
+          "url": "https://doi.org/10.1000/sample-3",
+          "doi": "10.1000/sample-3"
+        }
+      ]
     }
   ],
   "bench": [
     {
-      "id": "sample-bench-one", "area": "cancer",
+      "id": "sample-bench-one",
+      "area": "cancer",
       "title": "Placeholder title of a nanoparticle delivery paper",
       "headline": "A placeholder particle carried more drug into a dense tumour model.",
       "authors": "Placeholder A, Placeholder B, Placeholder C, et al.",
-      "venue": "Placeholder Journal", "published": "2026-01-01",
-      "evidence": { "type": "peer-reviewed", "model": "Mouse xenograft", "n": "n = 8 per arm", "limitation": "Small groups and a single cell line." },
+      "venue": "Placeholder Journal",
+      "published": "2026-01-01",
+      "evidence": {
+        "type": "peer-reviewed",
+        "model": "Mouse xenograft",
+        "n": "n = 8 per arm",
+        "limitation": "Small groups and a single cell line."
+      },
       "question": "Can a smaller particle with a softer surface reach deeper into tissue that is packed with fibres?",
       "approach": "The authors made two particle sizes, tracked them with fluorescence, and compared penetration depth in sections of treated tumours.",
       "model": "Mice carrying tumours grown from one human cell line, eight animals per group.",
       "result": "Placeholder numbers: the small particle reached a mean depth of 120 micrometres against 45 for the large one, and tumours shrank 38 percent more.",
       "limitations": "One cell line, no survival endpoint, and a short follow-up. The comparison drug dose was not a clinical dose.",
       "meaning": "If the depth gain holds in models that better copy human tissue, it could change how particles are designed for dense tumours.",
-      "diagram": { "layout": "flow", "nodes": [{ "label": "Inject" }, { "label": "Circulate" }, { "label": "Cross the vessel wall" }, { "label": "Spread in stroma", "key": true }], "links": ["blood", "leak", "diffusion"], "caption": "Placeholder route of a particle from the bloodstream into a tumour." },
-      "sources": [{ "label": "Placeholder journal article", "url": "https://doi.org/10.1000/sample-4", "doi": "10.1000/sample-4" }]
+      "diagram": {
+        "layout": "flow",
+        "nodes": [
+          {
+            "label": "Inject"
+          },
+          {
+            "label": "Circulate"
+          },
+          {
+            "label": "Cross the vessel wall"
+          },
+          {
+            "label": "Spread in stroma",
+            "key": true
+          }
+        ],
+        "links": [
+          "blood",
+          "leak",
+          "diffusion"
+        ],
+        "caption": "Placeholder route of a particle from the bloodstream into a tumour."
+      },
+      "sources": [
+        {
+          "label": "Placeholder journal article",
+          "url": "https://doi.org/10.1000/sample-4",
+          "doi": "10.1000/sample-4"
+        }
+      ]
     },
     {
-      "id": "sample-bench-two", "area": "mind",
+      "id": "sample-bench-two",
+      "area": "mind",
       "title": "Placeholder title of a cognition paper",
       "headline": "A placeholder task detected small attention changes after a short sleep restriction.",
       "authors": "Placeholder D, Placeholder E, et al.",
-      "venue": "Placeholder Journal of Neuroscience", "published": "2026-01-01",
-      "evidence": { "type": "human-rct", "model": "Healthy adults", "n": "n = 64", "limitation": "Healthy young adults only, and a short follow-up." },
+      "venue": "Placeholder Journal of Neuroscience",
+      "published": "2026-01-01",
+      "evidence": {
+        "type": "human-rct",
+        "model": "Healthy adults",
+        "n": "n = 64",
+        "limitation": "Healthy young adults only, and a short follow-up."
+      },
       "question": "Does one night of shorter sleep change measured attention the next day?",
       "approach": "A crossover design: each volunteer completed the task after normal sleep and after restricted sleep, in random order.",
       "model": "Sixty-four healthy adults aged 18 to 30 in a sleep laboratory.",
       "result": "Placeholder numbers: reaction time rose by 24 milliseconds on average (95 percent interval 11 to 37).",
       "limitations": "The group was young and healthy, and the lab setting differs from daily life.",
       "meaning": "A clear effect size helps other groups choose sample sizes for similar studies.",
-      "sources": [{ "label": "Placeholder journal article", "url": "https://doi.org/10.1000/sample-5", "doi": "10.1000/sample-5" }]
+      "sources": [
+        {
+          "label": "Placeholder journal article",
+          "url": "https://doi.org/10.1000/sample-5",
+          "doi": "10.1000/sample-5"
+        }
+      ]
     }
   ],
   "method": {
@@ -105,15 +258,37 @@
     "field": "cancer",
     "useWhen": "Before dosing cells or animals, and after any change to how particles are made or stored.",
     "steps": [
-      { "title": "Dilute the sample", "text": "Dilute to the concentration the source protocol gives, in the same buffer you will use for the experiment." },
-      { "title": "Measure size", "text": "Run the size measurement in at least three repeats and record the average and the spread." },
-      { "title": "Measure surface charge", "text": "Measure the zeta potential in the same buffer and note the pH." },
-      { "title": "Compare with the last batch", "text": "Reject a batch that differs from your recorded range, and write down why." }
+      {
+        "title": "Dilute the sample",
+        "text": "Dilute to the concentration the source protocol gives, in the same buffer you will use for the experiment."
+      },
+      {
+        "title": "Measure size",
+        "text": "Run the size measurement in at least three repeats and record the average and the spread."
+      },
+      {
+        "title": "Measure surface charge",
+        "text": "Measure the zeta potential in the same buffer and note the pH."
+      },
+      {
+        "title": "Compare with the last batch",
+        "text": "Reject a batch that differs from your recorded range, and write down why."
+      }
     ],
-    "pitfalls": ["Salt-rich buffers can change the reading, so always report the buffer."],
+    "pitfalls": [
+      "Salt-rich buffers can change the reading, so always report the buffer."
+    ],
     "safety": "Placeholder steps only. Follow your institution's rules for handling nanomaterials, lasers and biological samples, and ask your safety officer if unsure.",
-    "source": { "label": "Placeholder protocol", "url": "https://www.protocols.io/view/sample-protocol" },
-    "terms": [{ "term": "zeta potential", "def": "A measure of the electric charge near a particle's surface, which affects whether particles clump." }]
+    "source": {
+      "label": "Placeholder protocol",
+      "url": "https://www.protocols.io/view/sample-protocol"
+    },
+    "terms": [
+      {
+        "term": "zeta potential",
+        "def": "A measure of the electric charge near a particle's surface, which affects whether particles clump."
+      }
+    ]
   },
   "learn": {
     "question": "What is the EPR effect?",
@@ -125,58 +300,202 @@
     ],
     "diagram": {
       "layout": "layers",
-      "nodes": [{ "label": "Blood vessel" }, { "label": "Leaky gaps" , "key": true }, { "label": "Tumour tissue" }, { "label": "Poor drainage" }],
+      "nodes": [
+        {
+          "label": "Blood vessel"
+        },
+        {
+          "label": "Leaky gaps",
+          "key": true
+        },
+        {
+          "label": "Tumour tissue"
+        },
+        {
+          "label": "Poor drainage"
+        }
+      ],
       "caption": "Placeholder cross section: particles leave through gaps and are slow to leave the tissue."
     },
-    "terms": [{ "term": "permeability", "def": "How easily something passes through a barrier." }],
-    "seenIn": ["sample-cancer-one"],
-    "sources": [{ "label": "Placeholder review", "url": "https://doi.org/10.1000/sample-6", "doi": "10.1000/sample-6" }]
+    "terms": [
+      {
+        "term": "permeability",
+        "def": "How easily something passes through a barrier."
+      }
+    ],
+    "seenIn": [
+      "sample-cancer-one"
+    ],
+    "sources": [
+      {
+        "label": "Placeholder review",
+        "url": "https://doi.org/10.1000/sample-6",
+        "doi": "10.1000/sample-6"
+      }
+    ]
   },
   "trials": {
     "trials": [
       {
-        "id": "sample-trial-one", "area": "cancer", "title": "Placeholder phase 2 trial of a combination in pancreatic cancer",
-        "nct": "NCT00000002", "phase": "2", "status": "Recruiting", "change": "new",
+        "id": "sample-trial-one",
+        "area": "cancer",
+        "title": "Placeholder phase 2 trial of a combination in pancreatic cancer",
+        "nct": "NCT00000002",
+        "phase": "2",
+        "status": "Recruiting",
+        "change": "new",
         "what": "Placeholder: tests a chemotherapy plus an immune drug in adults after surgery.",
-        "who": "Adults with resected pancreatic cancer", "sponsor": "Placeholder University",
-        "sources": [{ "label": "ClinicalTrials.gov record", "url": "https://clinicaltrials.gov/study/NCT00000002" }]
+        "who": "Adults with resected pancreatic cancer",
+        "sponsor": "Placeholder University",
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov record",
+            "url": "https://clinicaltrials.gov/study/NCT00000002"
+          }
+        ]
       }
     ],
     "funding": [
       {
-        "id": "sample-call-one", "area": "mind", "title": "Placeholder call for early career neuroscience projects",
-        "funder": "Placeholder Foundation", "deadline": "2026-03-01", "amount": "Up to 100,000 euros",
+        "id": "sample-call-one",
+        "area": "mind",
+        "title": "Placeholder call for early career neuroscience projects",
+        "funder": "Placeholder Foundation",
+        "deadline": "2026-03-01",
+        "amount": "Up to 100,000 euros",
         "eligibility": "Researchers within seven years of their PhD, based in a member state.",
-        "sources": [{ "label": "Placeholder call page", "url": "https://example.org/funding/sample-call" }]
+        "sources": [
+          {
+            "label": "Placeholder call page",
+            "url": "https://example.org/funding/sample-call"
+          }
+        ]
       }
     ]
   },
   "chatter": [
-    { "id": "sample-chatter-one", "area": "cancer", "kind": "preprint-buzz", "title": "A placeholder preprint on tumour imaging is being discussed", "where": "Bluesky", "signal": "Placeholder: 310 likes and 80 reposts on one post", "gist": "Researchers are debating whether the placeholder sample size is large enough.", "sources": [{ "label": "Placeholder post", "url": "https://bsky.app/profile/example.org/post/sample" }] },
-    { "id": "sample-chatter-two", "area": "mind", "kind": "tool", "title": "A placeholder open tool for scoring behaviour videos spreads", "where": "Reddit", "signal": "Placeholder: top post of the day in a neuroscience community", "gist": "Labs are comparing it with manual scoring.", "sources": [{ "label": "Placeholder thread", "url": "https://www.reddit.com/r/neuroscience/comments/sample" }] },
-    { "id": "sample-chatter-three", "area": "other", "kind": "retraction", "title": "A placeholder paper is retracted after an image problem", "where": "Retraction Watch", "signal": "Placeholder: covered by one tracker", "gist": "The journal cited duplicated panels in two figures.", "sources": [{ "label": "Placeholder report", "url": "https://retractionwatch.com/sample" }] }
+    {
+      "id": "sample-chatter-one",
+      "area": "cancer",
+      "kind": "preprint-buzz",
+      "title": "A placeholder preprint on tumour imaging is being discussed",
+      "where": "Bluesky",
+      "signal": "Placeholder: 310 likes and 80 reposts on one post",
+      "gist": "Researchers are debating whether the placeholder sample size is large enough.",
+      "sources": [
+        {
+          "label": "Placeholder post",
+          "url": "https://bsky.app/profile/example.org/post/sample"
+        }
+      ]
+    },
+    {
+      "id": "sample-chatter-two",
+      "area": "mind",
+      "kind": "tool",
+      "title": "A placeholder open tool for scoring behaviour videos spreads",
+      "where": "Reddit",
+      "signal": "Placeholder: top post of the day in a neuroscience community",
+      "gist": "Labs are comparing it with manual scoring.",
+      "sources": [
+        {
+          "label": "Placeholder thread",
+          "url": "https://www.reddit.com/r/neuroscience/comments/sample"
+        }
+      ]
+    },
+    {
+      "id": "sample-chatter-three",
+      "area": "other",
+      "kind": "retraction",
+      "title": "A placeholder paper is retracted after an image problem",
+      "where": "Retraction Watch",
+      "signal": "Placeholder: covered by one tracker",
+      "gist": "The journal cited duplicated panels in two figures.",
+      "sources": [
+        {
+          "label": "Placeholder report",
+          "url": "https://retractionwatch.com/sample"
+        }
+      ]
+    }
   ],
   "curiosity": {
     "id": "sample-curiosity",
     "area": "curiosity",
     "title": "Sample: a placeholder study finds that bees can be trained to spot a chemical signal",
     "gist": "A placeholder study trained bees to respond to a smell linked to a disease marker in a lab test.",
-    "body": ["This is placeholder text for the curiosity section. It shows how a light, fun item sits beside the serious ones, with its evidence label still visible."],
-    "evidence": { "type": "peer-reviewed", "model": "Honey bees in a lab", "limitation": "A lab demonstration, not a diagnostic test." },
-    "sources": [{ "label": "Placeholder journal article", "url": "https://doi.org/10.1000/sample-7", "doi": "10.1000/sample-7" }]
+    "body": [
+      "This is placeholder text for the curiosity section. It shows how a light, fun item sits beside the serious ones, with its evidence label still visible."
+    ],
+    "evidence": {
+      "type": "peer-reviewed",
+      "model": "Honey bees in a lab",
+      "limitation": "A lab demonstration, not a diagnostic test."
+    },
+    "sources": [
+      {
+        "label": "Placeholder journal article",
+        "url": "https://doi.org/10.1000/sample-7",
+        "doi": "10.1000/sample-7"
+      }
+    ],
+    "diagram": {
+      "layout": "timeline",
+      "nodes": [
+        {
+          "label": "Age 7",
+          "note": "Placeholder: start of lessons"
+        },
+        {
+          "label": "Age 8",
+          "note": "Placeholder: tests taken",
+          "key": true
+        },
+        {
+          "label": "Age 9",
+          "note": "Placeholder: scans taken"
+        }
+      ],
+      "caption": "Placeholder timeline for the sample curiosity."
+    },
+    "terms": [
+      {
+        "term": "arcuate fasciculus",
+        "def": "A bundle of nerve fibres linking language areas of the brain."
+      }
+    ]
   },
   "jobs": [
     {
-      "id": "sample-job-one", "title": "Placeholder postdoctoral position in nanomedicine", "employer": "Placeholder Institute",
-      "location": "Zurich, Switzerland", "level": "postdoc", "salary": "Placeholder pay scale stated in the advert",
-      "deadline": "2026-02-15", "fit": "Asks for nanoparticle characterisation and cell culture experience.",
-      "sources": [{ "label": "Placeholder advert", "url": "https://example.org/jobs/sample-1" }]
+      "id": "sample-job-one",
+      "title": "Placeholder postdoctoral position in nanomedicine",
+      "employer": "Placeholder Institute",
+      "location": "Zurich, Switzerland",
+      "level": "postdoc",
+      "salary": "Placeholder pay scale stated in the advert",
+      "deadline": "2026-02-15",
+      "fit": "Asks for nanoparticle characterisation and cell culture experience.",
+      "sources": [
+        {
+          "label": "Placeholder advert",
+          "url": "https://example.org/jobs/sample-1"
+        }
+      ]
     },
     {
-      "id": "sample-job-two", "title": "Placeholder staff scientist in cancer imaging", "employer": "Placeholder Hospital",
-      "location": "Boston, United States", "level": "staff-scientist",
+      "id": "sample-job-two",
+      "title": "Placeholder staff scientist in cancer imaging",
+      "employer": "Placeholder Hospital",
+      "location": "Boston, United States",
+      "level": "staff-scientist",
       "fit": "Asks for imaging analysis and mouse model experience.",
-      "sources": [{ "label": "Placeholder advert", "url": "https://example.org/jobs/sample-2" }]
+      "sources": [
+        {
+          "label": "Placeholder advert",
+          "url": "https://example.org/jobs/sample-2"
+        }
+      ]
     }
   ],
   "note": "Layout fixture. Every name, number and link is a placeholder."

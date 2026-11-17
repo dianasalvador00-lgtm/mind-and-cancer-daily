@@ -88,6 +88,53 @@ const uiJson = JSON.stringify(UI).replace(/</g, '\\u003c');
           try { localStorage.setItem('lang', cur); } catch (e) {}
           setLang(cur);
         });
+        // Definitions for underlined terms: one tooltip, placed inside the screen, for mouse,
+        // keyboard and touch. Esc closes it.
+        var tip = document.createElement('div');
+        tip.id = 'term-tip';
+        tip.setAttribute('role', 'tooltip');
+        tip.hidden = true;
+        document.body.appendChild(tip);
+        var cur = null, shownAt = 0;
+        function place(el) {
+          var r = el.getBoundingClientRect();
+          var w = tip.offsetWidth, h = tip.offsetHeight, vw = document.documentElement.clientWidth;
+          var x = Math.min(Math.max(8, r.left), vw - w - 8);
+          var y = r.bottom + 8;
+          if (y + h > window.innerHeight - 8 && r.top - h - 8 > 0) y = r.top - h - 8;
+          tip.style.left = x + window.scrollX + 'px';
+          tip.style.top = y + window.scrollY + 'px';
+        }
+        function show(el) {
+          var def = el.getAttribute('data-def');
+          if (!def) return;
+          if (cur && cur !== el) cur.removeAttribute('aria-describedby');
+          cur = el; shownAt = Date.now();
+          tip.textContent = '';
+          var b = document.createElement('strong'); b.textContent = el.textContent;
+          var p = document.createElement('span'); p.textContent = def;
+          tip.appendChild(b); tip.appendChild(p);
+          tip.hidden = false;
+          el.setAttribute('aria-describedby', 'term-tip');
+          place(el);
+        }
+        function hide() { if (cur) cur.removeAttribute('aria-describedby'); cur = null; tip.hidden = true; }
+        document.querySelectorAll('.term').forEach(function (el) {
+          el.removeAttribute('title');
+          el.addEventListener('mouseenter', function () { show(el); });
+          el.addEventListener('mouseleave', hide);
+          el.addEventListener('focus', function () { show(el); });
+          el.addEventListener('blur', hide);
+          el.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (cur === el && Date.now() - shownAt > 400) hide(); else show(el);
+          });
+          el.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); cur === el ? hide() : show(el); } });
+        });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
+        window.addEventListener('scroll', function () { if (cur) place(cur); }, { passive: true });
+        window.addEventListener('resize', function () { if (cur) place(cur); });
+
         themeBtn.addEventListener('click', function () {
           var root = document.documentElement;
           var now = root.dataset.theme;
