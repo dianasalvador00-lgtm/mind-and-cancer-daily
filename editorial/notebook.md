@@ -10,3 +10,6 @@ file under 60 lines by removing the oldest lines.
 - 2026-11-16: project started. The sweep brief is a shortlist, not the research: open the primary
   source of every item before writing about it. Europe PMC's REST API (core record by DOI) returns
   the abstract and the licence in one call and is a fast way to read a paper.
+- 2026-11-17 (issue 2): Run needed `npm ci` first (read-paper failed without node_modules). Most journal and
+  news pages are paywalled or blocked, so bench items rest on Europe PMC abstracts: keep claims to those numbers.
+  Reddit JSON and Medical Xpress block bots; use the brief's `signal` field for chatter. No job could be verified.

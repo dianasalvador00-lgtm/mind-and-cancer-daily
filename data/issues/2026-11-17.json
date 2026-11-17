@@ -1,0 +1,487 @@
+{
+  "date": "2026-11-17",
+  "number": 2,
+  "title": "A TGF-beta trap for fibrotic tumours, and sleep-like brain waves in Parkinson's",
+  "dek": "A drug anchored to tumour matrix wakes up T cells in mice, a blood marker for pancreatic cancer recurrence shows up months before scans, and daytime slow waves track hallucinations in Parkinson's disease.",
+  "palette": "moss-violet",
+  "tldr": [
+    { "text": "A TGF-beta trap that sticks to tumour matrix cleared fibrotic mouse tumours and left lasting immune memory, with less whole-body effect than the free drug.", "area": "cancer" },
+    { "text": "In a pancreatic cancer preprint, KRAS DNA in blood after surgery flagged recurrence a median 7.6 months before imaging did.", "area": "cancer" },
+    { "text": "In 84 people with Parkinson's, more daytime sleep-like slow waves went with more hallucinations and poorer cognition.", "area": "mind" },
+    { "text": "A phase 3 lung cancer trial reports median PFS of 15 months with a TROP-2 drug plus pembrolizumab, versus 5.7 with chemotherapy.", "area": "cancer" },
+    { "text": "A vagus nerve and liver route that raises blood creatine drove manic-like behaviour in mice, and creatine was also higher in people with bipolar disorder.", "area": "mind" }
+  ],
+  "top": [
+    {
+      "id": "tgfb-trap-fn-edb",
+      "area": "cancer",
+      "title": "A TGF-beta trap anchored to tumour matrix clears fibrotic mouse tumours",
+      "gist": "An engineered blocker of a tumour-calming signal sticks to a matrix protein in tumours. It let T cells enter fibrotic mouse tumours, and the mice kept immune protection afterwards.",
+      "evidence": {
+        "type": "animal",
+        "model": "Mouse tumour models, fibrotic and immune-excluded",
+        "limitation": "Only the abstract was read. It gives no sample sizes or effect sizes, and the work is in mice, not people.",
+        "conflicts": "Funding listed: Korea Drug Development Fund."
+      },
+      "why": "Dense matrix keeps immune cells out of tumours such as pancreatic cancer. Putting a blocker where the matrix is, not in the whole body, is a delivery idea that carriers and targeting peptides could also use.",
+      "details": [
+        "The authors fused a peptide that binds fibronectin extra domain B (FN-EDB, a matrix protein enriched in tumours) to a soluble TGF-beta receptor. The aim was local blockade of TGF-beta signalling inside the tumour matrix.",
+        "According to the abstract, this switched off TGF-beta/SMAD signalling, freed T cells to make interferon gamma, and pushed fibroblasts and myeloid cells toward an antigen-presenting state. Tumours regressed in a T cell dependent way, effector-memory cells expanded, and mice showed cross-protective immunity. The abstract says the anchored version caused fewer body-wide gene changes than the unanchored receptor."
+      ],
+      "didNotShow": "It did not show benefit in people, in pancreatic cancer specifically, or how big the effect was, since numbers were not in the abstract.",
+      "terms": [
+        { "term": "TGF-beta", "def": "A signalling protein that, in tumours, helps scar-like tissue form and keeps immune cells quiet." },
+        { "term": "immune excluded", "def": "A tumour pattern where T cells gather at the edge but cannot get inside." }
+      ],
+      "sources": [
+        { "label": "Cancer Cell, Kang et al.", "url": "https://doi.org/10.1016/j.ccell.2026.10.007", "doi": "10.1016/j.ccell.2026.10.007" }
+      ],
+      "forYou": "Relevant to targeting payloads to dense tumour stroma and to combining stroma remodelling with immunotherapy."
+    },
+    {
+      "id": "sactmt-pembro-nsclc",
+      "area": "cancer",
+      "title": "A TROP-2 antibody-drug conjugate plus pembrolizumab doubles median PFS in one lung cancer group",
+      "gist": "In the phase 3 Opti-TROP-Lung06 trial, an antibody-drug conjugate plus pembrolizumab gave median progression-free survival of 15 months, versus 5.7 months with chemotherapy plus pembrolizumab.",
+      "evidence": {
+        "type": "news",
+        "model": "Phase 3, PD-L1-negative advanced nonsquamous NSCLC",
+        "limitation": "A Cancer Discovery news item. It gives median PFS only. Patient numbers, hazard ratio, survival and safety were not in the text read."
+      },
+      "why": "If the full data hold up, a TROP-2 antibody-drug conjugate could replace platinum chemotherapy in this group, which has few good options beyond chemotherapy with an immune checkpoint drug.",
+      "didNotShow": "Not confirmed here: overall survival, toxicity compared with chemotherapy, and how the result looks across subgroups.",
+      "terms": [
+        { "term": "antibody-drug conjugate", "def": "An antibody that carries a toxic drug and delivers it to cells that carry the antibody's target." },
+        { "term": "progression-free survival", "def": "The time patients live without their cancer growing or spreading." }
+      ],
+      "sources": [
+        { "label": "Cancer Discovery news", "url": "https://doi.org/10.1158/2159-8290.cd-nw2026-0107", "doi": "10.1158/2159-8290.cd-nw2026-0107" }
+      ],
+      "forYou": "Relevant to antibody-targeted payload delivery and to how combinations with checkpoint blockade are judged."
+    },
+    {
+      "id": "metronidazole-fusobacterium-crc",
+      "area": "cancer",
+      "title": "Pulsed metronidazole plus immunotherapy shows encouraging PFS in a bacteria-defined colorectal cancer group",
+      "gist": "A commentary describes a Cancer Cell study that added pulses of the antibiotic metronidazole to immunotherapy and a blood vessel growth inhibitor in Fusobacterium-positive metastatic colorectal cancer.",
+      "evidence": {
+        "type": "commentary",
+        "model": "MSS metastatic colorectal cancer, F. nucleatum positive",
+        "limitation": "Read only the commentary's abstract. The trial size, design and numbers were not available."
+      },
+      "why": "Antibiotics usually blunt checkpoint drugs. A narrow, timed course aimed at one bacterial network is a different bet, and it makes tumour microbes a possible way to pick patients.",
+      "didNotShow": "Not confirmed here: sample size, how PFS compares with a control group, and whether the benefit came from the antibiotic.",
+      "terms": [
+        { "term": "microsatellite-stable", "def": "A colorectal tumour type with intact DNA mismatch repair, which usually responds poorly to checkpoint drugs." }
+      ],
+      "sources": [
+        { "label": "Cancer Cell commentary", "url": "https://doi.org/10.1016/j.ccell.2026.10.013", "doi": "10.1016/j.ccell.2026.10.013" }
+      ]
+    },
+    {
+      "id": "hodgkin-second-cancers",
+      "area": "cancer",
+      "title": "Women treated for Hodgkin lymphoma still face high second-cancer risk, though lower after modern radiotherapy",
+      "gist": "In 7,428 women followed for a median 20 years, second cancers were 3.3 times as common as expected. Solid tumour risk fell 25 percent from the oldest to newest era.",
+      "evidence": {
+        "type": "human-observational",
+        "model": "National registry cohort, England and Wales, 1954 to 2010",
+        "n": "7,428 women",
+        "limitation": "Observational registry data across 60 years of changing treatment, so era effects and radiotherapy changes are hard to separate."
+      },
+      "why": "The fall in risk is mostly explained by less and better radiotherapy, which supports lifelong screening for lung and breast cancer in survivors rather than a relaxed approach.",
+      "details": [
+        "During follow-up 1,200 women developed 1,467 invasive cancers (standardised incidence ratio 3.3, 95 percent CI 3.1 to 3.5), most often breast, lung and thyroid. Risk of solid tumours rose with radiotherapy dose. Cumulative incidence of second cancers reached 36 percent at 50 years.",
+        "The 25 percent drop in solid tumours between 1954 to 1989 and 2000 to 2010 shrank and lost significance after adjusting for radiotherapy, but not after adjusting for chemotherapy. Blood cancers did not decline."
+      ],
+      "didNotShow": "It did not show lower risk for blood cancers, and it covers women only.",
+      "terms": [
+        { "term": "standardised incidence ratio", "def": "Observed cancers divided by the number expected in the general population of the same age and sex." }
+      ],
+      "sources": [
+        { "label": "Journal of Clinical Oncology", "url": "https://doi.org/10.1200/jco-26-00418", "doi": "10.1200/jco-26-00418" }
+      ]
+    },
+    {
+      "id": "tu-stroma-ovarian-blood",
+      "area": "cancer",
+      "title": "An experimental blood RNA test picks up early fallopian tube changes linked to ovarian cancer",
+      "gist": "Levels of an RNA called Tu-stroma, carried in vesicles in blood, were higher in people with tiny precancer patches in the fallopian tube, in stored samples from 506 people.",
+      "evidence": {
+        "type": "news",
+        "model": "Stored blood samples from people with known diagnoses",
+        "n": "506 people, 43 with the patch alone",
+        "limitation": "Read only a press explainer. Few people had the early lesion, diagnoses were already known, and the test has not been used on people screened without symptoms."
+      },
+      "why": "High-grade serous ovarian cancer is usually found late and has no screening programme in the UK. A blood signal of the earliest lesion would matter, but false alarms could drive unneeded surgery.",
+      "details": [
+        "The explainer reports that in a separate validation group the test picked up the precancer patch in about 92 percent of those who had it and gave no signal in about 98 percent of the healthy comparison group. It outperformed the standard CA125 test for telling these patches from healthy people or benign growths."
+      ],
+      "didNotShow": "It did not show when the signal first appears over time, or how it would perform in people without symptoms.",
+      "terms": [
+        { "term": "extracellular vesicles", "def": "Tiny membrane packages that cells release, carrying RNA and proteins to other cells." }
+      ],
+      "sources": [
+        { "label": "The Conversation", "url": "https://theconversation.com/early-changes-linked-to-ovarian-cancer-may-leave-a-trace-in-the-blood-new-study-296527" }
+      ]
+    },
+    {
+      "id": "delirium-perfect-storm",
+      "area": "mind",
+      "title": "A review frames delirium as a clash of acute stress and pre-existing brain vulnerability",
+      "gist": "A Nature Reviews Neuroscience review argues delirium arises when an acute illness meets a vulnerable brain, with slowed brain rhythms and network breakdown as common signs.",
+      "evidence": {
+        "type": "review",
+        "model": "Narrative review of EEG, imaging, biomarker and animal evidence",
+        "limitation": "Review of evidence the authors chose, and the abstract states there are no treatments yet."
+      },
+      "why": "Delirium is common in hospitals and linked to later dementia and death. A shared brain signature could give researchers a measurable target for trials.",
+      "didNotShow": "A review does not test any treatment, and the abstract says the neurobiology is still not well understood.",
+      "terms": [
+        { "term": "EEG slowing", "def": "A shift of brain electrical rhythms toward slower frequencies, seen on scalp recordings." }
+      ],
+      "sources": [
+        { "label": "Nature Reviews Neuroscience, Cunningham and Kimchi", "url": "https://doi.org/10.1038/s41583-026-01092-8", "doi": "10.1038/s41583-026-01092-8" }
+      ]
+    },
+    {
+      "id": "alzheimers-two-regions-hopkins",
+      "area": "mind",
+      "title": "Brain scans point to two regions that change before the hippocampus in Alzheimer's",
+      "gist": "Johns Hopkins researchers report two brain areas that show signs of Alzheimer's disease before it reaches the hippocampus, which could offer earlier imaging markers.",
+      "evidence": {
+        "type": "news",
+        "limitation": "Read only the feed summary. The regions, sample size and design were not available. The Medical Xpress page blocked automated reading."
+      },
+      "why": "The hippocampus is the usual early site in Alzheimer's imaging studies. An earlier marker could help find people for prevention trials.",
+      "didNotShow": "Not confirmed here: which regions, how many people were scanned, and whether the signal predicts who develops symptoms.",
+      "sources": [
+        { "label": "Medical Xpress", "url": "https://medicalxpress.com/news/2026-11-brain-scans-reveal-regions-hippocampus.html" }
+      ]
+    },
+    {
+      "id": "aribio-ed-drug-alzheimers",
+      "area": "mind",
+      "title": "A repurposed erectile dysfunction drug gives tepid results in Alzheimer's, Endpoints reports",
+      "gist": "Some real-world data suggest men who take erectile dysfunction drugs are less likely to develop Alzheimer's, but AriBio's trial results are described as tepid.",
+      "evidence": {
+        "type": "news",
+        "limitation": "Read only the headline and feed summary. Trial size, endpoints and the actual numbers were not available."
+      },
+      "why": "Repurposed drugs are cheap to test, and a weak result tells researchers how much to trust real-world associations as a guide to what works in a trial.",
+      "didNotShow": "Not confirmed here: the trial design, the dose, the size of the effect or safety findings.",
+      "sources": [
+        { "label": "Endpoints News", "url": "https://endpoints.news/aribios-repurposing-of-ed-drug-for-alzheimers-yields-tepid-results/" }
+      ]
+    },
+    {
+      "id": "versant-lilly-gene-therapy-startup",
+      "area": "rare",
+      "title": "Versant and Lilly back a 100 million dollar gene therapy startup",
+      "gist": "Versant Ventures, Eli Lilly and other investors are putting 100 million dollars into a new startup aimed at one of gene therapy's thorny problems, according to a news report.",
+      "evidence": {
+        "type": "news",
+        "limitation": "STAT's article is paywalled. Only the feed summary was read, so the technical problem and the company name were not confirmed."
+      },
+      "why": "Gene therapy for rare diseases is held back by delivery and manufacturing. Funding of this size shows where investors think those bottlenecks can be fixed.",
+      "didNotShow": "Not confirmed here: what problem the startup targets, which diseases or what technology it uses.",
+      "sources": [
+        { "label": "STAT+", "url": "https://www.statnews.com/2026/11/16/versant-lilly-put-100-million-behind-new-startup-aimed-at-solving-one-of-gene-therapys-thorniest-issues/" }
+      ]
+    }
+  ],
+  "bench": [
+    {
+      "id": "pd-sleep-like-slow-waves",
+      "area": "mind",
+      "title": "Sleep-like slow waves during wakefulness are associated with hallucinations and poorer cognition in Parkinson's disease",
+      "headline": "Awake people with Parkinson's show more sleep-like brain waves, and larger ones go with hallucinations and weaker thinking.",
+      "authors": "Bernasconi F, Andrillon T, Farah JC, et al.",
+      "venue": "Science Translational Medicine",
+      "published": "2026-11-11",
+      "evidence": {
+        "type": "human-observational",
+        "model": "Human EEG, patients with Parkinson's and healthy older adults",
+        "n": "84 patients, 30 controls",
+        "limitation": "An association in a cross-sectional cohort of non-demented patients, so it cannot show that the waves cause hallucinations."
+      },
+      "question": "Do brief sleep-like slow waves that intrude into waking brain activity relate to hallucinations and cognition in Parkinson's disease?",
+      "approach": "The team recorded brain activity in awake patients and healthy older adults, detected sleep-like slow waves (SLSWs), and compared how often they occurred and how large they were against hallucination traits and cognitive scores.",
+      "model": "84 non-demented people with Parkinson's disease and 30 healthy older adults.",
+      "result": "SLSWs occurred more often in patients. Hallucinatory traits went with higher SLSW amplitude, especially over frontal and central regions, and more prominent SLSWs went with poorer cognitive function. The abstract gives no effect sizes.",
+      "limitations": "Association only, from the abstract. Effect sizes, medication effects and whether the findings hold in patients with dementia were not reported.",
+      "meaning": "Slow-wave activity during waking could become a measurable marker of psychiatric and cognitive risk in Parkinson's, and a target for studies of sleep-like intrusions.",
+      "terms": [
+        { "term": "slow waves", "def": "Large, slow electrical oscillations of the brain that dominate deep sleep." },
+        { "term": "EEG", "def": "A recording of the brain's electrical activity from electrodes on the scalp." }
+      ],
+      "sources": [
+        { "label": "Science Translational Medicine", "url": "https://doi.org/10.1126/scitranslmed.aec1215", "doi": "10.1126/scitranslmed.aec1215" },
+        { "label": "Medical Xpress coverage", "url": "https://medicalxpress.com/news/2026-11-daytime-brain-resembling-deep-hallucinations.html" }
+      ],
+      "forYou": "Relevant to how sleep-related brain dynamics link to cognitive and psychiatric symptoms."
+    },
+    {
+      "id": "kras-ctdna-pdac-preprint",
+      "area": "cancer",
+      "title": "Quantitative KRAS ctDNA Dynamics Predict Early Recurrence After Neoadjuvant Therapy and Surgery in Pancreatic Cancer",
+      "headline": "Tumour DNA still detectable in blood after pancreatic cancer surgery marked patients likely to relapse, months before scans.",
+      "authors": "Authors not captured in the record read",
+      "venue": "Research Square (preprint)",
+      "published": "2026-11-13",
+      "evidence": {
+        "type": "preprint",
+        "model": "Human blood samples, pancreatic ductal adenocarcinoma",
+        "n": "130 enrolled, 55 analysed",
+        "limitation": "Not peer reviewed, small group of 55 for the main analysis, and no randomised test of acting on the result.",
+        "conflicts": "Funding was not listed in the record read."
+      },
+      "question": "Can KRAS-mutant DNA in blood after neoadjuvant treatment and surgery predict early recurrence in pancreatic cancer?",
+      "approach": "Droplet digital PCR measured KRAS G12D, G12V and G12R fragments in cell-free DNA and quantified a maximum variant allele frequency (mVAF), tracked before and after treatment and surgery.",
+      "model": "Patients with pancreatic ductal adenocarcinoma given neoadjuvant chemotherapy (NAC) then surgery.",
+      "result": "ctDNA was detected a median 7.6 months before imaging showed recurrence. Detection after surgery went with worse recurrence-free survival (adjusted HR 3.30, 95% CI 1.33 to 8.21). Clearance went with better survival (aHR 0.23, 0.06 to 0.90). Above-median mVAF meant 12.8 versus 26.3 months of recurrence-free survival.",
+      "limitations": "Wide confidence intervals from 55 patients. Positive patients still did badly after adjuvant chemotherapy, but nothing here shows that changing treatment helps.",
+      "meaning": "Blood KRAS monitoring could help sort high-risk patients and time trials of added treatment, if larger, peer-reviewed studies confirm it.",
+      "terms": [
+        { "term": "ctDNA", "def": "Fragments of tumour DNA that circulate in the blood." },
+        { "term": "droplet digital PCR", "def": "A method that splits a sample into thousands of droplets to count very rare DNA variants." }
+      ],
+      "sources": [
+        { "label": "Research Square preprint", "url": "https://doi.org/10.21203/rs.3.rs-10942935/v1", "doi": "10.21203/rs.3.rs-10942935/v1" }
+      ],
+      "forYou": "Relevant to pancreatic cancer biomarkers and to selecting patients for combination approaches."
+    },
+    {
+      "id": "redaporfin-micelle-pdt-icd",
+      "area": "cancer",
+      "title": "Formulation-controlled redaporfin cellular-targeted photodynamic therapy sensitizes tumors to PD-1/PD-L1 blockade via immunogenic cell death",
+      "headline": "Packaging a photosensitizer in the right micelle turned a weak light treatment into a partner for checkpoint drugs in mice.",
+      "authors": "Authors not captured in the record read",
+      "venue": "Biomedicine & Pharmacotherapy",
+      "published": "2026-11-12",
+      "evidence": {
+        "type": "animal",
+        "model": "CT26 colon carcinoma mice and cells",
+        "n": "Not given in the abstract",
+        "limitation": "A mouse colon tumour line, sample sizes not given in the abstract, and the immune findings come from one model.",
+        "conflicts": "Funding listed: Narodowe Centrum Nauki (Polish National Science Centre)."
+      },
+      "question": "Can the carrier used for the photosensitizer redaporfin change whether light treatment with a long drug-to-light gap triggers an immune response?",
+      "approach": "The team compared redaporfin in ethanol, in water and in Pluronic micelles (P123 and F127), measured photochemistry and cell uptake, then tested photodynamic therapy with and without PD-1 and PD-L1 blockade in tumour-bearing mice.",
+      "model": "CT26 mouse colon cancer cells and tumours, plus cell-free photochemistry.",
+      "result": "Micelles prolonged the triplet-state lifetime more than sevenfold versus ethanol and more than twentyfold versus water. P123 raised accumulation in the endoplasmic reticulum and calreticulin and HMGB1 signs of immunogenic cell death. Therapy alone was not curative, but with blockade up to 50 percent of mice had durable complete responses, stayed tumour-free for 120 days and resisted rechallenge.",
+      "limitations": "One tumour line, no human data, and the abstract does not give group sizes or statistics. The micelle carrier is shown to matter, but the mechanism links are correlative.",
+      "meaning": "Carrier choice may decide whether a clinical photosensitizer produces an immune-stimulating form of cell death, which is a design question for light-based combinations.",
+      "terms": [
+        { "term": "triplet state", "def": "A long-lived excited state of a photosensitizer that can pass energy to oxygen." },
+        { "term": "immunogenic cell death", "def": "Cell death that exposes signals such as calreticulin so the immune system reacts to the dying tumour." },
+        { "term": "micelle", "def": "A tiny sphere formed by detergent-like molecules that can hold a drug inside." }
+      ],
+      "diagram": {
+        "layout": "flow",
+        "nodes": [
+          { "label": "Micelle carrier", "note": "P123 Pluronic" },
+          { "label": "Longer triplet life", "note": "7x vs ethanol" },
+          { "label": "ER-linked ROS damage" },
+          { "label": "Immunogenic death", "note": "calreticulin, HMGB1", "key": true },
+          { "label": "Plus PD-1/PD-L1 blockade", "note": "up to 50% complete responses" }
+        ],
+        "links": ["prolongs", "targets", "exposes signals", "primes"],
+        "caption": "How the paper links formulation to immune response in mice. Steps follow the abstract; causality is not proven."
+      },
+      "sources": [
+        { "label": "Biomedicine & Pharmacotherapy", "url": "https://doi.org/10.1016/j.biopha.2026.120054", "doi": "10.1016/j.biopha.2026.120054" }
+      ],
+      "forYou": "Relevant to formulation of photosensitizers, light dosimetry and photodynamic immunotherapy combinations."
+    },
+    {
+      "id": "bipolar-vagus-liver-creatine",
+      "area": "mind",
+      "title": "Vagus-Hepatic-Creatine axis modulates manic-like behaviors via hippocampal MMP19 upregulation in bipolar disorder",
+      "headline": "In mice, extra creatine made in the liver drove manic-like behaviour through the vagus nerve and brain inflammation, and blood creatine was also higher in bipolar patients.",
+      "authors": "Authors not captured in the record read",
+      "venue": "Molecular Psychiatry",
+      "published": "2026-11-13",
+      "evidence": {
+        "type": "animal",
+        "model": "Sleep-deprivation manic-like mice, plus a small human clinical comparison",
+        "n": "55 MDD, 57 BD, 55 controls",
+        "limitation": "Mouse sleep-deprivation is a proxy for mania, human comparison is small and cross-sectional, and no treatment was tested in patients.",
+        "conflicts": "Funding listed: Sichuan University."
+      },
+      "question": "Why is peripheral creatine kinase altered in bipolar disorder, and does the periphery drive manic-like states?",
+      "approach": "The authors measured creatine in patients and mice, gave creatine or an analogue, cut the vagus nerve below the diaphragm, and tested hippocampal MMP19 by knockdown.",
+      "model": "Humans (55 with major depression, 57 with bipolar disorder, 55 controls) and sleep-deprived mice.",
+      "result": "Blood creatine was higher in bipolar patients and model mice, with raised liver GAMT enzyme. Creatine supplements reproduced manic-like behaviour, while the analogue beta-GPA or vagotomy reduced it. Creatine acted without crossing into the brain, through interleukin-1 alpha signalling and hippocampal MMP19.",
+      "limitations": "Causal claims rest on a mouse proxy model, and the abstract gives no effect sizes. Whether blocking this axis helps people is untested.",
+      "meaning": "It points to body-brain metabolism, not only brain circuits, as a source of mood-state biology and a possible drug target, pending replication.",
+      "terms": [
+        { "term": "vagotomy", "def": "Cutting the vagus nerve, which links organs like the liver to the brainstem." },
+        { "term": "MMP19", "def": "A matrix metalloproteinase, an enzyme that remodels tissue around cells." }
+      ],
+      "sources": [
+        { "label": "Molecular Psychiatry", "url": "https://doi.org/10.1038/s41380-026-03938-0", "doi": "10.1038/s41380-026-03938-0" }
+      ],
+      "forYou": "Relevant to systemic metabolism and neuroimmune signalling as drivers of brain states."
+    }
+  ],
+  "method": {
+    "id": "intratongue-hnscc-mouse-model",
+    "title": "Orthotopic intratongue injection for a head and neck cancer mouse model",
+    "gist": "A Bio-protocol paper describes injecting cancer cells under the tongue lining of a mouse to grow head and neck tumours in their natural site without surgery.",
+    "field": "cancer",
+    "useWhen": "When you want a preclinical head and neck squamous cell carcinoma model that grows in the oral mucosa, in a syngeneic setting or with patient-derived cells in immunocompromised mice.",
+    "steps": [
+      { "title": "Anaesthetise the mouse", "text": "Mice are anaesthetised before the injection." },
+      { "title": "Inject near the tongue edge", "text": "A small volume of cancer cell suspension is injected near the lateral border of the tongue, right under the mucous membrane." },
+      { "title": "Give analgesia and soft food", "text": "After injection, give appropriate analgesia and provide soft food for the whole experiment so the mice can eat freely." },
+      { "title": "Dissect tissues", "text": "At the endpoint, dissect the tongue and any organs where metastases may have formed." },
+      { "title": "Profile the tumour", "text": "Analyse samples with the methods described in the paper: atomic force microscopy for elasticity on fresh tissue, H&E staining, standard immunohistochemistry and confocal microscopy on paraffin sections." }
+    ],
+    "pitfalls": [
+      "Quantities, cell numbers and timings are in the full protocol and are not repeated here: read it before use."
+    ],
+    "safety": "Animal work needs ethical approval and trained staff. Follow your institution's animal welfare, anaesthesia, analgesia and biosafety rules, and ask your safety officer if unsure.",
+    "source": { "label": "Bio-protocol, Follain et al.", "url": "https://doi.org/10.21769/bioprotoc.5861", "doi": "10.21769/bioprotoc.5861" },
+    "terms": [
+      { "term": "orthotopic", "def": "Placing tumour cells in the organ or tissue where that cancer normally arises." },
+      { "term": "syngeneic", "def": "Using cells and a host from the same genetic strain, so the immune system stays intact." }
+    ],
+    "forYou": "Relevant to orthotopic models and tissue stiffness measurements in tumour studies."
+  },
+  "learn": {
+    "question": "What does it mean for a tumour to be immune excluded?",
+    "answer": "T cells can be present in the tissue around a tumour yet blocked from entering it. Signals such as TGF-beta and dense matrix help build that barrier, so lifting them can let T cells in.",
+    "analogy": "Like a castle with guards camped outside the wall: the army is there but cannot reach the keep.",
+    "body": [
+      "Many solid tumours sit inside tough, scar-like tissue made by fibroblasts. Cancer-associated fibroblasts and certain myeloid cells release TGF-beta, which holds T cells back and keeps them quiet.",
+      "In the Cancer Cell study above, a TGF-beta blocker anchored to a matrix protein relieved that exclusion in mouse tumours. Per the abstract, T cells became active, fibroblast and myeloid cells shifted toward presenting antigen, and the tumour became visible to the immune system."
+    ],
+    "diagram": {
+      "layout": "flow",
+      "nodes": [
+        { "label": "Fibrotic matrix" },
+        { "label": "TGF-beta builds up", "key": true },
+        { "label": "Fibroblasts, myeloid cells" },
+        { "label": "T cells stay outside" },
+        { "label": "Blockade lets T cells in" }
+      ],
+      "links": ["produces", "shapes", "block", "reverses"],
+      "caption": "A simplified path from tumour matrix to immune exclusion and how local TGF-beta blockade reverses it in mice."
+    },
+    "terms": [
+      { "term": "cancer-associated fibroblast", "def": "A tumour-supporting connective tissue cell that builds matrix and releases signals." },
+      { "term": "myeloid cells", "def": "A family of immune cells, including macrophages, that can calm or boost immune attack." }
+    ],
+    "seenIn": ["tgfb-trap-fn-edb"],
+    "sources": [
+      { "label": "Cancer Cell, Kang et al.", "url": "https://doi.org/10.1016/j.ccell.2026.10.007", "doi": "10.1016/j.ccell.2026.10.007" }
+    ]
+  },
+  "trials": {
+    "trials": [
+      {
+        "id": "nct07627191-glp1-gi-cancer",
+        "area": "cancer",
+        "title": "GLP-1 receptor agonist plus standard treatment in first-line metastatic pancreatic, colorectal or liver cancer",
+        "nct": "NCT07627191",
+        "phase": "1",
+        "status": "Recruiting",
+        "change": "updated",
+        "what": "Tests the safety and feasibility of continuing GLP-1 drugs during first-line chemotherapy. The primary outcome is treatment-emergent adverse events.",
+        "who": "About 30 patients (estimated) with metastatic pancreatic, colorectal or hepatocellular cancer, in three arms.",
+        "sponsor": "University of Arizona",
+        "sources": [ { "label": "ClinicalTrials.gov", "url": "https://clinicaltrials.gov/study/NCT07627191" } ]
+      },
+      {
+        "id": "nct06748950-keto-mental-illness",
+        "area": "mind",
+        "title": "Ketogenic metabolic therapy in schizophrenia, bipolar disorder and major depression",
+        "nct": "NCT06748950",
+        "phase": "n/a",
+        "status": "Recruiting",
+        "change": "updated",
+        "what": "A randomised trial of a ketogenic diet, with a drug-diet crossover arm, on well-being, functioning and quality of life, with deep omic profiling.",
+        "who": "About 120 people (estimated) with serious mental illness.",
+        "sponsor": "Stanford University",
+        "sources": [ { "label": "ClinicalTrials.gov", "url": "https://clinicaltrials.gov/study/NCT06748950" } ]
+      },
+      {
+        "id": "nct07721467-nectar-psilocybin",
+        "area": "mind",
+        "title": "NECTAR: cognitive training reinforced by psilocybin in ageing and Alzheimer's disease",
+        "nct": "NCT07721467",
+        "phase": "2",
+        "status": "Recruiting",
+        "change": "updated",
+        "what": "Tests whether psilocybin added to tablet-based cognitive training raises a neuroplasticity composite score in older adults.",
+        "who": "About 200 people (estimated) aged 65 and over, with early Alzheimer's disease or normal cognition.",
+        "sponsor": "National Institute on Aging",
+        "sources": [ { "label": "ClinicalTrials.gov", "url": "https://clinicaltrials.gov/study/NCT07721467" } ]
+      }
+    ],
+    "funding": []
+  },
+  "chatter": [
+    {
+      "id": "retraction-denali-cell-reports",
+      "area": "mind",
+      "kind": "retraction",
+      "title": "Cell Reports retracts a Parkinson's lysosome paper for data manipulation",
+      "where": "Retraction Watch",
+      "signal": "Retraction Watch report on 16 November 2026",
+      "gist": "The notice says the first author changed data points to cut variability, affecting in vitro figures but not the main in vivo conclusions. The company said it was isolated.",
+      "sources": [ { "label": "Retraction Watch", "url": "https://retractionwatch.com/2026/11/16/cell-reports-denali-therapeutics-neurodegeneration/" } ]
+    },
+    {
+      "id": "reddit-autism-brain-variability",
+      "area": "mind",
+      "kind": "preprint-buzz",
+      "title": "Autistic adults show more variable brain activity than each other, a study says",
+      "where": "r/psychology",
+      "signal": "#1 of the day's top posts on r/psychology",
+      "gist": "The post says adults with autism spectrum disorder vary more from one another in auditory, visual and social brain activity than comparison adults do. The linked study was not read.",
+      "sources": [ { "label": "r/psychology post", "url": "https://www.reddit.com/r/psychology/comments/1xxmt4a/people_with_autism_show_remarkable_variability_in/" } ]
+    },
+    {
+      "id": "reddit-open-cancer-map",
+      "area": "cancer",
+      "kind": "tool",
+      "title": "An open source interactive map of cancer information",
+      "where": "r/Oncology",
+      "signal": "#2 of the day's top posts on r/Oncology",
+      "gist": "A person built an open source interactive map to make cancer information easier to navigate after a family diagnosis. We did not open or assess the tool.",
+      "sources": [ { "label": "r/Oncology post", "url": "https://www.reddit.com/r/Oncology/comments/1xxredx/after_my_wifes_cancer_diagnosis_i_built_a/" } ]
+    },
+    {
+      "id": "mastodon-stuttering-podcast",
+      "area": "mind",
+      "kind": "debate",
+      "title": "Scientific American podcast on the neuroscience of stuttering gets shared",
+      "where": "Mastodon",
+      "signal": "4 favourites and 2 boosts on one Mastodon post",
+      "gist": "A small post shares a Scientific American podcast episode on the neuroscience of stuttering. A modest signal, and we did not listen to the episode.",
+      "sources": [ { "label": "Mastodon post", "url": "https://mastodonapp.uk/@brainsmatter/117623994289719182" }, { "label": "Scientific American", "url": "https://www.scientificamerican.com/podcast/episode/the-neuroscience-behind-stuttering/" } ]
+    }
+  ],
+  "curiosity": {
+    "id": "organoid-cognition-assays",
+    "area": "curiosity",
+    "title": "How would you test whether a brain organoid can remember or predict?",
+    "gist": "Two neuroscientists propose a ladder of cognitive tests for lab-grown brain tissue, from representing stimuli to memory and prediction, to ask what these tissues can compute.",
+    "body": [
+      "A Neuron review by Melloni and Dehaene says the computational abilities of brain organoids and assembloids (organoids joined together) are largely unexplored. They propose a hierarchy of assays based on cognitive neuroscience, covering representations, memory and predictive processing.",
+      "The authors say the tests would allow causal checks on how architecture and maturation shape computation, and would give evidence to debates about organoid consciousness. A Science feature in the same fortnight describes organoids as potential computing machines."
+    ],
+    "evidence": {
+      "type": "review",
+      "limitation": "Read only the abstracts. This is a proposal for tests, not results from experiments."
+    },
+    "sources": [
+      { "label": "Neuron, Melloni and Dehaene", "url": "https://doi.org/10.1016/j.neuron.2026.10.009", "doi": "10.1016/j.neuron.2026.10.009" },
+      { "label": "Science feature", "url": "https://doi.org/10.1126/science.aeo0641", "doi": "10.1126/science.aeo0641" }
+    ]
+  },
+  "jobs": [],
+  "note": "Many journal and news pages blocked reading, so several items rest on abstracts or feed summaries. No job posting could be opened and confirmed today."
+}
