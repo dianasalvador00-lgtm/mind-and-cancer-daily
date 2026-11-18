@@ -13,3 +13,4 @@ file under 60 lines by removing the oldest lines.
 - 2026-11-17 (issue 2): Run needed `npm ci` first (read-paper failed without node_modules). Most journal and
   news pages are paywalled or blocked, so bench items rest on Europe PMC abstracts: keep claims to those numbers.
   Reddit JSON and Medical Xpress block bots; use the brief's `signal` field for chatter. No job could be verified.
+- 2026-11-18 (issue 3): PubMed E-utilities (esearch by [doi], efetch xml) gave full abstracts for Lancet, Lancet Oncology and JCO papers that Europe PMC lacked; read-paper says NOT FOUND for brand-new journal items. Hub diagram notes render faint, so leave them off. Endpoints, STAT, Medical Xpress and PsyPost block bots again.
