@@ -16,10 +16,11 @@ page. Tune this file freely. The daily run reads it every morning and folds "Mor
 
 | Area | Share | What it covers |
 |---|---|---|
-| cancer | 35% | biology, tumour microenvironment, therapies, immunotherapy, early detection, trials |
-| mind | 35% | neuroscience, psychiatry, psychology, cognition, neurodegeneration, behaviour |
-| rare | 15% | gene and cell therapy, diagnosis, natural history, registries |
-| curiosity | 10% | odd but real findings, well sourced |
+| cancer | 30% | biology, tumour microenvironment, therapies, immunotherapy, early detection, trials |
+| mind | 30% | neuroscience, psychiatry, psychology, cognition, neurodegeneration, behaviour |
+| rare | 12% | gene and cell therapy, diagnosis, natural history, registries |
+| women | 15% | women's health and reproduction: pregnancy and birth, fertility and IVF, endometriosis, PCOS, menopause, contraception, sex differences in disease |
+| curiosity | 8% | odd but real findings, well sourced |
 | other | 5% | anything else in medicine that is genuinely notable |
 
 The shares are targets over a week, not quotas for one day. `config/topics.json` has the same

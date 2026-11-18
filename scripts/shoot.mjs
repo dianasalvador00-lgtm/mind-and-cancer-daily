@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Screenshots the built site (dist/) into .cache/shots/ so the daily run can look at it:
 // desktop and phone, light and dark, sliced into screen-height pieces, plus a tune-mode shot.
+// It also warns about words broken across lines and text spilling out of chips, diagrams and buttons.
 //   node scripts/shoot.mjs [--page index.html] [--out .cache/shots]
 // Needs a Chrome or Edge. Set CHROME_PATH to use a specific one; otherwise common install
 // locations are tried, then Puppeteer's own download (npx puppeteer browsers install chrome).
@@ -80,6 +81,32 @@ for (const v of variants) {
   const total = await page.evaluate(() => document.documentElement.scrollHeight);
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   if (overflow > 0) console.warn(`warning: ${v.name} scrolls sideways by ${overflow}px`);
+  // Readability: a word split across lines (no hyphen there) or text spilling out of its box, in
+  // diagrams, headings, chips and buttons. Folds are opened for the check and closed again.
+  const problems = await page.evaluate(() => {
+    const SEL = '.diagram .node-label, .diagram .node-note, .diagram .arrow-label, .tl-when, .tl-what, .cmp-value, .cmp-note, h1, h2, h3, .area, .ev, .chg, .acc, .cta-btn > span, .keyresult-label, .gl-entry dt';
+    const shut = [...document.querySelectorAll('details:not([open])')];
+    shut.forEach((d) => (d.open = true));
+    const out = [];
+    const where = (el) => el.closest('[id]')?.id ?? el.tagName.toLowerCase();
+    for (const el of document.querySelectorAll(SEL)) {
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      for (let t = walker.nextNode(); t; t = walker.nextNode()) {
+        // word parts: a line may break after a hyphen, a slash or a soft hyphen, never elsewhere
+        for (const m of t.data.matchAll(/[^\s\-/‐­]+/g)) {
+          const r = document.createRange();
+          r.setStart(t, m.index);
+          r.setEnd(t, m.index + m[0].length);
+          const tops = new Set([...r.getClientRects()].filter((x) => x.width > 0).map((x) => Math.round(x.top)));
+          if (tops.size > 1) out.push(`broken word "${m[0]}" in ${where(el)} (${el.className || el.tagName.toLowerCase()})`);
+        }
+      }
+      if (el.scrollWidth > el.clientWidth + 1 && getComputedStyle(el).display !== 'inline') out.push(`overflow: "${el.textContent.trim().slice(0, 40)}" spills out of its box in ${where(el)}`);
+    }
+    shut.forEach((d) => (d.open = false));
+    return [...new Set(out)];
+  });
+  for (const pr of problems) console.warn(`warning: ${v.name}: ${pr}`);
   const slices = Math.min(MAX_SLICES, Math.ceil(total / v.height));
   for (let i = 0; i < slices; i++) {
     const file = join(out, `${v.name}-${i + 1}.png`);

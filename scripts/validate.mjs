@@ -5,7 +5,8 @@
 //  - no hype words, no medical advice, nothing private in public text
 //  - evidence labels agree with sources (preprint hosts), method sources are protocol hosts
 //  - images exist, are credited and licensed; the Learn section has a diagram or an image
-//  - nothing is featured twice (kept issues and data/seen.json); palettes are not repeated
+//  - nothing is featured twice: same link or id, or the same story under another link (fuzzy),
+//    across kept issues, data/seen.json and within an issue; palettes are not repeated
 //  - the palette catalogue passes its contrast and colour-blind checks; UI strings are complete
 // Exit code 1 on any error; warnings print and pass.
 //
@@ -16,7 +17,7 @@ import { join, relative, extname } from 'node:path';
 import { Issue, Week, strings, METHOD_HOSTS } from '../src/kit/schema.mjs';
 import { PALETTES, checkPalettes, getPalette } from '../src/kit/palette.mjs';
 import { UI } from '../src/kit/i18n.mjs';
-import { issueKeys, readSeen } from './identity.mjs';
+import { issueKeys, readSeen, fingerprint, likelySame, fpFromKey } from './identity.mjs';
 
 const root = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1');
 const fixtureMode = process.argv.includes('--fixture');
@@ -186,16 +187,52 @@ real.forEach((i, idx) => {
   if (before.includes(i.palette)) err(`${i.f}: palette ${i.palette} was used within the previous 7 issues`);
 });
 
+// No repeats. A paper, news story, trial, method, call or post is featured once: not again on a later
+// day (kept issues and the 90-day memory in data/seen.json), and not twice in the same issue. Exact
+// identities (url, DOI, PMID, arXiv, NCT, title) catch the same link; the fuzzy check catches the same
+// study under another link or headline (a news report one day, the paper or another outlet the next).
+// The only exception: a trial may come back once for each real event (results posted, completed,
+// terminated). Issues before STRICT_FROM were written under the older trial rule ("updated" could
+// repeat) and are left as published.
+const STRICT_FROM = '2026-11-18';
 const seenMemory = readSeen(root);
+const seenFps = Object.entries(seenMemory).filter(([k]) => k.startsWith('fp:')).map(([k, d]) => ({ fp: fpFromKey(k), date: d }));
 const first = new Map();
+const earlier = [];
 for (const i of real) {
-  for (const { id, kind, keys, repeatable } of issueKeys(i)) {
-    for (const k of keys) {
-      if (first.has(k) && first.get(k).date !== i.date && !repeatable) err(`${i.f}: ${kind} "${id}" repeats ${k} from ${first.get(k).date}`);
-      if (seenMemory[k] && !repeatable) err(`${i.f}: ${kind} "${id}" was already featured on ${seenMemory[k]} (data/seen.json, ${k})`);
-      if (!first.has(k)) first.set(k, { date: i.date, id });
+  const legacy = i.date < STRICT_FROM;
+  const items = issueKeys(i).map((x) => ({ ...x, fp: fingerprint(x.text) }));
+  const mayRepeat = (x) => x.repeatable || (legacy && x.kind === 'trial' && i.trials.trials.find((t) => t.id === x.id)?.change !== 'new');
+  for (const x of items) {
+    for (const k of x.keys) {
+      const prev = first.get(k);
+      if (prev && prev.date === i.date && prev.id !== x.id) err(`${i.f}: ${x.kind} "${x.id}" and "${prev.id}" are the same item (${k}); keep one`);
+      if (k.startsWith('event:') && ((prev && prev.date !== i.date) || seenMemory[k])) err(`${i.f}: trial "${x.id}" repeats the same event (${k}) from ${prev?.date ?? seenMemory[k]}`);
+      else if (prev && prev.date !== i.date && !mayRepeat(x)) err(`${i.f}: ${x.kind} "${x.id}" repeats ${k} from ${prev.date} ("${prev.id}")`);
+      else if (seenMemory[k] && !mayRepeat(x)) err(`${i.f}: ${x.kind} "${x.id}" was already featured on ${seenMemory[k]} (data/seen.json, ${k})`);
+      if (!prev) first.set(k, { date: i.date, id: x.id });
+    }
+    if (mayRepeat(x)) continue;
+    // the same story under another link or headline
+    for (const y of earlier) {
+      const o = likelySame(x.fp, y.fp);
+      if (!o) continue;
+      const msg = `${i.f}: ${x.kind} "${x.id}" looks like the same story as ${y.kind} "${y.id}" from ${y.date} (${o.shared} shared words, ${Math.round(o.score * 100)}%)`;
+      if (o.score >= 0.8 && o.shared >= 6) err(`${msg}; drop it`);
+      else warn(`${msg}; drop it unless it is a different study`);
+    }
+    for (const s of seenFps) {
+      const o = likelySame(fingerprint(x.title), s.fp, 0.75);
+      if (o) warn(`${i.f}: ${x.kind} "${x.id}" looks like a story featured on ${s.date} (data/seen.json); drop it unless it is a different study`);
     }
   }
+  // the same story twice in one issue
+  for (let a = 0; a < items.length; a++)
+    for (let b = a + 1; b < items.length; b++) {
+      const o = likelySame(items[a].fp, items[b].fp);
+      if (o) warn(`${i.f}: ${items[a].kind} "${items[a].id}" and ${items[b].kind} "${items[b].id}" look like the same story (${o.shared} shared words); keep one`);
+    }
+  earlier.push(...items.map((x) => ({ ...x, date: i.date })));
 }
 
 // area mix over the kept issues (warning only)

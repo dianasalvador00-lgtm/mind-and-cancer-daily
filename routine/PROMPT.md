@@ -67,14 +67,21 @@ First check the network: fetch one item's URL. If you get a DNS or host error (`
 keep every claim to what they confirm, label such items `news` or `commentary`, say so in `note` and in
 your final report, and tell the owner to set the routine's environment to full network access.
 
-Choose what to read, balanced to the target mix in `taste.md` (cancer 35, mind 35, rare 15, curiosity
-10, other 5; strong nanomedicine, phototherapy and pancreatic cancer items earn a place on their own):
+Choose what to read, balanced to the target mix in `taste.md` (cancer 30, mind 30, women 15, rare 12, curiosity
+8, other 5; strong nanomedicine, phototherapy and pancreatic cancer items earn a place on their own):
 
 - 10 to 14 research and news candidates, giving every area a fair look,
 - 1 to 2 method candidates, 3 to 5 trials, 2 to 4 funding or chatter items, 1 curiosity, up to 8 jobs.
 
-Skip anything already in the last 7 issues (the sweep already drops what was featured, but papers
-found by search are not covered: `grep -l "<doi or title fragment>" data/issues/*.json data/seen.json`).
+**Never repeat a paper or story.** Nothing featured in the last 7 issues or remembered in
+`data/seen.json` comes back, not even under another link: a news report about a paper already covered,
+the paper behind a news item already covered, a press release or a second outlet on the same study all
+count as repeats. The sweep drops exact repeats and marks likely ones `seenBefore` (with where they ran):
+skip those unless you have checked it is a different study. Papers found by search are not covered by
+the sweep: `grep -il "<doi, NCT or distinctive title words>" data/issues/*.json data/seen.json`.
+A trial comes back only for a new event (`results-posted`, `completed`, `terminated`), once per event,
+and its `what` says what happened; never for a plain registry update. Validate fails on repeats and
+warns on look-alikes ("looks like the same story"): drop the item unless it is truly a different study.
 
 ### Helpers (at most 3, `model: "haiku"`, started in parallel)
 
@@ -140,6 +147,8 @@ npm run shoot
 - Read the screenshots in `.cache/shots/` (at least desktop-light-1, desktop-dark-1, phone-light-1,
   phone-dark-1, and one slice with a diagram). Look for cramped or overflowing text, one-word-per-line
   wrapping, big numbers that break, unreadable figures, poor contrast. Fix and repeat up to 3 rounds.
+- Treat every `broken word` or `overflow` warning from `npm run shoot` as a defect: shorten the label,
+  note or link it names (see "Readable diagrams" in WRITING.md) and shoot again.
 
 ## 7. Remember
 

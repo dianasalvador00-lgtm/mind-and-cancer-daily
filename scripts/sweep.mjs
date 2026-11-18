@@ -22,7 +22,7 @@
 //   node scripts/sweep.mjs --test     read every source once (also the disabled ones), print a table
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { keysOf, issueKeys, readSeen } from './identity.mjs';
+import { keysOf, issueKeys, readSeen, fingerprint, likelySame, fpFromKey, TRIAL_EVENTS } from './identity.mjs';
 import { READERS, MAY_BE_EMPTY, LANES } from './sources/index.mjs';
 import { sleep, hostOf, salaryIn, clip } from './sources/util.mjs';
 
@@ -76,15 +76,25 @@ function topicInfo(title, summary, src) {
 }
 
 // ------------------------------------------------------------ already featured
-const featured = new Set(Object.keys(readSeen(root)));
+// Nothing featured before comes back: exact identities are dropped, and a candidate that looks like
+// an already featured story under another link (fuzzy, see identity.mjs) is dropped when it is clearly
+// the same and flagged `seenBefore` (with a score penalty) when it may be. A trial returns only for a
+// real event (results posted, completed, terminated) that was not featured yet.
+const seenMem = readSeen(root);
+const featured = new Set(Object.keys(seenMem));
+const featuredStories = Object.entries(seenMem).filter(([k]) => k.startsWith('fp:')).map(([k, d]) => ({ fp: fpFromKey(k), where: `${d}` }));
 const issueDir = join(root, 'data', 'issues');
 if (existsSync(issueDir)) {
   for (const f of readdirSync(issueDir).filter((f) => f.endsWith('.json'))) {
     try {
-      for (const { keys, repeatable } of issueKeys(JSON.parse(readFileSync(join(issueDir, f), 'utf8')))) if (!repeatable) for (const k of keys) featured.add(k);
+      for (const x of issueKeys(JSON.parse(readFileSync(join(issueDir, f), 'utf8')))) {
+        for (const k of x.keys) if (!x.repeatable || k.startsWith('event:')) featured.add(k);
+        if (!x.repeatable) featuredStories.push({ fp: fingerprint(x.text), where: `${f.replace('.json', '')} ${x.id}` });
+      }
     } catch {}
   }
 }
+const SEEN_PENALTY = 3;
 
 // ------------------------------------------------------------ read the sources
 const windowHours = (src) => src.windowHours ?? topics.windows[src.section] ?? 48;
@@ -158,8 +168,15 @@ const index = new Map();
 for (const { it, src, ts } of raw) {
   const url = it.url;
   const keys = keysOf(url, it.title, { doi: it.doi, pmid: it.pmid, nct: it.nct });
-  const exempt = it.nct && it.change && it.change !== 'new';
+  const exempt = it.nct && TRIAL_EVENTS.includes(it.change) && !featured.has(`event:${String(it.nct).toUpperCase()}:${it.change}`);
   if (!exempt && [...keys].some((k) => featured.has(k))) continue;
+  let seenBefore;
+  if (!exempt) {
+    const fp = fingerprint(it.title);
+    const match = featuredStories.map((st) => ({ st, o: likelySame(fp, st.fp) })).filter((m) => m.o).sort((a, b) => b.o.score - a.o.score)[0];
+    if (match && match.o.score >= 0.8) continue;
+    if (match) seenBefore = match.st.where;
+  }
   const summary = clip(it.summary ?? '', 700);
   const info = topicInfo(it.title, summary, src);
   if (topics.requireTopic.includes(src.section) && info.topic === 0 && info.niche === 0) continue;
@@ -170,7 +187,7 @@ for (const { it, src, ts } of raw) {
   const ageH = (now - ts) / 3600_000;
   const recency = 1.5 * Math.max(0, 1 - ageH / windowHours(src));
   const salary = src.section === 'jobs' ? salaryIn(`${it.title} ${summary}`) : undefined;
-  const base = 2 * (src.weight ?? 1) + recency + info.topic + info.niche + Math.min(2, it.engagement ?? 0) + (salary ? topics.jobs.salaryBoost : 0) - (info.negative ? topics.negative.penalty : 0);
+  const base = 2 * (src.weight ?? 1) + recency + info.topic + info.niche + Math.min(2, it.engagement ?? 0) + (salary ? topics.jobs.salaryBoost : 0) - (info.negative ? topics.negative.penalty : 0) - (seenBefore ? SEEN_PENALTY : 0);
 
   const hit = [...keys].map((k) => index.get(k)).find((i) => i != null);
   const rec = {
@@ -194,6 +211,7 @@ for (const { it, src, ts } of raw) {
     ...(it.phase && { phase: it.phase, status: it.status, sponsor: it.sponsor, change: it.change, conditions: it.conditions }),
     ...(salary && { salary }),
     ...(info.nicheHits > 0 && { niche: true }),
+    ...(seenBefore && { seenBefore }),
     base,
     extra: 0,
   };
@@ -203,7 +221,7 @@ for (const { it, src, ts } of raw) {
     g.also = [...new Set([...(g.also ?? []), rec.source])].filter((s) => s !== g.source);
     if (rec.summary.length > g.summary.length) g.summary = rec.summary;
     if (rec.base > g.base) g.base = rec.base;
-    for (const f of ['doi', 'pmid', 'nct', 'signal', 'venue', 'authors', 'salary']) if (!g[f] && rec[f]) g[f] = rec[f];
+    for (const f of ['doi', 'pmid', 'nct', 'signal', 'venue', 'authors', 'salary', 'seenBefore']) if (!g[f] && rec[f]) g[f] = rec[f];
     if (/^https:\/\/doi\.org\//.test(rec.url) && !/^https:\/\/doi\.org\//.test(g.url)) g.url = rec.url;
     if (rec.preprint && !g.preprint) g.preprint = true;
     for (const k of keys) index.set(k, hit);
@@ -256,8 +274,8 @@ for (const section of Object.keys(INBOX_CAP)) {
 
 const strip = ({ base, extra, srcName, ...rest }) => ({ ...rest, ...(extra > 0 && { foundInSources: extra + 1 }) });
 const briefItem = (it) => {
-  const { id, section, area, title, url, doi, source, published, score, signal, phase, status, sponsor, change, conditions, nct, salary, preprint, review, niche, also, venue, authors, summary } = it;
-  return { id, section, area, title, url, ...(doi && { doi }), ...(nct && { nct }), source, ...(venue && venue !== source && { venue }), ...(authors && { authors }), published: published.slice(0, 10), score, ...(signal && { signal }), ...(phase && { phase, status, sponsor, change, conditions }), ...(salary && { salary }), ...(preprint && { preprint: true }), ...(review && { review: true }), ...(niche && { niche: true }), ...(also?.length && { alsoIn: also }), summary: clip(summary, 300) };
+  const { id, section, area, title, url, doi, source, published, score, signal, phase, status, sponsor, change, conditions, nct, salary, preprint, review, niche, also, venue, authors, summary, seenBefore } = it;
+  return { id, section, area, title, url, ...(doi && { doi }), ...(nct && { nct }), source, ...(venue && venue !== source && { venue }), ...(authors && { authors }), published: published.slice(0, 10), score, ...(signal && { signal }), ...(phase && { phase, status, sponsor, change, conditions }), ...(salary && { salary }), ...(preprint && { preprint: true }), ...(review && { review: true }), ...(niche && { niche: true }), ...(also?.length && { alsoIn: also }), ...(seenBefore && { seenBefore }), summary: clip(summary, 300) };
 };
 
 const mix = {};

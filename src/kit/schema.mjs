@@ -4,7 +4,7 @@
 // rendered escaped by src/kit/inline.ts.
 import { z } from 'zod';
 
-export const AREAS = ['cancer', 'mind', 'rare', 'curiosity', 'other'];
+export const AREAS = ['cancer', 'mind', 'rare', 'women', 'curiosity', 'other'];
 
 const text = (max) => z.string().trim().min(1).max(max);
 const url = z.string().url().refine((u) => /^https:\/\//.test(u), 'links must be https');
@@ -59,11 +59,15 @@ export const Diagram = z
   .object({
     layout: z.enum(['flow', 'layers', 'hub', 'cycle', 'timeline', 'compare']),
     nodes: z.array(z.object({ label: text(30), note: text(80).optional(), key: z.boolean().optional() }).strict()).min(2).max(8),
-    links: z.array(text(30)).max(8).optional(),
+    links: z.array(text(20)).max(8).optional(),
     caption: text(200),
   })
   .strict()
-  .refine((d) => d.layout !== 'compare' || d.nodes.length <= 4, { message: 'a compare diagram holds 2 to 4 nodes', path: ['nodes'] });
+  .refine((d) => d.layout !== 'compare' || d.nodes.length <= 4, { message: 'a compare diagram holds 2 to 4 nodes', path: ['nodes'] })
+  // Readability: boxes are narrow, and a word that is wider than its box can only be broken.
+  .refine((d) => !['flow', 'cycle'].includes(d.layout) || d.nodes.length <= 6, { message: 'a flow or cycle holds 2 to 6 nodes (more cannot sit side by side)', path: ['nodes'] })
+  .refine((d) => d.nodes.every((n) => n.label.trim().split(/\s+/).length <= 5), { message: 'a diagram label is 1 to 5 words', path: ['nodes'] })
+  .refine((d) => [...d.nodes.flatMap((n) => [n.label, n.note ?? '']), ...(d.links ?? [])].every((t) => t.split(/[\s/-]+/).every((w) => w.length <= 16)), { message: 'no word in a diagram label, note or link may be longer than 16 characters (shorten it or split a compound)', path: ['nodes'] });
 
 const forYou = text(240).optional();
 const terms = z.array(Term).max(6).optional();

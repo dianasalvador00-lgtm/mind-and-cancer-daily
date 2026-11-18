@@ -1,5 +1,5 @@
 /* Playful, colourful look. Every area has its own fixed colour (cancer coral, mind sky, rare mint,
-   curiosity sun, other pink), so a reader learns the code after one visit. The day's palette
+   women pink, curiosity sun, other sand), so a reader learns the code after one visit. The day's palette
    (set on <html>) colours the hero panel, links and focus rings. Sections change treatment as you
    scroll: a colour mosaic, a dark band, bright blocks, speech bubbles, flashcards.
    Bricolage Grotesque for headlines and numbers, Instrument Sans for reading and UI. */
@@ -25,6 +25,7 @@
   --mint: #2fc490; --mint-p: #d3f4e5;
   --sky: #4aa3ff; --sky-p: #dbedff;
   --pink: #ff82ad; --pink-p: #ffe1eb;
+  --sand: #d9c39a; --sand-p: #f2eadb;
 
   --a: var(--a-l, #0b6e6e);
   --b: var(--b-l, #9a5208);
@@ -60,7 +61,7 @@
     --surface: var(--surface-d);
     --card: var(--card-d);
     --band: #1a1e26;
-    --coral-p: #3d231d; --sun-p: #3a311a; --mint-p: #173a2d; --sky-p: #182d47; --pink-p: #3d1f2b;
+    --coral-p: #3d231d; --sun-p: #3a311a; --mint-p: #173a2d; --sky-p: #182d47; --pink-p: #3d1f2b; --sand-p: #332c20;
     --shadow-up: 0 18px 40px -16px rgba(0, 0, 0, 0.7);
     color-scheme: dark;
   }
@@ -75,7 +76,7 @@
   --surface: var(--surface-d);
   --card: var(--card-d);
   --band: #1a1e26;
-  --coral-p: #3d231d; --sun-p: #3a311a; --mint-p: #173a2d; --sky-p: #182d47; --pink-p: #3d1f2b;
+  --coral-p: #3d231d; --sun-p: #3a311a; --mint-p: #173a2d; --sky-p: #182d47; --pink-p: #3d1f2b; --sand-p: #332c20;
   --shadow-up: 0 18px 40px -16px rgba(0, 0, 0, 0.7);
   color-scheme: dark;
 }
@@ -102,7 +103,8 @@ p { margin: 0 0 0.8em; }
 [data-area='mind'] { --area: var(--sky); --area-p: var(--sky-p); }
 [data-area='rare'] { --area: var(--mint); --area-p: var(--mint-p); }
 [data-area='curiosity'] { --area: var(--sun); --area-p: var(--sun-p); }
-[data-area='other'] { --area: var(--pink); --area-p: var(--pink-p); }
+[data-area='women'] { --area: var(--pink); --area-p: var(--pink-p); }
+[data-area='other'] { --area: var(--sand); --area-p: var(--sand-p); }
 
 .kicker, .sub, .keyresult-label, .sources-label, .bench-grid dt, h4 { font-family: var(--sans); font-size: 0.8rem; font-weight: 650; line-height: 1.4; }
 
@@ -396,9 +398,11 @@ h4 { color: var(--muted); margin: 1rem 0 0.4rem; }
 .figure:has(a) { overflow: hidden; border-radius: var(--r-sm); }
 .figure a:hover img { transform: scale(1.025); }
 figcaption { font-size: 0.8rem; line-height: 1.5; color: var(--muted); margin-top: 0.55rem; }
-.diagram { margin: 0.7rem 0 0.9rem; padding: 1rem; background: var(--card); border-radius: var(--r-sm); }
+.diagram { container-type: inline-size; margin: 0.7rem 0 0.9rem; padding: 1rem; background: var(--card); border-radius: var(--r-sm); }
+/* diagram text never breaks inside a word: lines wrap only between words (or after a hyphen) */
+.diagram :is(.node-label, .node-note, .arrow-label, .tl-when, .tl-what, .cmp-value, .cmp-note) { overflow-wrap: normal; word-break: normal; hyphens: manual; text-wrap: balance; }
 .diagram .nodes { list-style: none; margin: 0; padding: 0; display: flex; align-items: stretch; gap: 0.4rem; }
-.diagram .node { flex: 1 1 0; min-width: 0; background: var(--area-p, var(--surface)); border-radius: 12px; padding: 0.6rem 0.7rem; display: flex; flex-direction: column; gap: 0.15rem; justify-content: center; text-align: center; }
+.diagram .node { flex: 1 1 0; min-width: 7.5rem; background: var(--area-p, var(--surface)); border-radius: 12px; padding: 0.6rem 0.7rem; display: flex; flex-direction: column; gap: 0.15rem; justify-content: center; text-align: center; }
 #bench .diagram .node:not(.key) { background: #353a44; }
 .diagram .node.key { background: var(--area, var(--coral)); }
 .diagram .node.key .node-label, .diagram .node.key .node-note { color: var(--on); }
@@ -409,7 +413,7 @@ figcaption { font-size: 0.8rem; line-height: 1.5; color: var(--muted); margin-to
 .arrow-label { font-size: 0.68rem; color: var(--muted); font-weight: 550; }
 .diagram-layers .nodes, .diagram-hub .nodes { flex-direction: column; }
 .diagram-layers .node { text-align: left; }
-.diagram-hub .nodes { display: grid; grid-template-columns: repeat(2, 1fr); }
+.diagram-hub .nodes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr)); }
 .diagram-hub .node.key { grid-column: 1 / -1; }
 /* timeline: dated steps */
 .timeline { list-style: none; margin: 0; padding: 0 0 0 0.2rem; display: grid; gap: 0.6rem; }
@@ -421,19 +425,22 @@ figcaption { font-size: 0.8rem; line-height: 1.5; color: var(--muted); margin-to
 .tl-what { font-size: 0.85rem; color: var(--muted); line-height: 1.4; }
 @container (max-width: 420px) { .tl-item { grid-template-columns: 1rem 1fr; } .tl-what { grid-column: 2; } }
 /* compare: 2 to 4 things side by side */
-.compare { display: grid; grid-template-columns: repeat(var(--cols, 2), minmax(0, 1fr)); gap: 0.5rem; }
+.compare { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 8.5rem), 1fr)); gap: 0.5rem; }
 .cmp { background: var(--area-p, var(--surface)); border-radius: 12px; padding: 0.9rem 0.75rem; text-align: center; display: flex; flex-direction: column; gap: 0.25rem; justify-content: center; }
 .cmp.key { background: var(--area, var(--coral)); color: var(--on); }
 .cmp.key .cmp-note { color: #2d3138; }
 .cmp-value { font: 800 1.8rem / 1.02 var(--display); letter-spacing: -0.035em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 .cmp-note { font-size: 0.8rem; color: var(--muted); line-height: 1.35; }
-@container (max-width: 380px) { .compare { grid-template-columns: 1fr; } }
 
-@container (max-width: 560px) {
-  .diagram-flow .nodes, .diagram-cycle .nodes { flex-direction: column; }
-  .diagram .arrow { flex-direction: row; gap: 0.5rem; margin: 0.05rem 0; }
-  .arrow-glyph { display: inline-block; transform: rotate(90deg); }
-}
+/* a flow or cycle goes vertical when its row would squeeze nodes under 7.5rem (about 7.5rem a node,
+   4.5rem an arrow, so the threshold depends on how many nodes there are) */
+@container (max-width: 21.5rem) { .diagram[data-n='2'] .nodes { flex-direction: column; } .diagram[data-n='2'] .node { min-width: 0; } .diagram[data-n='2'] .arrow { flex-direction: row; gap: 0.5rem; margin: 0.05rem 0; } .diagram[data-n='2'] .arrow-glyph { display: inline-block; transform: rotate(90deg); } }
+@container (max-width: 33.5rem) { .diagram[data-n='3'] .nodes { flex-direction: column; } .diagram[data-n='3'] .node { min-width: 0; } .diagram[data-n='3'] .arrow { flex-direction: row; gap: 0.5rem; margin: 0.05rem 0; } .diagram[data-n='3'] .arrow-glyph { display: inline-block; transform: rotate(90deg); } }
+@container (max-width: 45.5rem) { .diagram[data-n='4'] .nodes { flex-direction: column; } .diagram[data-n='4'] .node { min-width: 0; } .diagram[data-n='4'] .arrow { flex-direction: row; gap: 0.5rem; margin: 0.05rem 0; } .diagram[data-n='4'] .arrow-glyph { display: inline-block; transform: rotate(90deg); } }
+@container (max-width: 57.5rem) { .diagram[data-n='5'] .nodes { flex-direction: column; } .diagram[data-n='5'] .node { min-width: 0; } .diagram[data-n='5'] .arrow { flex-direction: row; gap: 0.5rem; margin: 0.05rem 0; } .diagram[data-n='5'] .arrow-glyph { display: inline-block; transform: rotate(90deg); } }
+@container (max-width: 69.5rem) { .diagram[data-n='6'] .nodes { flex-direction: column; } .diagram[data-n='6'] .node { min-width: 0; } .diagram[data-n='6'] .arrow { flex-direction: row; gap: 0.5rem; margin: 0.05rem 0; } .diagram[data-n='6'] .arrow-glyph { display: inline-block; transform: rotate(90deg); } }
+@container (max-width: 81.5rem) { .diagram[data-n='7'] .nodes { flex-direction: column; } .diagram[data-n='7'] .node { min-width: 0; } .diagram[data-n='7'] .arrow { flex-direction: row; gap: 0.5rem; margin: 0.05rem 0; } .diagram[data-n='7'] .arrow-glyph { display: inline-block; transform: rotate(90deg); } }
+@container (max-width: 93.5rem) { .diagram[data-n='8'] .nodes { flex-direction: column; } .diagram[data-n='8'] .node { min-width: 0; } .diagram[data-n='8'] .arrow { flex-direction: row; gap: 0.5rem; margin: 0.05rem 0; } .diagram[data-n='8'] .arrow-glyph { display: inline-block; transform: rotate(90deg); } }
 
 /* week page, archive and plain pages keep a narrow reading column */
 .week, .archive, main > .block { max-width: 46rem; margin-inline: auto; }

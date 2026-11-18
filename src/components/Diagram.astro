@@ -1,12 +1,14 @@
 ---
 // A clear diagram drawn from data, in HTML and CSS so it stays legible and wraps on a phone.
 // flow, layers, hub, cycle, timeline (dated steps) and compare (2 to 4 things side by side).
+// The figure measures its own width (a size container) and a flow or cycle stacks vertically when
+// its nodes would get narrower than a readable minimum, so labels never break inside a word.
 import Inline from './Inline.astro';
 type N = { label: string; note?: string; key?: boolean };
 const { d } = Astro.props as { d: { layout: 'flow' | 'layers' | 'hub' | 'cycle' | 'timeline' | 'compare'; nodes: N[]; links?: string[]; caption: string } };
 const arrows = d.layout === 'flow' || d.layout === 'cycle';
 ---
-<figure class={`diagram diagram-${d.layout}`} role="group" aria-label={d.caption}>
+<figure class={`diagram diagram-${d.layout}`} data-n={d.nodes.length} role="group" aria-label={d.caption}>
   {d.layout === 'timeline' ? (
     <ol class="timeline">
       {d.nodes.map((n) => (

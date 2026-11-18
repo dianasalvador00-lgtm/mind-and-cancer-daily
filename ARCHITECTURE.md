@@ -35,10 +35,11 @@ Owner: Diana Salvador (PhD researcher). Site text in English; interface switchab
 
 | Area id | Area | Share | Includes |
 |---|---|---|---|
-| `cancer` | Cancer | 35% | biology, tumour microenvironment, therapies, immunotherapy, early detection, trials |
-| `mind` | Mind | 35% | neuroscience, psychiatry, psychology, cognition, neurodegeneration, behaviour |
-| `rare` | Rare diseases | 15% | gene and cell therapy, diagnosis, natural history, registries |
-| `curiosity` | Curiosities | 10% | odd but real, well-sourced findings |
+| `cancer` | Cancer | 30% | biology, tumour microenvironment, therapies, immunotherapy, early detection, trials |
+| `mind` | Mind | 30% | neuroscience, psychiatry, psychology, cognition, neurodegeneration, behaviour |
+| `rare` | Rare diseases | 12% | gene and cell therapy, diagnosis, natural history, registries |
+| `women` | Women's health | 15% | women's health and reproduction: pregnancy, fertility and IVF, endometriosis, PCOS, menopause, contraception |
+| `curiosity` | Curiosities | 8% | odd but real, well-sourced findings |
 | `other` | Other medicine | 5% | anything else genuinely notable |
 
 **Boosted niche** (inside `cancer`): nanoparticles and nanomedicine, delivery into dense-stroma
@@ -182,8 +183,9 @@ Evidence  = {
 Image     = { src: "img/<date>/<slug>.webp", alt: text(200), credit: text(160),
               creditUrl: https, licence: enum CC-BY | CC-BY-SA | CC0 | public-domain | US-gov,
               fit: contain | cover }
-Diagram   = { layout: flow | layers | hub | cycle, nodes: 2-8 { label: text(30), note?: text(80),
-              key?: bool }, links?: text(30)[], caption: text(200) }
+Diagram   = { layout: flow | layers | hub | cycle, nodes: 2-8 (flow, cycle 2-6) { label: text(30), 1-5 words, note?: text(80),
+              key?: bool }, links?: text(20)[], caption: text(200) }
+              // no word over 16 characters in labels, notes or links (it could only be broken)
 ForYou    = text(240) optional on every item; generic, never personal details (rendered hidden)
 ```
 
@@ -279,8 +281,12 @@ Errors:
 - **Method source** host allowlist (see schema) and non-empty `safety`.
 - **Images**: file exists under `public/img/<date>/`, has `licence` + `credit` + `creditUrl`.
 - **Learn** has a diagram or an image.
-- **Dedupe**: no item key (url, DOI, PMID, arXiv id, NCT, normalized title) repeated within
-  the kept issues, or present in `data/seen.json` (except trials with `change != new`).
+- **Dedupe (no repeats)**: no item key (url, DOI, PMID, arXiv id, NCT, normalized title, title
+  fingerprint) repeated within the kept issues, within one issue, or present in `data/seen.json`.
+  A fuzzy check (distinctive-word overlap of title and summary, `identity.mjs`) catches the same
+  study under another link or headline: error when clearly the same, warning when likely. Trials
+  may return only for a new event (`results-posted`, `completed`, `terminated`), once per event
+  (`event:NCT:change` key). Issues before 2026-11-18 keep the older trial rule.
 - **Privacy**: public fields must not match `config/private.json` patterns (generic list: the
   owner's surname, "my lab", "our lab", "our group", "unpublished", "my thesis", "my PhD").
   `forYou` is exempt from the "reader" phrases but not from the surname/unpublished checks.
@@ -367,7 +373,9 @@ score = 2*sourceWeight                       // config/sources.json weight 1..3
   **per-host cap of 40%** of each section's output; fill sections round-robin by source.
 - **Dedupe**: normalize URL (strip utm, hash, trailing slash), DOI lowercase, PMID, arXiv id
   without version, NCT, normalized title (lowercase, alnum only, first 80 chars). Merge
-  duplicates across sources; drop anything in the last 7 issues or `data/seen.json`.
+  duplicates across sources; drop anything in the last 7 issues or `data/seen.json`, and
+  anything that is clearly the same story under another link (fuzzy title match); mark likely
+  repeats `seenBefore` with a score penalty. Trials pass again only for an unfeatured event.
 - Output caps: research 150, news 120, others 40 each.
 
 ### Outputs
@@ -389,7 +397,7 @@ sources get `"disabled": true` with the error in a `"$note"`, not deleted.
 ## 8. Site and look
 
 - **Playful, colourful, fluid look.** Each area has a fixed colour (cancer coral, mind sky,
-  rare mint, curiosity sun, other pink) used for chips, tiles and key results; the daily palette
+  rare mint, women pink, curiosity sun, other sand) used for chips, tiles and key results; the daily palette
   colours the hero panel and links. Headlines in Bricolage Grotesque, text in Instrument Sans.
   The hero is a flowing panel with blob shapes that morph on hover and holds "Today in short" as a
   staggered row. Stories flow in masonry columns at their own height with organic corners that

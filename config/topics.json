@@ -2,22 +2,27 @@
   "$comment": "What the sweep scores against. Edit freely. Keywords match from the start of a word, case-insensitively (so 'pancrea' matches pancreas and pancreatic). share is the target percentage of each issue; weight multiplies keyword hits. niche is boosted inside cancer: strong items surface without a quota. negative keywords subtract points. jobs lists skills and fields for the jobs section. The daily run may not edit this file; the owner does.",
   "areas": {
     "cancer": {
-      "share": 35,
+      "share": 30,
       "weight": 1,
       "keywords": ["cancer", "tumor", "tumour", "oncolog", "carcinoma", "neoplasm", "metasta", "chemotherap", "immunotherap", "checkpoint inhibitor", "CAR-T", "CAR T", "leukemia", "leukaemia", "lymphoma", "glioma", "glioblastoma", "melanoma", "sarcoma", "myeloma", "radiotherap", "radiation therapy", "biopsy", "liquid biopsy", "ctDNA", "tumor microenvironment", "tumour microenvironment", "early detection", "KRAS", "PD-1", "PD-L1", "antibody-drug conjugate", "clinical trial"]
     },
     "mind": {
-      "share": 35,
+      "share": 30,
       "weight": 1,
       "keywords": ["neuroscien", "brain", "neuron", "cognit", "memory", "psychiatr", "psycholog", "depress", "anxiety", "schizophren", "bipolar", "autism", "ADHD", "dementia", "alzheimer", "parkinson", "neurodegenerat", "synap", "cortex", "hippocamp", "sleep", "consciousness", "mental health", "behaviour", "behavior", "psychedelic", "psilocybin", "neuroimaging", "fMRI", "EEG", "stroke", "epilep", "microglia", "connectome", "addiction"]
     },
     "rare": {
-      "share": 15,
+      "share": 12,
       "weight": 1,
       "keywords": ["rare disease", "orphan drug", "orphan disease", "gene therapy", "cell therapy", "antisense", "inborn error", "lysosomal", "cystic fibrosis", "muscular dystrophy", "spinal muscular atrophy", "huntington", "newborn screening", "natural history", "ultra-rare", "genetic disorder", "mitochondrial disease", "CRISPR", "base editing", "enzyme replacement"]
     },
+    "women": {
+      "share": 15,
+      "weight": 1,
+      "keywords": ["women's health", "womens health", "pregnan", "maternal", "obstetric", "gynaecolog", "gynecolog", "fertility", "infertil", "IVF", "in vitro fertili", "assisted reproduct", "embryo", "oocyte", "sperm", "placenta", "preeclampsia", "pre-eclampsia", "preterm", "miscarriage", "stillbirth", "postpartum", "perinatal", "endometriosis", "adenomyosis", "polycystic ovary", "PCOS", "menopaus", "perimenopaus", "menstrua", "contracepti", "uterus", "uterine", "ovarian reserve", "reproductive health", "reproductive medicine", "breastfeeding", "lactation", "hormone therapy", "fibroids"]
+    },
     "curiosity": {
-      "share": 10,
+      "share": 8,
       "weight": 0.6,
       "keywords": ["surprising", "unexpected", "first time", "strange", "curious", "bizarre", "mystery", "never before", "accidentally", "evolution", "ancient", "octopus", "bees", "dogs", "microbiome", "placebo"]
     },
@@ -33,11 +38,11 @@
   },
   "negative": {
     "penalty": 3,
-    "keywords": ["supplement", "detox", "weight loss", "horoscope", "diet hack", "CBD oil", "essential oil", "miracle", "anti-aging cream", "sponsored", "advertorial", "giveaway", "casino", "cryptocurrency"]
+    "keywords": ["supplement", "detox", "weight loss", "horoscope", "diet hack", "CBD oil", "essential oil", "miracle", "anti-aging cream", "sponsored", "advertorial", "giveaway", "casino", "cryptocurrency", "corrigendum", "erratum", "case report"]
   },
   "sections": {
     "methods": ["protocol", "method", "assay", "staining", "imaging", "culture", "isolation", "preparation", "quantification", "analysis pipeline", "spectroscop", "microscop", "flow cytometry", "single-cell", "sequencing", "mouse model", "organoid"],
-    "funding": ["grant", "funding", "fellowship", "call for", "award", "prize", "programme", "program", "RFA", "NOFO", "cancer", "neuro", "rare", "mental health", "nanomedicine"],
+    "funding": ["grant", "funding", "fellowship", "call for", "award", "prize", "programme", "program", "RFA", "NOFO", "cancer", "neuro", "rare", "mental health", "nanomedicine", "women's health", "reproduct", "maternal"],
     "jobs": ["postdoc", "post-doc", "postdoctoral", "PhD", "research fellow", "scientist", "research associate", "group leader", "oncolog", "cancer", "neuroscien", "nanomedicine", "nanoparticle", "drug delivery", "biomedical engineering", "tumour", "tumor", "immunolog", "photonics", "biophotonic", "imaging", "organoid", "pancrea"]
   },
   "jobs": {

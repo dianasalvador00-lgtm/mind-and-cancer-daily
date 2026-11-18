@@ -64,8 +64,9 @@ phrase), `dek` (260), `palette` (an id from `src/kit/palette.mjs`, not used in t
 `tldr` (3 to 5 `{ text, area }`), then the sections below, then optional `note` (240): one honest line
 about the run if something was unusual (a source down, no network, a quiet day).
 
-`area` is one of `cancer`, `mind`, `rare`, `curiosity`, `other`. Over a week aim for about 35 percent
-cancer, 35 mind, 15 rare, 10 curiosity, 5 other (`config/topics.json`). Nanoparticle, phototherapy and
+`area` is one of `cancer`, `mind`, `rare`, `women`, `curiosity`, `other`. Over a week aim for about 30
+percent cancer, 30 mind, 15 women (women's health and reproduction), 12 rare, 8 curiosity, 5 other
+(`config/topics.json`). A cancer of the breast, ovary, cervix or uterus stays `cancer`. Nanoparticle, phototherapy and
 pancreatic cancer items are a boosted niche inside cancer.
 
 ### 1. `top`: Top stories (6 to 10)
@@ -109,6 +110,8 @@ how CAR-T works, what a p-value does and does not say.
 
 `trials.trials` (up to 6): `id`, `area`, `title`, `nct`, `phase`, `status`, `change` (new, updated,
 results-posted, completed, terminated), `what`, `who`, `sponsor`, `sources` (ClinicalTrials.gov first).
+A trial featured before may return only with `results-posted`, `completed` or `terminated` (once per
+event, `what` says what happened); an `updated` trial that ran before is a repeat, so leave it out.
 `trials.funding` (up to 5): `id`, `area`, `title`, `funder`, `deadline`, `amount` (only if stated),
 `eligibility`, `sources`. At least one entry in total. Open the registry record
 (`node scripts/read-paper.mjs NCT...`) before writing.
@@ -165,6 +168,19 @@ generated art. In order of preference:
      the value, `note` says what it is; mark the treatment arm `key`.
    Labels 1 to 3 plain words (a step by its result: "Drug reaches tumour"), at most 8 nodes, a one
    sentence `caption` that says what the diagram shows. Every label must come from the source.
+
+   **Readable diagrams.** A diagram box is narrow, so a word that does not fit can only be broken
+   ("Fibr / obla / sts"), which makes it useless. The kit never breaks words inside a diagram and
+   stacks a flow vertically when its boxes would get too narrow, but keep the text short so it reads
+   well side by side:
+   - `flow` and `cycle`: 2 to 6 nodes; 3 to 5 is best. More steps: use `layers` or split the idea.
+   - Labels: 1 to 3 words (5 at most), about 20 characters. Put detail in `note`, not the label.
+   - No word longer than 16 characters, in labels, notes or links. Use the short form the source
+     uses ("ctDNA", "TGF-beta") or split a compound ("immune-excluded" reads as two parts).
+   - Arrow `links`: one or two words (at most 20 characters), a verb: "blocks", "primes".
+   - `compare`: values short enough for a small box ("15 months", "3.3x"), the rest in `note`.
+   Validate rejects diagrams that break these limits, and `npm run shoot` prints a
+   `broken word` warning for any word the browser still had to split, with where it is.
 3. **Nothing.** A card with no real picture and no structure to draw has no visual.
 
 `node scripts/fetch-image.mjs <image-url> <date> <slug>` saves a chosen image under `public/img/<date>/`
