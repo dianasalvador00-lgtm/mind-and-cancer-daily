@@ -75,6 +75,8 @@ for (const v of variants) {
   await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: v.scheme }]);
   await page.goto(`http://127.0.0.1:${port}${base}${route}${route.includes('?') ? '&' : '?'}tune=${v.name === 'desktop-light' ? '1' : '0'}`, { waitUntil: 'networkidle0' });
   await page.evaluate(() => document.fonts.ready);
+  // let the one-off entrance animations finish (never waits on an endless one)
+  await page.evaluate(() => Promise.race([Promise.all(document.getAnimations().filter((a) => a.effect?.getTiming().iterations !== Infinity).map((a) => a.finished.catch(() => {}))), new Promise((r) => setTimeout(r, 3000))]));
   const total = await page.evaluate(() => document.documentElement.scrollHeight);
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   if (overflow > 0) console.warn(`warning: ${v.name} scrolls sideways by ${overflow}px`);

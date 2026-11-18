@@ -52,29 +52,31 @@ const ctaKind = (srcs: { url: string; doi?: string }[], evType?: string): CtaKin
 const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 ---
 <article class="issue">
-  <header class="issue-head">
-    <p class="kicker"><T k="issue" /> {issue.number} <span class="dot">&middot;</span> <time data-date={d} datetime={d}>{formatDate(d)}</time> <span class="dot">&middot;</span> {minutes} <T k="minRead" /></p>
-    <h1><Inline text={issue.title} /></h1>
-    <p class="dek"><Inline text={issue.dek} /></p>
-    <p class="howto"><T k="howToRead" /></p>
-    {sample && <p class="sample-note"><T k="sample" /></p>}
-  </header>
+  <div class="hero">
+    <header class="issue-head">
+      <p class="kicker"><T k="issue" /> {issue.number} <span class="dot">&middot;</span> <time data-date={d} datetime={d}>{formatDate(d)}</time> <span class="dot">&middot;</span> {minutes} <T k="minRead" /></p>
+      <h1><Inline text={issue.title} /></h1>
+      <p class="dek"><Inline text={issue.dek} /></p>
+      <p class="howto"><T k="howToRead" /></p>
+      {sample && <p class="sample-note"><T k="sample" /></p>}
+    </header>
+
+    <section class="tldr" aria-labelledby="tldr-h">
+      <h2 id="tldr-h"><T k="todayInShort" /></h2>
+      <ul class="tldr-grid" style={`--n:${issue.tldr.length}`}>
+        {issue.tldr.map((t) => (
+          <li class="tldr-tile" data-area={t.area}>
+            <span class="area" data-area={t.area}><T k={`area_${t.area}`} /></span>
+            <span class="tldr-text"><Inline text={t.text} terms={glossary} /></span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </div>
 
   <nav class="sections" aria-label="Sections">
     {nav.map((id) => <a href={`#${id}`}><T k={id} /></a>)}
   </nav>
-
-  <section class="tldr" aria-labelledby="tldr-h">
-    <h2 id="tldr-h"><T k="todayInShort" /></h2>
-    <ul class="tldr-grid" style={`--n:${issue.tldr.length}`}>
-      {issue.tldr.map((t) => (
-        <li class="tldr-tile" data-area={t.area}>
-          <span class="area" data-area={t.area}><T k={`area_${t.area}`} /></span>
-          <span class="tldr-text"><Inline text={t.text} terms={glossary} /></span>
-        </li>
-      ))}
-    </ul>
-  </section>
 
   <section id="top" class="block">
     <h2><T k="top" /></h2>

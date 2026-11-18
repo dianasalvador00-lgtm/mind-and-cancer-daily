@@ -5,9 +5,9 @@
 //      (CIE76 delta E of at least 20 after simulation).
 // Issues can only reference ids, never raw colours.
 
-export const PAPER = { light: '#fbfaf6', dark: '#12161c' };
-export const INK = { light: '#1b2430', dark: '#e8ecf1' };
-export const CARD = { light: '#ffffff', dark: '#171c24' };
+export const PAPER = { light: '#fbf8f3', dark: '#0f1114' };
+export const INK = { light: '#15171b', dark: '#eff1f4' };
+export const CARD = { light: '#ffffff', dark: '#16191e' };
 
 export const PALETTES = [
   { id: 'teal-amber', name: 'Teal and amber', light: ['#0b6e6e', '#9a5208'], dark: ['#4fc3c3', '#f0a24b'] },

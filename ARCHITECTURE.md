@@ -149,8 +149,8 @@ CLAUDE.md            short rules for any Claude session in this repo
 
 - Node 22 in Actions (local machine has Node 26 LTS; keep code compatible with 22).
 - `astro` 5, `zod` 3, `fast-xml-parser` 5, `sharp` (images), dev: `puppeteer` (screenshots).
-- Fonts via `@fontsource-variable/*`: a readable serif for body (Source Serif 4 or Literata),
-  a clean sans for UI and headings (Inter or IBM Plex Sans), a mono for numbers in tables.
+- Fonts via `@fontsource-variable/*`: Bricolage Grotesque (optical sizes) for headlines and big
+  numbers, Instrument Sans for body and UI, JetBrains Mono for DOIs and code.
 - Drop from the reference: `@anthropic-ai/sdk`, `satori`/`@resvg` OG cards (optional later),
   `triage.mjs`, bespoke pages, art SVGs, the riso theme catalog, Steam/HN/HF/DEV readers.
 - Astro `site` = `https://dianasalvador00-lgtm.github.io`, `base` = `/mind-and-cancer-daily/`.
@@ -388,9 +388,16 @@ sources get `"disabled": true` with the error in a `"$note"`, not deleted.
 
 ## 8. Site and look
 
-- **Calm, legible science look.** White or near-white paper in light mode, deep slate in dark.
-  Body 18 px serif, line length 65 to 75 characters, generous spacing. No decorative art.
-- **Daily colour pair**: `src/kit/palette.mjs` holds ~14 named pairs `{ id, accent, accent2 }`
+- **Playful, colourful, fluid look.** Each area has a fixed colour (cancer coral, mind sky,
+  rare mint, curiosity sun, other pink) used for chips, tiles and key results; the daily palette
+  colours the hero panel and links. Headlines in Bricolage Grotesque, text in Instrument Sans.
+  The hero is a flowing panel with blob shapes that morph on hover and holds "Today in short" as a
+  staggered row. Stories flow in masonry columns at their own height with organic corners that
+  relax on hover; the lead story spans the top as a two-column spread in a solid colour. The bench
+  is a dark band with wavy edges; chatter cards are speech bubbles; key terms are flashcards.
+  Section titles carry a numbered blob and a squiggle. The hero enters once on load; everything
+  rests under reduced motion. No photographs or decorative art beyond these shapes.
+- **Daily colour pair** (hero and links): `src/kit/palette.mjs` holds ~14 named pairs `{ id, accent, accent2 }`
   with light and dark variants. Build-time checks: accent text on paper >= 4.5:1 (WCAG AA) in
   both modes; the two accents distinguishable under simulated deuteranopia and protanopia
   (delta E >= 20 after simulation). The issue picks a palette id; the layout sets CSS variables.
