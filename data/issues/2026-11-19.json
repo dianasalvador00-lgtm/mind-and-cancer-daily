@@ -1,0 +1,762 @@
+{
+  "date": "2026-11-19",
+  "number": 4,
+  "title": "Memory gains across generations, a null birth trial, and how the brain forgets",
+  "dek": "Later-born generations enter old age with better memory. A 2,963-woman trial finds no clear gain from two labour drugs. Also: long-term antidepressants, blood DNA tests in head and neck cancer, and how microglia erase motor memory.",
+  "palette": "ocean-ember",
+  "tldr": [
+    {
+      "text": "In about 219,000 people followed for up to 30 years, later-born generations had better memory entering old age and slower decline.",
+      "area": "mind"
+    },
+    {
+      "text": "In 2,963 first-time mothers after induced labour, two drugs given to help spontaneous birth showed no clear benefit over placebo.",
+      "area": "women"
+    },
+    {
+      "text": "A 115-study analysis of long-term antidepressant use found escitalopram, duloxetine and agomelatine kept more people responding than fluoxetine.",
+      "area": "mind"
+    },
+    {
+      "text": "Week-12 blood tumour DNA after chemoradiotherapy flagged recurrence with 100 percent specificity in 74 head and neck cancer patients.",
+      "area": "cancer"
+    },
+    {
+      "text": "In mice, microglia eat the myelin that stores a motor memory once a 'don't eat me' signal, CD47, falls.",
+      "area": "mind"
+    }
+  ],
+  "top": [
+    {
+      "id": "generational-memory-dementia",
+      "area": "mind",
+      "title": "Later-born generations enter old age with better memory and lose it more slowly",
+      "gist": "Across five long studies (about 219,000 people, up to 30 years), later-born generations had higher memory scores entering old age and slower decline afterwards.",
+      "evidence": {
+        "type": "human-observational",
+        "n": "219,000 people, 783,000 tests",
+        "limitation": "Observational cohorts from Western countries, and episodic memory only. The size of the effect is compared with dementia trends, which does not prove cause."
+      },
+      "why": "Dementia incidence has fallen about 13 percent per decade. This study says better starting memory and slower decline together could explain it, so prevention across the whole life matters.",
+      "details": [
+        "The authors pooled about 783,000 episodic-memory assessments from five long-running studies in Europe and the United States. They compared people born in different decades at the same ages.",
+        "Gains were largest among the fastest decliners. Later-born groups also had longer periods of stable memory, fewer clinical impairments and slower hippocampal shrinkage."
+      ],
+      "didNotShow": "It did not show why later generations do better, or that the same gains will continue for people born after these cohorts.",
+      "terms": [
+        {
+          "term": "episodic memory",
+          "def": "Memory for specific events, such as what happened at a given time and place."
+        },
+        {
+          "term": "longitudinal study",
+          "def": "A study that follows the same people over many years."
+        },
+        {
+          "term": "hippocampal atrophy",
+          "def": "Shrinkage of the hippocampus, a brain region that is central to forming memories."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nature Medicine, Fjell et al.",
+          "url": "https://doi.org/10.1038/s41591-026-04759-y",
+          "doi": "10.1038/s41591-026-04759-y",
+          "access": "paywall"
+        }
+      ],
+      "forYou": "Cohort design and cross-generation comparisons relevant to ageing and dementia research."
+    },
+    {
+      "id": "saint-labour-drugs-trial",
+      "area": "women",
+      "title": "Two drugs given in labour did not clearly raise spontaneous vaginal birth after induction",
+      "gist": "In 2,963 first-time mothers after induced labour, hyoscine butylbromide, sodium bicarbonate or both did not clearly beat placebo for spontaneous vaginal birth.",
+      "evidence": {
+        "type": "human-rct",
+        "phase": "3",
+        "status": "Completed",
+        "n": "2,963 analysed (3,094 randomised)",
+        "limitation": "Small benefits cannot be excluded: the confidence intervals reach about 8 to 9 percentage points in favour of each single drug."
+      },
+      "why": "Both drugs are cheap and were hoped to smooth labour. A large, blinded trial now says there is no clear case to add them routinely.",
+      "details": [
+        "The trial ran in 11 Norwegian hospitals from January 2023 to January 2025. Women were randomised into four groups: both drugs, bicarbonate, hyoscine, or double placebo. Doses were given at active labour and repeated every four hours, up to three times.",
+        "Spontaneous vaginal birth occurred in 57 percent (both drugs), 61 percent (bicarbonate), 61 percent (hyoscine) and 56 percent (placebo). Versus placebo the differences were -0.2 (95% CI -5.1 to 4.7), 3.1 (-1.7 to 8.0) and 4.0 (-0.8 to 8.9) percentage points. Serious adverse events were similar between groups."
+      ],
+      "didNotShow": "It did not show harm from either drug, and it does not cover women who have already given birth or labours that start on their own.",
+      "terms": [
+        {
+          "term": "nulliparous",
+          "def": "Describes a woman who has not given birth before."
+        },
+        {
+          "term": "induction of labour",
+          "def": "Starting labour with medicine or other means instead of waiting for it to begin."
+        },
+        {
+          "term": "factorial trial",
+          "def": "A trial design that tests two treatments alone and together in the same people."
+        }
+      ],
+      "diagram": {
+        "layout": "compare",
+        "nodes": [
+          {
+            "label": "56%",
+            "note": "Placebo"
+          },
+          {
+            "label": "57%",
+            "note": "Both drugs"
+          },
+          {
+            "label": "61%",
+            "note": "Bicarbonate"
+          },
+          {
+            "label": "61%",
+            "note": "Hyoscine"
+          }
+        ],
+        "caption": "Share of women with a spontaneous vaginal birth in each arm of the SAINT trial; none differed clearly from placebo."
+      },
+      "sources": [
+        {
+          "label": "BMJ, Michelsen et al. (SAINT)",
+          "url": "https://doi.org/10.1136/bmj-2026-101069",
+          "doi": "10.1136/bmj-2026-101069",
+          "access": "open"
+        },
+        {
+          "label": "ClinicalTrials.gov NCT05719467",
+          "url": "https://clinicaltrials.gov/study/NCT05719467",
+          "access": "open"
+        }
+      ],
+      "forYou": "Large blinded factorial trial design with a clear null result."
+    },
+    {
+      "id": "antidepressants-long-term-network-meta",
+      "area": "mind",
+      "title": "Long-term antidepressants: escitalopram, duloxetine and agomelatine held response better than fluoxetine",
+      "gist": "A network meta-analysis of 115 trials (30,428 people) compared 21 antidepressants over more than 12 weeks. Some drugs held response longer, but the evidence is uncertain.",
+      "evidence": {
+        "type": "meta-analysis",
+        "n": "115 studies, 30,428 participants",
+        "limitation": "19 of the 35 head-to-head studies had high risk of bias, and certainty of evidence was limited, so the ranking is tentative.",
+        "conflicts": "Funding: none stated."
+      },
+      "why": "Depression often relapses, so long-term data matter more than 6-week response. Few head-to-head trials last this long, which is why this synthesis relied on chains of evidence.",
+      "details": [
+        "In the 35 head-to-head studies (9,888 people), sustained response was higher than with fluoxetine for escitalopram (OR 1.62, 95% CI 1.21 to 2.18), duloxetine (1.57, 1.08 to 2.26) and agomelatine (1.40, 1.06 to 1.85).",
+        "Escitalopram (OR 0.60, 0.43 to 0.83) and duloxetine (0.64, 0.44 to 0.95) also had fewer people stopping for any reason. Reboxetine and milnacipran had more discontinuation."
+      ],
+      "didNotShow": "It did not show that any single drug is best for an individual person, and the authors call for more head-to-head long-term trials.",
+      "terms": [
+        {
+          "term": "network meta-analysis",
+          "def": "A method that combines many trials to compare treatments, even pairs never tested directly against each other."
+        },
+        {
+          "term": "sustained response",
+          "def": "Staying improved on a treatment over a long period rather than only at the first check."
+        },
+        {
+          "term": "odds ratio",
+          "def": "A measure of how much more or less likely an outcome is in one group than another."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The Lancet Psychiatry, van Haaren et al.",
+          "url": "https://doi.org/10.1016/S2215-0366(26)00326-3",
+          "doi": "10.1016/S2215-0366(26)00326-3",
+          "access": "paywall"
+        }
+      ],
+      "forYou": "Evidence synthesis methods and how certainty is graded."
+    },
+    {
+      "id": "ctdna-head-neck-chemoradiotherapy",
+      "area": "cancer",
+      "title": "Blood tumour DNA at 12 weeks flags recurrence after chemoradiotherapy in head and neck cancer",
+      "gist": "In 74 patients, detectable tumour DNA 12 weeks after treatment predicted shorter progression-free survival (HR 6.44), but missed about a third of recurrences.",
+      "evidence": {
+        "type": "peer-reviewed",
+        "n": "74 patients",
+        "limitation": "Small prospective cohort. Week-12 sensitivity was 69 percent, so a negative test cannot rule out recurrence."
+      },
+      "why": "Scans after chemoradiotherapy are hard to read. A blood test with 100 percent specificity could help confirm who is at highest risk, alongside imaging.",
+      "details": [
+        "Plasma was collected before treatment, at 8 and 12 weeks, and during follow-up, using a plasma-only methylation assay. Tumour DNA was detectable before treatment in 85.1 percent of patients.",
+        "At week 12 the test had 69 percent sensitivity, 100 percent specificity, 100 percent positive predictive value and 76 percent negative predictive value. Detectable ctDNA went with shorter progression-free survival (HR 6.44, 95% CI 2.73 to 16.74), especially in patients with a partial response on PET/CT."
+      ],
+      "didNotShow": "It did not show that acting on a positive test improves survival, and the authors advise against using it alone to exclude recurrence.",
+      "terms": [
+        {
+          "term": "ctDNA",
+          "def": "Tumour DNA that circulates in the blood, used as a marker of remaining or returning cancer."
+        },
+        {
+          "term": "sensitivity",
+          "def": "The share of people with the condition whom a test correctly flags."
+        },
+        {
+          "term": "specificity",
+          "def": "The share of people without the condition whom a test correctly clears."
+        },
+        {
+          "term": "HR",
+          "def": "Short for hazard ratio: how much faster an event happens in one group than another."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Clinical Cancer Research, Bruixola et al.",
+          "url": "https://doi.org/10.1158/1078-0432.ccr-26-1545",
+          "doi": "10.1158/1078-0432.ccr-26-1545",
+          "access": "paywall"
+        }
+      ],
+      "forYou": "Liquid biopsy performance metrics and timing of sampling."
+    },
+    {
+      "id": "melanoma-multiomic-atlas",
+      "area": "cancer",
+      "title": "A 13-layer molecular atlas of 183 melanomas links antigens, lipids and sex to immune outcomes",
+      "gist": "Profiling 183 melanomas across 13 molecular layers linked tumour antigens to T cell infiltration and a sugar-tagged protein, GPNMB, to survival differences between sexes.",
+      "evidence": {
+        "type": "human-observational",
+        "n": "183 tumours",
+        "limitation": "A descriptive atlas: the links are associations, and the abstract does not report functional tests or validation in an independent cohort."
+      },
+      "why": "Melanoma responds well to immunotherapy, but who responds is hard to predict. A shared dataset of this depth gives other labs hypotheses to test.",
+      "details": [
+        "The team measured HLA-I antigens by mass spectrometry, metabolites, and protein ubiquitylation and glycosylation. Antigens tracked with CD8+ T cell infiltration, and lipids differed between primary and metastatic tumours.",
+        "A subset with high ubiquitylation of interferon signalling and AKT1 activation had worse survival. GPNMB glycosylation was tied to survival differing by sex and to a lysosome-linked programme."
+      ],
+      "didNotShow": "It did not show that targeting any of these features changes treatment response, or why the survival link differs by sex.",
+      "terms": [
+        {
+          "term": "immunopeptidomics",
+          "def": "A method that identifies the protein fragments cells display on their surface for T cells to inspect."
+        },
+        {
+          "term": "glycosylation",
+          "def": "The attachment of sugar chains to a protein, which can change how it behaves."
+        },
+        {
+          "term": "ubiquitylation",
+          "def": "The tagging of a protein with ubiquitin, which can mark it for destruction or change its activity."
+        },
+        {
+          "term": "GPNMB",
+          "def": "A protein carrying sugar chains that is linked to lysosomes and to immune behaviour in melanoma."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cancer Discovery, Gong et al.",
+          "url": "https://doi.org/10.1158/2159-8290.cd-26-0302",
+          "doi": "10.1158/2159-8290.cd-26-0302",
+          "access": "paywall"
+        }
+      ],
+      "forYou": "Multi-omic profiling of tumours and the immune microenvironment."
+    },
+    {
+      "id": "pku-brain-phenylalanine-adults",
+      "area": "rare",
+      "title": "Adults with early-treated PKU still show changes in brain chemistry, and four weeks of extra phenylalanine shifts them",
+      "gist": "In 30 adults with phenylketonuria and 59 controls, brain scans showed higher phenylalanine and altered metabolites despite lifelong diet. Phenylalanine loading changed some levels.",
+      "evidence": {
+        "type": "human-rct",
+        "n": "30 adults with PKU, 59 controls",
+        "limitation": "Small rare-disease sample. The crossover loading lasted four weeks, and no link to blood flow was found in the abstract."
+      },
+      "why": "PKU is treated from birth with diet, yet the adult brain still carries traces. Showing which brain markers move with phenylalanine gives future trials a measurable target.",
+      "details": [
+        "At baseline, people with PKU had higher brain phenylalanine and N-acetylaspartate, and lower myo-inositol, N-acetylaspartylglutamate and total creatine. Four weeks of oral phenylalanine increased brain phenylalanine and lowered myo-inositol, which reversed.",
+        "Blood and brain phenylalanine were strongly correlated (r = 0.83, p < 0.001), though their ratio varied by person."
+      ],
+      "didNotShow": "It did not show a link between these chemical changes and cognitive performance, white matter lesions or cerebral blood flow.",
+      "terms": [
+        {
+          "term": "phenylketonuria",
+          "def": "An inherited condition in which the body cannot break down the amino acid phenylalanine, so it builds up."
+        },
+        {
+          "term": "magnetic resonance spectroscopy",
+          "def": "A scan that measures the concentration of chemicals in a region of the brain."
+        },
+        {
+          "term": "crossover",
+          "def": "A trial design in which each person receives both the treatment and the placebo in turn."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Brain, Muri et al.",
+          "url": "https://doi.org/10.1093/brain/awag362",
+          "doi": "10.1093/brain/awag362"
+        }
+      ],
+      "forYou": "Non-invasive biomarkers for small rare-disease populations."
+    },
+    {
+      "id": "dw4902-fibroid-bleeding-phase2",
+      "area": "women",
+      "title": "An oral GnRH antagonist, DW4902, cut heavy bleeding from fibroids in a small phase 2 trial",
+      "gist": "In 71 women with uterine fibroids, three daily doses of DW4902 brought bleeding scores under 10 in 73 to 100 percent of women over weeks 6 to 12.",
+      "evidence": {
+        "type": "clinical-trial",
+        "phase": "2",
+        "status": "Completed",
+        "n": "71 women",
+        "limitation": "Small, short phase 2 trial. The placebo response rate was not in the abstract, and bone density was only tracked over the short term."
+      },
+      "why": "Fibroids are a common cause of heavy bleeding. Oral drugs that act on hormones are an alternative to surgery, so early dose data help later trials.",
+      "details": [
+        "Women were randomised to placebo or 160, 240 or 320 mg once daily at 12 Korean hospitals. The main goal was a pictorial blood assessment chart score under 10 during weeks 6 to 12.",
+        "Haemoglobin rose in the 160 and 240 mg groups, and fibroid and uterine volumes fell. Bone density changes were modest and reversible. Adverse events were mostly mild with no serious drug-related events."
+      ],
+      "didNotShow": "It did not show long-term safety, effects on bone beyond the short term, or how it compares with approved drugs.",
+      "terms": [
+        {
+          "term": "GnRH antagonist",
+          "def": "A drug that blocks a brain hormone signal and so lowers oestrogen and progesterone."
+        },
+        {
+          "term": "uterine fibroids",
+          "def": "Non-cancerous growths in the muscle wall of the uterus."
+        },
+        {
+          "term": "pictorial blood assessment chart",
+          "def": "A diary in which women record how much menstrual blood soaks each pad or tampon."
+        },
+        {
+          "term": "DW4902",
+          "def": "An experimental oral drug that blocks the GnRH hormone signal."
+        }
+      ],
+      "sources": [
+        {
+          "label": "BJOG, Song et al.",
+          "url": "https://doi.org/10.1111/1471-0528.70385",
+          "doi": "10.1111/1471-0528.70385",
+          "access": "paywall"
+        }
+      ],
+      "forYou": "Dose-ranging design and hormone-targeted drug development."
+    }
+  ],
+  "bench": [
+    {
+      "id": "microglia-motor-memory-decay",
+      "area": "mind",
+      "title": "Microglia mediate motor memory decay through activity-dependent phagocytosis of myelin sheaths",
+      "headline": "In mice, immune cells of the brain trim the insulation around memory-linked neurons when those neurons go quiet, and the memory fades.",
+      "authors": "Hu Z, Luo Y, Zhou T, et al.",
+      "venue": "Nature Neuroscience",
+      "published": "2026-11-17",
+      "evidence": {
+        "type": "animal",
+        "model": "Mouse",
+        "limitation": "Mouse motor memory only. Read from the abstract, so sample sizes and effect sizes were not checked."
+      },
+      "question": "Why do motor memories fade, and what physically happens in the brain when they do?",
+      "approach": "The team linked memory decay to changes in the myelin that wraps memory-associated neurons. They then deleted or raised CD47 in oligodendrocytes tied to the motor memory and watched microglia and memory.",
+      "model": "Mouse brain, with oligodendrocytes linked to motor memory engram cells.",
+      "result": "Lower engram activity reduced CD47 on oligodendrocytes. This let microglia eat myelin sheaths. Knocking out CD47 sped memory decay, and overexpressing it did the opposite. Microglia ate myelin and synapses independently.",
+      "limitations": "Mouse data on motor learning. The abstract does not give group sizes, and the claim for other memory types is a suggestion, not a result.",
+      "meaning": "Forgetting may be an active, regulated clean-up rather than passive fading, which gives a target for studying memory loss in disease.",
+      "diagram": {
+        "layout": "flow",
+        "nodes": [
+          {
+            "label": "Engram goes quiet"
+          },
+          {
+            "label": "CD47 falls"
+          },
+          {
+            "label": "Microglia eat myelin"
+          },
+          {
+            "label": "Memory fades",
+            "key": true
+          }
+        ],
+        "links": [
+          "lowers",
+          "unmasks",
+          "erodes"
+        ],
+        "caption": "In mice, a drop in neuron activity lowers the CD47 signal, letting microglia remove myelin and the motor memory decay."
+      },
+      "terms": [
+        {
+          "term": "microglia",
+          "def": "The immune cells of the brain, which also remove debris and prune connections."
+        },
+        {
+          "term": "myelin",
+          "def": "The fatty insulation around nerve fibres that speeds electrical signals."
+        },
+        {
+          "term": "engram",
+          "def": "The group of neurons that stores a particular memory."
+        },
+        {
+          "term": "oligodendrocyte",
+          "def": "A brain cell that makes myelin."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nature Neuroscience, Hu et al.",
+          "url": "https://doi.org/10.1038/s41593-026-02505-8",
+          "doi": "10.1038/s41593-026-02505-8",
+          "access": "paywall"
+        }
+      ],
+      "forYou": "Myelin plasticity and microglial pruning relevant to memory and ageing."
+    },
+    {
+      "id": "b7h3-pdac-spatial-organiser",
+      "area": "cancer",
+      "title": "B7-H3 Orchestrates Fibro-Immune Spatial Organisation in Pancreatic Cancer",
+      "headline": "A preprint maps where the checkpoint protein B7-H3 sits in pancreatic tumours and finds it marks zones of scar-like tissue and immune suppression.",
+      "authors": "Legrini A, Zhang T, McGuigan M, et al.",
+      "venue": "bioRxiv (preprint)",
+      "published": "2026-11-18",
+      "evidence": {
+        "type": "preprint",
+        "model": "Human tissue",
+        "limitation": "Not peer reviewed. The abstract gives no sample size, and spatial association does not show that B7-H3 drives the pattern."
+      },
+      "question": "What does B7-H3 do inside the dense, immune-poor environment of pancreatic cancer?",
+      "approach": "Multiscale spatial profiling mapped B7-H3 across regions and single cells in treatment-naive resected tumours, then looked at tumours after neoadjuvant treatment.",
+      "model": "Treatment-naive resected human pancreatic ductal adenocarcinoma, plus a neoadjuvant-treated set.",
+      "result": "B7-H3 was not simply high in cancer cells. It tracked a shift from tumour-cell architecture to a fibro-inflammatory, immune-suppressed state tied to aggressive disease and poor prognosis. The state was also seen after neoadjuvant therapy.",
+      "limitations": "No numbers were in the abstract, and the work is descriptive. It is a preprint and has not been reviewed.",
+      "meaning": "If B7-H3 marks where stroma blocks immune cells, it could guide which patients get B7-H3 drugs now in early trials.",
+      "terms": [
+        {
+          "term": "B7-H3",
+          "def": "A protein on tumour and stromal cells that can dampen immune attack; also called CD276."
+        },
+        {
+          "term": "spatial profiling",
+          "def": "A way to measure molecules in tissue while keeping track of where each cell sits."
+        },
+        {
+          "term": "neoadjuvant",
+          "def": "Given before surgery to shrink a tumour or improve its removal."
+        },
+        {
+          "term": "desmoplastic",
+          "def": "Describes a tumour surrounded by dense, scar-like connective tissue."
+        }
+      ],
+      "sources": [
+        {
+          "label": "bioRxiv preprint, Legrini et al.",
+          "url": "https://doi.org/10.64898/2026.11.16.762837",
+          "doi": "10.64898/2026.11.16.762837",
+          "access": "open"
+        }
+      ],
+      "forYou": "Pancreatic stroma, immune exclusion and spatial biology."
+    },
+    {
+      "id": "tr107-capivasertib-pdac-organoids",
+      "area": "cancer",
+      "title": "TR-107 and Capivasertib Synergistically Inhibit Pancreatic Cancer Organoid Growth In Vitro",
+      "headline": "A mitochondrial protease activator, TR-107, killed pancreatic cancer organoids at low nanomolar doses and worked better with an AKT inhibitor in a preprint.",
+      "authors": "LaComb JF, Mojumdar A, Vera C, et al.",
+      "venue": "bioRxiv (preprint)",
+      "published": "2026-11-17",
+      "evidence": {
+        "type": "preprint",
+        "model": "4 PDAC organoids, 4 cell lines",
+        "limitation": "Not peer reviewed and entirely in vitro. No animal or human data are in the abstract.",
+        "conflicts": "The abstract says Madera Therapeutics developed TR-107; funding was not read."
+      },
+      "question": "Can switching on the mitochondrial ClpP protease starve pancreatic cancer cells, and does it combine with an AKT inhibitor?",
+      "approach": "TR-107 was tested on organoids and cell lines for viability, ClpX levels and gene expression, including under low oxygen, and combined with capivasertib.",
+      "model": "Four pancreatic cancer organoid lines and four cell lines.",
+      "result": "TR-107 lowered viability at low nanomolar doses and reduced ClpX in a dose-dependent way. It changed ferroptosis, amino acid and HIF-1 alpha pathways, kept working in low oxygen, and synergised with capivasertib.",
+      "limitations": "Dish-based work with no sample sizes in the abstract, and a drug from a company that is named as its developer.",
+      "meaning": "Mitochondrial metabolism is a candidate weak point in pancreatic cancer, worth testing in animals before any clinical idea.",
+      "terms": [
+        {
+          "term": "organoid",
+          "def": "A small 3D culture grown from cells that mimics features of an organ or tumour."
+        },
+        {
+          "term": "mitochondrial ClpXP",
+          "def": "A protein-degrading machine inside mitochondria that helps keep them healthy."
+        },
+        {
+          "term": "ferroptosis",
+          "def": "A form of cell death driven by iron-dependent damage to fats in the cell membrane."
+        },
+        {
+          "term": "synergy",
+          "def": "When two drugs together have a bigger effect than the sum of each alone."
+        }
+      ],
+      "sources": [
+        {
+          "label": "bioRxiv preprint, LaComb et al.",
+          "url": "https://doi.org/10.64898/2026.11.13.766013",
+          "doi": "10.64898/2026.11.13.766013",
+          "access": "open"
+        }
+      ],
+      "forYou": "Organoid drug screening and metabolic targets in pancreatic cancer."
+    }
+  ],
+  "method": {
+    "id": "tapenade-3d-organoid-imaging",
+    "title": "Quantifying dense 3D organoids with the open-source Tapenade workflow",
+    "gist": "A Bio-protocol paper lays out an open-source workflow that turns multi-view 3D organoid images into cell-level and tissue-scale measurements.",
+    "field": "cancer",
+    "useWhen": "You have whole-mount, multichannel 3D image stacks of dense organoids and want unbiased numbers on shape, deformation and spatial patterns without writing code.",
+    "steps": [
+      {
+        "title": "Install the software",
+        "text": "Set up the Tapenade workflow. It runs as open-source Python scripts or through Napari interfaces."
+      },
+      {
+        "title": "Register and fuse views",
+        "text": "Align and merge the multi-view image stacks into one dataset."
+      },
+      {
+        "title": "Preprocess the images",
+        "text": "Clean the multichannel stacks to deal with imaging artifacts and weak signal before analysis."
+      },
+      {
+        "title": "Segment nuclei",
+        "text": "Find each nucleus in 3D. Use the Napari interface to tune parameters and check results at each stage."
+      },
+      {
+        "title": "Generate outputs",
+        "text": "Produce morphometric measurements, deformation fields and spatial correlation analyses from the segmented data."
+      }
+    ],
+    "pitfalls": [
+      "Dense, multilayered samples bring imaging artifacts, crowding and low signal-to-noise, so check each stage by eye.",
+      "Settings are not listed here; take every parameter from the protocol."
+    ],
+    "safety": "Follow your institution's safety rules for any biological material, stem cell work and fixation chemicals used to prepare the samples.",
+    "source": {
+      "label": "Bio-protocol, Gros et al. (Tapenade)",
+      "url": "https://doi.org/10.21769/bioprotoc.5823",
+      "doi": "10.21769/bioprotoc.5823",
+      "access": "open"
+    },
+    "terms": [
+      {
+        "term": "whole-mount imaging",
+        "def": "Imaging an intact sample in 3D instead of cutting it into thin slices."
+      },
+      {
+        "term": "segmentation",
+        "def": "Outlining each object, such as each cell nucleus, in an image by computer."
+      },
+      {
+        "term": "deformation field",
+        "def": "A map showing how far and in which direction each part of a tissue moved or stretched."
+      }
+    ],
+    "forYou": "3D organoid image analysis that transfers to tumour organoids."
+  },
+  "learn": {
+    "question": "What is the 'don't eat me' signal, and why do brain and cancer both use it?",
+    "answer": "CD47 is a protein on cells that tells immune cells such as macrophages and microglia not to eat them. Cancer copies it to hide, and the brain seems to turn it down to clear old connections.",
+    "analogy": "Like a badge at a door: guards let in anyone who wears it, and remove people without it.",
+    "body": [
+      "CD47 sits on the surface of many cells. It binds SIRP-alpha on macrophages and switches off their urge to engulf, a process called phagocytosis. The signal protects healthy cells from being eaten by mistake.",
+      "Many cancers raise CD47 to escape immune surveillance, so drugs that block CD47 or SIRP-alpha are in early trials. A 2022 meta-analysis of 24 studies (771 patients) found a 16.7 percent response rate, higher in blood cancers (25.3 percent) than solid tumours (9.1 percent).",
+      "In today's mouse study, the same logic works in the brain. When memory neurons go quiet, their myelin-making cells lower CD47, and microglia eat the myelin."
+    ],
+    "diagram": {
+      "layout": "flow",
+      "nodes": [
+        {
+          "label": "Cell shows CD47"
+        },
+        {
+          "label": "Macrophage reads it"
+        },
+        {
+          "label": "Eating switches off"
+        },
+        {
+          "label": "Cell survives",
+          "key": true
+        }
+      ],
+      "links": [
+        "binds",
+        "triggers",
+        "spares"
+      ],
+      "caption": "CD47 on a cell binds SIRP-alpha on a macrophage, which switches off eating. Less CD47 means the cell is easier to remove."
+    },
+    "terms": [
+      {
+        "term": "CD47",
+        "def": "A protein on cell surfaces that signals immune cells not to engulf the cell."
+      },
+      {
+        "term": "SIRP-alpha",
+        "def": "A receptor on macrophages that detects CD47 and switches off their engulfing."
+      },
+      {
+        "term": "macrophage",
+        "def": "An immune cell that engulfs and digests debris, microbes and unwanted cells."
+      },
+      {
+        "term": "phagocytosis",
+        "def": "The process in which a cell engulfs and digests another cell or particle."
+      }
+    ],
+    "seenIn": [
+      "microglia-motor-memory-decay"
+    ],
+    "sources": [
+      {
+        "label": "Frontiers in Immunology, Son et al. (CD47-SIRP-alpha meta-analysis)",
+        "url": "https://doi.org/10.3389/fimmu.2022.1027235",
+        "doi": "10.3389/fimmu.2022.1027235",
+        "access": "open"
+      },
+      {
+        "label": "Nature Neuroscience, Hu et al.",
+        "url": "https://doi.org/10.1038/s41593-026-02505-8",
+        "doi": "10.1038/s41593-026-02505-8",
+        "access": "paywall"
+      }
+    ]
+  },
+  "trials": {
+    "trials": [
+      {
+        "id": "nct04428151-leap-009-head-neck",
+        "area": "cancer",
+        "title": "LEAP-009: lenvatinib plus pembrolizumab in head and neck cancer after platinum and immunotherapy",
+        "nct": "NCT04428151",
+        "phase": "2",
+        "status": "Terminated",
+        "change": "terminated",
+        "what": "The registry now lists this randomised, open-label study as terminated, with 408 participants enrolled and results posted. The reason for stopping was not read.",
+        "who": "Recurrent or metastatic head and neck squamous cell carcinoma that progressed after platinum and a PD-1 or PD-L1 inhibitor. Main outcome: overall survival.",
+        "sponsor": "Merck Sharp & Dohme LLC",
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov NCT04428151",
+            "url": "https://clinicaltrials.gov/study/NCT04428151",
+            "access": "open"
+          }
+        ]
+      }
+    ],
+    "funding": []
+  },
+  "chatter": [
+    {
+      "id": "ctad26-mevidalen-alzheimers",
+      "area": "mind",
+      "kind": "conference",
+      "title": "Lilly's dopamine drug mevidalen reported to fail a phase 2 Alzheimer's study at CTAD",
+      "where": "Endpoints News",
+      "signal": "Endpoints News report from CTAD 2026 on 18 November 2026",
+      "gist": "Endpoints reports that Eli Lilly's mevidalen, tested in mild and moderate Alzheimer's, failed its phase 2 study. Only the feed summary was read; the page blocks readers.",
+      "sources": [
+        {
+          "label": "Endpoints News",
+          "url": "https://endpoints.news/ctad26-lillys-dopamine-drug-mevidalen-fails-phase-2-study-in-alzheimers/"
+        }
+      ]
+    },
+    {
+      "id": "fructose-ovarian-cancer-spread",
+      "area": "cancer",
+      "kind": "debate",
+      "title": "Fructose released by chemotherapy-surviving cells may help ovarian cancer spread, in a preclinical report",
+      "where": "ScienceDaily and Mastodon",
+      "signal": "5 boosts on a Mastodon #cancer post on 17 November 2026",
+      "gist": "A Wistar Institute study in Nature Aging says cells that survive chemotherapy release fructose that loosens neighbouring tumour cells. It is preclinical, and the page raises questions about diet and statins.",
+      "sources": [
+        {
+          "label": "ScienceDaily (Wistar Institute release)",
+          "url": "https://www.sciencedaily.com/releases/2026/11/261111221501.htm",
+          "access": "open"
+        }
+      ]
+    },
+    {
+      "id": "uspstf-meeting-cervical-perinatal-alcohol",
+      "area": "women",
+      "kind": "debate",
+      "title": "US preventive services panel meets after a long gap to discuss cervical cancer, perinatal depression and alcohol",
+      "where": "STAT",
+      "signal": "STAT report of 18 November 2026",
+      "gist": "STAT reports that the US Preventive Services Task Force meets for the first time in over a year. Topics include coverage of cervical cancer, perinatal depression and alcohol use treatments. Only the summary was read.",
+      "sources": [
+        {
+          "label": "STAT",
+          "url": "https://www.statnews.com/2026/11/18/uspstf-task-force-after-rfk-jr-shakeup-to-meet/"
+        }
+      ]
+    },
+    {
+      "id": "cervical-cancer-elimination-day",
+      "area": "cancer",
+      "kind": "conference",
+      "title": "17 November marked the day of action to eliminate cervical cancer",
+      "where": "Mastodon",
+      "signal": "3 boosts and 1 favourite on a Mastodon #cancer post on 17 November 2026",
+      "gist": "A Spanish-language post marks the day of action to eliminate cervical cancer, with the slogan 'Together we can eliminate cervical cancer', and calls it a preventable and curable cancer.",
+      "sources": [
+        {
+          "label": "Mastodon post (masto.es)",
+          "url": "https://masto.es/@Somosdisca/117633202540298161"
+        }
+      ]
+    }
+  ],
+  "curiosity": {
+    "id": "penicillin-allergy-labels",
+    "area": "other",
+    "title": "Most children labelled allergic to penicillin may not be allergic",
+    "gist": "About 1 in 20 US children has a penicillin allergy in their notes, yet research suggests most are not truly allergic. In a 2024 study, 91 percent of assessed children had the label removed.",
+    "body": [
+      "Two UK doctors explain in The Conversation that many labels start when a virus causes a rash during an antibiotic course. The label then stays in the record into adulthood and pushes doctors to broader antibiotics, which are less effective and raise infection risks such as MRSA and C difficile.",
+      "They outline a way GPs can sort children into three groups after a structured chat with the family: label removed with no test, a supervised single home dose, or referral for severe reactions. Parents should never retry an antibiotic without medical advice."
+    ],
+    "evidence": {
+      "type": "commentary",
+      "limitation": "An expert summary of a British Journal of General Practice article. The primary paper and the 2024 study were not read."
+    },
+    "terms": [
+      {
+        "term": "de-labelling",
+        "def": "Removing an incorrect allergy entry from a person's medical record after checking the history."
+      }
+    ],
+    "sources": [
+      {
+        "label": "The Conversation",
+        "url": "https://theconversation.com/most-children-labelled-allergic-to-antibiotics-may-not-have-an-allergy-researchers-warn-295819",
+        "access": "open"
+      }
+    ]
+  },
+  "jobs": [],
+  "note": "Endpoints, STAT, Medical Xpress and Cancer Research UK block automated readers, so those items rest on feed text. Several papers rest on abstracts from Europe PMC and PubMed. No job could be opened and checked, so the jobs list is empty."
+}
