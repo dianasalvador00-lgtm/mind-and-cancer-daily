@@ -1,0 +1,974 @@
+{
+ "date": "2026-11-22",
+ "generatedAt": "2026-11-22T07:05:32.229Z",
+ "note": "Shortlist for the daily run. Scores are deterministic (see scripts/sweep.mjs). area is a keyword guess.",
+ "areaMix": {
+  "cancer": 23,
+  "women": 2,
+  "mind": 13,
+  "other": 5,
+  "rare": 2
+ },
+ "failedSources": [
+  {
+   "source": "Reddit: labs and biology",
+   "error": "HTTP 403"
+  },
+  {
+   "source": "Europe PMC: rare disease preprints",
+   "error": "HTTP 503"
+  },
+  {
+   "source": "Europe PMC: cancer preprints",
+   "error": "HTTP 503"
+  },
+  {
+   "source": "Europe PMC: nano and phototherapy",
+   "error": "HTTP 503"
+  },
+  {
+   "source": "Europe PMC: pancreatic cancer preprints",
+   "error": "HTTP 503"
+  },
+  {
+   "source": "Europe PMC: mind preprints",
+   "error": "HTTP 503"
+  },
+  {
+   "source": "Genetics in Medicine",
+   "error": "returned no items"
+  },
+  {
+   "source": "Journal of Controlled Release",
+   "error": "returned no items"
+  },
+  {
+   "source": "Fierce Biotech",
+   "error": "HTTP 403"
+  },
+  {
+   "source": "New Scientist",
+   "error": "HTTP 403"
+  },
+  {
+   "source": "Europe PMC: women's health preprints",
+   "error": "HTTP 503"
+  },
+  {
+   "source": "Reddit: neuroscience and psychology",
+   "error": "HTTP 403"
+  },
+  {
+   "source": "Reddit: cancer and rare disease",
+   "error": "HTTP 403"
+  }
+ ],
+ "items": [
+  {
+   "id": "r001",
+   "section": "research",
+   "area": "cancer",
+   "title": "Vascular-targeted mild photothermal modulation of the blood-brain barrier enables efficient delivery of Pt(IV) prodrug to glioblastoma.",
+   "url": "https://doi.org/10.1016/j.jconrel.2026.115558",
+   "doi": "10.1016/j.jconrel.2026.115558",
+   "source": "Journal of controlled release : official journal of the Controlled Release Society",
+   "published": "2026-11-22",
+   "score": 12.99,
+   "niche": true,
+   "summary": "Effective platinum chemotherapy for glioblastoma is constrained by the blood-brain barrier and blood-brain tumor barrier (BBB/BBTB), which limit intracranial drug exposure. Here, we developed PS@RGD-Pt nanoparticles that integrate a NIR photothermal semiconducting polymer, a reduction-responsive Pt..."
+  },
+  {
+   "id": "r002",
+   "section": "research",
+   "area": "cancer",
+   "title": "Neighborhood Deprivation and Circulating Tumor DNA Provide Distinct Prognostic Signals in Localized Pancreatic Cancer.",
+   "url": "https://doi.org/10.21203/rs.3.rs-11395904/v1",
+   "doi": "10.21203/rs.3.rs-11395904/v1",
+   "source": "Research square",
+   "published": "2026-11-20",
+   "score": 12.4,
+   "niche": true,
+   "summary": "Pancreatic ductal adenocarcinoma (PDAC) is the third leading cause of cancer death in the US. Socioeconomic disadvantage, measured by Area Deprivation Index (ADI), may affect outcomes beyond tumor biology. We evaluate ADI and overall survival (OS) in localized PDAC, accounting for KRAS-mutant circu..."
+  },
+  {
+   "id": "r009",
+   "section": "research",
+   "area": "women",
+   "title": "Using placental biomarkers to guide delivery in late preterm preeclampsia.",
+   "url": "https://doi.org/10.1016/j.ajog.2026.11.018",
+   "doi": "10.1016/j.ajog.2026.11.018",
+   "source": "American journal of obstetrics and gynecology",
+   "published": "2026-11-22",
+   "score": 10.44,
+   "summary": "In women with late preterm preeclampsia without severe features, the optimal timing of delivery remains uncertain. Earlier delivery may reduce progression to severe maternal disease, whereas expectant management may limit neonatal morbidity related to late preterm birth. Because conventional clinic..."
+  },
+  {
+   "id": "r010",
+   "section": "research",
+   "area": "mind",
+   "title": "Cerebellar optogenetic stimulation restores motor cortex activity and behaviour after stroke.",
+   "url": "https://doi.org/10.1093/brain/awag396",
+   "doi": "10.1093/brain/awag396",
+   "source": "Brain : a journal of neurology",
+   "published": "2026-11-22",
+   "score": 10.24,
+   "summary": "Stroke causes severe motor deficits, but functional recovery can occur through neural circuit reorganization in areas adjacent to and remote from the infarct. Optogenetic stimulation can modulate neuronal activity and improve recovery in experimental models, yet the population-level cortical dynami..."
+  },
+  {
+   "id": "r011",
+   "section": "research",
+   "area": "cancer",
+   "title": "Targeting Neutrophil Extracellular Traps to Inhibit Colon Cancer Tumor Necrosis and Metastasis",
+   "url": "https://doi.org/10.1158/2159-8290.cd-25-0748",
+   "doi": "10.1158/2159-8290.cd-25-0748",
+   "source": "Cancer Discovery",
+   "authors": "Emma Gazzara, José M. Adrover, Sebastian A. Dziadowicz",
+   "published": "2026-11-20",
+   "score": 10.15,
+   "alsoIn": [
+    "Cancer discovery"
+   ],
+   "summary": "Tumor necrosis is associated with poor prognosis in colorectal cancer (CRC) yet is generally viewed as a passive consequence of tumor growth rather than a therapeutic target. We demonstrate that necrosis correlates with metastatic disease in human CRC independently of tumor size. Single-cell RNA se..."
+  },
+  {
+   "id": "r012",
+   "section": "research",
+   "area": "mind",
+   "title": "The hippocampus as a latent diffusion engine for memory, perception and cognitive dysfunction",
+   "url": "https://doi.org/10.1093/brain/awag325",
+   "doi": "10.1093/brain/awag325",
+   "source": "Brain",
+   "authors": "David T. Jones, Michael J Breakspear",
+   "published": "2026-11-18",
+   "score": 10.08,
+   "alsoIn": [
+    "Brain : a journal of neurology"
+   ],
+   "summary": "The hippocampus is a central cognitive hub whose dysfunction contributes to most neurodegenerative dementias. Despite extensive knowledge of its anatomy, physiology and circuitry, a unifying account that links hippocampal dynamics to cognition and clinical syndromes remains lacking. Drawing on syst..."
+  },
+  {
+   "id": "r013",
+   "section": "research",
+   "area": "cancer",
+   "title": "[Comment] Sacituzumab tirumotecan in previously treated endometrial cancer",
+   "url": "https://doi.org/10.1016/S0140-6736(26)02250-6",
+   "doi": "10.1016/S0140-6736(26)02250-6",
+   "source": "The Lancet (journal feed)",
+   "venue": "Lancet (London, England)",
+   "published": "2026-11-21",
+   "score": 10.05,
+   "alsoIn": [
+    "Lancet (London, England)"
+   ],
+   "summary": "Endometrial cancer is the most common gynaecological cancer in high-income countries, the sixth most common cancer in women worldwide,1 and one of few cancers for which both the incidence and mortality rate are increasing.2,3 Although 75% of endometrial cancers present with early-stage disease when..."
+  },
+  {
+   "id": "r014",
+   "section": "research",
+   "area": "mind",
+   "title": "Advancing brain organoids from disease phenotypes to mechanisms and translation across developmental, infectious, and neurodegenerative diseases",
+   "url": "https://www.cell.com/neuron/fulltext/S0896-6273(26)00810-X?rss=yes",
+   "doi": "10.1016/j.neuron.2026.10.014",
+   "source": "Neuron (journal feed)",
+   "published": "2026-11-11",
+   "score": 9.99,
+   "niche": true,
+   "summary": "This review examines how human brain organoids are advancing studies of neurodevelopmental disorders, nervous system infections, and neurodegenerative diseases. It highlights emerging principles of cellular and temporal vulnerability, multicellular interactions, and disease progression and consider..."
+  },
+  {
+   "id": "r015",
+   "section": "research",
+   "area": "cancer",
+   "title": "Multicenter characterization of enterocolitis associated with BCMA-directed CAR T cell therapy",
+   "url": "https://doi.org/10.1038/s41591-026-04783-y",
+   "doi": "10.1038/s41591-026-04783-y",
+   "source": "Nature Medicine",
+   "authors": "Lekha Mikkilineni, Mark P. Hamilton, Alexandria M. Jensen",
+   "published": "2026-11-19",
+   "score": 9.91,
+   "alsoIn": [
+    "Nature medicine"
+   ],
+   "summary": "Immune effector cell-associated enterocolitis (IEC-EC) is a delayed toxicity of ciltacabtagene autoleucel. The US Multiple Myeloma Immunotherapy Consortium retrospectively adjudicated 54 suspected cases from 8 institutions: 41 were IEC-EC (31 confirmed by anti-camelid variable heavy-chain immunohis..."
+  },
+  {
+   "id": "r017",
+   "section": "research",
+   "area": "cancer",
+   "title": "Effect of a Multidisciplinary Intervention on Fatigue in Lymphoma Survivors With Persistent Fatigue: A Randomized Controlled Trial (the REFUEL trial)",
+   "url": "https://doi.org/10.1200/jco-26-00414",
+   "doi": "10.1200/jco-26-00414",
+   "source": "Journal of Clinical Oncology",
+   "authors": "Synne Bøhn, Tone Skaali, Torbjørn Fosen Wisløff",
+   "published": "2026-11-20",
+   "score": 9.83,
+   "alsoIn": [
+    "Journal of clinical oncology : official journal of the American Society of Clinical Oncology"
+   ],
+   "summary": "Purpose Persistent fatigue is a prevalent, complex, and distressing late effect among lymphoma survivors. We examined the effect of a multidisciplinary intervention on fatigue among lymphoma survivors with persistent fatigue. Methods Lymphoma survivors with persistent fatigue (moderate to severe fa..."
+  },
+  {
+   "id": "r018",
+   "section": "research",
+   "area": "cancer",
+   "title": "[Comment] Rare earth elements and the fragile promise of cancer theranostics",
+   "url": "https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(26)00486-9/fulltext?rss=yes",
+   "doi": "10.1016/S1470-2045(26)00486-9",
+   "source": "Lancet Oncology (journal feed)",
+   "published": "2026-11-01",
+   "score": 9.78,
+   "niche": true,
+   "summary": "Radionuclide theranostics is transforming oncology by enabling more personalised treatment based on tumour biology. The approach pairs tumour-specific vectors with diagnostic and therapeutic radionuclides. Theranostics enables clinicians to confirm tumour targeting via molecular imaging before deli..."
+  },
+  {
+   "id": "r019",
+   "section": "research",
+   "area": "cancer",
+   "title": "A urea-powered platelet micromotor initiates self-amplifying ECM remodeling to potentiate BCG immunotherapy in bladder cancer",
+   "url": "https://doi.org/10.1016/j.biomaterials.2026.124784",
+   "doi": "10.1016/j.biomaterials.2026.124784",
+   "source": "Biomaterials",
+   "authors": "Mingde Gao, Jiale Tian, Haifeng Guo",
+   "published": "2026-11-17",
+   "score": 9.76,
+   "summary": "The dense extracellular matrix (ECM) of bladder cancer poses a critical barrier that limits drug penetration and fosters immune exclusion, undermining the efficacy of Bacillus Calmette-Guérin (BCG) immunotherapy. To overcome this barrier, we engineered a urea-powered platelet-based micromotors (BCG..."
+  },
+  {
+   "id": "r021",
+   "section": "research",
+   "area": "cancer",
+   "title": "Genomic mediators of acquired resistance to immunotherapy in metastatic melanoma.",
+   "url": "https://doi.org/10.1016/j.ccell.2026.10.011",
+   "doi": "10.1016/j.ccell.2026.10.011",
+   "source": "Cancer cell",
+   "published": "2026-11-19",
+   "score": 9.67,
+   "summary": ""
+  },
+  {
+   "id": "r023",
+   "section": "research",
+   "area": "cancer",
+   "title": "In Situ Programming of Armored CAR‐Macrophages by Microneedle‐Mediated Gene Delivery for Melanoma Immunotherapy",
+   "url": "https://doi.org/10.1002/adma.75787",
+   "doi": "10.1002/adma.75787",
+   "source": "Advanced Materials",
+   "authors": "Juhyeong Hong, Hanseok Lim, Kyungdong Kim",
+   "published": "2026-11-18",
+   "score": 9.58,
+   "niche": true,
+   "alsoIn": [
+    "Advanced materials (Deerfield Beach, Fla.)"
+   ],
+   "summary": "Despite clinical advances in CAR‐T therapy and immune checkpoint blockade, effective immunotherapy for solid tumors remains limited by restricted immune‐cell access and an immunosuppressive tumor microenvironment. Chimeric antigen receptor macrophages (CAR‐M) provide an alternative strategy by comb..."
+  },
+  {
+   "id": "r024",
+   "section": "research",
+   "area": "cancer",
+   "title": "CAR T-cell therapy for lung cancer: current landscape and emerging strategies.",
+   "url": "https://doi.org/10.1016/j.exphem.2026.105983",
+   "doi": "10.1016/j.exphem.2026.105983",
+   "source": "Experimental hematology",
+   "published": "2026-11-20",
+   "score": 9.51,
+   "niche": true,
+   "summary": "Chimeric antigen receptor (CAR) T-cell therapy has transformed the treatment of hematologic malignancies, but its efficacy in lung cancer remains limited because of insufficient persistence, T-cell dysfunction, tumor antigen heterogeneity, and the complex immunosuppressive tumor microenvironment. R..."
+  },
+  {
+   "id": "r037",
+   "section": "research",
+   "area": "other",
+   "title": "Mesenchymal stromal cells for periventricular hemorrhagic infarction in extremely preterm infants: a double-blinded randomized controlled phase IIa clinical trial.",
+   "url": "https://doi.org/10.1186/s13287-026-05235-7",
+   "doi": "10.1186/s13287-026-05235-7",
+   "source": "Stem cell research & therapy",
+   "published": "2026-11-20",
+   "score": 9.07,
+   "niche": true,
+   "summary": "Periventricular hemorrhagic infarction in extremely preterm infants (PVHI; the most severe form of intraventricular hemorrhage) are associated with a high risk of mortality and neurodevelopmental disability with no effective treatments. We aimed to assess the safety and potential efficacy of mesenc..."
+  },
+  {
+   "id": "r038",
+   "section": "research",
+   "area": "cancer",
+   "title": "Chromatin Remodeling of RasGRP3 Underlies Temozolomide Sensitivity in Glioblastoma Organoids",
+   "url": "https://doi.org/10.1002/advs.78665",
+   "doi": "10.1002/advs.78665",
+   "source": "Advanced Science",
+   "authors": "Bohan Chen, Guangsong Su, Yiting Huang",
+   "published": "2026-11-18",
+   "score": 9.06,
+   "niche": true,
+   "alsoIn": [
+    "Advanced science (Weinheim, Baden-Wurttemberg, Germany)"
+   ],
+   "summary": "Acquired resistance to temozolomide (TMZ) constitutes a formidable clinical barrier in the management of glioblastoma (GBM). GBM organoid models (GBO) that faithfully mirror the parental tumor phenotype serve as powerful research instruments to overcome the limitations in this field. We established..."
+  },
+  {
+   "id": "r040",
+   "section": "research",
+   "area": "cancer",
+   "title": "Glycans on Tumor‐Derived Extracellular Vesicles for Cancer Liquid Biopsy: From Signatures to Selective Capture",
+   "url": "https://doi.org/10.1002/smll.76699",
+   "doi": "10.1002/smll.76699",
+   "source": "Small",
+   "authors": "Elisa S. Breet, Peter ten Dijke, Agustin Enciso‐Martinez",
+   "published": "2026-11-20",
+   "score": 9.01,
+   "review": true,
+   "alsoIn": [
+    "Small (Weinheim an der Bergstrasse, Germany)"
+   ],
+   "summary": "Tumor-derived extracellular vesicles (tdEVs) are stable carriers of tumor-associated information in biofluids and have emerged as promising minimally invasive biomarkers for cancer detection and monitoring. While protein and nucleic acid cargo have been extensively characterized, the glycosylation..."
+  },
+  {
+   "id": "r042",
+   "section": "research",
+   "area": "cancer",
+   "title": "A multimodal foundation model for molecular and morphologic data in oncology",
+   "url": "https://doi.org/10.1038/s43018-026-01252-w",
+   "doi": "10.1038/s43018-026-01252-w",
+   "source": "Nature Cancer",
+   "authors": "Anurag Jayant Vaidya, Andrew Zhang, Guillaume Jaume",
+   "published": "2026-11-20",
+   "score": 9,
+   "alsoIn": [
+    "Nature cancer"
+   ],
+   "summary": "Foundation models are advancing computational pathology by transferring knowledge from large datasets to diagnostic, prognostic and treatment response tasks. Most existing models, however, either operate at the patch level or learn slide-level representations using image-based objectives, coarse ti..."
+  },
+  {
+   "id": "r053",
+   "section": "research",
+   "area": "cancer",
+   "title": "Flexible strategy for purine supply in tumours",
+   "url": "https://doi.org/10.1038/s41568-026-01001-2",
+   "doi": "10.1038/s41568-026-01001-2",
+   "source": "Nature Reviews Cancer",
+   "authors": "Chien-Han Kao, Ruey‐Hwa Chen",
+   "published": "2026-11-19",
+   "score": 8.51,
+   "alsoIn": [
+    "Nature reviews. Cancer"
+   ],
+   "summary": ""
+  },
+  {
+   "id": "r057",
+   "section": "research",
+   "area": "cancer",
+   "title": "Reply to: Concerns about use of placebo control in clinical trials of Obinutuzumab β for aquaporin-4 antibody positive neuromyelitis optica spectrum disorder.",
+   "url": "https://doi.org/10.1038/s41591-026-04782-z",
+   "doi": "10.1038/s41591-026-04782-z",
+   "source": "Nature medicine",
+   "published": "2026-11-21",
+   "score": 8.5,
+   "summary": ""
+  },
+  {
+   "id": "r059",
+   "section": "research",
+   "area": "cancer",
+   "title": "The Global Landscape of Liquid Biopsy Technology in Oncology: From Biological Foundations to Commercial and Clinical Frontiers.",
+   "url": "https://doi.org/10.1007/s40291-026-00885-y",
+   "doi": "10.1007/s40291-026-00885-y",
+   "source": "Molecular diagnosis & therapy",
+   "published": "2026-11-22",
+   "score": 8.44,
+   "summary": "Liquid biopsy has developed rapidly over the past decade and now contributes to several defined areas of oncology practice. Here, we offer an expert opinion on the biological foundations, technological platforms, clinical evidence base, commercial ecosystem and market trajectory of blood-based canc..."
+  },
+  {
+   "id": "r060",
+   "section": "research",
+   "area": "mind",
+   "title": "The effectiveness of AI-based cognitive behavioral therapy chatbots for anxiety and depression symptoms: a systematic review and meta-analysis.",
+   "url": "https://doi.org/10.3389/fpubh.2026.1997810",
+   "doi": "10.3389/fpubh.2026.1997810",
+   "source": "Frontiers in public health",
+   "published": "2026-11-22",
+   "score": 8.44,
+   "summary": "AI chatbots are increasingly being used to provide accessible psychological support. However, the effectiveness of chatbot-delivered cognitive behavioral therapy for anxiety and depressive symptoms remains uncertain. This study aimed to evaluate the effects of artificial intelligence chatbot-based..."
+  },
+  {
+   "id": "r072",
+   "section": "research",
+   "area": "cancer",
+   "title": "Neutrophils are known by their neighbors in breast cancer",
+   "url": "https://www.cell.com/cancer-cell/fulltext/S1535-6108(26)00475-7?rss=yes",
+   "doi": "10.1016/j.ccell.2026.10.009",
+   "source": "Cancer Cell (journal feed)",
+   "published": "2026-11-09",
+   "score": 8.1,
+   "summary": "In this issue of Cancer Cell, Xu et al. combine large-scale computational pathology, spatial omics, and functional experiments to examine neutrophil organization in triple-negative breast tumors. They identify two neutrophil niches with different clinical associations: tumor-proximal neutrophils ar..."
+  },
+  {
+   "id": "r101",
+   "section": "research",
+   "area": "mind",
+   "title": "[Correspondence] Open Dialogue: challenges in interpreting the ODDESSI trial results – Authors' reply",
+   "url": "https://www.thelancet.com/journals/lanpsy/article/PIIS2215-0366(26)00334-2/fulltext?rss=yes",
+   "doi": "10.1016/S2215-0366(26)00334-2",
+   "source": "Lancet Psychiatry (journal feed)",
+   "published": "2026-11-04",
+   "score": 7.63,
+   "summary": "We are grateful for the interest in the ODDESSI trial1 provided by Tomi Bergström, Sameer Jauhar, Richard Morris, Justin Palanci, and Robert Howard and Paul Hutton."
+  },
+  {
+   "id": "n001",
+   "section": "news",
+   "area": "cancer",
+   "title": "Recap – LustgartenLIVE!: Sprint to Discovery",
+   "url": "https://lustgarten.org/recap-lustgartenlive-sprint-to-discovery/#new_tab",
+   "source": "Lustgarten Foundation",
+   "published": "2026-11-20",
+   "score": 7.7,
+   "niche": true,
+   "summary": "The second annual LustgartenLIVE!: Sprint to Discovery put the next generation of scientific talent in the spotlight for a fast-paced showcase of innovative research supported by the Lustgarten Foundation’s LABS […] The post Recap – LustgartenLIVE!: Sprint to Discovery appeared first on Lustgarten..."
+  },
+  {
+   "id": "n002",
+   "section": "news",
+   "area": "cancer",
+   "title": "Following in Her Footsteps: Jonathan Grammer’s Marathon Tribute to His Mom",
+   "url": "https://lustgarten.org/following-in-her-footsteps-jonathan-grammers-marathon-tribute-to-his-mom/",
+   "source": "Lustgarten Foundation",
+   "published": "2026-11-19",
+   "score": 7.47,
+   "niche": true,
+   "summary": "Ten years ago, Jonathan Grammer stood at the finish line of a marathon, cheering as his mother, Cheryl, completed her first and only 26.2-mile race at age 50. It was […] The post Following in Her Footsteps: Jonathan Grammer’s Marathon Tribute to His Mom appeared first on Lustgarten Foundation: Panc..."
+  },
+  {
+   "id": "n003",
+   "section": "news",
+   "area": "other",
+   "title": "Opinion: When should medical school start?",
+   "url": "https://www.statnews.com/2026/11/21/stat-letters-to-editor-medical-school-pediatric-emergency-care/?utm_campaign=rss",
+   "source": "STAT",
+   "published": "2026-11-21",
+   "score": 7.38,
+   "summary": "STAT readers weigh in on shortening medical school, fixing pediatric emergency care, and more."
+  },
+  {
+   "id": "n004",
+   "section": "news",
+   "area": "mind",
+   "title": "Patients have little say in how brain implant trials are done. Ian Burkhart wants to change that",
+   "url": "https://www.statnews.com/2026/11/20/ian-burkhart-how-brain-implant-trials-can-serve-patients-better/?utm_campaign=rss",
+   "source": "STAT",
+   "published": "2026-11-20",
+   "score": 7.36,
+   "summary": "Ian Burkhart, founder of a coalition of brain implant trial participants, says device developers should give patients more agency in research."
+  },
+  {
+   "id": "n005",
+   "section": "news",
+   "area": "other",
+   "title": "Research Spotlight: Why This Awareness Month Feels Different",
+   "url": "https://pancan.org/news/research-spotlight/why-this-awareness-month-feels-different/",
+   "source": "PanCAN",
+   "published": "2026-11-18",
+   "score": 7.2,
+   "niche": true,
+   "summary": "Nov 18, 2026 - By Anna Berkenblit, MD, MMSc Editor’s note: The “Research Spotlight” series is written by Dr. Anna Berkenblit , PanCAN’s Chief Scientific and Medical Officer. Each month, Dr. Berkenblit shares her insights into the latest news and research in pancreatic cancer. Follow Dr. Berkenblit..."
+  },
+  {
+   "id": "n006",
+   "section": "news",
+   "area": "cancer",
+   "title": "Editors’ Picks, November 2026: Less Toxic Immunotherapy, Targeting the Breast Cancer Microenvironment, Clinical Trials, and More",
+   "url": "https://www.aacr.org/blog/2026/11/20/editors-picks-november-2026-less-toxic-immunotherapy-targeting-the-breast-cancer-microenvironment-clinical-trials-and-more/",
+   "source": "AACR news",
+   "published": "2026-11-20",
+   "score": 7.13,
+   "summary": "The November 2026 Editors’ Picks from AACR journals include a potential strategy to make immune checkpoint inhibitors less toxic without compromising their effectiveness; how an HDAC inhibitor can sensitize metastatic breast cancer to dual checkpoint inhibition; two phase II trials of neoadjuvant c..."
+  },
+  {
+   "id": "n007",
+   "section": "news",
+   "area": "other",
+   "title": "Opinion: How Kennedy and MAHA could help stop measles",
+   "url": "https://www.statnews.com/2026/11/21/rfk-jr-maha-measles-outbreak-elimination-status-promote-mmr-vaccine/?utm_campaign=rss",
+   "source": "STAT",
+   "published": "2026-11-21",
+   "score": 7.07,
+   "summary": "Kennedy and MAHA say they aren’t anti-vaccine. They can prove it by promoting the MMR vaccine, writes Brinda Adhikari."
+  },
+  {
+   "id": "n013",
+   "section": "news",
+   "area": "cancer",
+   "title": "Custom MRI tool could show within weeks if pancreatic cancer treatment is working",
+   "url": "https://medicalxpress.com/news/2026-11-custom-mri-tool-weeks-pancreatic.html",
+   "source": "Medical Xpress",
+   "published": "2026-11-20",
+   "score": 6.34,
+   "niche": true,
+   "summary": "About 60% of people diagnosed with pancreatic cancer don't qualify for surgery because their disease is too advanced. For these patients, treatment typically begins with chemotherapy, in the hope that the tumor will shrink enough to be surgically removed, which offers the best chance of long-term s..."
+  },
+  {
+   "id": "n014",
+   "section": "news",
+   "area": "mind",
+   "title": "Alcohol addiction and eating disorders often go hand in hand—here's why",
+   "url": "https://medicalxpress.com/news/2026-11-alcohol-addiction-disorders.html",
+   "source": "Medical Xpress",
+   "published": "2026-11-20",
+   "score": 6.2,
+   "alsoIn": [
+    "The Conversation: health"
+   ],
+   "summary": "When some people drink, they purposely skip meals in order to amplify the effects of the alcohol or to save calories for their drinks. The practice, sometimes referred to as \"drunkorexia,\" highlights the crossover that can exist between risky drinking behavior and disordered eating."
+  },
+  {
+   "id": "n015",
+   "section": "news",
+   "area": "mind",
+   "title": "Image-guided versus local field potential-guided programming for subthalamic deep brain stimulation in Parkinson’s disease",
+   "url": "https://www.nature.com/articles/s41531-026-01627-x",
+   "source": "Nature news in medicine",
+   "published": "2026-11-21",
+   "score": 6.13,
+   "summary": ""
+  },
+  {
+   "id": "n017",
+   "section": "news",
+   "area": "mind",
+   "title": "Insecticide exposure in pregnancy linked to cognition in middle childhood",
+   "url": "https://medicalxpress.com/news/2026-11-insecticide-exposure-pregnancy-linked-cognition.html",
+   "source": "Medical Xpress: obstetrics and gynaecology",
+   "published": "2026-11-20",
+   "score": 5.8,
+   "summary": "Neonicotinoids are among the most common insecticides worldwide, given their low cost and high efficacy. However, these insecticides take a long time to break down in the environment and can easily contaminate their surroundings, affecting food and water supplies. Despite the well-documented effect..."
+  },
+  {
+   "id": "n018",
+   "section": "news",
+   "area": "mind",
+   "title": "CNS dispatches from Jefferies: Acadia’s search for deals, Alto’s psychiatry question and ProMIS’ Alzheimer’s ambitions",
+   "url": "https://endpoints.news/cns-dispatches-from-jefferies-acadias-search-for-deals-altos-psychiatry-question-and-promis-alzheimers-ambitions/",
+   "source": "Endpoints News",
+   "published": "2026-11-20",
+   "score": 5.76,
+   "summary": "The chaotic environs of this year’s Jefferies Healthcare conference, held earlier this week in London, attracted a number of drugmakers active in the central nervous system (CNS) and psychiatry space. Endpoints News ..."
+  },
+  {
+   "id": "n019",
+   "section": "news",
+   "area": "women",
+   "title": "Genetic data from over one million people reveals new clues to how endometriosis develops",
+   "url": "https://medicalxpress.com/news/2026-11-genetic-million-people-reveals-clues.html",
+   "source": "Medical Xpress: obstetrics and gynaecology",
+   "published": "2026-11-20",
+   "score": 5.73,
+   "summary": "In a large, international study analyzing data from over 1 million people, researchers identified multiple genomic regions, associations and pathways underlying endometriosis, a debilitating, chronic condition in which tissue similar to the lining of the uterus grows in other places in the body."
+  },
+  {
+   "id": "n021",
+   "section": "news",
+   "area": "rare",
+   "title": "European CF Awareness Day",
+   "url": "https://www.eurordis.org/european-cf-awareness-day/",
+   "source": "EURORDIS",
+   "published": "2026-11-18",
+   "score": 5.67,
+   "summary": "The post European CF Awareness Day appeared first on EURORDIS-Rare Diseases Europe ."
+  },
+  {
+   "id": "n022",
+   "section": "news",
+   "area": "cancer",
+   "title": "Merck gets another Phase 3 win for sac-TMT, this time in gastric cancer",
+   "url": "https://endpoints.news/merck-gets-another-phase-3-win-for-sac-tmt-this-time-in-gastric-cancer/",
+   "source": "Endpoints News",
+   "published": "2026-11-20",
+   "score": 5.46,
+   "summary": "An experimental antibody-drug conjugate from Merck has succeeded in another Phase 3 cancer study, potentially helping offset Keytruda's looming patent cliff. Merck said Friday morning that a pivotal trial testing sacituzumab ..."
+  },
+  {
+   "id": "n023",
+   "section": "news",
+   "area": "mind",
+   "title": "Workplace ergonomics, self-reported musculoskeletal symptoms and sedentary behaviour among desk-based office employees in Islamabad, Pakistan: a cross-sectional survey of employees and human resource...",
+   "url": "https://www.nature.com/articles/s41598-026-80088-x",
+   "source": "Nature news in medicine",
+   "published": "2026-11-21",
+   "score": 5.33,
+   "summary": ""
+  },
+  {
+   "id": "n027",
+   "section": "news",
+   "area": "rare",
+   "title": "Learning from PaLaDIn: A webinar for Rare Disease Communities",
+   "url": "https://www.eurordis.org/learning-from-paladin-a-webinar-for-rare-disease-communities/",
+   "source": "EURORDIS",
+   "published": "2026-11-16",
+   "score": 5.29,
+   "summary": "The post Learning from PaLaDIn: A webinar for Rare Disease Communities appeared first on EURORDIS-Rare Diseases Europe ."
+  },
+  {
+   "id": "n028",
+   "section": "news",
+   "area": "other",
+   "title": "EU recommendations for 2026/2027 seasonal flu vaccine composition",
+   "url": "https://www.ema.europa.eu/en/news/eu-recommendations-2026-2027-seasonal-flu-vaccine-composition",
+   "source": "EMA news",
+   "published": "2026-11-17",
+   "score": 5.2,
+   "summary": "The recommendations were updated and published on the following dates: 17 November 2026: to include a recommendation for mRNA (nucleic acid) influenza vaccines. Annex I…"
+  },
+  {
+   "id": "n038",
+   "section": "news",
+   "area": "mind",
+   "title": "How brain cell networks expand and shrink as cocaine habits form",
+   "url": "https://www.psypost.org/how-brain-cell-networks-expand-and-shrink-as-cocaine-habits-form/",
+   "source": "PsyPost",
+   "published": "2026-11-21",
+   "score": 4.85,
+   "summary": "As mice learn to self-administer cocaine, the brain networks driving the habit undergo constant remodeling. A new study reveals that the brain continually swaps out individual neurons to maintain the addictive behavior."
+  },
+  {
+   "id": "n040",
+   "section": "news",
+   "area": "mind",
+   "title": "Evolutionary hypothesis linking facial symmetry to women’s mating behavior fails to hold up in new study",
+   "url": "https://www.psypost.org/evolutionary-hypothesis-linking-facial-symmetry-to-womens-mating-behavior-fails-to-hold-up-in-new-study/",
+   "source": "PsyPost",
+   "published": "2026-11-21",
+   "score": 4.65,
+   "summary": "Evolutionary psychologists once proposed that symmetrical faces signal good genes and active sex lives. A new study finds that apparent link in women vanishes once researchers account for urban versus rural living."
+  },
+  {
+   "id": "t001",
+   "section": "trials",
+   "area": "cancer",
+   "title": "Gemcitabine, Carboplatin, and Lenalidomide for Treatment of Advanced/Metastatic Urothelial Cancer and Other Solid Tumors",
+   "url": "https://clinicaltrials.gov/study/NCT01352962",
+   "nct": "NCT01352962",
+   "source": "ClinicalTrials.gov: pancreatic cancer",
+   "published": "2026-11-20",
+   "score": 11.31,
+   "phase": "1",
+   "status": "completed",
+   "sponsor": "National Cancer Institute (NCI)",
+   "change": "completed",
+   "conditions": "Urethral Neoplasms, Neoplasms, Urethral, Cancer of the Urethra, Urethral Cancer",
+   "niche": true,
+   "summary": "Background: \\- Gemcitabine and carboplatin are chemotherapy drugs used to treat several types of cancer, including cancer of the pancreas, bladder, ovaries, and lung. Lenalidomide, a drug that prevents the growth of new blood vessels in tumors, has been approved for treatment of certain blood cance..."
+  },
+  {
+   "id": "t002",
+   "section": "trials",
+   "area": "cancer",
+   "title": "Durvalumab in Combination With Chemotherapy in Treating Patients With Advanced Solid Tumors, DURVA+ Trial",
+   "url": "https://clinicaltrials.gov/study/NCT03907475",
+   "nct": "NCT03907475",
+   "source": "ClinicalTrials.gov: nanoparticles and phototherapy",
+   "published": "2026-11-18",
+   "score": 10.96,
+   "phase": "2",
+   "status": "recruiting",
+   "sponsor": "National Cancer Institute (NCI)",
+   "change": "updated",
+   "conditions": "Locally Advanced Malignant Solid Neoplasm, Metastatic Malignant Solid Neoplasm",
+   "niche": true,
+   "summary": "This phase II trial studies the side effects of durvalumab when given together with chemotherapy in treating patients with solid tumors that have spread to other places in the body (advanced). Immunotherapy with monoclonal antibodies, such as durvalumab, may help the body's immune system attack the..."
+  },
+  {
+   "id": "t007",
+   "section": "trials",
+   "area": "mind",
+   "title": "Study of Neuro-Cognitive Correlates of Pediatric Anxiety Disorders",
+   "url": "https://clinicaltrials.gov/study/NCT00018057",
+   "nct": "NCT00018057",
+   "source": "ClinicalTrials.gov: depression and psychosis",
+   "published": "2026-11-20",
+   "score": 8.01,
+   "phase": "2",
+   "status": "recruiting",
+   "sponsor": "National Institute of Mental Health (NIMH)",
+   "change": "updated",
+   "conditions": "Anxiety Disorders, Major Depressive Disorder",
+   "summary": "Study Description: This study examines relations between neurocognitive and clinical features of pediatric anxiety disorders. The study uses neuro-cognitive tasks, functional magnetic resonance imaging (fMRI), as well as magneto- and electro-encephalography (M/EEG). Patients will be studied over on..."
+  },
+  {
+   "id": "t008",
+   "section": "trials",
+   "area": "mind",
+   "title": "Efficacy and Safety of T-817MA in Patients With Mild Cognitive Impairment (MCI) Due to Alzheimer's Disease (AD) or Mild AD",
+   "url": "https://clinicaltrials.gov/study/NCT04191486",
+   "nct": "NCT04191486",
+   "source": "ClinicalTrials.gov: neurodegeneration",
+   "published": "2026-11-20",
+   "score": 8.01,
+   "phase": "2",
+   "status": "completed",
+   "sponsor": "FUJIFILM Toyama Chemical Co., Ltd.",
+   "change": "completed",
+   "conditions": "Mild Cognitive Impairment",
+   "summary": "Primary objective is to evaluate the neuroprotective effect of T-817MA on Tau protein phosphorylated at threonine 181 (p-tau 181) in cerebrospinal fluid (CSF) compared with placebo in patients with a diagnosis of MCI due to AD or mild AD. Secondary objectives are: 1. To evaluate in patients on T-81..."
+  },
+  {
+   "id": "m001",
+   "section": "methods",
+   "area": "cancer",
+   "title": "Protocol for establishing a 3D coculture of colorectal cancer liver metastasis patient-derived organoids, endothelial cells, and fibroblasts",
+   "url": "https://doi.org/10.1016/j.xpro.2026.104973",
+   "doi": "10.1016/j.xpro.2026.104973",
+   "source": "STAR Protocols",
+   "authors": "Amani Machmouchi, Anneke Stolte, Florian Döbbe",
+   "published": "2026-11-20",
+   "score": 9.94,
+   "niche": true,
+   "summary": ""
+  },
+  {
+   "id": "m004",
+   "section": "methods",
+   "area": "women",
+   "title": "Enzymatic Enrichment of Sensory Epithelia from Late-Stage Mouse Embryonic Stem Cell-Derived Inner Ear Organoids",
+   "url": "https://doi.org/10.3791/75351",
+   "doi": "10.3791/75351",
+   "source": "JoVE",
+   "authors": "Dima Mohsin, Emi Pilla, Jiayi Wu",
+   "published": "2026-11-17",
+   "score": 8.27,
+   "niche": true,
+   "summary": ""
+  },
+  {
+   "id": "m005",
+   "section": "methods",
+   "area": "other",
+   "title": "Multiplexed single-cell reduced representation bisulfite sequencing for genome-wide DNA methylation profiling",
+   "url": "https://doi.org/10.1038/s41596-026-01452-9",
+   "doi": "10.1038/s41596-026-01452-9",
+   "source": "Nature Protocols",
+   "authors": "Fang Liu, Jian Huang, Yanhua Zheng",
+   "published": "2026-10-15",
+   "score": 8.22,
+   "summary": ""
+  },
+  {
+   "id": "m009",
+   "section": "methods",
+   "area": "cancer",
+   "title": "A Dissociation-Based Seahorse XF Workflow for Quantifying Averaged Bioenergetics in Anchorage-Independent Cancer Cell Clusters",
+   "url": "https://doi.org/10.21769/bioprotoc.5849",
+   "doi": "10.21769/bioprotoc.5849",
+   "source": "Bio-protocol",
+   "authors": "Ranae Lindeque, Jacobus Visagie, Belinda Fouché",
+   "published": "2026-10-20",
+   "score": 7.67,
+   "summary": "Cell clustering during anchorage-independent growth (AIG) is a key hallmark of malignant progression, supporting survival under detachment during metastatic dissemination. However, bioenergetic profiling of cell clusters grown under AIG conditions remains technically challenging, in part because of..."
+  },
+  {
+   "id": "c001",
+   "section": "chatter",
+   "area": "mind",
+   "title": "Princeton #neuroscience graduate student Eva Yi Xie was kidnapped by #ICE on her way home to New Jersey from the Society for Neuroscience conference this week....",
+   "url": "https://mefi.social/@biogeo/117655022297598255",
+   "source": "Mastodon #neuroscience",
+   "published": "2026-11-21",
+   "score": 7.67,
+   "signal": "1 favourites and 3 boosts on Mastodon (#neuroscience)",
+   "summary": "Princeton #neuroscience graduate student Eva Yi Xie was kidnapped by #ICE on her way home to New Jersey from the Society for Neuroscience conference this week. She had just presented her research on how a part of the brain called the entorhinal cortex helps us learn how to navigate through space, s..."
+  },
+  {
+   "id": "c002",
+   "section": "chatter",
+   "area": "mind",
+   "title": "\"I am OUTRAGED\": NJ state Senator @AndrewZwicker on ICE detaining Princeton Ph.D. student Eva Yi Xie as she prepared to return from a neuroscience conference....",
+   "url": "https://mastodon.social/@cbarbermd/117657244108985947",
+   "source": "Mastodon #neuroscience",
+   "published": "2026-11-22",
+   "score": 6.81,
+   "signal": "1 favourites and 5 boosts on Mastodon (#neuroscience)",
+   "summary": "\"I am OUTRAGED\": NJ state Senator @AndrewZwicker on ICE detaining Princeton Ph.D. student Eva Yi Xie as she prepared to return from a neuroscience conference. She's a researcher using her talents to transform how we understand the human brain. He says it tells the world's scientists: \"do not come t..."
+  },
+  {
+   "id": "c003",
+   "section": "chatter",
+   "area": "mind",
+   "title": "Eva Yi Xie, a neuroscience graduate student, was kidnapped by ICE yesterday on her way back home from the Society for Neuroscience meeting. For USians, please...",
+   "url": "https://ecoevo.social/@noamross/117650434054363642",
+   "source": "Mastodon #neuroscience",
+   "published": "2026-11-20",
+   "score": 6.69,
+   "signal": "0 favourites and 41 boosts on Mastodon (#neuroscience)",
+   "summary": "Eva Yi Xie, a neuroscience graduate student, was kidnapped by ICE yesterday on her way back home from the Society for Neuroscience meeting. For USians, please call the your representatives and demand her release. Capitol switchboard: (202) 224-3121 Eva was a science fair kid, like students I've men..."
+  },
+  {
+   "id": "c007",
+   "section": "chatter",
+   "area": "mind",
+   "title": "\"Eva Yi Xie GS, a third-year Ph.D. student in #neuroscience, has been detained by #US Immigration and Customs Enforcement... the first known #Princeton student...",
+   "url": "https://newsie.social/@ZhiZhu/117650407950113908",
+   "source": "Mastodon #neuroscience",
+   "published": "2026-11-20",
+   "score": 5.71,
+   "signal": "2 favourites and 15 boosts on Mastodon (#neuroscience)",
+   "summary": "\"Eva Yi Xie GS, a third-year Ph.D. student in #neuroscience, has been detained by #US Immigration and Customs Enforcement... the first known #Princeton student to be reported to be detained by #ICE. “Eva is a brilliant computational and experimental systems neuroscientist. She is also a valued coll..."
+  },
+  {
+   "id": "c008",
+   "section": "chatter",
+   "area": "mind",
+   "title": "Vikas Bhandawat is hiring for multiple positions for PhD students or postdocs, at Drexel University in Philadelphia, USA: «We are recruiting for multiple proje...",
+   "url": "https://mathstodon.xyz/@albertcardona/117655590796338690",
+   "source": "Mastodon #neuroscience",
+   "published": "2026-11-21",
+   "score": 5.51,
+   "signal": "2 favourites and 4 boosts on Mastodon (#neuroscience)",
+   "summary": "Vikas Bhandawat is hiring for multiple positions for PhD students or postdocs, at Drexel University in Philadelphia, USA: «We are recruiting for multiple projects. Anyone interested in systems neuroscience, sensorimotor transformation, the interaction between the nervous and musculoskeletal systems..."
+  },
+  {
+   "id": "c011",
+   "section": "chatter",
+   "area": "mind",
+   "title": "DATE: November 21, 2026 at 10:24AM SOURCE: SCIENCE DAILY MIND-BRAIN FEED TITLE: AI may not work like the human brain after all, scientists discover URL: https:...",
+   "url": "https://mastodon.clinicians-exchange.org/@psychbot/117655145391198709",
+   "source": "Mastodon #neuroscience",
+   "published": "2026-11-21",
+   "score": 5.16,
+   "signal": "2 favourites and 2 boosts on Mastodon (#neuroscience)",
+   "alsoIn": [
+    "Mastodon #psychology"
+   ],
+   "summary": "DATE: November 21, 2026 at 10:24AM SOURCE: SCIENCE DAILY MIND-BRAIN FEED TITLE: AI may not work like the human brain after all, scientists discover URL: https://www.sciencedaily.com/releases/2026/11/261120075701.htm AI may not think like the human brain after all, according to a striking new discov..."
+  },
+  {
+   "id": "c013",
+   "section": "chatter",
+   "area": "mind",
+   "title": "Falling asleep involves being less aware of one's environment and diminishing thought control; that's why it's hard to remember we fell asleep. Link: https://w...",
+   "url": "https://mastodon.world/@ombialik/117649409375566101",
+   "source": "Mastodon #neuroscience",
+   "published": "2026-11-20",
+   "score": 4.45,
+   "signal": "1 favourites and 4 boosts on Mastodon (#neuroscience)",
+   "summary": "Falling asleep involves being less aware of one's environment and diminishing thought control; that's why it's hard to remember we fell asleep. Link: https://www.sciencedirect.com/science/article/abs/pii/S1053810009002037 #Sleep #Memory #Neuroscience"
+  },
+  {
+   "id": "j001",
+   "section": "jobs",
+   "area": "mind",
+   "title": "Two former colleagues of mine (when I was still doing neuroscience) have open PhD and postdoc positions. * PhD (based at TU Dresden, Germany): https://nextclou...",
+   "url": "https://fediscience.org/@tfardet/117500619332354884",
+   "source": "Mastodon #postdoc",
+   "published": "2026-10-25",
+   "score": 8.2,
+   "signal": "2 favourites and 3 boosts on Mastodon (#postdoc)",
+   "alsoIn": [
+    "Mastodon #phdposition"
+   ],
+   "summary": "Two former colleagues of mine (when I was still doing neuroscience) have open PhD and postdoc positions. * PhD (based at TU Dresden, Germany): https://nextcloud.tuebingen.mpg.de/index.php/s/wbpcYQ5pgMjDJos * Postdoc (based at the Max Planck Institute for Biological Cybernetics, Germany): https://ne..."
+  },
+  {
+   "id": "j002",
+   "section": "jobs",
+   "area": "mind",
+   "title": "Research technician or Postdoc Fellow in Neuroscience Lab Rutgers University See the full job description on jobRxiv: https://jobrxiv.org/job/rutgers-universit...",
+   "url": "https://mas.to/@jobRxiv/117646434186402299",
+   "source": "Mastodon #hiring",
+   "published": "2026-11-20",
+   "score": 7.24,
+   "signal": "0 favourites and 4 boosts on Mastodon (#hiring)",
+   "preprint": true,
+   "summary": "Research technician or Postdoc Fellow in Neuroscience Lab Rutgers University See the full job description on jobRxiv: https://jobrxiv.org/job/rutgers-university-27778-research-technician-or-postdoc-fellow-in-neuroscience-lab/ #behavioralneuroscience #cellbiology #confocalmicroscopy #molecularbiolog..."
+  },
+  {
+   "id": "j003",
+   "section": "jobs",
+   "area": "curiosity",
+   "title": "Oh look, one of my favourite colleagues (Lynn Govaert) is offering a really cool 5 year (!!) #postdoc position with a focus on theoretical eco-evolutionary dyn...",
+   "url": "https://ecoevo.social/@KorinnaAllhoff/117571027915294247",
+   "source": "Mastodon #postdoc",
+   "published": "2026-11-06",
+   "score": 6.06,
+   "signal": "0 favourites and 7 boosts on Mastodon (#postdoc)",
+   "summary": "Oh look, one of my favourite colleagues (Lynn Govaert) is offering a really cool 5 year (!!) #postdoc position with a focus on theoretical eco-evolutionary dynamics in Salzburg! More info ⬇️ https://karriere.plus.ac.at/en/jobs/e7761fe9-6fe3-436d-8826-cc6be679d867 #TheoreticalEcology #EcoEvoModellin..."
+  },
+  {
+   "id": "j004",
+   "section": "jobs",
+   "area": "mind",
+   "title": "If you want apply for a 12-month postdoc in France, I am working on solutions to protect the sleep during heatwaves (e.g., CoolSleep : https://cites-irset.fr/e...",
+   "url": "https://masto.ai/@PaquitoBernard/117507157585523125",
+   "source": "Mastodon #postdoc",
+   "published": "2026-10-26",
+   "score": 5.41,
+   "signal": "0 favourites and 3 boosts on Mastodon (#postdoc)",
+   "summary": "If you want apply for a 12-month postdoc in France, I am working on solutions to protect the sleep during heatwaves (e.g., CoolSleep : https://cites-irset.fr/en/project/coolsleep-countering-the-effects-of-summer-heat-on-sleep-in-social-housing-tenants-in-france/). Member of an amazing research team..."
+  },
+  {
+   "id": "u001",
+   "section": "curiosity",
+   "area": "cancer",
+   "title": "How do tumors talk to nerves? This scientist is finding out",
+   "url": "https://www.sciencenews.org/article/tumors-talk-nerve-sn-10-sebnem-ece-eksi",
+   "source": "Science News",
+   "published": "2026-11-21",
+   "score": 6.8,
+   "summary": "After finding proteins linked to memory in prostate cancer cells, Sebnem Ece Eksi hopes to map nerve fibers in tumors."
+  },
+  {
+   "id": "u002",
+   "section": "curiosity",
+   "area": "mind",
+   "title": "Resistance training could help boost brain health and confidence in older adults",
+   "url": "https://theconversation.com/resistance-training-could-help-boost-brain-health-and-confidence-in-older-adults-297007",
+   "source": "The Conversation: health",
+   "published": "2026-11-20",
+   "score": 6.01,
+   "summary": "Lifting weights takes coordination as well as strength. A trial in older adults tested whether training could also improve thinking and memory."
+  },
+  {
+   "id": "u003",
+   "section": "curiosity",
+   "area": "mind",
+   "title": "The brain’s protective barrier also blocks medicine. This engineer wants a way through",
+   "url": "https://www.sciencenews.org/article/brain-protective-barrier-engineer-sn10",
+   "source": "Science News",
+   "published": "2026-11-18",
+   "score": 5.79,
+   "summary": "Rebecca Pinals built a blood-brain barrier on a chip to study how drugs could reach the brains of people with dementia."
+  },
+  {
+   "id": "u004",
+   "section": "curiosity",
+   "area": "mind",
+   "title": "Could an erectile dysfunction drug offer a new way to treat Alzheimer’s?",
+   "url": "https://theconversation.com/could-an-erectile-dysfunction-drug-offer-a-new-way-to-treat-alzheimers-296893",
+   "source": "The Conversation: health",
+   "published": "2026-11-20",
+   "score": 5.61,
+   "summary": "AR1001 slowed the worsening of symptoms by 31% in people not taking other Alzheimer’s drugs, but results across the full trial were less clear."
+  },
+  {
+   "id": "u005",
+   "section": "curiosity",
+   "area": "mind",
+   "title": "Brain stacking: an expert weighs in on whether this TikTok trend can really boost your brainpower",
+   "url": "https://theconversation.com/brain-stacking-an-expert-weighs-in-on-whether-this-tiktok-trend-can-really-boost-your-brainpower-295488",
+   "source": "The Conversation: health",
+   "published": "2026-11-19",
+   "score": 5.28,
+   "summary": "Stacking up bursts of reading, puzzles and journalling is being promoted as a way to boost brainpower."
+  },
+  {
+   "id": "u007",
+   "section": "curiosity",
+   "area": "curiosity",
+   "title": "The libido drug women want is testosterone",
+   "url": "https://www.sciencenews.org/article/libido-drug-women-want-is-testosterone",
+   "source": "Science News",
+   "published": "2026-11-20",
+   "score": 4.94,
+   "summary": "Off-label testosterone use for female libido is going up. The research still hasn’t caught up."
+  }
+ ]
+}

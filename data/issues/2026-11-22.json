@@ -1,0 +1,738 @@
+{
+  "date": "2026-11-22",
+  "number": 7,
+  "title": "A lymphoma fatigue programme, a preeclampsia test, and a way past the brain barrier",
+  "dek": "A 150-person trial finds a 12-week programme eases lymphoma fatigue, but not by 9 months. Placental markers cut severe preeclampsia in one cohort. Also: laser heat opens the brain barrier in glioma mice, and a mouse stroke study.",
+  "palette": "slate-gold",
+  "tldr": [
+    {
+      "text": "In 150 lymphoma survivors with long-lasting fatigue, a 12-week programme lowered fatigue scores by 3.5 points at 3 months, but the gap faded by 9 months.",
+      "area": "cancer"
+    },
+    {
+      "text": "With biomarker-guided delivery, progression to severe preeclampsia fell from 52.1 percent to 19.6 percent in a before and after comparison.",
+      "area": "women"
+    },
+    {
+      "text": "In glioblastoma mice, mild laser heating opened the blood-brain barrier briefly and median survival rose to 36 days from 16 days.",
+      "area": "cancer"
+    },
+    {
+      "text": "In 13 mice after a stroke, stimulating the cerebellum raised motor cortex activity and improved recovery on a rotating beam task.",
+      "area": "mind"
+    },
+    {
+      "text": "Cord blood levels of two neonicotinoid insecticide markers were linked to slower thinking in 9-year-olds, in a study of 200 samples.",
+      "area": "mind"
+    }
+  ],
+  "top": [
+    {
+      "id": "refuel-lymphoma-fatigue",
+      "area": "cancer",
+      "title": "A 12-week programme eased lingering fatigue in lymphoma survivors, but not for long",
+      "gist": "In 150 lymphoma survivors with long fatigue, a 12-week programme cut scores by 3.5 points on a 0 to 33 scale at 3 months. By 9 months the gain was gone.",
+      "evidence": {
+        "type": "human-rct",
+        "n": "150 (75 programme, 75 usual care)",
+        "limitation": "The benefit shrank to a non-significant 0.9 points by 9 months. Read from the abstract only."
+      },
+      "why": "Fatigue after cancer is common and hard to treat. A randomised trial shows a combined programme can help, and also shows that the help needs a way to last.",
+      "details": [
+        "The programme combined patient education, physical exercise, a cognitive-behavioural therapy based programme and nutritional counselling. The comparison group received usual care.",
+        "Fatigue was lower than usual care by 3.5 points at 3 months (95 percent confidence interval, 1.6 to 5.4 points lower) and by 2.4 points at 6 months. At 9 months the gap was 0.9 points, with an interval that crossed zero.",
+        "At 3 months the programme also improved physical functioning, role functioning and global health. It did not clearly change social, emotional or cognitive functioning."
+      ],
+      "didNotShow": "It did not show a lasting effect at 9 months, or which part of the programme did the work.",
+      "terms": [
+        {
+          "term": "lymphoma",
+          "def": "A cancer of the lymph system, part of the body's immune network."
+        },
+        {
+          "term": "Chalder Fatigue Questionnaire",
+          "def": "A questionnaire that scores physical and mental fatigue on a scale from 0 to 33."
+        },
+        {
+          "term": "randomised controlled trial",
+          "def": "A study that assigns people by chance to a treatment or a comparison group."
+        },
+        {
+          "term": "confidence interval",
+          "def": "A range of values that is likely to contain the true effect."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Journal of Clinical Oncology, Bohn et al.",
+          "url": "https://doi.org/10.1200/JCO-26-00414",
+          "doi": "10.1200/JCO-26-00414",
+          "access": "paywall"
+        }
+      ],
+      "forYou": "Supportive care and survivorship outcomes that combine exercise and cognitive therapy."
+    },
+    {
+      "id": "preeclampsia-biomarker-delivery",
+      "area": "women",
+      "title": "Biomarker-guided delivery cut progression to severe preeclampsia in a before and after comparison",
+      "gist": "At two hospitals, progression to severe preeclampsia fell from 52.1 percent with waiting to 19.6 percent with delivery guided by placental blood markers. Newborn outcomes were mixed.",
+      "evidence": {
+        "type": "human-observational",
+        "n": "not stated in the abstract",
+        "limitation": "Not randomised, with different years compared (2014 to 2017 versus 2022 to 2025). The authors say it was not powered to show newborn noninferiority."
+      },
+      "why": "Late preterm preeclampsia forces a hard choice between early birth and waiting. A blood test might help decide, but a randomised trial result still needs to hold up in routine care.",
+      "details": [
+        "Women with preeclampsia without severe features at 34 to 36 weeks were compared. In the earlier period they were managed by waiting. In the later period delivery was advised when a placental marker profile was abnormal.",
+        "The adjusted odds ratio for severe progression was 0.22 (95 percent confidence interval, 0.13 to 0.38). Composite newborn illness fell from 57.0 percent to 45.6 percent, driven by fewer newborn unit admissions.",
+        "Newborn illness without counting admission was 35.2 percent and 35.6 percent, so the abstract shows no clear newborn gain beyond that."
+      ],
+      "didNotShow": "It did not show that newborns fare as well as with waiting, because the study was not designed to test that.",
+      "terms": [
+        {
+          "term": "preeclampsia",
+          "def": "A pregnancy condition with high blood pressure, which can harm the mother and baby."
+        },
+        {
+          "term": "placental biomarker",
+          "def": "A substance made by the placenta that can be measured in blood."
+        },
+        {
+          "term": "odds ratio",
+          "def": "A measure of how much an exposure changes the odds of an outcome, where 1 means no change."
+        }
+      ],
+      "sources": [
+        {
+          "label": "American Journal of Obstetrics and Gynecology, Villalain et al.",
+          "url": "https://doi.org/10.1016/j.ajog.2026.11.018",
+          "doi": "10.1016/j.ajog.2026.11.018",
+          "access": "paywall"
+        }
+      ],
+      "forYou": "Biomarker-guided clinical timing decisions and the limits of before and after designs."
+    },
+    {
+      "id": "mri-pancreatic-response",
+      "area": "cancer",
+      "title": "A custom MRI method aims to show within weeks whether pancreatic cancer treatment works",
+      "gist": "Ohio State researchers say a corrected MRI at 7 weeks of chemotherapy predicted response at 17 weeks. Standard CT at about 8 weeks caught response in 17 percent of patients.",
+      "evidence": {
+        "type": "news",
+        "limitation": "Read from a Medical Xpress release. Patient numbers were not stated, and the 98 percent accuracy is an upper figure."
+      },
+      "why": "About 60 percent of people with pancreatic cancer cannot have surgery at diagnosis. Knowing early whether chemotherapy works would help decide who goes on to surgery.",
+      "details": [
+        "The article describes a dynamic contrast enhanced MRI scan, corrected with a calibration object called a phantom. It reports accuracy of up to 98 percent in an earlier prospective study.",
+        "A new trial, NCT07705919, plans 50 people with pancreatic cancer judged resectable after pre-surgical treatment. It asks whether having the MRI information raises the rate of complete surgical removal. The registry record was not checked."
+      ],
+      "didNotShow": "It did not show results from the new trial, or how many patients the earlier study included.",
+      "terms": [
+        {
+          "term": "dynamic contrast enhanced MRI",
+          "def": "An MRI scan taken as a dye passes through tissue, showing how blood flows into a tumour."
+        },
+        {
+          "term": "phantom",
+          "def": "A test object with known properties, used to calibrate a scanner."
+        },
+        {
+          "term": "resectable",
+          "def": "Able to be removed by surgery."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Medical Xpress",
+          "url": "https://medicalxpress.com/news/2026-11-custom-mri-tool-weeks-pancreatic.html",
+          "access": "open"
+        },
+        {
+          "label": "European Radiology, Holland et al. (earlier study)",
+          "url": "https://doi.org/10.1007/s00330-026-12810-2",
+          "doi": "10.1007/s00330-026-12810-2"
+        }
+      ],
+      "forYou": "Imaging response in dense-stroma pancreatic tumours and quantitative perfusion readouts."
+    },
+    {
+      "id": "endometriosis-gwas-multiancestry",
+      "area": "women",
+      "title": "A genetic study of over 1 million people links 58 genome regions to endometriosis",
+      "gist": "A multi-ancestry analysis across 14 biobanks found 58 genome regions tied to endometriosis, 27 of them new, and 314 implicated genes. Case numbers were not in the news report.",
+      "evidence": {
+        "type": "news",
+        "limitation": "Read from a Medical Xpress report. Case and control counts and limitations were not stated."
+      },
+      "why": "Endometriosis takes years to diagnose and has few treatments. Genetic links point to pathways that drugs might reach, and to overlap with 135 other conditions or traits.",
+      "details": [
+        "The report says the analysis covered more than 1 million participants, over 30 percent of non-European ancestry. Wider ancestry makes the findings useful for more people.",
+        "The team combined the genetic scan with other molecular data to name 314 genes. These are candidates, not proven causes."
+      ],
+      "didNotShow": "It did not show which genes cause the disease or whether any is a good drug target.",
+      "terms": [
+        {
+          "term": "endometriosis",
+          "def": "A chronic condition in which tissue like the womb lining grows outside the womb."
+        },
+        {
+          "term": "genome-wide association study",
+          "def": "A scan that compares DNA variants across many people to find those linked to a trait."
+        },
+        {
+          "term": "biobank",
+          "def": "A collection of health data and samples from many volunteers."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Medical Xpress",
+          "url": "https://medicalxpress.com/news/2026-11-genetic-million-people-reveals-clues.html",
+          "access": "open"
+        },
+        {
+          "label": "Nature Genetics, Guare et al.",
+          "url": "https://doi.org/10.1038/s41588-026-02810-9",
+          "doi": "10.1038/s41588-026-02810-9"
+        }
+      ],
+      "forYou": "Large-scale genetics of a poorly understood women's health condition."
+    },
+    {
+      "id": "neonicotinoid-cord-cognition",
+      "area": "mind",
+      "title": "Insecticide markers in cord blood were linked to slower thinking at age 9",
+      "gist": "In 200 cord blood samples, higher levels of two neonicotinoid markers went with lower scores on two thinking tests at age 9. No link appeared in early childhood.",
+      "evidence": {
+        "type": "human-observational",
+        "n": "200 cord serum samples",
+        "limitation": "The authors cite a small sample and low concentrations. Effect sizes were not given in the news report."
+      },
+      "why": "Neonicotinoids are widely used insecticides that break down slowly. Small cohorts like this cannot prove harm, but they show where larger studies should look.",
+      "details": [
+        "Ten neonicotinoid-related compounds were measured. Dinotefuran and desmethyl-acetamiprid were found in more than half of samples.",
+        "At 10 to 32 months there were no links after correcting for multiple comparisons. At age 9, more dinotefuran went with lower processing speed, and more desmethyl-acetamiprid with lower perceptual reasoning."
+      ],
+      "didNotShow": "It did not show that the insecticides caused the lower scores, and gave no effect sizes in the report.",
+      "terms": [
+        {
+          "term": "neonicotinoid",
+          "def": "A class of insecticide that acts on the nervous system of insects."
+        },
+        {
+          "term": "cord serum",
+          "def": "The liquid part of blood taken from the umbilical cord at birth."
+        },
+        {
+          "term": "processing speed",
+          "def": "How quickly a person can take in and respond to simple information."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Medical Xpress",
+          "url": "https://medicalxpress.com/news/2026-11-insecticide-exposure-pregnancy-linked-cognition.html",
+          "access": "open"
+        },
+        {
+          "label": "JAMA Network Open, Nagata et al.",
+          "url": "https://doi.org/10.1001/jamanetworkopen.2026.43481",
+          "doi": "10.1001/jamanetworkopen.2026.43481"
+        }
+      ],
+      "forYou": "Prenatal exposure cohorts and developmental neurotoxicity."
+    },
+    {
+      "id": "merck-sac-tmt-gastric",
+      "area": "cancer",
+      "title": "Merck says a Phase 3 trial of sacituzumab tirumotecan in gastric cancer succeeded",
+      "gist": "Endpoints News reports that Merck said on Friday 20 November that a pivotal Phase 3 trial of its antibody-drug conjugate in gastric cancer was a success. No data were read.",
+      "evidence": {
+        "type": "news",
+        "limitation": "Only the Endpoints feed summary was readable, and Merck's own release was not. No survival numbers, safety data or trial name were confirmed."
+      },
+      "why": "Antibody-drug conjugates link a toxic payload to an antibody that seeks cancer cells. Another positive Phase 3 would widen where this one is used.",
+      "didNotShow": "It did not show how large the benefit was, how safe the drug was, or which trial this was.",
+      "terms": [
+        {
+          "term": "antibody-drug conjugate",
+          "def": "A drug that attaches a cell-killing molecule to an antibody that targets cancer cells."
+        },
+        {
+          "term": "Phase 3 trial",
+          "def": "A large trial that tests a treatment against the standard one before approval."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Endpoints News",
+          "url": "https://endpoints.news/merck-gets-another-phase-3-win-for-sac-tmt-this-time-in-gastric-cancer/",
+          "access": "paywall"
+        }
+      ],
+      "forYou": "Antibody-drug conjugate delivery and payload design."
+    }
+  ],
+  "bench": [
+    {
+      "id": "photothermal-bbb-pt-glioma",
+      "area": "cancer",
+      "title": "Vascular-targeted mild photothermal modulation of the blood-brain barrier enables efficient delivery of Pt(IV) prodrug to glioblastoma",
+      "headline": "Gentle laser heating briefly loosened the blood-brain barrier in glioma mice, let 4.6 times more platinum into the tumour and lengthened survival.",
+      "authors": "Chen, Shi, Hu, et al.",
+      "venue": "Journal of Controlled Release",
+      "published": "2026-11-21",
+      "evidence": {
+        "type": "animal",
+        "model": "Orthotopic GL261 glioma mice",
+        "limitation": "One mouse glioma model. Group sizes and full text were not read.",
+        "conflicts": "The authors declare no competing financial interests."
+      },
+      "question": "Can mild heat open the barrier around a brain tumour just enough for a platinum drug to get in, without harming normal brain?",
+      "approach": "The team built nanoparticles with a near-infrared heat-making polymer, a platinum prodrug and a vessel-seeking peptide. They shone an 808 nm laser at the tumour.",
+      "model": "Mice with GL261 glioma tumours grown in the brain, plus cell work.",
+      "result": "At 0.5 W/cm2 for 3 minutes the tumour reached 46.3 °C. Six minutes reached 63 °C and activated glial cells. Permeability peaked at 1 hour and was near baseline by 24 hours. Platinum in the tumour rose about 4.6-fold. Median survival was 36 days versus 16 days for PBS.",
+      "limitations": "Mouse data from one model, read from the abstract. Group sizes and long-term safety were not checked.",
+      "meaning": "It supports the idea of a controllable thermal dose window for barrier opening, which other nanoparticle and phototherapy designs could borrow.",
+      "diagram": {
+        "layout": "compare",
+        "nodes": [
+          {
+            "label": "16 days",
+            "note": "PBS control"
+          },
+          {
+            "label": "20 days",
+            "note": "Particles, no laser"
+          },
+          {
+            "label": "22 days",
+            "note": "Platinum polymer, laser"
+          },
+          {
+            "label": "36 days",
+            "note": "Full system with laser",
+            "key": true
+          }
+        ],
+        "caption": "Median survival in glioma mice was 36 days with the full system and laser, against 16 days for PBS."
+      },
+      "terms": [
+        {
+          "term": "glioblastoma",
+          "def": "The most common and aggressive type of primary brain cancer."
+        },
+        {
+          "term": "blood-brain barrier",
+          "def": "A tight lining of the brain's blood vessels that limits which molecules enter the brain."
+        },
+        {
+          "term": "photothermal",
+          "def": "Using light absorbed by a material to make heat."
+        },
+        {
+          "term": "prodrug",
+          "def": "A drug given in an inactive form that is switched on at the target."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Journal of Controlled Release, Chen et al.",
+          "url": "https://doi.org/10.1016/j.jconrel.2026.115558",
+          "doi": "10.1016/j.jconrel.2026.115558",
+          "access": "paywall"
+        }
+      ],
+      "forYou": "Mild photothermal dose windows and nanoparticle delivery across vascular barriers, relevant to tumour penetration."
+    },
+    {
+      "id": "cerebellar-stimulation-stroke",
+      "area": "mind",
+      "title": "Cerebellar optogenetic stimulation restores motor cortex activity and behaviour after stroke",
+      "headline": "In mice, light stimulation of a cerebellar nucleus after a stroke raised motor cortex activity and improved recovery, whatever the size of the stroke.",
+      "authors": "Kopchock, Chiang, Chen, et al.",
+      "venue": "Brain",
+      "published": "2026-11-21",
+      "evidence": {
+        "type": "animal",
+        "model": "Awake mice after transient middle cerebral artery occlusion",
+        "n": "13 mice",
+        "limitation": "Small mouse study with 13 animals, followed for 28 days. Group sizes were not given."
+      },
+      "question": "Can stimulating a distant brain region, the cerebellum, help the damaged motor cortex recover after a stroke?",
+      "approach": "The team imaged calcium activity in motor cortex neurons over time in awake mice. Treated mice got light stimulation of the opposite cerebellar nucleus on days 5 to 14.",
+      "model": "Mice with a temporary blockage of a brain artery, imaged with a head-mounted microscope.",
+      "result": "Stroke lowered cortical activity: peak frequency fell (p < 0.001) and amplitude fell (p = 0.004). Lower frequency tracked lesion size (r2 = 0.88). Stimulation raised frequency (p = 0.017) and amplitude (p < 0.001) and improved rotating beam performance (p = 0.027).",
+      "limitations": "Mouse data, read from the abstract. The rotating beam task is one behaviour. Whether it works in people is untested.",
+      "meaning": "It shows a remote brain region may be a stimulation target after stroke, and that recovery could be uncoupled from injury size.",
+      "terms": [
+        {
+          "term": "optogenetics",
+          "def": "A method that makes neurons respond to light so researchers can switch them on."
+        },
+        {
+          "term": "cerebellum",
+          "def": "A brain region at the back of the head that helps coordinate movement."
+        },
+        {
+          "term": "motor cortex",
+          "def": "The brain area that plans and sends out voluntary movement commands."
+        },
+        {
+          "term": "calcium imaging",
+          "def": "A way to watch neurons fire by tracking a calcium-sensitive glowing dye."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Brain, Kopchock et al.",
+          "url": "https://doi.org/10.1093/brain/awag396",
+          "doi": "10.1093/brain/awag396",
+          "access": "paywall"
+        }
+      ],
+      "forYou": "Remote neuromodulation and circuit-level recovery metrics."
+    }
+  ],
+  "method": {
+    "id": "crc-liver-met-organoid-coculture",
+    "title": "A 3D coculture of tumour organoids, endothelial cells and fibroblasts",
+    "gist": "A STAR Protocols paper describes growing patient-derived colorectal liver metastasis organoids together with vessel-lining cells and fibroblasts in a 3D gel, to study how tumour and vessel cells interact.",
+    "field": "cancer",
+    "useWhen": "You want a human tumour model with vessel and stromal cells present, to study tumour-endothelial interactions in vitro.",
+    "steps": [
+      {
+        "title": "Make organoids",
+        "text": "Establish patient-derived organoids from colorectal cancer liver metastasis specimens."
+      },
+      {
+        "title": "Prepare the coculture",
+        "text": "Prepare the organoid, endothelial cell and fibroblast mix for the 3D coculture."
+      },
+      {
+        "title": "Embed in hydrogel",
+        "text": "Grow the cells together in a 3D fibrin and Matrigel hydrogel."
+      },
+      {
+        "title": "Process and stain",
+        "text": "Process the cocultures for histology and run immunofluorescence to read the interactions."
+      }
+    ],
+    "pitfalls": [
+      "Cell numbers, gel ratios and timings are not listed here. Take them from the protocol.",
+      "Only the abstract was readable today, so check every step against the full paper."
+    ],
+    "safety": "Follow your institution's rules for human tissue, biological material and cell culture, including consent and ethics approval.",
+    "source": {
+      "label": "STAR Protocols, Machmouchi et al.",
+      "url": "https://doi.org/10.1016/j.xpro.2026.104973",
+      "doi": "10.1016/j.xpro.2026.104973"
+    },
+    "terms": [
+      {
+        "term": "organoid",
+        "def": "A small 3D culture of cells grown to mimic features of an organ or tumour."
+      },
+      {
+        "term": "endothelial cell",
+        "def": "A cell that lines the inside of blood vessels."
+      },
+      {
+        "term": "fibroblast",
+        "def": "A connective tissue cell that makes the scaffold around other cells."
+      },
+      {
+        "term": "hydrogel",
+        "def": "A water-rich gel that holds cells in 3D."
+      }
+    ],
+    "forYou": "Stroma and vessel-containing tumour models for testing nanoparticle penetration."
+  },
+  "learn": {
+    "question": "What does the blood-brain barrier block, and how can drugs get past it?",
+    "answer": "It is a tight lining of the brain's blood vessels that lets in nutrients but keeps out most drugs. Ways in include carrier proteins, brief heat or ultrasound, and targeted particles.",
+    "analogy": "Like a nightclub door with a guest list: small and approved molecules enter, most others stay outside.",
+    "body": [
+      "Cells in the vessel wall are sealed by tight junction proteins, and pumps push many drugs back out. Most large molecules and many small ones never reach brain tissue.",
+      "In brain tumours the barrier is leaky in places, but unevenly, so drugs still reach the tumour poorly. Researchers try to open it briefly or to ride its carrier proteins.",
+      "In today's bench paper, mild laser heating reorganised two tight junction proteins for about a day, and platinum entered the tumour at 4.6 times the usual level in mice."
+    ],
+    "diagram": {
+      "layout": "layers",
+      "nodes": [
+        {
+          "label": "Blood",
+          "note": "Drug circulates here"
+        },
+        {
+          "label": "Endothelial wall",
+          "note": "Cells sealed by tight junctions"
+        },
+        {
+          "label": "Efflux pumps",
+          "note": "Push many drugs back out"
+        },
+        {
+          "label": "Brain tissue",
+          "note": "Tumour or healthy neurons",
+          "key": true
+        }
+      ],
+      "caption": "A drug in the blood must cross sealed vessel cells and efflux pumps before it can reach brain tissue."
+    },
+    "terms": [
+      {
+        "term": "tight junction",
+        "def": "A protein seal between neighbouring cells that stops molecules slipping between them."
+      },
+      {
+        "term": "efflux pump",
+        "def": "A protein in the cell membrane that pushes molecules back out of the cell."
+      }
+    ],
+    "seenIn": [
+      "photothermal-bbb-pt-glioma"
+    ],
+    "sources": [
+      {
+        "label": "Journal of Controlled Release, Chen et al.",
+        "url": "https://doi.org/10.1016/j.jconrel.2026.115558",
+        "doi": "10.1016/j.jconrel.2026.115558",
+        "access": "paywall"
+      }
+    ]
+  },
+  "trials": {
+    "trials": [
+      {
+        "id": "nct04191486-t817ma-results",
+        "area": "mind",
+        "title": "T-817MA in mild cognitive impairment or mild Alzheimer's disease: results posted",
+        "nct": "NCT04191486",
+        "phase": "2",
+        "status": "Completed",
+        "change": "results-posted",
+        "what": "Results were posted on 20 November. Change in spinal fluid p-tau181 to week 78 was a ratio of 0.954 on T-817MA 448 mg and 0.951 on placebo, so no clear difference. 24 stopped early on drug versus 9 on placebo.",
+        "who": "221 people with mild cognitive impairment due to Alzheimer's disease or mild Alzheimer's disease.",
+        "sponsor": "FUJIFILM Toyama Chemical Co., Ltd.",
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov NCT04191486",
+            "url": "https://clinicaltrials.gov/study/NCT04191486",
+            "access": "open"
+          }
+        ]
+      }
+    ],
+    "funding": [
+      {
+        "id": "cruk-early-detection-programme",
+        "area": "cancer",
+        "title": "Early Detection and Diagnosis Programme Award",
+        "funder": "Cancer Research UK",
+        "deadline": "2027-03-11",
+        "amount": "Up to 2.5 million pounds over up to 5 years",
+        "eligibility": "UK-based researchers or clinicians with a post funded for the whole award. Outline deadline for round 2 is as listed (the page table is unclear); talk to the funder first.",
+        "sources": [
+          {
+            "label": "Cancer Research UK",
+            "url": "https://www.cancerresearchuk.org/funding-for-researchers/our-funding-schemes/early-detection-programme-award",
+            "access": "open"
+          }
+        ]
+      },
+      {
+        "id": "wellcome-discovery-awards",
+        "area": "mind",
+        "title": "Discovery Awards",
+        "funder": "Wellcome",
+        "amount": "No maximum stated; average award 3.5 million pounds",
+        "eligibility": "Established researchers with research leadership, teams of 1 to 8, based in the UK or eligible low and middle income countries. No deadline; mental health is in scope.",
+        "sources": [
+          {
+            "label": "Wellcome",
+            "url": "https://wellcome.org/research-funding/schemes/wellcome-discovery-awards",
+            "access": "open"
+          }
+        ]
+      }
+    ]
+  },
+  "chatter": [
+    {
+      "id": "lancet-onc-theranostics-comment",
+      "area": "cancer",
+      "kind": "debate",
+      "title": "A Lancet Oncology comment questions the supply of rare earth elements for theranostics",
+      "where": "The Lancet Oncology",
+      "signal": "Lancet Oncology comment, published 20 November 2026",
+      "gist": "The comment is titled 'Rare earth elements and the fragile promise of cancer theranostics'. Only the feed summary was read, which defines theranostics as pairing imaging and therapy radionuclides.",
+      "sources": [
+        {
+          "label": "The Lancet Oncology",
+          "url": "https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(26)00486-9/fulltext"
+        }
+      ]
+    },
+    {
+      "id": "burkhart-implant-trial-agency",
+      "area": "mind",
+      "kind": "debate",
+      "title": "A brain implant trial participant argues patients need more say in trial design",
+      "where": "STAT",
+      "signal": "STAT story of 20 November 2026",
+      "gist": "STAT reports that Ian Burkhart, founder of a coalition of brain implant trial participants, says device developers should give patients more agency in research. Only the feed summary was read.",
+      "sources": [
+        {
+          "label": "STAT",
+          "url": "https://www.statnews.com/2026/11/20/ian-burkhart-how-brain-implant-trials-can-serve-patients-better/"
+        }
+      ]
+    },
+    {
+      "id": "lustgartenlive-sprint",
+      "area": "cancer",
+      "kind": "conference",
+      "title": "LustgartenLIVE showcases early-career pancreatic cancer researchers",
+      "where": "Lustgarten Foundation",
+      "signal": "Second annual event, recap posted by the Lustgarten Foundation",
+      "gist": "The foundation's recap says the fast-paced showcase put the next generation of scientific talent in the spotlight, with research supported by its LABS programme. Only the feed summary was read.",
+      "sources": [
+        {
+          "label": "Lustgarten Foundation",
+          "url": "https://lustgarten.org/recap-lustgartenlive-sprint-to-discovery/"
+        }
+      ]
+    },
+    {
+      "id": "jefferies-cns-dispatches",
+      "area": "mind",
+      "kind": "conference",
+      "title": "Endpoints reports from the Jefferies healthcare conference on CNS and psychiatry drugs",
+      "where": "Endpoints News",
+      "signal": "Endpoints News story from the Jefferies conference in London, week of 16 November 2026",
+      "gist": "Endpoints describes drugmakers in the central nervous system and psychiatry space at the London meeting. Only the feed summary was read.",
+      "sources": [
+        {
+          "label": "Endpoints News",
+          "url": "https://endpoints.news/cns-dispatches-from-jefferies-acadias-search-for-deals-altos-psychiatry-question-and-promis-alzheimers-ambitions/"
+        }
+      ]
+    }
+  ],
+  "curiosity": {
+    "id": "female-testosterone-libido",
+    "area": "curiosity",
+    "title": "Testosterone for women's libido is rising in use, but no product is approved",
+    "gist": "Science News reports that off-label testosterone prescriptions for women rose from 0.4 to 1.8 per 1,000 women between 2018 and 2026, while the research has not caught up.",
+    "body": [
+      "Science News reports that the US Food and Drug Administration has not approved any testosterone product for women's sexual desire. Prescribing is off-label, using products made for men or compounded.",
+      "The article cites a 2008 trial in postmenopausal women that improved sexual function and desire, and says evidence in premenopausal women is preliminary. Large placebo effects and unresolved breast cancer and heart risks are noted."
+    ],
+    "evidence": {
+      "type": "news",
+      "limitation": "Read from a Science News report, not from the papers it cites. No trial sizes or effect sizes were given."
+    },
+    "terms": [
+      {
+        "term": "off-label",
+        "def": "Use of a drug for a purpose, group or dose that regulators have not approved."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Science News, Jamie Ducharme",
+        "url": "https://www.sciencenews.org/article/libido-drug-women-want-is-testosterone",
+        "access": "open"
+      }
+    ]
+  },
+  "jobs": [
+    {
+      "id": "ucla-zhang-biomarkers",
+      "title": "Postdoctoral scholar: translational cancer biomarkers and molecular assay development",
+      "employer": "UCLA Pathology and Laboratory Medicine",
+      "location": "Los Angeles, United States",
+      "level": "postdoc",
+      "fit": "PhD, MD or MD/PhD with liquid biopsy and cfDNA or bioinformatics experience, and at least two first-author papers.",
+      "sources": [
+        {
+          "label": "Posting",
+          "url": "https://jobrxiv.org/job/postdoctoral-scholar-translational-cancer-biomarkers-and-molecular-assay-development/",
+          "access": "open"
+        }
+      ],
+      "salary": "Salary range: $71,491-$74,140 (Depending on Experience)",
+      "deadline": "2027-01-01"
+    },
+    {
+      "id": "ucla-radu-theranostics",
+      "title": "Postdoctoral scholar, nuclear medicine and theranostics laboratory",
+      "employer": "UCLA",
+      "location": "Los Angeles, United States",
+      "level": "postdoc",
+      "fit": "PhD in immunology or cancer biology, T cell biology, flow cytometry, mouse tumour models; lipid nanoparticle familiarity preferred.",
+      "sources": [
+        {
+          "label": "Posting",
+          "url": "https://jobrxiv.org/job/postdoctoral-scholar-radu-laboratory-nuclear-medicine-and-theranostics/",
+          "access": "open"
+        }
+      ],
+      "salary": "Salary range: $71,491/yr. - $85,736/yr."
+    },
+    {
+      "id": "uci-mind-postdoc",
+      "title": "Postdoctoral scholar series, UCI MIND 2026-27",
+      "employer": "University of California Irvine",
+      "location": "Irvine, United States",
+      "level": "postdoc",
+      "fit": "Doctoral degree, preferably in neuroscience, biochemistry or immunology; CV and 3 to 5 references.",
+      "sources": [
+        {
+          "label": "Posting",
+          "url": "https://recruit.ap.uci.edu/JPF10226",
+          "access": "open"
+        }
+      ],
+      "salary": "The salary range for this position is $69,073-$82,836.",
+      "deadline": "2027-06-30"
+    },
+    {
+      "id": "baylor-cellular-neuro",
+      "title": "Postdoctoral associate, cellular neuroscience",
+      "employer": "Baylor College of Medicine",
+      "location": "Houston, United States",
+      "level": "postdoc",
+      "fit": "MD or PhD in a basic science, ideally neuroscience or cell and molecular biology; neurobiology techniques.",
+      "sources": [
+        {
+          "label": "Posting",
+          "url": "https://www.nature.com/naturecareers/job/12866072/postdoctoral-associate-cellular-neuroscience/",
+          "access": "open"
+        }
+      ],
+      "salary": "$63,480",
+      "deadline": "2026-12-25"
+    },
+    {
+      "id": "uchicago-tumour-postdoc",
+      "title": "Postdoctoral scholar, Biological Sciences Division",
+      "employer": "University of Chicago",
+      "location": "Chicago, United States",
+      "level": "postdoc",
+      "fit": "PhD with 3 to 4 years of in vivo tumour model work; epigenetics, metabolism or tumour microenvironment experience.",
+      "sources": [
+        {
+          "label": "Posting",
+          "url": "https://www.nature.com/naturecareers/job/12866218/postdoctoral-scholar-/",
+          "access": "open"
+        }
+      ],
+      "salary": "$63,480 - $77,076 per year",
+      "deadline": "2026-11-28"
+    }
+  ],
+  "note": "Europe PMC was down, so papers were read from PubMed abstracts. Endpoints, STAT and the Lancet comment were not readable, so chatter rests on feed text. Two methods pages were abstract-only."
+}
