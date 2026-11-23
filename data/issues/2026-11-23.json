@@ -1,0 +1,492 @@
+{
+  "date": "2026-11-23",
+  "number": 8,
+  "title": "A CAR T win in older lymphoma patients, a failed CBD trial, and leaky AI tests",
+  "dek": "A randomised trial favours CAR T over chemotherapy in older people with lymphoma. A large trial finds no benefit of cannabidiol for children's severe behaviour problems. A thermography study shows how patient overlap inflates AI scores.",
+  "palette": "denim-ochre",
+  "tldr": [
+    { "text": "A CAR T therapy delayed lymphoma progression longer than chemotherapy in 160 older people who could not have a transplant (6.2 versus 2.5 months).", "area": "cancer" },
+    { "text": "Cannabidiol did not reduce severe behaviour problems more than placebo in 131 children and teenagers with intellectual disability.", "area": "mind" },
+    { "text": "Splitting breast thermography images by patient, not by image, cut AI scores sharply on two public datasets.", "area": "cancer" },
+    { "text": "28.8 percent of recent mothers in a 16 state US survey reported needing mental health care, and 68.1 percent of them got it.", "area": "women" }
+  ],
+  "top": [
+    {
+      "id": "zamto-cel-daly2-eu",
+      "area": "cancer",
+      "title": "CAR T therapy delays lymphoma progression versus chemotherapy in older patients",
+      "gist": "In 160 older adults with relapsed lymphoma who could not have a transplant, a CAR T therapy delayed progression longer than chemotherapy: 6.2 versus 2.5 months in a phase 2 trial.",
+      "evidence": {
+        "type": "clinical-trial",
+        "phase": "2",
+        "status": "Primary analysis, ongoing",
+        "n": "160 (82 versus 78)",
+        "limitation": "Open-label and phase 2, with a median follow-up of 17 months.",
+        "conflicts": "Funded by Miltenyi Biomedicine."
+      },
+      "why": "Older people who cannot have a transplant have had little randomised evidence for CAR T. This trial gives the first controlled comparison against standard chemoimmunotherapy in that group.",
+      "details": [
+        "Patients had large B-cell lymphoma that came back or did not respond after first treatment. They were assigned 1:1 to one infusion of zamtocabtagene autoleucel or up to eight cycles of R-GemOx, across 45 centres in 12 European countries.",
+        "Event-free survival was 6.21 months with the CAR T therapy and 2.53 months with R-GemOx (hazard ratio 0.39, 95% CI 0.27 to 0.58, p<0.0001). Grade 3 or higher adverse events were similar: 83 percent versus 86 percent.",
+        "Serious adverse events occurred in 41 percent versus 66 percent, mostly progression of the cancer. Two people (3 percent) died of treatment-related causes after the CAR T therapy, against one (1 percent) with chemotherapy."
+      ],
+      "didNotShow": "The abstract does not report overall survival, so it is not yet clear whether the delay in progression means longer life.",
+      "terms": [
+        { "term": "CAR T", "def": "A therapy in which a patient's own T cells are engineered to carry a receptor that targets a protein on cancer cells." },
+        { "term": "Event-free survival", "def": "The time from treatment until a defined setback, such as progression of the cancer or death." },
+        { "term": "R-GemOx", "def": "A standard chemotherapy and antibody combination of rituximab, gemcitabine and oxaliplatin." },
+        { "term": "Hazard ratio", "def": "A number comparing how fast events happen in two groups. Below 1 means slower in the treated group." }
+      ],
+      "diagram": {
+        "layout": "compare",
+        "nodes": [
+          { "label": "6.2 months", "note": "Event-free survival with the CAR T therapy", "key": true },
+          { "label": "2.5 months", "note": "Event-free survival with R-GemOx chemotherapy" }
+        ],
+        "caption": "Median event-free survival in the DALY 2-EU trial, CAR T versus chemotherapy."
+      },
+      "sources": [
+        { "label": "The Lancet Oncology: DALY 2-EU primary analysis", "url": "https://doi.org/10.1016/S1470-2045(26)00290-1", "doi": "10.1016/S1470-2045(26)00290-1", "access": "paywall" }
+      ],
+      "forYou": "Relevant to how cell therapies are compared with standard care in older patients."
+    },
+    {
+      "id": "alnoe-alectinib-stage-iii",
+      "area": "cancer",
+      "title": "Alectinib before surgery shrinks tumours in stage III ALK-positive lung cancer",
+      "gist": "In 33 people with stage III ALK-positive lung cancer, 8 weeks of alectinib before surgery left 10 percent or less living tumour in 42 percent. This was a single-arm phase 2 trial.",
+      "evidence": {
+        "type": "clinical-trial",
+        "phase": "2",
+        "status": "Primary endpoint met",
+        "n": "33",
+        "limitation": "Single arm with no comparison group; median follow-up 26.8 months."
+      },
+      "why": "Stage III ALK-positive lung cancer has no single standard treatment. This shows that a targeted pill given first is feasible and active, which a randomised trial would now need to test.",
+      "details": [
+        "Patients had not been treated before. They took alectinib 600 mg twice daily for 8 weeks, then had surgery, then continued alectinib for up to 96 weeks.",
+        "All 33 finished the first phase and 28 (85 percent) had surgery. Complete removal of tumour (R0) was achieved in 24 of them (86 percent). Four patients (12 percent) had no living tumour left.",
+        "After 26.8 months, six patients (18 percent) had a recurrence. Grade 3 or higher adverse events occurred in 9 percent during the first phase and 27 percent during the adjuvant phase."
+      ],
+      "didNotShow": "It did not compare alectinib with surgery first or with chemotherapy, and median survival was not yet reached.",
+      "terms": [
+        { "term": "ALK", "def": "A gene that, when rearranged, drives some lung cancers and can be blocked by targeted drugs." },
+        { "term": "Neoadjuvant", "def": "Treatment given before the main treatment, here before surgery, to shrink the tumour." },
+        { "term": "Major pathologic response", "def": "A tumour removed at surgery that has 10 percent or less living cancer cells left." },
+        { "term": "Single-arm", "def": "A trial design in which every participant gets the same treatment and there is no control group." }
+      ],
+      "sources": [
+        { "label": "Journal of Clinical Oncology: ALNEO phase II trial", "url": "https://doi.org/10.1200/jco-26-00854", "doi": "10.1200/jco-26-00854", "access": "paywall" }
+      ],
+      "forYou": "Relevant to timing of targeted therapy around surgery."
+    },
+    {
+      "id": "cbd-intellectual-disability-rct",
+      "area": "mind",
+      "title": "Cannabidiol fails to reduce severe behaviour problems in children with intellectual disability",
+      "gist": "In 131 children and teenagers with intellectual disability and severe behaviour problems, cannabidiol lowered irritability scores no more than placebo over 8 weeks in a randomised trial.",
+      "evidence": {
+        "type": "human-rct",
+        "n": "131 (65 versus 66)",
+        "limitation": "84 percent also had autism, and the main outcome was reported by parents."
+      },
+      "why": "Families and clinicians are keen on cannabidiol for hard-to-treat behaviour. This is a controlled trial with a clear negative answer for this dose and group.",
+      "details": [
+        "The double-blind trial ran in 3 children's hospitals in Australia. Participants aged 6 to 18 took cannabidiol isolate in oil (10 mg per kg a day) or placebo for 8 weeks, with 4 weeks of follow-up.",
+        "At the end of treatment, irritability scores were 21.7 with cannabidiol and 19.2 with placebo (mean difference 2.4, 95% CI -1.5 to 6.3). Adverse events were similar: 63.1 percent versus 60.6 percent."
+      ],
+      "didNotShow": "It did not test other doses, other cannabis-derived products or other outcomes, and adults were not included.",
+      "terms": [
+        { "term": "Cannabidiol", "def": "A compound from the cannabis plant that does not cause a high and is used in some medicines." },
+        { "term": "Aberrant Behavior Checklist", "def": "A questionnaire completed by parents that scores problem behaviours. Higher scores mean more severe behaviour." }
+      ],
+      "sources": [
+        { "label": "JAMA Pediatrics: cannabidiol randomised clinical trial", "url": "https://doi.org/10.1001/jamapediatrics.2026.5152", "doi": "10.1001/jamapediatrics.2026.5152" },
+        { "label": "ClinicalTrials.gov NCT04821856", "url": "https://clinicaltrials.gov/study/NCT04821856" }
+      ],
+      "forYou": "Relevant to negative trials in neurodevelopmental conditions."
+    },
+    {
+      "id": "postpartum-mental-health-need",
+      "area": "women",
+      "title": "More than 1 in 4 recent mothers say they needed mental health care, and a third did not get it",
+      "gist": "In a 2022 survey of 13,432 recent mothers in 16 US states, 28.8 percent reported needing mental health care after birth. Of those, 68.1 percent got care.",
+      "evidence": {
+        "type": "human-observational",
+        "n": "13,432 respondents, 16 states",
+        "limitation": "Self-reported and cross-sectional, from 16 states only, so it cannot show cause."
+      },
+      "why": "It puts a number on the gap between need and care after birth, and shows who falls through it. That helps target services.",
+      "details": [
+        "Women with a depression diagnosis in or before pregnancy reported need 43.1 percentage points more often. Need was lower among uninsured women, Asian and Pacific Islander women and Hispanic women.",
+        "Access was lower for women on Medicaid (8.6 points lower), uninsured women (22.5 points lower) and Hispanic women (8.1 points lower). The most common barrier was not having time (75.1 percent), then treatment concerns (37.9 percent) and cost (34.8 percent)."
+      ],
+      "didNotShow": "It did not measure whether care worked, and it covers self-reported need rather than clinical diagnoses.",
+      "terms": [
+        { "term": "PRAMS", "def": "A US health department survey of women who recently gave birth." },
+        { "term": "Percentage points", "def": "The simple difference between two percentages, for example 50 percent versus 40 percent is 10 points." }
+      ],
+      "sources": [
+        { "label": "Women's Health Issues: postpartum mental health treatment", "url": "https://doi.org/10.1016/j.whi.2026.10.003", "doi": "10.1016/j.whi.2026.10.003" }
+      ],
+      "forYou": "Relevant to access to care and measuring unmet need."
+    },
+    {
+      "id": "thermography-patient-overlap",
+      "area": "cancer",
+      "title": "Patient overlap inflates AI scores for breast thermography",
+      "gist": "On two public datasets, splitting images by patient cut AI scores from 0.999 to 0.951 and from 0.888 to 0.762 compared with splitting by image. This is a computational study.",
+      "evidence": {
+        "type": "computational",
+        "n": "5,444 and 357 images (214, 119 patients)",
+        "limitation": "Two public datasets and four model types; it does not show thermography itself fails."
+      },
+      "why": "Near-perfect scores in medical AI papers can come from testing on patients the model has already seen. This quantifies how large that effect can be.",
+      "details": [
+        "The authors compared image-level splits, which let one patient appear in training and test sets, with strict patient-level splits. The effect was larger in the smaller dataset and in lightweight models.",
+        "They say the findings do not invalidate earlier strong results, but that near-perfect scores deserve caution when patient-level separation is not documented."
+      ],
+      "didNotShow": "It did not test other imaging types or show that earlier thermography studies were wrong.",
+      "terms": [
+        { "term": "AUC", "def": "A score from 0.5 (chance) to 1 (perfect) for how well a test separates two groups." },
+        { "term": "Data leakage", "def": "When test data share information with training data, such as the same patient, making the test too easy." },
+        { "term": "Thermography", "def": "An imaging method that records the heat of the skin with an infrared camera." }
+      ],
+      "diagram": {
+        "layout": "compare",
+        "nodes": [
+          { "label": "0.999", "note": "Dataset 1, split by image" },
+          { "label": "0.951", "note": "Dataset 1, split by patient", "key": true },
+          { "label": "0.888", "note": "Dataset 2, split by image" },
+          { "label": "0.762", "note": "Dataset 2, split by patient", "key": true }
+        ],
+        "caption": "Mean AUC on two public datasets, with images or patients kept apart between training and test."
+      },
+      "sources": [
+        { "label": "Scientific Reports: patient overlap bias in breast thermography", "url": "https://doi.org/10.1038/s41598-026-64646-x", "doi": "10.1038/s41598-026-64646-x", "access": "open" }
+      ],
+      "forYou": "Relevant to validation practice for imaging models."
+    },
+    {
+      "id": "car-macrophage-microneedle",
+      "area": "cancer",
+      "title": "A microneedle patch programs CAR macrophages inside melanoma tumours in mice",
+      "gist": "In mice with melanoma, a microneedle patch with gene-carrying nanoparticles programmed macrophages in the tumour to attack it, delaying growth and extending survival.",
+      "evidence": {
+        "type": "animal",
+        "model": "Mouse B16F10 melanoma",
+        "limitation": "Mouse melanoma models only, with no human data."
+      },
+      "why": "Solid tumours resist cell therapy because immune cells struggle to enter. Programming cells in place could sidestep that, and this tests one way to do it.",
+      "details": [
+        "The patch carried mannose-modified nanoparticles with two genes: a receptor aimed at a melanoma protein (TYRP1) and a PD-L1 blocker that switches on in low oxygen.",
+        "Compared with the same dose injected into the tumour, the patch gave a lower final tumour burden, more CAR-carrying macrophages at the tumour surface and less exposure elsewhere in the body.",
+        "Removing T cells showed they were the main cells needed for lasting control, so the macrophages worked together with the adaptive immune response."
+      ],
+      "didNotShow": "It did not test safety or dosing in humans, or other tumour types.",
+      "terms": [
+        { "term": "CAR macrophage", "def": "An immune cell of the macrophage type engineered to carry a receptor that targets a tumour protein." },
+        { "term": "Microneedle", "def": "A patch of tiny needles that pierces the top layer of skin to deliver a drug." },
+        { "term": "PD-L1", "def": "A protein on tumour cells that switches off attacking T cells." }
+      ],
+      "sources": [
+        { "label": "Advanced Materials: in situ programming of CAR macrophages", "url": "https://doi.org/10.1002/adma.75787", "doi": "10.1002/adma.75787" }
+      ],
+      "forYou": "Relevant to nanoparticle delivery of nucleic acids into tumours."
+    },
+    {
+      "id": "msc-preterm-brain-bleed",
+      "area": "other",
+      "title": "Stem cells did not cut shunt or death in premature babies with severe brain bleeds",
+      "gist": "In 22 extremely preterm babies with severe brain bleeds, injected stem cells did not lower the rate of shunt or death versus saline (relative risk 1.14). Two-year outcomes were exploratory.",
+      "evidence": {
+        "type": "human-rct",
+        "phase": "2",
+        "n": "22",
+        "limitation": "One centre and 22 babies; secondary outcomes had wide intervals."
+      },
+      "why": "There is no effective treatment for this type of bleed. A safe, blinded trial gives a basis for larger studies, but no sign of benefit on the main outcome.",
+      "details": [
+        "Babies received stem cells into the brain's fluid spaces (10 million cells per kg) or saline within 7 days of diagnosis. The main outcome was shunt or death by 36 weeks.",
+        "Among survivors at 2 years, the stem cell group had lower rates of cerebral palsy (RR 0.56, 95% CI 0.27 to 1.17), epilepsy (0.38, 0.10 to 1.36) and microcephaly (0.30, 0.08 to 1.07). All intervals include 1. No serious treatment-related adverse events occurred."
+      ],
+      "didNotShow": "It did not show benefit on the main outcome, and the two-year differences could be chance.",
+      "terms": [
+        { "term": "Mesenchymal stromal cells", "def": "Adult cells with repair and anti-inflammatory properties, tested as a cell therapy." },
+        { "term": "Periventricular hemorrhagic infarction", "def": "The most severe form of bleeding inside the brain's fluid-filled chambers in premature infants." },
+        { "term": "Relative risk", "def": "The risk in one group divided by the risk in the other. A value of 1 means no difference." }
+      ],
+      "sources": [
+        { "label": "Stem Cell Research and Therapy: phase IIa trial", "url": "https://doi.org/10.1186/s13287-026-05235-7", "doi": "10.1186/s13287-026-05235-7", "access": "open" }
+      ],
+      "forYou": "Relevant to cell therapy trials in small, rare populations."
+    },
+    {
+      "id": "hippocampus-latent-diffusion",
+      "area": "mind",
+      "title": "A review likens the hippocampus to an image-generating AI to explain dementia",
+      "gist": "A review in Brain proposes that the hippocampus compresses inputs and regenerates memories like an image-generating AI, and uses the idea to explain how different dementias break down.",
+      "evidence": {
+        "type": "review"
+      },
+      "why": "A single account that links hippocampal activity to memory and to several dementias gives researchers testable predictions, even though this paper reports no new experiment.",
+      "details": [
+        "The authors call the framework stochastic latent oscillatory diffusion. They say the hippocampus compresses sensory, bodily and cognitive inputs into compact codes and regenerates percepts, memories and imagined scenes.",
+        "Travelling waves of oscillation between cortex and hippocampus schedule this process. Alzheimer's disease, dementia with Lewy bodies and frontotemporal dementia are framed as breakdowns of different components."
+      ],
+      "didNotShow": "It is a theory. The authors say the hippocampus does not literally run diffusion algorithms, and the paper does not test the idea.",
+      "terms": [
+        { "term": "Latent diffusion model", "def": "An AI model that compresses data into a compact code and rebuilds it step by step, as image generators do." }
+      ],
+      "sources": [
+        { "label": "Brain: the hippocampus as a latent diffusion engine", "url": "https://doi.org/10.1093/brain/awag325", "doi": "10.1093/brain/awag325" }
+      ],
+      "forYou": "Relevant to computational models of memory."
+    }
+  ],
+  "bench": [
+    {
+      "id": "nets-colon-cancer-necrosis",
+      "area": "cancer",
+      "title": "Targeting Neutrophil Extracellular Traps to Inhibit Colon Cancer Tumor Necrosis and Metastasis",
+      "headline": "Blocking neutrophil traps reduced dead tissue in tumours and spread of colon cancer in mice, and made chemotherapy work better.",
+      "authors": "Emma R Gazzara, Jose M Adrover, Sebastian A Dziadowicz, et al.",
+      "venue": "Cancer Discovery",
+      "published": "2026-11-20",
+      "evidence": {
+        "type": "animal",
+        "model": "Mouse colon cancer model plus human tissue",
+        "limitation": "The abstract gives no sample sizes, and the mouse model covers one colon cancer subtype."
+      },
+      "question": "Is tumour necrosis, the death of tissue inside a tumour, a passive by-product of growth, or something that drives spread?",
+      "approach": "The team combined single-cell and spatial gene activity maps of human colorectal tumours and liver metastases with blood analysis, then blocked neutrophil traps genetically and with a drug in mice.",
+      "model": "Human colorectal cancer samples and a mouse model of mismatch repair-proficient colorectal cancer.",
+      "result": "In people, necrosis tracked with metastasis independently of tumour size. Patients had more circulating neutrophils, including trap-primed ones with reduced ability to leave vessels. In mice, blocking traps reduced necrosis, reduced metastasis and improved chemotherapy.",
+      "limitations": "The abstract does not give effect sizes. Mouse findings may not transfer to people, and trap inhibitors were not tested in patients here.",
+      "meaning": "If confirmed, necrosis near tumours could be a target, and trap inhibitors could be tested with chemotherapy.",
+      "terms": [
+        { "term": "Neutrophil extracellular trap", "def": "A web of DNA and proteins released by neutrophils, a type of white blood cell." },
+        { "term": "Necrosis", "def": "Death of tissue, here inside a tumour, often where blood supply is poor." },
+        { "term": "Spatial transcriptomics", "def": "A method that maps which genes are active at each location in a tissue slice." }
+      ],
+      "sources": [
+        { "label": "Cancer Discovery: neutrophil extracellular traps and colon cancer necrosis", "url": "https://doi.org/10.1158/2159-8290.cd-25-0748", "doi": "10.1158/2159-8290.cd-25-0748" }
+      ],
+      "forYou": "Relevant to tumour microenvironment features that affect drug delivery."
+    },
+    {
+      "id": "neuromelanin-mri-depression",
+      "area": "mind",
+      "title": "Combined Neuromelanin-Sensitive and Functional MRI Links Midbrain Dopaminergic Dysfunction to Connectome Architecture in First-Episode, Medication-Naive Major Depressive Disorder",
+      "headline": "In people with a first episode of depression who had never taken medication, a dopamine-related brain signal was lower and linked differently to brain networks.",
+      "authors": "Qiuyu Lv, Chengwen Liu, Daifeng Dong, et al.",
+      "venue": "Biological Psychiatry",
+      "published": "2026-11-22",
+      "evidence": {
+        "type": "human-observational",
+        "n": "112 patients, 230 controls",
+        "limitation": "Cross-sectional, so it cannot show cause, and the signal is an indirect measure of the dopamine system."
+      },
+      "question": "Is the midbrain dopamine system altered in first-episode depression, and how does that relate to brain-wide networks?",
+      "approach": "The team compared a neuromelanin-sensitive MRI signal in the substantia nigra and ventral tegmental area with resting-state functional MRI connectivity, then compared the pattern with maps of dopamine receptors and transporters.",
+      "model": "112 first-episode, medication-naive adults with major depressive disorder and 230 healthy controls.",
+      "result": "Patients had a lower midbrain signal. Lower signal went with higher connectivity to striatal and limbic regions in depression, and the coupling pattern matched an anticipatory pleasure connectome pattern.",
+      "limitations": "The design is cross-sectional with no follow-up. Spatial matches with normative maps show association, not mechanism.",
+      "meaning": "The signal could help study why some people with depression lose pleasure, and test whether dopamine-focused treatments suit subgroups.",
+      "terms": [
+        { "term": "Neuromelanin MRI", "def": "An MRI method sensitive to neuromelanin, a pigment found in dopamine-producing neurons." },
+        { "term": "Anhedonia", "def": "A loss of the ability to feel pleasure." },
+        { "term": "Functional connectivity", "def": "How strongly activity in two brain regions rises and falls together." }
+      ],
+      "sources": [
+        { "label": "Biological Psychiatry: neuromelanin MRI in first-episode depression", "url": "https://doi.org/10.1016/j.biopsych.2026.11.008", "doi": "10.1016/j.biopsych.2026.11.008" }
+      ],
+      "forYou": "Relevant to imaging biomarkers in psychiatry."
+    },
+    {
+      "id": "bcg-platelet-micromotor",
+      "area": "cancer",
+      "title": "A urea-powered platelet micromotor initiates self-amplifying ECM remodeling to potentiate BCG immunotherapy in bladder cancer",
+      "headline": "A self-propelled platelet-coated carrier pushed BCG deep into bladder tumours in mice, softened the surrounding matrix and brought in more immune cells.",
+      "authors": "Mingde Gao, Jiale Tian, Haifeng Guo, et al.",
+      "venue": "Biomaterials",
+      "published": "2026-11-17",
+      "evidence": {
+        "type": "animal",
+        "model": "Mouse orthotopic and subcutaneous bladder tumours",
+        "limitation": "Mouse models only, with no human data."
+      },
+      "question": "Can a self-propelled carrier get BCG past the dense matrix of bladder tumours and strengthen the immune attack?",
+      "approach": "The team built micromotors that use the enzyme urease to move through urea, coated them with platelet membrane to find tumour cells, loaded them with BCG and tested them in mouse bladder tumour models.",
+      "model": "Mice with bladder tumours placed in the bladder (orthotopic) and under the skin (subcutaneous).",
+      "result": "BCG delivered this way activated a DAPL1-linked pathway that loosened the matrix, which let more BCG and immune cells in. The treatment gave superior tumour inhibition, longer survival and a shift from immune-desert to immune-inflamed tumours.",
+      "limitations": "The abstract gives no sample sizes or effect sizes. Mouse bladders and human bladders differ, and long-term safety is untested.",
+      "meaning": "It points to using the matrix itself as a target when delivering immunotherapy into dense tumours.",
+      "terms": [
+        { "term": "BCG", "def": "A weakened bacterium placed in the bladder to stimulate an immune attack on bladder cancer." },
+        { "term": "Micromotor", "def": "A microscopic particle that moves by turning chemical fuel, here urea, into propulsion." },
+        { "term": "Extracellular matrix", "def": "The meshwork of proteins and sugars that holds cells together in a tissue." }
+      ],
+      "diagram": {
+        "layout": "cycle",
+        "nodes": [
+          { "label": "Micromotor delivers BCG" },
+          { "label": "Matrix loosens" },
+          { "label": "More cells enter" },
+          { "label": "More remodelling" }
+        ],
+        "links": ["activates", "opens", "amplifies", "feeds back"],
+        "caption": "The feedback loop the authors describe: delivered BCG loosens the matrix, which lets in more BCG and immune cells."
+      },
+      "sources": [
+        { "label": "Biomaterials: platelet micromotor for BCG in bladder cancer", "url": "https://doi.org/10.1016/j.biomaterials.2026.124784", "doi": "10.1016/j.biomaterials.2026.124784" }
+      ],
+      "forYou": "Relevant to nanoparticle penetration of dense stroma and self-propelled carriers."
+    }
+  ],
+  "method": {
+    "id": "seahorse-cluster-bioenergetics",
+    "title": "Measure average energy use of cancer cell clusters with a Seahorse workflow",
+    "gist": "Dissociate floating cancer cell clusters into single cells just before a Seahorse assay, so every cell counts equally in the oxygen consumption reading. Steps summarised from the abstract.",
+    "field": "cancer",
+    "useWhen": "You grow cancer cells as floating clusters and need an average measure of their mitochondrial respiration, where gradients and irregular shapes make normalisation hard.",
+    "steps": [
+      { "title": "Grow clusters", "text": "Generate cancer cell clusters under anchorage-independent growth in ultra-low adherent plates." },
+      { "title": "Dissociate", "text": "Break the clusters into a single-cell suspension with enzymes and mechanical dissociation, immediately before the assay." },
+      { "title": "Plate the cells", "text": "Place the suspension on poly-D-lysine-coated 2D microplates for the Seahorse instrument." },
+      { "title": "Run the assay", "text": "Run the Seahorse XF Mito Stress Test on an XF96 or XF Pro instrument to record oxygen consumption rate." },
+      { "title": "Read the average", "text": "All viable cells in each cluster contribute equally, so the reading is a cluster average and needs little post hoc normalisation." }
+    ],
+    "pitfalls": [
+      "Reagents, timings and cell numbers are in the full protocol. This card uses only the abstract, so read the paper before running it.",
+      "Averaging cannot show differences between cells inside one cluster."
+    ],
+    "safety": "Follow your institution's rules for biological materials, cell culture and enzymes, and for the instrument you use.",
+    "source": { "label": "Bio-protocol: dissociation-based Seahorse XF workflow", "url": "https://doi.org/10.21769/bioprotoc.5849", "doi": "10.21769/bioprotoc.5849", "access": "open" },
+    "terms": [
+      { "term": "Anchorage-independent growth", "def": "The ability of cells to grow without attaching to a surface, a hallmark of malignant cells." },
+      { "term": "Oxygen consumption rate", "def": "How fast cells use oxygen, a common measure of mitochondrial respiration." },
+      { "term": "Mito Stress Test", "def": "A Seahorse assay that measures mitochondrial function by adding drugs in sequence." }
+    ],
+    "forYou": "Relevant to metabolic profiling of tumour spheroids and clusters."
+  },
+  "learn": {
+    "question": "What does a hazard ratio of 0.39 mean?",
+    "answer": "A hazard ratio compares how fast events such as progression or death happen in two groups. A value of 0.39 means the treated group had events at about 39 percent of the rate in the comparison group, at any moment.",
+    "analogy": "Think of two sets of light bulbs. A ratio of 0.39 means one set burns out at about 0.4 times the rate of the other at any moment.",
+    "body": [
+      "Trials follow two groups and count events over time. The hazard is the rate at which events happen at a given moment among people still being followed. The ratio of the two groups' hazards is the hazard ratio.",
+      "A ratio of 1 means no difference. Below 1 means events are less frequent in the first group. The 95 percent confidence interval shows the plausible range: in the lymphoma trial it ran from 0.27 to 0.58, which does not include 1.",
+      "The ratio is a relative rate, not a time gain. In that trial the median event-free survival was 6.2 versus 2.5 months. The ratio and the months answer different questions, and both are worth reading."
+    ],
+    "diagram": {
+      "layout": "flow",
+      "nodes": [
+        { "label": "Two groups followed" },
+        { "label": "Events counted over time" },
+        { "label": "Event rates compared" },
+        { "label": "Hazard ratio" }
+      ],
+      "links": ["tracks", "counts", "gives"],
+      "caption": "How a hazard ratio is built from follow-up of two groups."
+    },
+    "seenIn": ["zamto-cel-daly2-eu"],
+    "sources": [
+      { "label": "The Lancet Oncology: DALY 2-EU, which reports a hazard ratio of 0.39", "url": "https://doi.org/10.1016/S1470-2045(26)00290-1", "doi": "10.1016/S1470-2045(26)00290-1" }
+    ]
+  },
+  "trials": {
+    "trials": [
+      {
+        "id": "gax-ci-pdac-results",
+        "area": "cancer",
+        "title": "Low-dose multi-agent chemotherapy then olaparib and pembrolizumab in metastatic pancreatic cancer",
+        "nct": "NCT04753879",
+        "phase": "2",
+        "status": "Completed",
+        "change": "results-posted",
+        "what": "Results posted on 4 November 2026. 36 people started. The record lists a 6-month progression-free survival rate of 21.05 percent and 13 people with grade 3 or higher drug-related toxicity.",
+        "who": "36 people with untreated metastatic pancreatic ductal adenocarcinoma",
+        "sponsor": "Sidney Kimmel Comprehensive Cancer Center at Johns Hopkins",
+        "sources": [
+          { "label": "ClinicalTrials.gov NCT04753879", "url": "https://clinicaltrials.gov/study/NCT04753879" }
+        ]
+      },
+      {
+        "id": "xen1101-mdd-results",
+        "area": "mind",
+        "title": "XEN1101 for major depressive disorder: proof of concept trial",
+        "nct": "NCT04827901",
+        "phase": "2",
+        "status": "Completed",
+        "change": "results-posted",
+        "what": "Results posted on 6 November 2026. 60 people started (29 XEN1101, 31 placebo). Reward-circuit fMRI change was -0.11 versus -0.04, and MADRS scores fell 13.01 versus 11.01 points. The record lists means only.",
+        "who": "60 people with major depressive disorder, 8 weeks of treatment",
+        "sponsor": "James Murrough",
+        "sources": [
+          { "label": "ClinicalTrials.gov NCT04827901", "url": "https://clinicaltrials.gov/study/NCT04827901" }
+        ]
+      }
+    ],
+    "funding": []
+  },
+  "chatter": [
+    {
+      "id": "oddessi-open-dialogue-debate",
+      "area": "mind",
+      "kind": "debate",
+      "title": "Authors answer letters on how to read the ODDESSI Open Dialogue trial",
+      "where": "Lancet Psychiatry correspondence",
+      "signal": "Authors' reply in the December 2026 issue to letters from six named researchers",
+      "gist": "The ODDESSI authors replied to letters on how to interpret the trial of Open Dialogue care, a debate about what the results can and cannot support.",
+      "sources": [
+        { "label": "Lancet Psychiatry: authors' reply", "url": "https://doi.org/10.1016/S2215-0366(26)00334-2", "doi": "10.1016/S2215-0366(26)00334-2" }
+      ]
+    },
+    {
+      "id": "nmosd-placebo-control-debate",
+      "area": "rare",
+      "kind": "debate",
+      "title": "Authors reply to concerns about a placebo control in a neuromyelitis optica trial",
+      "where": "Nature Medicine correspondence",
+      "signal": "Reply published 20 November 2026 in Nature Medicine",
+      "gist": "The trial authors replied to concerns about using a placebo control for obinutuzumab β in aquaporin-4 antibody positive neuromyelitis optica spectrum disorder, a rare autoimmune condition.",
+      "sources": [
+        { "label": "Nature Medicine: reply on placebo control", "url": "https://doi.org/10.1038/s41591-026-04782-z", "doi": "10.1038/s41591-026-04782-z" }
+      ]
+    },
+    {
+      "id": "threads-pathology-model",
+      "area": "cancer",
+      "kind": "tool",
+      "title": "THREADS links tissue slides to gene activity to predict cancer outcomes",
+      "where": "Nature Cancer",
+      "signal": "Evaluated on 107 oncology tasks; pretrained on over 47,000 slides",
+      "gist": "THREADS aligns tissue images with genomic or transcriptomic profiles and, the authors report, outperformed leading slide-level models across tasks such as subtyping and survival analysis.",
+      "sources": [
+        { "label": "Nature Cancer: THREADS foundation model", "url": "https://doi.org/10.1038/s43018-026-01252-w", "doi": "10.1038/s43018-026-01252-w" }
+      ]
+    }
+  ],
+  "curiosity": {
+    "id": "memory-proteins-in-prostate-tumours",
+    "area": "curiosity",
+    "title": "Brain memory proteins turned up in high-risk prostate cancer cells",
+    "gist": "A researcher found proteins studied in memory circuits in prostate cancer cells from high-risk patients, and now studies how tumours and nerves communicate.",
+    "body": [
+      "Sebnem Ece Eksi saw neuronal adhesion molecules, proteins important in the circuitry of memory, in prostate cancer cells from high-risk patients. That raised questions about how nervous systems and cancer interact.",
+      "Her lab now plans to test an AI image recognition method to find nerve fibres in human tumour biopsies, which are not normally visible, and to map how they change as cancer progresses."
+    ],
+    "evidence": {
+      "type": "news"
+    },
+    "terms": [
+      { "term": "Neuronal adhesion molecules", "def": "Proteins that help neurons stick to and signal to each other." }
+    ],
+    "sources": [
+      { "label": "Science News: how do tumors talk to nerves?", "url": "https://www.sciencenews.org/article/tumors-talk-nerve-sn-10-sebnem-ece-eksi" }
+    ]
+  },
+  "jobs": [],
+  "note": "The sweep brief was missing, so the run swept first. Europe PMC was unreliable, so PubMed abstracts were used. The method summary uses the abstract only. No job could be verified."
+}
