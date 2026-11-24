@@ -1,0 +1,705 @@
+{
+  "date": "2026-11-24",
+  "number": 9,
+  "title": "A rectal cancer regimen beats standard care, and spine bone density tracks brain aging",
+  "dek": "A phase 3 trial favours radiotherapy plus immunotherapy before surgery in rectal cancer. A lung cancer trial finds no gain from adding local treatment. Chest CT bone density tracks cognitive decline. A nanocarrier crosses the bladder tumour barrier in mice.",
+  "palette": "indigo-coral",
+  "tldr": [
+    {
+      "text": "Short radiotherapy plus camrelizumab and chemotherapy gave 91.3 percent three-year event-free survival versus 77.4 percent with standard care in rectal cancer.",
+      "area": "cancer"
+    },
+    {
+      "text": "Adding local radiation or surgery to maintenance drugs did not delay progression in 215 people with limited metastatic lung cancer (hazard ratio 0.93).",
+      "area": "cancer"
+    },
+    {
+      "text": "In 715 older adults, lower spine bone density measured on chest CT went with faster decline on cognitive tests, though the effects were small.",
+      "area": "mind"
+    },
+    {
+      "text": "Women with depression, anxiety or stress in pregnancy had about 3.4-fold higher blood IL-6 and more of one placental receptor form in a 66-woman cohort.",
+      "area": "women"
+    }
+  ],
+  "top": [
+    {
+      "id": "union-rectal-camrelizumab",
+      "area": "cancer",
+      "title": "Radiotherapy plus immunotherapy improves event-free survival in rectal cancer",
+      "gist": "In 231 people with locally advanced rectal cancer, short radiotherapy then camrelizumab and chemotherapy gave 91.3 percent three-year event-free survival versus 77.4 percent with standard care, in a phase 3 trial.",
+      "evidence": {
+        "type": "clinical-trial",
+        "phase": "3",
+        "status": "Interim analysis, not recruiting",
+        "n": "231 (113 versus 118)",
+        "limitation": "Open-label, interim analysis of a secondary endpoint judged by investigators, in nine hospitals in China (98 percent Han Chinese)."
+      },
+      "why": "This is the first phase 3 trial of radiotherapy, immunotherapy and chemotherapy together before surgery for rectal cancer. Earlier it improved complete tumour clearance. Now it shows a longer-term benefit.",
+      "details": [
+        "Adults aged 18 to 75 with untreated rectal cancer were randomly assigned 1:1. One group had five days of radiotherapy (25 Gy), then camrelizumab with CAPOX chemotherapy, then surgery. The other had six weeks of chemoradiotherapy (50.4 Gy in 28 fractions) then CAPOX.",
+        "Median follow-up was about 35 to 37 months. Three-year event-free survival was 91.3 percent (95% CI 83.9 to 95.4) versus 77.4 percent (67.9 to 84.4). The stratified hazard ratio was 0.33 (0.15 to 0.71, p=0.0029).",
+        "Grade 3 or 4 treatment-related adverse events were similar, such as lower lymphocyte counts in 20 percent versus 28 percent. Serious treatment-related events occurred in 19 percent versus 13 percent. One person in the experimental group died of septic shock linked to chemotherapy."
+      ],
+      "didNotShow": "Overall survival is not reported in the abstract, and the trial was open-label, so assessors knew the treatment.",
+      "terms": [
+        {
+          "term": "Event-free survival",
+          "def": "The time from random assignment until a defined setback, such as spread, local return of the cancer or death."
+        },
+        {
+          "term": "Camrelizumab",
+          "def": "An antibody drug that blocks the PD-1 protein so the immune system can attack cancer cells."
+        },
+        {
+          "term": "CAPOX",
+          "def": "A chemotherapy pair of the pill capecitabine and the infused drug oxaliplatin."
+        },
+        {
+          "term": "Hazard ratio",
+          "def": "A number comparing how fast events happen in two groups. Below 1 means slower in the treated group."
+        }
+      ],
+      "diagram": {
+        "layout": "compare",
+        "nodes": [
+          {
+            "label": "91.3%",
+            "note": "Three-year event-free survival, new regimen",
+            "key": true
+          },
+          {
+            "label": "77.4%",
+            "note": "Three-year event-free survival, standard care"
+          }
+        ],
+        "caption": "Three-year event-free survival in the UNION trial, new regimen versus standard of care."
+      },
+      "sources": [
+        {
+          "label": "The Lancet Oncology: UNION interim analysis",
+          "url": "https://doi.org/10.1016/S1470-2045(26)00446-8",
+          "doi": "10.1016/S1470-2045(26)00446-8"
+        },
+        {
+          "label": "ClinicalTrials.gov NCT04928807",
+          "url": "https://clinicaltrials.gov/study/NCT04928807"
+        }
+      ],
+      "forYou": "Relevant to combining radiation with immunotherapy before surgery."
+    },
+    {
+      "id": "nrg-lu002-consolidative",
+      "area": "cancer",
+      "title": "Adding local treatment to maintenance drugs does not help in limited metastatic lung cancer",
+      "gist": "In 215 people with lung cancer spread to up to three sites, adding radiation or surgery to maintenance drugs did not delay progression (hazard ratio 0.93) in a randomised phase 2 trial.",
+      "evidence": {
+        "type": "clinical-trial",
+        "phase": "2",
+        "status": "Primary analysis",
+        "n": "215 (81 versus 134)",
+        "limitation": "A phase 2 trial with a 1:2 split and median follow-up of 21.9 months; it was not designed to rule out small benefits."
+      },
+      "why": "Treating each leftover tumour site is popular for limited spread. This large randomised trial finds no gain with modern immunotherapy-based care and more lung inflammation.",
+      "details": [
+        "After four courses of first-line therapy, people with stable disease or a partial response had up to three leftover sites outside the lung. They were assigned to maintenance drugs alone or to local treatment (radiation, surgery or both) followed by maintenance drugs. 90 percent had immunotherapy-based treatment.",
+        "Progression-free survival at 1 and 2 years was 48.0 and 35.9 percent with drugs alone, versus 51.5 and 40.1 percent with local treatment added (hazard ratio 0.93, p=0.66). Overall survival hazard ratios were 1.05.",
+        "Grade 2 or higher adverse events were more common with local treatment (84 versus 73 percent), including grade 3 or higher pneumonitis (10 versus 1 percent). Early pneumonitis went with worse outcomes."
+      ],
+      "didNotShow": "It did not show which patients, if any, benefit from local treatment, and the authors call for better patient selection.",
+      "terms": [
+        {
+          "term": "Oligometastatic",
+          "def": "Cancer that has spread to only a small number of sites, here up to three outside the lung."
+        },
+        {
+          "term": "Local consolidative therapy",
+          "def": "Radiation, surgery or both aimed at the remaining tumour sites after drug treatment has shrunk the cancer."
+        },
+        {
+          "term": "Progression-free survival",
+          "def": "The time during which a cancer does not grow or spread, or the person has not died."
+        },
+        {
+          "term": "Pneumonitis",
+          "def": "Inflammation of the lung tissue, which can be caused by radiation or drugs."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Journal of Clinical Oncology: NRG-LU002 randomised phase II trial",
+          "url": "https://doi.org/10.1200/JCO-25-02395",
+          "doi": "10.1200/JCO-25-02395"
+        }
+      ],
+      "forYou": "Relevant to timing and benefit of local therapy alongside systemic treatment."
+    },
+    {
+      "id": "instability-training-mci-rct",
+      "area": "mind",
+      "title": "Resistance training on unstable surfaces slightly improves two thinking tests in older adults",
+      "gist": "In 162 adults over 65 with probable mild cognitive impairment, 24 weeks of resistance training on unstable surfaces beat gentle exercise on 2 of 10 thinking tests, by small amounts.",
+      "evidence": {
+        "type": "human-rct",
+        "n": "162 (80 versus 82)",
+        "limitation": "Only 2 of the tested outcomes improved, the gains were small, and the control group did not do structured strength work."
+      },
+      "why": "Exercise is often advised for ageing brains, but trials are mixed. This blinded trial finds a small, specific gain in executive function, with no evidence yet on dementia risk.",
+      "details": [
+        "Participants were physically independent and screened as probably having mild cognitive impairment. The training group did seven exercises, three sets of 10 to 15 repetitions, twice weekly on balance pads and similar surfaces. The control group did low-intensity stretching and functional exercises.",
+        "At 24 weeks, the training group named 1.2 more words starting with the letter A in a minute (95% CI 0.2 to 2.2) and repeated 0.7 more digits forward (0.1 to 1.3). Other cognitive tests did not differ between groups."
+      ],
+      "didNotShow": "It did not show effects on memory, daily function or the chance of developing dementia, and it cannot separate strength gains from the balance challenge.",
+      "terms": [
+        {
+          "term": "Mild cognitive impairment",
+          "def": "A state with more memory or thinking difficulty than usual for one's age but mostly independent daily life."
+        },
+        {
+          "term": "Executive function",
+          "def": "The thinking skills used to plan, focus attention, switch tasks and hold information in mind."
+        },
+        {
+          "term": "Assessor-blinded",
+          "def": "A trial design in which the people measuring outcomes do not know which group a participant is in."
+        }
+      ],
+      "sources": [
+        {
+          "label": "J Nutr Health Aging: 24-week instability resistance training trial",
+          "url": "https://doi.org/10.1016/j.jnha.2026.101030",
+          "doi": "10.1016/j.jnha.2026.101030"
+        },
+        {
+          "label": "The Conversation: resistance training and brain health",
+          "url": "https://theconversation.com/resistance-training-could-help-boost-brain-health-and-confidence-in-older-adults-297007"
+        }
+      ],
+      "forYou": "Relevant to exercise interventions for cognitive ageing."
+    },
+    {
+      "id": "bone-density-brain-aging-mesa",
+      "area": "mind",
+      "title": "Lower spine bone density on chest CT goes with faster cognitive decline",
+      "gist": "In 715 older adults, lower spine bone density read by AI on chest CT went with faster cognitive decline. The effects were modest.",
+      "evidence": {
+        "type": "human-observational",
+        "n": "715 (405 to 675 per outcome)",
+        "limitation": "Secondary analysis of a cohort study; the overall white matter result did not survive correction for multiple tests (adjusted p=0.07)."
+      },
+      "why": "Chest CT scans are already common. If bone density read from them tracks brain ageing, a scan taken for another reason could flag people for follow-up. This study is a first step only.",
+      "details": [
+        "Researchers used a deep learning algorithm to measure bone density in the chest spine on CT scans from the Multi-Ethnic Study of Atherosclerosis. The group had a median age of 69 and 318 women. They were followed with brain MRI and cognitive tests.",
+        "Lower bone density went with faster decline in a global cognition score (0.025 SD per year, p=0.002) and faster white matter changes in two regions. The link with white matter hyperintensities was stronger in people with diabetes."
+      ],
+      "didNotShow": "It cannot show that bone loss causes brain ageing, and it did not test whether using bone density changes care.",
+      "terms": [
+        {
+          "term": "White matter",
+          "def": "The brain tissue made of nerve fibres that carry signals between regions."
+        },
+        {
+          "term": "Deep learning",
+          "def": "A computer method that learns patterns from many examples, here to measure bone density in scans."
+        },
+        {
+          "term": "Fractional anisotropy",
+          "def": "An MRI measure of how well organised white matter fibres are. Lower values suggest damage."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Radiology: deep learning bone density and white matter, MESA",
+          "url": "https://doi.org/10.1148/radiol.260656",
+          "doi": "10.1148/radiol.260656"
+        },
+        {
+          "label": "ScienceDaily: weak bones and faster brain aging",
+          "url": "https://www.sciencedaily.com/releases/2026/11/261121221132.htm"
+        }
+      ],
+      "forYou": "Relevant to imaging biomarkers that are reused from scans taken for other reasons."
+    },
+    {
+      "id": "assortative-mating-nonadditive",
+      "area": "mind",
+      "title": "Partner similarity can hide non-additive genetic effects in twin studies",
+      "gist": "In about 9,000 Dutch families, allowing for partner similarity cut additive genetic estimates by 14 to 39 percent and revealed non-additive effects.",
+      "evidence": {
+        "type": "computational",
+        "n": "About 9,000 Dutch families",
+        "limitation": "Results depend on the assumptions of the extended twin model, and only three traits were tested."
+      },
+      "why": "Heritability estimates feed into psychiatric genetics. If partner similarity inflates the additive share, it may help explain why twin and DNA-based estimates differ.",
+      "details": [
+        "The authors built an extended twin model that includes spouses. Simulations showed that partners resembling each other can mask effects that are not additive, such as gene interactions.",
+        "Applied to height, openness to experience and borderline personality disorder features, partner correlations were 0.21 to 0.29. Adjusting for them cut additive estimates and showed non-additive effects."
+      ],
+      "didNotShow": "It does not identify which genes or interactions are involved, and it does not apply to every trait.",
+      "terms": [
+        {
+          "term": "Assortative mating",
+          "def": "The tendency of people to choose partners who resemble them in some trait."
+        },
+        {
+          "term": "Non-additive genetic effect",
+          "def": "A genetic influence that depends on interactions between gene variants, not on each variant adding up alone."
+        },
+        {
+          "term": "Twin design",
+          "def": "A study comparing identical and non-identical twins to split trait differences into genetic and environmental parts."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Molecular Psychiatry: assortative mating and non-additive genetic contributions",
+          "url": "https://doi.org/10.1038/s41380-026-03932-6",
+          "doi": "10.1038/s41380-026-03932-6"
+        }
+      ],
+      "forYou": "Relevant to how heritability is estimated in behavioural traits."
+    },
+    {
+      "id": "bbp-418-lgmd-fda",
+      "area": "rare",
+      "title": "FDA approves BridgeBio's BBP-418 for limb-girdle muscular dystrophy",
+      "gist": "Endpoints News reports that the FDA approved BBP-418 for limb-girdle muscular dystrophy on Monday 23 November, the first of three approvals BridgeBio expects. Only the news summary was read.",
+      "evidence": {
+        "type": "news",
+        "limitation": "Based on a news summary only. The label, the trial data and the exact patient group were not read."
+      },
+      "why": "Few treatments exist for limb-girdle muscular dystrophies, a group of rare inherited muscle diseases. A new approval is a milestone, but the evidence behind it needs reading from the regulator and company.",
+      "didNotShow": "The summary does not give the trial results, the approved population or the price.",
+      "terms": [
+        {
+          "term": "Limb-girdle muscular dystrophy",
+          "def": "A group of rare inherited diseases that cause weakness in the muscles around the hips and shoulders."
+        },
+        {
+          "term": "BBP-418",
+          "def": "An experimental drug from BridgeBio that Endpoints News reports is now approved for a muscular dystrophy."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Endpoints News: FDA approves BridgeBio rare disease drug",
+          "url": "https://endpoints.news/fda-approves-bridgebio-rare-disease-drug-for-muscular-dystrophy/"
+        }
+      ],
+      "forYou": "Relevant to rare disease approvals based on small trials."
+    },
+    {
+      "id": "giredestrant-second-approval",
+      "area": "cancer",
+      "title": "Roche wins a second FDA approval for its breast cancer pill giredestrant",
+      "gist": "Endpoints News reports that the FDA gave giredestrant a second approval on Monday 23 November, this time in early-stage disease, a larger market. Only the news summary was read.",
+      "evidence": {
+        "type": "news",
+        "limitation": "Based on a news summary only. The approved population, trial results and label were not read."
+      },
+      "why": "A move from advanced to early-stage breast cancer widens how many people could use a drug. The supporting trial data should be read from the FDA or Roche before drawing conclusions.",
+      "didNotShow": "The summary does not give trial results, the approved group or safety data.",
+      "sources": [
+        {
+          "label": "Endpoints News: Roche second FDA approval for breast cancer pill",
+          "url": "https://endpoints.news/roche-wins-second-fda-approval-for-breast-cancer-pill-opening-up-bigger-market/"
+        }
+      ],
+      "forYou": "Relevant to regulatory expansion of oral cancer drugs into earlier disease."
+    }
+  ],
+  "bench": [
+    {
+      "id": "bladder-transcytosis-nanocarrier",
+      "area": "cancer",
+      "title": "Phosphatidylserine-mediated transcytosis enables tumor-selective penetration of nanomedicines across urine-tumor barrier for bladder cancer therapy",
+      "headline": "A nanocarrier that sticks to a fat molecule exposed on cancer cells moved gemcitabine deep into bladder tumours in mice and stopped 95 percent of tumour growth.",
+      "authors": "Pu Zhang, Jiajia Xiang, Dechao Feng, et al.",
+      "venue": "Biomaterials",
+      "published": "2026-11-18",
+      "evidence": {
+        "type": "animal",
+        "model": "Orthotopic mouse bladder cancer model",
+        "limitation": "The abstract gives no animal numbers, and results in one mouse model may not carry over to people."
+      },
+      "question": "Can a nanocarrier cross the mucus and tumour layers that stop drugs given into the bladder from reaching deep cancer cells?",
+      "approach": "The team built a carrier with a polyzwitterionic shell that slips through mucus and binds phosphatidylserine, then tested uptake in cancer and normal urothelial cells and delivery of gemcitabine into the bladder of mice.",
+      "model": "Cancer and normal urothelial cells in culture, and an orthotopic bladder cancer model in mice.",
+      "result": "In cancer cells, binding triggered an uptake route without clathrin and carried cargo across the cell toward deep tumour regions. Normal cells took the carrier up by the clathrin route and sent it to lysosomes for breakdown. In mice, gemcitabine in the carrier gave 95.2 percent tumour inhibition, complete tumour clearance in 40 percent, and no detectable off-target toxicity.",
+      "limitations": "Mouse model only, with no sample sizes in the abstract. Long-term safety and manufacturing were not addressed there.",
+      "meaning": "If it holds up, exploiting a cancer-specific surface signal could improve drug delivery through dense tissue barriers beyond the bladder.",
+      "terms": [
+        {
+          "term": "Phosphatidylserine",
+          "def": "A fat molecule that sits inside healthy cell membranes but is often exposed on the surface of cancer cells."
+        },
+        {
+          "term": "Intravesical",
+          "def": "Given directly into the bladder through a catheter, rather than by mouth or injection."
+        },
+        {
+          "term": "Orthotopic",
+          "def": "Placed in the organ where the cancer would naturally grow, such as bladder tumour cells grown in a mouse bladder."
+        },
+        {
+          "term": "Gemcitabine",
+          "def": "A chemotherapy drug that blocks cancer cells from copying their DNA."
+        }
+      ],
+      "diagram": {
+        "layout": "flow",
+        "nodes": [
+          {
+            "label": "Carrier crosses mucus"
+          },
+          {
+            "label": "Binds tumour cell"
+          },
+          {
+            "label": "Carried across cell"
+          },
+          {
+            "label": "Drug reaches depth"
+          }
+        ],
+        "links": [
+          "binds",
+          "enters",
+          "releases"
+        ],
+        "caption": "How the carrier moves from the bladder surface into deeper tumour layers in cancer cells."
+      },
+      "sources": [
+        {
+          "label": "Biomaterials: phosphatidylserine-mediated transcytosis in bladder cancer",
+          "url": "https://doi.org/10.1016/j.biomaterials.2026.124788",
+          "doi": "10.1016/j.biomaterials.2026.124788"
+        }
+      ],
+      "forYou": "Relevant to nanoparticle penetration of dense tissue and transcytosis-based delivery."
+    },
+    {
+      "id": "dll3-tarlatamab-subtypes",
+      "area": "cancer",
+      "title": "Transcription factor subtype governs response and resistance to DLL3-directed T cell engagement in small cell lung cancer",
+      "headline": "Small cell lung cancers that make the ASCL1 protein respond best to tarlatamab, and resistance often comes from a switch to a NEUROD1 state.",
+      "authors": "Damien Vasseur, Shin Saito, Gunsagar S Gulati, et al.",
+      "venue": "Cancer Cell",
+      "published": "2026-11-23",
+      "evidence": {
+        "type": "animal",
+        "model": "Immunocompetent syngeneic mouse model plus patient plasma",
+        "limitation": "The abstract gives no sample sizes or effect sizes, and the mouse model may not mirror every human resistance route."
+      },
+      "question": "Do the molecular subtypes of small cell lung cancer predict who responds to tarlatamab, and how does resistance develop?",
+      "approach": "The team inferred tumour gene activity from DNA fragments circulating in patient plasma, and built a mouse model with an intact immune system to study response and resistance.",
+      "model": "Plasma from patients with small cell lung cancer, and a syngeneic mouse model treated with a DLL3-targeting T cell engager.",
+      "result": "In patients and mice, subtype predicted response. ASCL1 tumours responded best, NEUROD1 tumours did worse, and POU2F3 tumours were intrinsically resistant. Acquired resistance involved a shift to a NEUROD1-high state with lower DLL3, or more regulatory and exhausted T cell programs.",
+      "limitations": "The abstract does not give patient numbers or response rates, and subtype was inferred from plasma, not tumour biopsies.",
+      "meaning": "Subtype from a blood sample could one day help choose or sequence treatments, which would need prospective testing.",
+      "terms": [
+        {
+          "term": "Tarlatamab",
+          "def": "A drug that links T cells to cancer cells carrying a protein called DLL3 so the T cells kill them."
+        },
+        {
+          "term": "Syngeneic",
+          "def": "Made of cells from the same inbred mouse strain as the host, so the mouse keeps a working immune system."
+        },
+        {
+          "term": "Circulating chromatin",
+          "def": "Fragments of DNA with attached proteins that cells release into the blood, which can reveal which genes were active."
+        },
+        {
+          "term": "ASCL1",
+          "def": "A transcription factor, a protein that switches genes on, that defines one subtype of small cell lung cancer."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cancer Cell: transcription factor subtype and DLL3 T cell engagement",
+          "url": "https://doi.org/10.1016/j.ccell.2026.10.015",
+          "doi": "10.1016/j.ccell.2026.10.015"
+        }
+      ],
+      "forYou": "Relevant to biomarkers of response to T cell engagers."
+    },
+    {
+      "id": "pregnancy-distress-placenta-gr",
+      "area": "women",
+      "title": "Depression, anxiety, and stress during pregnancy are associated with inflammation and altered placental glucocorticoid receptor signaling",
+      "headline": "Women with depression, anxiety or stress in pregnancy had higher inflammation in blood and placenta, and more of one placental stress-hormone receptor form.",
+      "authors": "Sreeparna Bhaumik, Zarqa Saif, Jack Lockett, et al.",
+      "venue": "American Journal of Obstetrics and Gynecology",
+      "published": "2026-11-23",
+      "evidence": {
+        "type": "human-observational",
+        "n": "66 (34 vs 32); 129 (71 vs 58)",
+        "limitation": "Associations only in two small cohorts, so cause and direction are unknown."
+      },
+      "question": "How are maternal depression, anxiety and stress linked to inflammation and to stress-hormone signalling in the placenta?",
+      "approach": "The team measured placental receptor forms, related genes and blood IL-6 at 24 and 36 weeks in the Queensland Family Cohort, then checked the receptor form in a second cohort in Adelaide.",
+      "model": "Placental tissue and blood from pregnant women with moderate to severe symptoms and from controls.",
+      "result": "Nuclear GRα-D1 in the placenta was about 4-fold higher in Queensland and 2-fold higher in Adelaide in women with symptoms. Blood IL-6 was about 3.4-fold higher at 24 weeks and 3.8-fold higher at 36 weeks. Placental IL-6 and TNF-alpha were up and IL-10 was down. GRα-D1 rose with symptom severity.",
+      "limitations": "Small cohorts, no proof that the placental change causes symptoms or poor outcomes, and no outcomes for babies in the abstract.",
+      "meaning": "GRα-D1 is a candidate link between maternal mental health and placental function that needs follow-up in larger studies.",
+      "terms": [
+        {
+          "term": "Glucocorticoid receptor",
+          "def": "A protein in cells that binds stress hormones such as cortisol and changes which genes are active."
+        },
+        {
+          "term": "GRα-D1",
+          "def": "One form of the glucocorticoid receptor, measured here in the nucleus of placental cells."
+        },
+        {
+          "term": "IL-6",
+          "def": "A signalling protein of the immune system that rises with inflammation."
+        },
+        {
+          "term": "Cohort",
+          "def": "A group of people followed over time, here pregnant women recruited in Queensland and Adelaide."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Am J Obstet Gynecol: placental glucocorticoid receptor and maternal mood",
+          "url": "https://doi.org/10.1016/j.ajog.2026.11.020",
+          "doi": "10.1016/j.ajog.2026.11.020"
+        }
+      ],
+      "forYou": "Relevant to biological links between maternal stress and placental function."
+    }
+  ],
+  "method": {
+    "id": "msc-rrbs-methylation",
+    "title": "Profile DNA methylation in hundreds of single cells with Msc-RRBS",
+    "gist": "Run lysis, digestion, end repair and adapter ligation in one microwell per cell, then clean up with magnetic beads, to read DNA methylation across single cells. Steps summarised from the abstract.",
+    "field": "other",
+    "useWhen": "You want cell-to-cell differences in DNA methylation, for example in development or disease, that bulk sequencing averages away.",
+    "steps": [
+      {
+        "title": "Sort cells",
+        "text": "Sort single cells into the wells of a 96-well plate. The workflow also accepts pooled cells or sub-nanogram purified DNA."
+      },
+      {
+        "title": "React in one well",
+        "text": "Carry out cell lysis, restriction digestion, end repair and adapter ligation in the same microwell, with no buffer exchange, to limit DNA loss."
+      },
+      {
+        "title": "Use indexed adapters",
+        "text": "Use short indexed adapters so adapter dimers can be removed and cells can be pooled for sequencing."
+      },
+      {
+        "title": "Clean up the library",
+        "text": "Purify the library DNA with magnetic beads."
+      },
+      {
+        "title": "Sequence and analyse",
+        "text": "Sequence the libraries and process the data. The full workflow from sorting to sequencing-ready libraries takes about 6 days per set of plates."
+      }
+    ],
+    "pitfalls": [
+      "Reagents, volumes and timings are in the full protocol. This card uses only the abstract, so read the paper before running it.",
+      "Basic data processing needs limited bioinformatics training, but advanced analysis needs more computational expertise."
+    ],
+    "safety": "Follow your institution's rules for biological materials, human samples and sequencing reagents.",
+    "source": {
+      "label": "Nature Protocols: Msc-RRBS single-cell methylation profiling",
+      "url": "https://doi.org/10.1038/s41596-026-01452-9",
+      "doi": "10.1038/s41596-026-01452-9"
+    },
+    "terms": [
+      {
+        "term": "DNA methylation",
+        "def": "A chemical tag on DNA that helps control which genes are switched on."
+      },
+      {
+        "term": "Restriction digestion",
+        "def": "Cutting DNA at specific short sequences with enzymes."
+      },
+      {
+        "term": "Adapter",
+        "def": "A short piece of DNA added to the ends of fragments so they can be sequenced."
+      }
+    ],
+    "forYou": "Relevant to epigenetic profiling of heterogeneous tumour and tissue cells."
+  },
+  "learn": {
+    "question": "What is transcytosis, and why does it matter for drugs?",
+    "answer": "Transcytosis is when a cell takes something in on one side, carries it across its interior and releases it on the other side. It can move a drug through layers of cells, not only into one cell.",
+    "analogy": "Think of a ferry rather than a harbour. Normal uptake ends at the harbour, while transcytosis carries the cargo across to the far shore.",
+    "body": [
+      "Most drug carriers enter a cell by endocytosis and end up inside it, often destroyed in a lysosome. Transcytosis uses part of the same machinery but sends the cargo across the cell and out the other side.",
+      "That matters for tumours and barriers made of many cell layers, such as the bladder lining. In the mouse study here, a carrier binding phosphatidylserine on cancer cells was carried toward deeper tumour regions, while normal cells took it up by a route that ended in breakdown."
+    ],
+    "diagram": {
+      "layout": "flow",
+      "nodes": [
+        {
+          "label": "Carrier binds cell"
+        },
+        {
+          "label": "Cell takes it in"
+        },
+        {
+          "label": "Carried across"
+        },
+        {
+          "label": "Released deeper"
+        }
+      ],
+      "links": [
+        "triggers",
+        "moves",
+        "frees"
+      ],
+      "caption": "The steps of transcytosis, from binding on one side to release on the other."
+    },
+    "seenIn": [
+      "bladder-transcytosis-nanocarrier"
+    ],
+    "terms": [
+      {
+        "term": "Transcytosis",
+        "def": "Transport of material across a cell, from one side to the other, in small membrane bubbles."
+      },
+      {
+        "term": "Endocytosis",
+        "def": "A process in which a cell folds its outer membrane inward to engulf material from outside."
+      },
+      {
+        "term": "Lysosome",
+        "def": "A compartment inside cells that breaks down worn-out molecules and captured material."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Biomaterials: transcytosis of nanomedicines across the urine-tumor barrier",
+        "url": "https://doi.org/10.1016/j.biomaterials.2026.124788",
+        "doi": "10.1016/j.biomaterials.2026.124788"
+      }
+    ]
+  },
+  "trials": {
+    "trials": [
+      {
+        "id": "yl201-pdac-phase3",
+        "area": "cancer",
+        "title": "YL201 versus liposomal irinotecan with 5-FU and leucovorin in metastatic pancreatic cancer",
+        "nct": "NCT07803783",
+        "phase": "3",
+        "status": "Recruiting",
+        "change": "updated",
+        "what": "Registered on 4 September 2026 and updated on 23 November 2026. The trial compares YL201, a B7-H3 antibody drug conjugate, with chemotherapy after failure of gemcitabine-based treatment. Primary outcomes are progression-free survival and overall survival.",
+        "who": "320 planned people with metastatic pancreatic ductal adenocarcinoma that progressed on gemcitabine-based therapy",
+        "sponsor": "MediLink Therapeutics (Suzhou) Co., Ltd.",
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov NCT07803783",
+            "url": "https://clinicaltrials.gov/study/NCT07803783"
+          }
+        ]
+      },
+      {
+        "id": "trofuse-007-nsclc",
+        "area": "cancer",
+        "title": "Sacituzumab tirumotecan plus pembrolizumab versus pembrolizumab alone in PD-L1 high lung cancer",
+        "nct": "NCT06170788",
+        "phase": "3",
+        "status": "Recruiting",
+        "change": "updated",
+        "what": "Record updated on 23 November 2026. The primary objective is overall survival; no results are posted. The trial tests whether adding the antibody drug conjugate to pembrolizumab beats pembrolizumab alone as first treatment.",
+        "who": "614 planned people with metastatic non-small cell lung cancer and PD-L1 tumour proportion score of 50 percent or more",
+        "sponsor": "Merck Sharp & Dohme LLC",
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov NCT06170788",
+            "url": "https://clinicaltrials.gov/study/NCT06170788"
+          }
+        ]
+      }
+    ],
+    "funding": []
+  },
+  "chatter": [
+    {
+      "id": "bumble-bee-cognition-science",
+      "area": "mind",
+      "kind": "debate",
+      "title": "A Science perspective asks what bumble bees say about the origins of intelligence",
+      "where": "Mastodon #neuroscience",
+      "signal": "4 boosts and 0 favourites on Mastodon (#neuroscience)",
+      "gist": "Researchers shared a Science perspective by Chittka and Heinze on bumble bee cognition, with the subtitle that bees provide clues about the origins of intelligence. Only the title was read.",
+      "sources": [
+        {
+          "label": "Science: Bumble bee cognition",
+          "url": "https://doi.org/10.1126/science.aek1724",
+          "doi": "10.1126/science.aek1724"
+        },
+        {
+          "label": "Mastodon post",
+          "url": "https://mathstodon.xyz/@albertcardona/117667913237153791"
+        }
+      ]
+    },
+    {
+      "id": "tunneling-nanotubes-knowable",
+      "area": "cancer",
+      "kind": "debate",
+      "title": "Tunneling nanotubes, once doubted, are studied for roles in cancer",
+      "where": "Mastodon #oncology",
+      "signal": "5 boosts and 1 favourite on Mastodon (#oncology)",
+      "gist": "Knowable Magazine says cells may trade resources through thin tunneling nanotubes. Many colleagues first doubted this, and the structures are now studied in cancer and other diseases. Only the post was read.",
+      "sources": [
+        {
+          "label": "Mastodon post by Knowable Magazine",
+          "url": "https://mstdn.science/@KnowableMag/117666542207589219"
+        }
+      ]
+    },
+    {
+      "id": "glyphosate-iowa-discussion",
+      "area": "cancer",
+      "kind": "debate",
+      "title": "Iowa herbicide and cancer rates is being shared again",
+      "where": "Mastodon #cancer",
+      "signal": "6 boosts and 1 favourite on Mastodon (#cancer)",
+      "gist": "A post links a Washington Post story and says Iowa researchers found higher cancer rates, especially non-Hodgkin lymphoma, in high-spray counties. This is a county-level report as described in the post. The study was not read.",
+      "sources": [
+        {
+          "label": "Mastodon post",
+          "url": "https://mastodon.world/@obrien_kat/117664758844172082"
+        }
+      ]
+    }
+  ],
+  "curiosity": {
+    "id": "dna-damage-daily",
+    "area": "curiosity",
+    "title": "A cell may suffer up to 100,000 DNA damage events a day",
+    "gist": "A molecular biologist quoted by Quanta Magazine estimates that some cells endure up to 100,000 DNA damage events daily, and gene editing relies on the repair systems that fix them.",
+    "body": [
+      "Quanta Magazine's explainer says DNA is a working document that cells must read constantly, so it is exposed to by-products of metabolism and to radiation and chemicals. Björn Schumacher of the University of Cologne says damage to the DNA is the default.",
+      "Cells repair most of this damage quickly. Gene editing tools work by cutting DNA and then relying on the cell's own repair machinery to insert, delete or change genes."
+    ],
+    "evidence": {
+      "type": "news",
+      "limitation": "The figure is one researcher's estimate in a magazine explainer, not a measured value from a study."
+    },
+    "terms": [
+      {
+        "term": "Gene editing",
+        "def": "Changing a cell's DNA at a chosen spot, usually by cutting it and letting the cell repair the cut."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Quanta Magazine: the DNA repair system that makes gene editing work",
+        "url": "https://www.quantamagazine.org/the-incredible-elegant-dna-repair-system-makes-gene-editing-work-20261123/"
+      }
+    ]
+  },
+  "jobs": [],
+  "note": "The sweep brief was missing, so the run swept first. PubMed abstracts were used. STAT, Endpoints, Medical Xpress and Knowable block bots, so two approvals and two chatter items rest on feed summaries. No job could be verified."
+}
