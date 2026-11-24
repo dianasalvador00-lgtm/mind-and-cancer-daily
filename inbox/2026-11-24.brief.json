@@ -1,38 +1,19 @@
 {
  "date": "2026-11-24",
- "generatedAt": "2026-11-24T07:05:33.426Z",
+ "generatedAt": "2026-11-24T08:00:39.190Z",
  "note": "Shortlist for the daily run. Scores are deterministic (see scripts/sweep.mjs). area is a keyword guess.",
  "areaMix": {
-  "cancer": 26,
+  "cancer": 25,
+  "mind": 5,
   "women": 4,
-  "mind": 8,
-  "other": 4,
-  "rare": 3
+  "curiosity": 1,
+  "other": 6,
+  "rare": 4
  },
  "failedSources": [
   {
    "source": "Reddit: labs and biology",
-   "error": "HTTP 403"
-  },
-  {
-   "source": "Europe PMC: pancreatic cancer preprints",
-   "error": "HTTP 503"
-  },
-  {
-   "source": "Europe PMC: nano and phototherapy",
-   "error": "HTTP 503"
-  },
-  {
-   "source": "Europe PMC: cancer preprints",
-   "error": "HTTP 503"
-  },
-  {
-   "source": "Europe PMC: rare disease preprints",
-   "error": "HTTP 503"
-  },
-  {
-   "source": "Europe PMC: mind preprints",
-   "error": "HTTP 503"
+   "error": "HTTP 404"
   },
   {
    "source": "Nature Human Behaviour",
@@ -51,20 +32,12 @@
    "error": "HTTP 403"
   },
   {
-   "source": "New Scientist",
-   "error": "HTTP 403"
-  },
-  {
-   "source": "Europe PMC: women's health preprints",
-   "error": "HTTP 503"
-  },
-  {
    "source": "Reddit: neuroscience and psychology",
-   "error": "HTTP 403"
+   "error": "HTTP 404"
   },
   {
    "source": "Reddit: cancer and rare disease",
-   "error": "HTTP 403"
+   "error": "HTTP 404"
   }
  ],
  "items": [
@@ -77,53 +50,28 @@
    "doi": "10.1177/10781552261507625",
    "source": "Journal of oncology pharmacy practice : official publication of the International Society of Oncology Pharmacy Practitioners",
    "published": "2026-11-23",
-   "score": 12.72,
+   "score": 12.71,
    "niche": true,
    "summary": "ObjectiveTriple-negative breast cancer (TNBC) is a biologically heterogeneous breast cancer subtype characterized by the absence of estrogen receptor, progesterone receptor, and human epidermal growth factor receptor-2 (HER2), limiting targeted treatment options and contributing to poor clinical ou..."
   },
   {
-   "id": "r004",
+   "id": "r002",
    "section": "research",
    "area": "cancer",
-   "title": "Disruption of the TCF7L1-TLE3 Complex by Sulforaphane De-Represses TFRC Transcription to Overcome Chemoresistance Through Ferroptosis in Pancreatic Cancer.",
-   "url": "https://doi.org/10.1002/advs.78876",
-   "doi": "10.1002/advs.78876",
-   "source": "Advanced science (Weinheim, Baden-Wurttemberg, Germany)",
-   "authors": "Ce Liu, Bo Zhang, Pentao Liu",
-   "published": "2026-11-22",
-   "score": 12.1,
+   "title": "Synergistic enhancement ofnab-paclitaxel responses by PD-L1 immune checkpoint targeted photoactivable liposomes with altered cell-cycle progression and amplified immunogenic signaling.",
+   "url": "https://doi.org/10.1039/d6pm00480f",
+   "doi": "10.1039/d6pm00480f",
+   "source": "RSC pharmaceutics",
+   "published": "2026-11-20",
+   "score": 12.32,
    "niche": true,
    "alsoIn": [
-    "Advanced Science"
+    "Europe PMC: nano and phototherapy"
    ],
-   "summary": "Pancreatic ductal adenocarcinoma (PDAC) is among the most lethal malignancies. Inducing ferroptosis is a promising strategy to enhance chemotherapy and overcome resistance in PDAC. However, the transcriptional control of transferrin receptor 1 (TFRC, encoding the TFR1 protein), the iron gateway dri..."
+   "summary": "Nab-paclitaxel (nab-PTX) is approved in combination with atezolizumab, an α-PD-L1 immunotherapy, and carboplatin for metastatic non-squamous non-small-cell lung cancer, providing only a 4.7-month improvement in survival over chemotherapy alone. The clinical benefit of combining nab-PTX with PD-1/PD..."
   },
   {
    "id": "r009",
-   "section": "research",
-   "area": "cancer",
-   "title": "Multicenter Randomized Phase II Trial of Maintenance Systemic Therapy Versus Local Consolidative Therapy Plus Maintenance Systemic Therapy for Limited Metastatic Non-Small Cell Lung Cancer (NRG-LU002...",
-   "url": "https://doi.org/10.1200/JCO-25-02395",
-   "doi": "10.1200/JCO-25-02395",
-   "source": "Journal of clinical oncology : official journal of the American Society of Clinical Oncology",
-   "published": "2026-11-23",
-   "score": 10.22,
-   "summary": "First-line treatments for advanced non-small cell lung cancer (NSCLC) without actionable mutations include immunotherapy (IO) and/or chemotherapy. The NRG-LU002 randomized phase II trial evaluated the addition of local consolidative therapy (LCT)-radiation and/or surgery-to maintenance systemic the..."
-  },
-  {
-   "id": "r010",
-   "section": "research",
-   "area": "women",
-   "title": "Depression, anxiety, and stress during pregnancy are associated with inflammation and altered placental glucocorticoid receptor signaling.",
-   "url": "https://doi.org/10.1016/j.ajog.2026.11.020",
-   "doi": "10.1016/j.ajog.2026.11.020",
-   "source": "American journal of obstetrics and gynecology",
-   "published": "2026-11-23",
-   "score": 10.22,
-   "summary": "Depression, anxiety, and stress during pregnancy are common and are associated with adverse maternal, obstetric, and offspring outcomes, yet the biological pathways linking maternal mental health symptoms to placental function remain poorly understood. In nonpregnant individuals, systemic inflammat..."
-  },
-  {
-   "id": "r011",
    "section": "research",
    "area": "cancer",
    "title": "Pediatric Tumor Immune Organoids Preserve Cellular Compartments and are Suitable for Preclinical Modeling of Emerging Immunotherapies",
@@ -132,7 +80,7 @@
    "source": "Advanced Science",
    "authors": "Naiara Martínez-Vélez, Roel Polak, William Lee Wang",
    "published": "2026-11-22",
-   "score": 10.16,
+   "score": 10.15,
    "niche": true,
    "alsoIn": [
     "Advanced science (Weinheim, Baden-Wurttemberg, Germany)"
@@ -140,7 +88,7 @@
    "summary": "Therapeutic progress against pediatric solid tumors and brain tumors has stalled. Immunotherapies have shown promise, but additional optimizations are needed to overcome the immunosuppressive tumor microenvironment (TME). Cost‐effective, reliable models that recapitulate the TME of solid tumors cou..."
   },
   {
-   "id": "r012",
+   "id": "r010",
    "section": "research",
    "area": "mind",
    "title": "Advancing brain organoids from disease phenotypes to mechanisms and translation across developmental, infectious, and neurodegenerative diseases",
@@ -153,7 +101,7 @@
    "summary": "This review examines how human brain organoids are advancing studies of neurodevelopmental disorders, nervous system infections, and neurodegenerative diseases. It highlights emerging principles of cellular and temporal vulnerability, multicellular interactions, and disease progression and consider..."
   },
   {
-   "id": "r013",
+   "id": "r011",
    "section": "research",
    "area": "cancer",
    "title": "Intramuscular Olanzapine or Droperidol for Acute Behavioral Disturbance in Children and Adolescents: The PEAChY-M Randomized Clinical Trial.",
@@ -161,11 +109,25 @@
    "doi": "10.1001/jama.2026.25561",
    "source": "JAMA",
    "published": "2026-11-23",
-   "score": 9.8,
+   "score": 9.79,
    "summary": "Acute behavioral disturbance is a high-risk emergency department presentation. There is limited evidence for the comparative effectiveness of intramuscular sedative medications in children and adolescents, which may be required when there is imminent risk of serious harm due to agitation. To determ..."
   },
   {
-   "id": "r014",
+   "id": "r012",
+   "section": "research",
+   "area": "cancer",
+   "title": "The tumor suppressor role of the KRAS proto-oncogene in metastatic pancreatic cancer.",
+   "url": "https://doi.org/10.64898/2026.11.18.767567",
+   "doi": "10.64898/2026.11.18.767567",
+   "source": "Preprint",
+   "published": "2026-11-20",
+   "score": 9.57,
+   "preprint": true,
+   "niche": true,
+   "summary": "KRAS is the most frequently mutated proto-oncogene in human cancers. Progression to advanced disease is frequently associated with allelic imbalance of the KRAS locus with gain of the mutant allele and loss of the wild-type allele through clonal and sub-clonal loss of heterozygosity (LOH). While a..."
+  },
+  {
+   "id": "r013",
    "section": "research",
    "area": "cancer",
    "title": "Multicenter characterization of enterocolitis associated with BCMA-directed CAR T cell therapy",
@@ -174,14 +136,26 @@
    "source": "Nature Medicine",
    "authors": "Lekha Mikkilineni, Mark P. Hamilton, Alexandria M. Jensen",
    "published": "2026-11-19",
-   "score": 9.48,
+   "score": 9.47,
    "alsoIn": [
     "Nature medicine"
    ],
    "summary": "Immune effector cell-associated enterocolitis (IEC-EC) is a delayed toxicity of ciltacabtagene autoleucel. The US Multiple Myeloma Immunotherapy Consortium retrospectively adjudicated 54 suspected cases from 8 institutions: 41 were IEC-EC (31 confirmed by anti-camelid variable heavy-chain immunohis..."
   },
   {
-   "id": "r016",
+   "id": "r014",
+   "section": "research",
+   "area": "women",
+   "title": "Giants in obstetrics and gynecology: Yves Ville, MD: innovation, inquiry, and leadership in maternal-fetal medicine.",
+   "url": "https://doi.org/10.1016/j.ajog.2026.07.036",
+   "doi": "10.1016/j.ajog.2026.07.036",
+   "source": "American journal of obstetrics and gynecology",
+   "published": "2026-11-20",
+   "score": 9.45,
+   "summary": ""
+  },
+  {
+   "id": "r015",
    "section": "research",
    "area": "women",
    "title": "Declining Fertility Rates — The Role of Assisted Reproductive Technology",
@@ -190,14 +164,26 @@
    "source": "NEJM",
    "authors": "Elias M. Dahdouh, Jacques Balayla",
    "published": "2026-11-21",
-   "score": 9.32,
+   "score": 9.31,
    "alsoIn": [
     "The New England journal of medicine"
    ],
    "summary": "Some countries have expanded public support for fertility treatment as part of efforts to encourage childbearing. But population-level aims should not displace reproductive autonomy."
   },
   {
-   "id": "r018",
+   "id": "r016",
+   "section": "research",
+   "area": "cancer",
+   "title": "Clinical acquired resistance to mutant-selective PI3Kα inhibition.",
+   "url": "https://doi.org/10.1158/2159-8290.CD-26-0390",
+   "doi": "10.1158/2159-8290.CD-26-0390",
+   "source": "Cancer discovery",
+   "published": "2026-11-23",
+   "score": 9.29,
+   "summary": "Allosteric mutant-selective PI3Kα inhibitors have demonstrated promising efficacy and tolerability in clinical trials for PIK3CA-mutant HR-positive metastatic breast cancer (HR+MBC). To characterize the clinical landscape of acquired resistance to mutant-selective PI3Kα inhibitors, we analyzed seri..."
+  },
+  {
+   "id": "r017",
    "section": "research",
    "area": "cancer",
    "title": "[Department of Error] Department of Error",
@@ -205,23 +191,11 @@
    "doi": "10.1016/S0140-6736(26)02307-X",
    "source": "The Lancet (journal feed)",
    "published": "2026-11-21",
-   "score": 9.29,
+   "score": 9.28,
    "summary": "Davids MS, Eyre TA, Woyach JA, et al. Fixed-duration pirtobrutinib plus venetoclax–rituximab versus venetoclax–rituximab for patients with previously treated chronic lymphocytic leukaemia or small lymphocytic lymphoma (BRUIN CLL-322): an open-label, multicentre, randomised, controlled, phase 3 tria..."
   },
   {
-   "id": "r023",
-   "section": "research",
-   "area": "cancer",
-   "title": "Transcription factor subtype governs response and resistance to DLL3-directed T cell engagement in small cell lung cancer.",
-   "url": "https://doi.org/10.1016/j.ccell.2026.10.015",
-   "doi": "10.1016/j.ccell.2026.10.015",
-   "source": "Cancer cell",
-   "published": "2026-11-23",
-   "score": 9.16,
-   "summary": "Although small cell lung cancer (SCLC) comprises transcription factor (TF)-defined molecular subtypes (ASCL1, NEUROD1, and POU2F3), whether these predict therapeutic response or evolve under therapeutic pressure remains unclear. Tarlatamab, a DLL3 × CD3 bispecific T cell engager, has transformed SC..."
-  },
-  {
-   "id": "r024",
+   "id": "r022",
    "section": "research",
    "area": "cancer",
    "title": "Cell-free RNA in Urine May Detect Bladder Cancer and Distinguish Response",
@@ -229,39 +203,39 @@
    "doi": "10.1158/2159-8290.cd-rw2026-104",
    "source": "Cancer Discovery",
    "published": "2026-11-20",
-   "score": 9.08,
+   "score": 9.07,
    "alsoIn": [
     "Cancer discovery"
    ],
    "summary": "A noninvasive test that enables cancer detection at high specificity and sensitivity would be valuable for the screening and monitoring of many malignancies, particularly those located in regions otherwise difficult to sample. Liquid biopsy represents a tractable approach, wherein tumor-derived sig..."
   },
   {
-   "id": "r025",
+   "id": "r023",
    "section": "research",
    "area": "cancer",
-   "title": "Phosphatidylserine-mediated transcytosis enables tumor-selective penetration of nanomedicines across urine-tumor barrier for bladder cancer therapy.",
-   "url": "https://doi.org/10.1016/j.biomaterials.2026.124788",
-   "doi": "10.1016/j.biomaterials.2026.124788",
-   "source": "Biomaterials",
-   "published": "2026-11-23",
-   "score": 9.07,
-   "niche": true,
-   "summary": "Transcytosis has been strategically leveraged to promote the transport of therapeutic agents across diverse biological barriers. However, its potential remains largely untapped for overcoming the urine-tumor barrier in intravesical therapy, primarily due to mucus entrapment and insufficient tumor s..."
-  },
-  {
-   "id": "r027",
-   "section": "research",
-   "area": "cancer",
-   "title": "[Articles] Neoadjuvant short-course radiotherapy followed by camrelizumab and chemotherapy versus standard of care for locally advanced rectal cancer (UNION): a prespecified interim analysis of a mul...",
-   "url": "https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(26)00446-8/fulltext?rss=yes",
-   "doi": "10.1016/S1470-2045(26)00446-8",
-   "source": "Lancet Oncology (journal feed)",
-   "published": "2026-10-25",
+   "title": "4D-printed Ti<sub>3</sub>AlC<sub>2</sub> patches with annual ring mechanical behaviors for photothermal melanoma therapy.",
+   "url": "https://doi.org/10.1039/d6tb02066f",
+   "doi": "10.1039/d6tb02066f",
+   "source": "Europe PMC: nano and phototherapy",
+   "published": "2026-11-19",
    "score": 9.01,
-   "summary": "In this interim analysis, short-course radiotherapy followed by camrelizumab and CAPOX significantly improved 3-year event-free survival in patients with locally advanced rectal cancer, with a safety profile similar to long-course chemoradiotherapy followed by CAPOX. Comparison of this promising ne..."
+   "niche": true,
+   "summary": "To address the limitations of current patches in melanoma treatment-such as poor adaptation to dynamic skin surface mechanics and limited anti-tumor efficacy-this study designed and fabricated a 4D-printed, annual ring patch with adaptive conformity and efficient photothermal therapy capabilities...."
   },
   {
-   "id": "r028",
+   "id": "r024",
+   "section": "research",
+   "area": "cancer",
+   "title": "[Policy Review] Curative-intent management of de novo metastatic nasopharyngeal carcinoma: an evidence-based consensus guideline from the International Collaborating Oncology Organisations",
+   "url": "https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(26)00347-5/fulltext?rss=yes",
+   "doi": "10.1016/S1470-2045(26)00347-5",
+   "source": "Lancet Oncology (journal feed)",
+   "published": "2026-11-01",
+   "score": 8.97,
+   "summary": "Patients with de novo metastatic nasopharyngeal carcinoma were historically deemed incurable and treated with palliative intent. Emergence of potent systemic therapy in combination with local treatment for both locoregional and metastatic diseases has enabled long-term survival in some patients. Th..."
+  },
+  {
+   "id": "r025",
    "section": "research",
    "area": "mind",
    "title": "Brain extracellular matrix remodelling in health and neuropsychiatric disorders.",
@@ -269,11 +243,11 @@
    "doi": "10.1038/s41583-026-01102-9",
    "source": "Nature reviews. Neuroscience",
    "published": "2026-11-20",
-   "score": 8.98,
+   "score": 8.97,
    "summary": "The neural extracellular matrix (ECM) is increasingly recognized as an active regulator of brain function and an important contributor to the pathogenesis of neuropsychiatric disorders. This Review examines ECM organization, function and adaptive remodelling in the healthy brain and synthesizes evi..."
   },
   {
-   "id": "r030",
+   "id": "r026",
    "section": "research",
    "area": "cancer",
    "title": "Engineering Carbon Dots for Cancer Therapy: Active Delivery, Tumor Microenvironment Modulation, and Translational Challenges.",
@@ -281,12 +255,61 @@
    "doi": "10.2147/IJN.S649071",
    "source": "International journal of nanomedicine",
    "published": "2026-11-22",
-   "score": 8.91,
+   "score": 8.9,
    "niche": true,
    "summary": "The treatment of solid tumors has long been constrained by two major barriers: inefficient drug delivery and an immunosuppressive tumor microenvironment. Carbon dots (CDs) are a class of carbon-based nanomaterials encompassing several subtypes, including graphene quantum dots, carbon quantum dots,..."
   },
   {
+   "id": "r030",
+   "section": "research",
+   "area": "curiosity",
+   "title": "Copper—Iron—Selenide Nanocrystals With Composition‐Tunable Photothermal Response",
+   "url": "https://doi.org/10.1002/smll.76817",
+   "doi": "10.1002/smll.76817",
+   "source": "Small",
+   "authors": "Andrey Iodchik, Ahmed Alsadig, Pauline Becker",
+   "published": "2026-11-20",
+   "score": 8.82,
+   "niche": true,
+   "alsoIn": [
+    "Small (Weinheim an der Bergstrasse, Germany)",
+    "Europe PMC: nano and phototherapy"
+   ],
+   "summary": "Semiconductor nanocrystals (NCs) with tunable optical absorption and efficient photothermal conversion are emerging as key components in next‐generation theranostic platforms. However, rational control over the underlying heat‐generation mechanisms remains limited, particularly the interplay betwee..."
+  },
+  {
+   "id": "r031",
+   "section": "research",
+   "area": "cancer",
+   "title": "Oncogenic KRAS-MAPK signaling sustains a CD73 dependent therapeutic vulnerability in pancreatic cancer",
+   "url": "https://doi.org/10.21203/rs.3.rs-11627835/v1",
+   "doi": "10.21203/rs.3.rs-11627835/v1",
+   "source": "Preprint",
+   "published": "2026-11-20",
+   "score": 8.82,
+   "preprint": true,
+   "niche": true,
+   "summary": "Abstract Pancreatic ductal adenocarcinoma (PDAC) is predominantly driven by oncogenic KRAS signaling and sustained by a desmoplastic, immunosuppressive microenvironment limiting therapeutic response. CD73-mediated adenosine signaling supports this immune-excluded, tumor-supportive microenvironment...."
+  },
+  {
    "id": "r034",
+   "section": "research",
+   "area": "cancer",
+   "title": "Lipid nanoparticle-delivered Cas13b ribonucleoproteins targeting survivin overcome gemcitabine resistance in pancreatic cancer",
+   "url": "https://doi.org/10.64898/2026.11.18.767627",
+   "doi": "10.64898/2026.11.18.767627",
+   "source": "biorxiv (pharmacology and toxicology)",
+   "published": "2026-11-19",
+   "score": 8.71,
+   "preprint": true,
+   "niche": true,
+   "alsoIn": [
+    "Preprint"
+   ],
+   "summary": "Pancreatic ductal adenocarcinoma (PDAC) remains one of the deadliest cancers, largely due to its poor response to chemotherapy and the development of drug resistance. Survivin (BIRC5), an inhibitor of apoptosis frequently overexpressed in PDAC, contributes to tumor cell survival and gemcitabine res..."
+  },
+  {
+   "id": "r035",
    "section": "research",
    "area": "women",
    "title": "Lipid-related metabolic indices and in vitro fertilization outcomes in women with polycystic ovary syndrome: a retrospective cohort study with mediation analysis.",
@@ -294,25 +317,21 @@
    "doi": "10.1186/s13048-026-02246-z",
    "source": "Journal of ovarian research",
    "published": "2026-11-23",
-   "score": 8.72,
+   "score": 8.71,
    "summary": "To examine the association between composite lipid-related metabolic indices and embryological outcomes in women with polycystic ovary syndrome (PCOS) undergoing in vitro fertilization/intracytoplasmic sperm injection (IVF/ICSI), and to test whether body mass index (BMI) and serum total cholesterol..."
   },
   {
-   "id": "r039",
+   "id": "r041",
    "section": "research",
    "area": "cancer",
-   "title": "Glycans on Tumor‐Derived Extracellular Vesicles for Cancer Liquid Biopsy: From Signatures to Selective Capture",
-   "url": "https://doi.org/10.1002/smll.76699",
-   "doi": "10.1002/smll.76699",
-   "source": "Small",
-   "authors": "Elisa S. Breet, Peter ten Dijke, Agustin Enciso‐Martinez",
-   "published": "2026-11-20",
-   "score": 8.58,
-   "review": true,
-   "alsoIn": [
-    "Small (Weinheim an der Bergstrasse, Germany)"
-   ],
-   "summary": "Tumor-derived extracellular vesicles (tdEVs) are stable carriers of tumor-associated information in biofluids and have emerged as promising minimally invasive biomarkers for cancer detection and monitoring. While protein and nucleic acid cargo have been extensively characterized, the glycosylation..."
+   "title": "Spatial profiling of primary CRC and synchronous lung and liver metastases identifies a liver-specific stromal niche associated with immune exclusion.",
+   "url": "https://doi.org/10.1158/1078-0432.CCR-26-0498",
+   "doi": "10.1158/1078-0432.CCR-26-0498",
+   "source": "Clinical cancer research : an official journal of the American Association for Cancer Research",
+   "published": "2026-11-23",
+   "score": 8.55,
+   "niche": true,
+   "summary": "Liver metastases from microsatellite-stable colorectal cancer (MSS CRC) demonstrate profound resistance to immune checkpoint therapy (ICT) compared with extrahepatic disease, but the tissue-specific mechanisms remain unclear. We sought to determine how organ-specific microenvironments shape immune..."
   },
   {
    "id": "r045",
@@ -324,11 +343,44 @@
    "source": "Cancer Research",
    "authors": "Liangrui Pan, Chenchen Nie, 聂德林",
    "published": "2026-11-19",
-   "score": 8.36,
+   "score": 8.35,
    "alsoIn": [
     "Cancer research"
    ],
    "summary": "Accurate prediction of treatment response remains challenging in cancer. To facilitate response prediction in non-small cell lung cancer (NSCLC), we developed PRISM, an interpretable multiscale graph-learning framework for estimating treatment-specific objective response from pretreatment H&E whole..."
+  },
+  {
+   "id": "r047",
+   "section": "research",
+   "area": "cancer",
+   "title": "Metabolic and structural profiling of phosphaturic mesenchymal tumors by multimodal optical spectroscopy: a case study",
+   "url": "https://doi.org/10.1117/1.jbo.31.11.116502",
+   "doi": "10.1117/1.jbo.31.11.116502",
+   "source": "Journal of Biomedical Optics",
+   "authors": "Igor D. Romanishkin, Kirill Prokhorov, Daria V. Pominova",
+   "published": "2026-11-18",
+   "score": 8.3,
+   "niche": true,
+   "alsoIn": [
+    "Journal of biomedical optics",
+    "Europe PMC: nano and phototherapy"
+   ],
+   "summary": "Significance: Optical spectroscopy-based imaging is not commonly used for the diagnosis of phosphaturic mesenchymal tumor (PMT), which are rare neoplasms often associated with tumor-induced osteomalacia. Accurate diagnosis of PMT is clinically challenging due to their small size, variable localizat..."
+  },
+  {
+   "id": "r050",
+   "section": "research",
+   "area": "cancer",
+   "title": "Liquid biopsy and cancer therapy: current technology, diagnosis, prognosis, and cancer treatments.",
+   "url": "https://doi.org/10.1186/s43556-026-00670-7",
+   "doi": "10.1186/s43556-026-00670-7",
+   "source": "Molecular biomedicine",
+   "published": "2026-11-21",
+   "score": 8.29,
+   "alsoIn": [
+    "Europe PMC: nano and phototherapy"
+   ],
+   "summary": "Liquid biopsy offers repeated, minimally invasive molecular profiling of cancer, but its clinical value depends on the analyte, analytical platform, and intended use. In this Review, we evaluate current liquid-biopsy technologies for diagnosis, prognosis, and treatment guidance, with a particular e..."
   },
   {
    "id": "r060",
@@ -340,84 +392,11 @@
    "source": "Nature Reviews Cancer",
    "authors": "Chien-Han Kao, Ruey‐Hwa Chen",
    "published": "2026-11-19",
-   "score": 8.08,
+   "score": 8.07,
    "alsoIn": [
     "Nature reviews. Cancer"
    ],
    "summary": ""
-  },
-  {
-   "id": "r061",
-   "section": "research",
-   "area": "mind",
-   "title": "Cortical and meningeal neuroimmune interactions contribute to the generation of migraine headaches",
-   "url": "https://doi.org/10.1093/brain/awag413",
-   "doi": "10.1093/brain/awag413",
-   "source": "Brain",
-   "authors": "Şefik Evren Erdener, Ζeynep Kaya, Turgay Dalkara",
-   "published": "2026-11-20",
-   "score": 8.08,
-   "alsoIn": [
-    "Brain : a journal of neurology"
-   ],
-   "summary": "Migraine is a prevalent disorder that ranks as the second leading cause of disability among all diseases. Recent advancements have significantly enhanced our comprehension of its underlying pathophysiology. Growing evidence highlights complex neuroimmune signaling networks-particularly interactions..."
-  },
-  {
-   "id": "r062",
-   "section": "research",
-   "area": "mind",
-   "title": "Assortative mating can mask non-additive genetic contributions to individual differences",
-   "url": "https://doi.org/10.1038/s41380-026-03932-6",
-   "doi": "10.1038/s41380-026-03932-6",
-   "source": "Molecular Psychiatry",
-   "authors": "Giacomo Bignardi, Hans Fredrik Sunde, Susanne Bruins",
-   "published": "2026-11-19",
-   "score": 8.08,
-   "alsoIn": [
-    "Molecular psychiatry"
-   ],
-   "summary": "Assortative mating impacts trait variation and covariation among individuals within populations. Here, we examine how direct and indirect assortative mating influence additive and non-additive genetic contributions to individual differences. In an extended twin design, we show by simulations that c..."
-  },
-  {
-   "id": "r063",
-   "section": "research",
-   "area": "cancer",
-   "title": "A randomised phase II trial of neoadjuvant chemotherapy with or without concurrent aromatase inhibitor therapy in ER-positive breast cancer (ANZ1401 ELIMINATE)",
-   "url": "https://doi.org/10.1158/1078-0432.ccr-26-0501",
-   "doi": "10.1158/1078-0432.ccr-26-0501",
-   "source": "Clinical Cancer Research",
-   "authors": "Nicholas Murray, Luis E. Lara Gonzalez, Nicholas Wilcken",
-   "published": "2026-11-20",
-   "score": 8.04,
-   "alsoIn": [
-    "Clinical cancer research : an official journal of the American Association for Cancer Research"
-   ],
-   "summary": "PURPOSE: Patients with large estrogen receptor (ER)-positive, HER2-negative breast cancers have low pathologic complete response (pCR) rates with neoadjuvant chemotherapy. We aimed to determine the rate of tumor downstaging with concurrent neoadjuvant chemo-endocrine therapy (CET) compared with neo..."
-  },
-  {
-   "id": "r070",
-   "section": "research",
-   "area": "cancer",
-   "title": "Neutrophils are known by their neighbors in breast cancer",
-   "url": "https://www.cell.com/cancer-cell/fulltext/S1535-6108(26)00475-7?rss=yes",
-   "doi": "10.1016/j.ccell.2026.10.009",
-   "source": "Cancer Cell (journal feed)",
-   "published": "2026-11-09",
-   "score": 7.95,
-   "summary": "In this issue of Cancer Cell, Xu et al. combine large-scale computational pathology, spatial omics, and functional experiments to examine neutrophil organization in triple-negative breast tumors. They identify two neutrophil niches with different clinical associations: tumor-proximal neutrophils ar..."
-  },
-  {
-   "id": "r114",
-   "section": "research",
-   "area": "cancer",
-   "title": "Baseline Prognosis and Treatment Benefit From First-Line Immunotherapy Strategies: Target Trial Emulations Across Advanced Solid Tumors",
-   "url": "https://www.medrxiv.org/content/10.64898/2026.11.20.26368610v1",
-   "doi": "10.64898/2026.11.20.26368610",
-   "source": "medrxiv (oncology)",
-   "published": "2026-11-23",
-   "score": 6.72,
-   "preprint": true,
-   "summary": "Background In randomized trials, first-line immune checkpoint inhibitor (ICI)-based therapy has shown excess early mortality versus chemotherapy- or targeted therapy-containing regimens. ICI monotherapy is often chosen for frail patients because it is perceived as less toxic. Whether treatment bene..."
   },
   {
    "id": "n001",
@@ -427,7 +406,7 @@
    "url": "https://www.statnews.com/2026/11/23/caronilex-dual-targeting-car-t-overcomes-myeloma-resistance/?utm_campaign=rss",
    "source": "STAT",
    "published": "2026-11-23",
-   "score": 8.83,
+   "score": 8.8,
    "summary": "Relapse in multiple myeloma is common. A new type of CAR-T aims to avoid that by adding a target to evade the tumor."
   },
   {
@@ -438,20 +417,19 @@
    "url": "https://www.statnews.com/2026/11/23/genmab-cancer-drugs-oncology-clinical-trials/?utm_campaign=rss",
    "source": "STAT",
    "published": "2026-11-23",
-   "score": 8.03,
+   "score": 8,
    "summary": "The Danish biotech Genmab in on a roll with cancer drugs, with success in three late-stage clinical trials over the course of a month."
   },
   {
-   "id": "n004",
+   "id": "n003",
    "section": "news",
    "area": "other",
-   "title": "Study launched to improve consistency in diagnosis and treatment",
-   "url": "https://www.pancreaticcancer.org.uk/news-and-blogs/study-launched-to-improve-consistency-in-diagnosis-and-treatment/",
-   "source": "Pancreatic Cancer UK",
-   "published": "2026-11-23",
-   "score": 7.86,
-   "niche": true,
-   "summary": "The post Study launched to improve consistency in diagnosis and treatment appeared first on Pancreatic Cancer UK ."
+   "title": "STAT+: Sanofi to buy Insmed for $41B, picking up two lung disease medicines",
+   "url": "https://www.statnews.com/2026/11/24/sanofi-insmed-acquisition-dupixent-rare-disease-inflammation/?utm_campaign=rss",
+   "source": "STAT",
+   "published": "2026-11-24",
+   "score": 7.98,
+   "summary": "Sanofi is buying U.S. biotech Insmed for $41 billion, a megadeal that will give the French pharma company two new approved medicines."
   },
   {
    "id": "n005",
@@ -466,15 +444,16 @@
    "summary": "When Melissa Mirabile sat down at the kitchen table to tell her 14-year-old son that his father had pancreatic cancer, his response would stay with her forever. Her son lowered […] The post Melissa Mirabile: Turning Loss into a Legacy of Hope appeared first on Lustgarten Foundation: Pancreatic Canc..."
   },
   {
-   "id": "n007",
+   "id": "n006",
    "section": "news",
-   "area": "rare",
-   "title": "FDA approves BridgeBio rare disease drug for muscular dystrophy",
-   "url": "https://endpoints.news/fda-approves-bridgebio-rare-disease-drug-for-muscular-dystrophy/",
-   "source": "Endpoints News",
+   "area": "other",
+   "title": "Study launched to improve consistency in diagnosis and treatment",
+   "url": "https://www.pancreaticcancer.org.uk/news-and-blogs/study-launched-to-improve-consistency-in-diagnosis-and-treatment/",
+   "source": "Pancreatic Cancer UK",
    "published": "2026-11-23",
-   "score": 7.45,
-   "summary": "The FDA approved a new rare disease drug from BridgeBio Pharma, the first of an expected three on tap for the company. Regulators on Monday waved through BBP-418 to treat patients with limb-girdle muscular dystrophy ..."
+   "score": 7.85,
+   "niche": true,
+   "summary": "The post Study launched to improve consistency in diagnosis and treatment appeared first on Pancreatic Cancer UK ."
   },
   {
    "id": "n013",
@@ -484,7 +463,7 @@
    "url": "https://lustgarten.org/following-in-her-footsteps-jonathan-grammers-marathon-tribute-to-his-mom/",
    "source": "Lustgarten Foundation",
    "published": "2026-11-19",
-   "score": 7.04,
+   "score": 7.03,
    "niche": true,
    "summary": "Ten years ago, Jonathan Grammer stood at the finish line of a marathon, cheering as his mother, Cheryl, completed her first and only 26.2-mile race at age 50. It was […] The post Following in Her Footsteps: Jonathan Grammer’s Marathon Tribute to His Mom appeared first on Lustgarten Foundation: Panc..."
   },
@@ -496,7 +475,7 @@
    "url": "https://medicalxpress.com/news/2026-11-highlights-term-health-gestational-diabetes.html",
    "source": "Medical Xpress",
    "published": "2026-11-24",
-   "score": 6.92,
+   "score": 6.89,
    "alsoIn": [
     "Medical Xpress: obstetrics and gynaecology"
    ],
@@ -510,144 +489,143 @@
    "url": "https://www.nature.com/articles/s41392-026-03015-6",
    "source": "Nature news in medicine",
    "published": "2026-11-24",
-   "score": 6.88,
+   "score": 6.85,
    "summary": ""
   },
   {
    "id": "n016",
-   "section": "news",
-   "area": "mind",
-   "title": "Scientists discover a surprising link between weak bones and faster brain aging",
-   "url": "https://www.sciencedaily.com/releases/2026/11/261121221132.htm",
-   "source": "ScienceDaily: women's health",
-   "published": "2026-11-23",
-   "score": 6.87,
-   "summary": "Weakening bones may reveal more about brain health than scientists previously realized, with new research linking lower spinal bone density to faster cognitive decline and accelerated changes in the brain's white matter. The surprising connection suggests that routine medical scans could help uncov..."
-  },
-  {
-   "id": "n017",
-   "section": "news",
-   "area": "cancer",
-   "title": "A multi-analyte blood test takes aim at early pancreatic cancer",
-   "url": "https://www.nature.com/articles/s41571-026-01235-x",
-   "source": "Nature news in medicine",
-   "published": "2026-11-23",
-   "score": 6.83,
-   "niche": true,
-   "summary": ""
-  },
-  {
-   "id": "n018",
    "section": "news",
    "area": "other",
    "title": "Research Spotlight: Why This Awareness Month Feels Different",
    "url": "https://pancan.org/news/research-spotlight/why-this-awareness-month-feels-different/",
    "source": "PanCAN",
    "published": "2026-11-18",
-   "score": 6.78,
+   "score": 6.77,
    "niche": true,
    "summary": "Nov 18, 2026 - By Anna Berkenblit, MD, MMSc Editor’s note: The “Research Spotlight” series is written by Dr. Anna Berkenblit , PanCAN’s Chief Scientific and Medical Officer. Each month, Dr. Berkenblit shares her insights into the latest news and research in pancreatic cancer. Follow Dr. Berkenblit..."
   },
   {
-   "id": "n019",
+   "id": "n017",
    "section": "news",
    "area": "mind",
    "title": "Fatigue can persist even after a good recovery from stroke",
    "url": "https://medicalxpress.com/news/2026-11-fatigue-persist-good-recovery.html",
    "source": "Medical Xpress",
    "published": "2026-11-23",
-   "score": 6.48,
+   "score": 6.46,
    "alsoIn": [
     "The Conversation: health"
    ],
    "summary": "In a study of life after stroke, one survivor described doing less during the day if they planned to see friends that evening. When you're living with fatigue, even an ordinary day can take that kind of planning. Going out may mean deciding what else can wait until tomorrow."
   },
   {
-   "id": "n020",
+   "id": "n018",
    "section": "news",
    "area": "rare",
    "title": "NORD Designates 50th Rare Disease Center of Excellence – Expanding National Network to South Carolina",
    "url": "https://rarediseases.org/nord-designates-50th-rare-disease-center-of-excellence-expanding-national-network-to-south-carolina/",
    "source": "NORD",
    "published": "2026-11-23",
-   "score": 6.39,
+   "score": 6.38,
    "summary": "Medical University of South Carolina and Greenwood Genetic Center collaboration earns NORD® designation for South Carolina’s First Rare Disease Center of Excellence NORWELL, Mass., Nov. 23, 2026 — The … Continue reading \"NORD Designates 50th Rare Disease Center of Excellence – Expanding National Ne..."
   },
   {
-   "id": "n021",
+   "id": "n019",
    "section": "news",
-   "area": "cancer",
-   "title": "Roche wins second FDA approval for breast cancer pill, opening up bigger market",
-   "url": "https://endpoints.news/roche-wins-second-fda-approval-for-breast-cancer-pill-opening-up-bigger-market/",
-   "source": "Endpoints News",
-   "published": "2026-11-23",
-   "score": 6.36,
-   "summary": "Roche's breast cancer pill giredestrant won its second FDA approval on Monday, opening up a much larger potential market for the Swiss drugmaker in early-stage disease. The FDA approved the drug ..."
+   "area": "other",
+   "title": "The level of diabetes knowledge and associated factors among Chinese patients with type 2 diabetes in Hong Kong primary care settings",
+   "url": "https://www.nature.com/articles/s41598-026-82039-y",
+   "source": "Nature news in medicine",
+   "published": "2026-11-24",
+   "score": 6.21,
+   "summary": ""
   },
   {
-   "id": "n027",
+   "id": "n022",
+   "section": "news",
+   "area": "rare",
+   "title": "Capricor says it will challenge FDA's rejection of Duchenne therapy",
+   "url": "https://endpoints.news/capricor-says-it-will-challenge-fdas-rejection-of-duchenne-therapy/",
+   "source": "Endpoints News",
+   "published": "2026-11-23",
+   "score": 5.92,
+   "summary": "Capricor Therapeutics will appeal the FDA’s Friday rejection of its cell therapy for Duchenne muscular dystrophy, CEO Linda Marbán said Monday. During an interview with Endpoints News, Marbán disputed data integrity concerns raised by the ..."
+  },
+  {
+   "id": "n024",
    "section": "news",
    "area": "cancer",
    "title": "Rising or persistently high HPV levels may signal greater cervical precancer risk",
    "url": "https://medicalxpress.com/news/2026-11-persistently-high-hpv-greater-cervical.html",
    "source": "Medical Xpress: obstetrics and gynaecology",
    "published": "2026-11-23",
-   "score": 5.78,
+   "score": 5.75,
    "summary": "New research reveals that among women with persistent human papillomavirus (HPV) infection, increasing and persistently high viral load trends may indicate the presence of cervical cancer. The analysis is published in Cancer."
   },
   {
-   "id": "n032",
+   "id": "n026",
+   "section": "news",
+   "area": "rare",
+   "title": "Lilly buys Huntington's startup LoQus23 for up to $725M",
+   "url": "https://endpoints.news/lilly-buys-huntingtons-startup-loqus23-for-up-to-725m/",
+   "source": "Endpoints News",
+   "published": "2026-11-23",
+   "score": 5.6,
+   "summary": "Eli Lilly is headed into Thanksgiving week with an extension to its 2026 shopping bonanza, this time by snapping up a UK-based Huntington's disease biotech set to enter the clinic in the coming months. The ..."
+  },
+  {
+   "id": "n030",
    "section": "news",
    "area": "rare",
    "title": "European CF Awareness Day",
    "url": "https://www.eurordis.org/european-cf-awareness-day/",
    "source": "EURORDIS",
    "published": "2026-11-18",
-   "score": 5.24,
+   "score": 5.23,
    "summary": "The post European CF Awareness Day appeared first on EURORDIS-Rare Diseases Europe ."
   },
   {
-   "id": "n040",
+   "id": "n037",
    "section": "news",
    "area": "other",
    "title": "EU recommendations for 2026/2027 seasonal flu vaccine composition",
    "url": "https://www.ema.europa.eu/en/news/eu-recommendations-2026-2027-seasonal-flu-vaccine-composition",
    "source": "EMA news",
    "published": "2026-11-17",
-   "score": 4.77,
+   "score": 4.76,
    "summary": "The recommendations were updated and published on the following dates: 17 November 2026: to include a recommendation for mRNA (nucleic acid) influenza vaccines. Annex I…"
   },
   {
-   "id": "n043",
+   "id": "n040",
    "section": "news",
    "area": "mind",
    "title": "Study suggests cognitive skills shape how young children learn new words from screen versus paper books",
    "url": "https://www.psypost.org/study-suggests-cognitive-skills-shape-how-young-children-learn-new-words-from-screen-versus-paper-books/",
    "source": "PsyPost",
    "published": "2026-11-23",
-   "score": 4.45,
+   "score": 4.42,
    "summary": "Reading together on paper or an iPad taught preschoolers new words about equally well on average, new research suggests. Yet how well children comprehended words from a screen hinged on their attention, memory, and self-control skills."
   },
   {
-   "id": "n046",
+   "id": "n043",
    "section": "news",
    "area": "mind",
    "title": "LSD may counter some aging-related brain changes, rodent and cell experiments suggest",
    "url": "https://www.psypost.org/lsd-may-counter-some-aging-related-brain-changes-rodent-and-cell-experiments-suggest/",
    "source": "PsyPost",
    "published": "2026-11-23",
-   "score": 4.31,
+   "score": 4.29,
    "summary": "Scientists first tested whether LSD makes brain cells look younger. That hypothesis failed, yet they found something unexpected: LSD pushed rodent brain genes opposite to human aging and blunted Alzheimer's-related cell damage in lab dishes."
   },
   {
-   "id": "n069",
+   "id": "n066",
    "section": "news",
    "area": "women",
    "title": "28.8% of postpartum women report needing mental health care in survey spanning 16 states",
    "url": "https://medicalxpress.com/news/2026-11-postpartum-women-mental-health-survey.html",
    "source": "Medical Xpress: obstetrics and gynaecology",
    "published": "2026-11-22",
-   "score": 3.26,
+   "score": 3.24,
    "seenBefore": "2026-11-23 postpartum-mental-health-need",
    "summary": "Mental health conditions are the leading cause of pregnancy-related death in the United States. Yet almost all these deaths are considered preventable if women are effectively screened during and after giving birth and then connected with needed care, according to CDC data from 2017–2019."
   },
@@ -655,19 +633,22 @@
    "id": "t001",
    "section": "trials",
    "area": "cancer",
-   "title": "A Study to Compare the Efficacy and Safety of YL201 With Standard Chemotherapy in Patients With Metastatic Pancreatic Cancer After Failure of Gemcitabine-Based Systemic Chemotherapy",
-   "url": "https://clinicaltrials.gov/study/NCT07803783",
-   "nct": "NCT07803783",
+   "title": "Delayed Adjuvant Systemic Therapy Versus Standard of Care (Observation Without Adjuvant Therapy) in Patients Ineligible for Timely Adjuvant Therapy After Resection of Pancreatic Cancer",
+   "url": "https://clinicaltrials.gov/study/NCT07953153",
+   "nct": "NCT07953153",
    "source": "ClinicalTrials.gov: pancreatic cancer",
    "published": "2026-11-23",
-   "score": 11.6,
+   "score": 11.53,
    "phase": "3",
-   "status": "recruiting",
-   "sponsor": "MediLink Therapeutics (Suzhou) Co., Ltd.",
-   "change": "updated",
-   "conditions": "Metastatic Pancreatic Cancer, Pancreatic Ductal Adenocarcinoma (PDAC)",
+   "status": "not yet recruiting",
+   "sponsor": "Vastra Gotaland Region",
+   "change": "new",
+   "conditions": "Pancreatic Cancer Resectable, Oncological Outcomes",
    "niche": true,
-   "summary": "The purpose of this study is to evaluate the safety and efficacy of an investigational B7-H3 antibody drug-conjugate administered as monotherapy, compared with standard of care (SOC) chemotherapy in metastatic pancreatic cancer patients who have failed prior Gemcitabine-based systemic therapy."
+   "alsoIn": [
+    "ClinicalTrials.gov: cancer immunotherapy phase 3"
+   ],
+   "summary": "In this randomized clinical trial, the investigators will study whether the participants with pancreatic cancer can benefit from starting chemotherapy later than usual after surgery. The investigators will compare two groups of patients: Patients who start adjuvant chemotherapy between 13 and 24 we..."
   },
   {
    "id": "t004",
@@ -678,7 +659,7 @@
    "nct": "NCT07107594",
    "source": "ClinicalTrials.gov: nanoparticles and phototherapy",
    "published": "2026-11-23",
-   "score": 10.22,
+   "score": 10.21,
    "phase": "n/a",
    "status": "recruiting",
    "sponsor": "Hospital Clinic of Barcelona",
@@ -695,7 +676,7 @@
    "nct": "NCT00018057",
    "source": "ClinicalTrials.gov: depression and psychosis",
    "published": "2026-11-23",
-   "score": 8.22,
+   "score": 8.21,
    "phase": "2",
    "status": "recruiting",
    "sponsor": "National Institute of Mental Health (NIMH)",
@@ -707,18 +688,18 @@
    "id": "t008",
    "section": "trials",
    "area": "cancer",
-   "title": "Sacituzumab Tirumotecan (MK-2870) in Combination With Pembrolizumab Versus Pembrolizumab Alone in Metastatic Non-small Cell Lung Cancer (NSCLC) With Programmed Cell Death Ligand 1 (PD-L1) Tumor Propo...",
-   "url": "https://clinicaltrials.gov/study/NCT06170788",
-   "nct": "NCT06170788",
-   "source": "ClinicalTrials.gov: neurodegeneration",
+   "title": "Measuring if Immunotherapy Plus Chemotherapy is Better Than Chemotherapy Alone for Patients With Aggressive Poorly Differentiated Sarcomas",
+   "url": "https://clinicaltrials.gov/study/NCT06422806",
+   "nct": "NCT06422806",
+   "source": "ClinicalTrials.gov: cancer immunotherapy phase 3",
    "published": "2026-11-23",
-   "score": 8.22,
+   "score": 8.21,
    "phase": "3",
    "status": "recruiting",
-   "sponsor": "Merck Sharp & Dohme LLC",
+   "sponsor": "National Cancer Institute (NCI)",
    "change": "updated",
-   "conditions": "Non-small Cell Lung Cancer (NSCLC)",
-   "summary": "The primary objective of the study is to compare sacituzumab tirumotecan combined with pembrolizumab to pembrolizumab alone with respect to overall survival (OS). The primary hypothesis is that the combination of sacituzumab tirumotecan and pembrolizumab is superior to pembrolizumab alone with resp..."
+   "conditions": "Metastatic Dedifferentiated Liposarcoma, Metastatic Undifferentiated Pleomorphic Sarcoma, Stage III Soft Tissue Sarcoma of the Trunk and Extremities AJCC v8, Stage IV Soft Tissue Sarcoma of the Trunk and Extremities AJCC v8",
+   "summary": "This phase III trial compares the effect of immunotherapy (pembrolizumab) plus chemotherapy (doxorubicin) to chemotherapy (doxorubicin) alone in treating patients with dedifferentiated liposarcoma (DDLPS), undifferentiated pleomorphic sarcoma (UPS) or a related poorly differentiated sarcoma that ha..."
   },
   {
    "id": "m001",
@@ -751,13 +732,13 @@
    "id": "m005",
    "section": "methods",
    "area": "other",
-   "title": "Multiplexed single-cell reduced representation bisulfite sequencing for genome-wide DNA methylation profiling",
-   "url": "https://doi.org/10.1038/s41596-026-01452-9",
-   "doi": "10.1038/s41596-026-01452-9",
+   "title": "Optimized oviductal injection protocol for i-GONAD using electric microinjectors",
+   "url": "https://doi.org/10.1038/s41596-026-01457-4",
+   "doi": "10.1038/s41596-026-01457-4",
    "source": "Nature Protocols",
-   "authors": "Fang Liu, Jian Huang, Yanhua Zheng",
-   "published": "2026-10-15",
-   "score": 8.17,
+   "authors": "Masato Ohtsuka, Rico Miyagasako, 駿 浅田",
+   "published": "2026-11-20",
+   "score": 7.99,
    "summary": ""
   },
   {
@@ -778,109 +759,97 @@
    "id": "c001",
    "section": "chatter",
    "area": "mind",
-   "title": "\"Bumble bee cognition\" \"Bees provide clues about the origins of intelligence\" Chittka and Heinze, 2026 https://doi.org/10.1126/science.aek1724 #neuroscience #b...",
-   "url": "https://mathstodon.xyz/@albertcardona/117667913237153791",
-   "source": "Mastodon #neuroscience",
-   "published": "2026-11-23",
-   "score": 8.15,
-   "signal": "0 favourites and 4 boosts on Mastodon (#neuroscience)",
-   "summary": "\"Bumble bee cognition\" \"Bees provide clues about the origins of intelligence\" Chittka and Heinze, 2026 https://doi.org/10.1126/science.aek1724 #neuroscience #bumblebees #intelligence"
-  },
-  {
-   "id": "c002",
-   "section": "chatter",
-   "area": "mind",
    "title": "#Computational #NeuroScience #Paper #NewPaper \"You've done WHAT? Seriously?? ANOTHER neuron model???\" \"Mmh...\" \"Don't you think there are enough!?\" \"Mmh, yes,...",
    "url": "https://fediscience.org/@jkanev/117667551071567179",
    "source": "Mastodon #neuroscience",
    "published": "2026-11-23",
-   "score": 7.3,
+   "score": 7.27,
    "signal": "4 favourites and 2 boosts on Mastodon (#neuroscience)",
    "summary": "#Computational #NeuroScience #Paper #NewPaper \"You've done WHAT? Seriously?? ANOTHER neuron model???\" \"Mmh...\" \"Don't you think there are enough!?\" \"Mmh, yes, but this is a really nice one. Different from the others. Have a look:\" • https://rdcu.be/6eUxcbJdk4pa • https://link.springer.com/article/1..."
   },
   {
-   "id": "c003",
+   "id": "c002",
    "section": "chatter",
    "area": "mind",
    "title": "What existing psychological concepts are there to describe the phenomenon of wanting to relieve yourself from thinking (using brain power) that seems to drive...",
    "url": "https://radikal.social/@malte/117666645825082702",
    "source": "Mastodon #psychology",
    "published": "2026-11-23",
-   "score": 5.78,
+   "score": 5.75,
    "signal": "1 favourites and 6 boosts on Mastodon (#psychology)",
    "summary": "What existing psychological concepts are there to describe the phenomenon of wanting to relieve yourself from thinking (using brain power) that seems to drive a lot of AI use? I want to put some thinking into this (use some brain power) so throw some good ideas at me. #Psychology #PsychicRAM #Worki..."
   },
   {
-   "id": "c004",
-   "section": "chatter",
-   "area": "cancer",
-   "title": "New evidence the widely used pesticide Roundup - with key ingredient glyphosate - may be linked to increases in cancer, esp lymphatic & blood. https://wapo.st/...",
-   "url": "https://mastodon.world/@obrien_kat/117664758844172082",
-   "source": "Mastodon #cancer",
-   "published": "2026-11-23",
-   "score": 5.63,
-   "signal": "1 favourites and 6 boosts on Mastodon (#cancer)",
-   "summary": "New evidence the widely used pesticide Roundup - with key ingredient glyphosate - may be linked to increases in cancer, esp lymphatic & blood. https://wapo.st/4zFPcLg Iowa researchers found higher rates of cancer, esp non-Hodgkin’s lymphoma, in high-spray counties. https://iowacapitaldispatch.com/2..."
-  },
-  {
-   "id": "c005",
+   "id": "c003",
    "section": "chatter",
    "area": "cancer",
    "title": "Federal scientists flag new cancer concerns with common herbicide - The Washington Post https://archive.ph/t47Aj #Roundup #glyphosate #Herbicides #Pesticides #...",
    "url": "https://masto.ai/@Miro_Collas/117667114791643732",
    "source": "Mastodon #cancer",
    "published": "2026-11-23",
-   "score": 5.51,
+   "score": 5.48,
    "signal": "0 favourites and 6 boosts on Mastodon (#cancer)",
    "summary": "Federal scientists flag new cancer concerns with common herbicide - The Washington Post https://archive.ph/t47Aj #Roundup #glyphosate #Herbicides #Pesticides #Cancer #Health"
   },
   {
-   "id": "c006",
-   "section": "chatter",
-   "area": "cancer",
-   "title": "When a young researcher suggested cells trade resources through microscopic pipelines, many colleagues refused to believe it. Two decades later, these tunnelin...",
-   "url": "https://mstdn.science/@KnowableMag/117666542207589219",
-   "source": "Mastodon #oncology",
-   "published": "2026-11-23",
-   "score": 5.4,
-   "signal": "1 favourites and 5 boosts on Mastodon (#oncology)",
-   "summary": "When a young researcher suggested cells trade resources through microscopic pipelines, many colleagues refused to believe it. Two decades later, these tunneling nanotubes are being studied for roles in cancer and other diseases. 📰 Tiny, threadlike connections act as ‘skyways’ between cells ✍️ Sara..."
-  },
-  {
-   "id": "c007",
+   "id": "c004",
    "section": "chatter",
    "area": "cancer",
    "title": "Iowa has 2nd highest cancer rate in U.S. & is one of 3 states where rate is rising. https://www.iaenvironment.org/our-work/cancer-and-environmental-risk-factor...",
    "url": "https://mastodon.world/@obrien_kat/117664776930557261",
    "source": "Mastodon #cancer",
    "published": "2026-11-23",
-   "score": 5.2,
+   "score": 5.18,
    "signal": "2 favourites and 5 boosts on Mastodon (#cancer)",
    "summary": "Iowa has 2nd highest cancer rate in U.S. & is one of 3 states where rate is rising. https://www.iaenvironment.org/our-work/cancer-and-environmental-risk-factors-in-iowa/ And today or tomorrow, the military plans to detonate tons of highly toxic lead azide, which will send a plume of toxic lead dust..."
   },
   {
-   "id": "c008",
+   "id": "c005",
    "section": "chatter",
    "area": "mind",
    "title": "I Stood At The Edge Of The Algorithm-Driven Incel Pipeline, And It Was Terrifying. While I realized what was going on, I almost did not. #psychology #social-me...",
    "url": "https://faithcollapsing.com/@StevenSaus/117667059150773798",
    "source": "Mastodon #psychology",
    "published": "2026-11-23",
-   "score": 5.12,
+   "score": 5.09,
    "signal": "2 favourites and 7 boosts on Mastodon (#psychology)",
    "summary": "I Stood At The Edge Of The Algorithm-Driven Incel Pipeline, And It Was Terrifying. While I realized what was going on, I almost did not. #psychology #social-media #sociology #feminism #sexism #technology https://www.ideatrash.net/2026/11/i-stood-at-the-edge-of-the-algorithm-driven-incel-pipeline-an..."
   },
   {
-   "id": "c009",
+   "id": "c006",
    "section": "chatter",
    "area": "mind",
    "title": "Para quienes me pidieron la nota de divulgación (o de qué diantres se trata eso?), aquí está el link: https://www.gub.uy/ministerio-educacion-cultura/comunicac...",
    "url": "https://mastodon.uy/@dprieto/117666035895606299",
    "source": "Mastodon #neuroscience",
    "published": "2026-11-23",
-   "score": 4.94,
+   "score": 4.91,
    "signal": "3 favourites and 4 boosts on Mastodon (#neuroscience)",
    "summary": "Para quienes me pidieron la nota de divulgación (o de qué diantres se trata eso?), aquí está el link: https://www.gub.uy/ministerio-educacion-cultura/comunicacion/noticias/articulo-del-instituto-clemente-estable-publicado-academia-nacional-ciencias Trabajo uruguayo sobre reparación de la médula esp..."
+  },
+  {
+   "id": "c007",
+   "section": "chatter",
+   "area": "mind",
+   "title": "Everybody's got their particular Teddy Bears, comfort objects or rituals that we hold close in a harsh world. Trans folks are no different, and this week on #S...",
+   "url": "https://hachyderm.io/@Impossible_PhD/117665966391170809",
+   "source": "Mastodon #psychology",
+   "published": "2026-11-23",
+   "score": 4.81,
+   "signal": "14 favourites and 8 boosts on Mastodon (#psychology)",
+   "summary": "Everybody's got their particular Teddy Bears, comfort objects or rituals that we hold close in a harsh world. Trans folks are no different, and this week on #StainedGlassWoman we're diving into what's probably one of our biggest Teddy Bears. #Trans #MtF #Enby #FtM #Psychology https://stainedglasswo..."
+  },
+  {
+   "id": "c008",
+   "section": "chatter",
+   "area": "mind",
+   "title": "clear day I keep trying to untangle my thoughts #dailyhaikuprompt - clear day #haiku #poem #poetry #writing #writingcommunity #poetrycommunity #senryu #autumn...",
+   "url": "https://mastodon.nl/@MarjoleinRotsteeg/117661339871418072",
+   "source": "Mastodon #psychology",
+   "published": "2026-11-22",
+   "score": 4.57,
+   "signal": "4 favourites and 9 boosts on Mastodon (#psychology)",
+   "summary": "clear day I keep trying to untangle my thoughts #dailyhaikuprompt - clear day #haiku #poem #poetry #writing #writingcommunity #poetrycommunity #senryu #autumn #fall #winter #light #psychology @dailyhaikuprompt"
   },
   {
    "id": "j001",
@@ -930,7 +899,7 @@
    "url": "https://masto.ai/@PaquitoBernard/117507157585523125",
    "source": "Mastodon #postdoc",
    "published": "2026-10-26",
-   "score": 4.81,
+   "score": 4.8,
    "signal": "0 favourites and 2 boosts on Mastodon (#postdoc)",
    "summary": "If you want apply for a 12-month postdoc in France, I am working on solutions to protect the sleep during heatwaves (e.g., CoolSleep : https://cites-irset.fr/en/project/coolsleep-countering-the-effects-of-summer-heat-on-sleep-in-social-housing-tenants-in-france/). Member of an amazing research team..."
   },
@@ -942,7 +911,7 @@
    "url": "https://theconversation.com/boots-is-moving-into-medical-cannabis-will-pharmacies-make-it-mainstream-296881",
    "source": "The Conversation: health",
    "published": "2026-11-23",
-   "score": 5.73,
+   "score": 5.71,
    "summary": "Boots has launched a private medical cannabis service, but the evidence is strong for only a few conditions and NHS prescriptions remain rare."
   },
   {
@@ -953,63 +922,74 @@
    "url": "https://www.sciencenews.org/article/riemann-hypothesis-solved-math-ai",
    "source": "Science News",
    "published": "2026-11-23",
-   "score": 5.34,
+   "score": 5.33,
    "summary": "The proof apparently settles a 167-year-old puzzle related to prime numbers, thanks to a human mathematician working with AI."
   },
   {
    "id": "u003",
    "section": "curiosity",
    "area": "curiosity",
-   "title": "The Incredible, Elegant DNA Repair System Makes Gene Editing Work",
-   "url": "https://www.quantamagazine.org/the-incredible-elegant-dna-repair-system-makes-gene-editing-work-20261123/",
-   "source": "Quanta Magazine",
-   "published": "2026-11-23",
-   "score": 5.26,
-   "summary": "Genetic information is sturdy, but its physical structure is sensitive. Natural tools for repairing a cell’s thousands of daily injuries are fundamental to gene-editing technologies. The post The Incredible, Elegant DNA Repair System Makes Gene Editing Work first appeared on Quanta Magazine"
-  },
-  {
-   "id": "u004",
-   "section": "curiosity",
-   "area": "mind",
-   "title": "Resistance training could help boost brain health and confidence in older adults",
-   "url": "https://theconversation.com/resistance-training-could-help-boost-brain-health-and-confidence-in-older-adults-297007",
-   "source": "The Conversation: health",
-   "published": "2026-11-20",
-   "score": 5.26,
-   "summary": "Lifting weights takes coordination as well as strength. A trial in older adults tested whether training could also improve thinking and memory."
-  },
-  {
-   "id": "u005",
-   "section": "curiosity",
-   "area": "curiosity",
    "title": "The notion of ‘positive masculinity’ is dividing the male studies field",
    "url": "https://www.sciencenews.org/article/positive-masculinity-male-studies-field",
    "source": "Science News",
    "published": "2026-11-23",
-   "score": 5.26,
+   "score": 5.25,
    "summary": "Masculinity has long been seen as a problem to be solved. Researchers disagree on how to flip the script so as to help men improve well-being."
   },
   {
-   "id": "u006",
+   "id": "u004",
    "section": "curiosity",
    "area": "curiosity",
    "title": "New Year’s resolutions: starting small today could work better than waiting until January",
    "url": "https://theconversation.com/new-years-resolutions-starting-small-today-could-work-better-than-waiting-until-january-296746",
    "source": "The Conversation: health",
    "published": "2026-11-23",
-   "score": 5.25,
+   "score": 5.23,
    "summary": "Big resolutions often fizzle by February. Small changes started now, such as a few minutes of activity, are easier to keep up."
   },
   {
-   "id": "u007",
+   "id": "u005",
    "section": "curiosity",
    "area": "curiosity",
    "title": "‘Mitt & Ted’ recounts how a political odd couple changed U.S. health care",
    "url": "https://www.sciencenews.org/article/mitt-and-ted-healthcare-podcast",
    "source": "Science News",
    "published": "2026-11-23",
-   "score": 5.23,
+   "score": 5.22,
    "summary": "The newest season of The Big Dig podcast tells of how Mitt Romney and Ted Kennedy briefly joined forces to reform healthcare laws."
+  },
+  {
+   "id": "u006",
+   "section": "curiosity",
+   "area": "curiosity",
+   "title": "Could blowing your nose make cold symptoms worse?",
+   "url": "https://theconversation.com/could-blowing-your-nose-make-cold-symptoms-worse-296745",
+   "source": "The Conversation: health",
+   "published": "2026-11-23",
+   "score": 5.16,
+   "summary": "If you do have to blow your nose, it’s best to blow one nostril at a time."
+  },
+  {
+   "id": "u011",
+   "section": "curiosity",
+   "area": "mind",
+   "title": "The brain benefits of letting children do things on their own",
+   "url": "https://www.newscientist.com/article/2600239-the-brain-benefits-of-letting-children-do-things-on-their-own/?utm_campaign=RSS|NSNS&utm_content=home&utm_medium=RSS&utm_source=NSNS",
+   "source": "New Scientist",
+   "published": "2026-11-23",
+   "score": 3.94,
+   "summary": "Giving children more freedom feels risky, but research on independent play has motivated me to let my daughter go, says columnist Helen Thomson"
+  },
+  {
+   "id": "u012",
+   "section": "curiosity",
+   "area": "curiosity",
+   "title": "What is the Riemann hypothesis and why is its solution so monumental?",
+   "url": "https://www.newscientist.com/article/2600226-what-is-the-riemann-hypothesis-and-why-is-its-solution-so-monumental/?utm_campaign=RSS|NSNS&utm_content=home&utm_medium=RSS&utm_source=NSNS",
+   "source": "New Scientist",
+   "published": "2026-11-20",
+   "score": 2.21,
+   "summary": "It has been called the hardest problem in mathematics, and now through a combination of human ingenuity and relentlessness, and the computational power of AI, the Riemann hypothesis may have finally been solved"
   }
  ]
 }
