@@ -1,0 +1,722 @@
+{
+  "date": "2026-11-25",
+  "number": 10,
+  "title": "A gut toxicity of myeloma CAR T, a null sepsis trial, and one meaning across 21 languages",
+  "dek": "A multicentre review defines a delayed, sometimes fatal gut injury after one myeloma CAR T product. Ambulance antibiotics did not lower sepsis deaths. Brain scans suggest shared meaning across 21 languages.",
+  "palette": "pine-copper",
+  "tldr": [
+    {
+      "text": "Of 1,308 people given the myeloma CAR T product cilta-cel, 41 had confirmed delayed gut injury (3.0 percent). 17 died with it active.",
+      "area": "cancer"
+    },
+    {
+      "text": "In 2,048 adults with suspected sepsis, a ceftriaxone shot in the ambulance did not lower hospital deaths: 18.0 percent versus 18.4 percent with placebo.",
+      "area": "other"
+    },
+    {
+      "text": "Models trained on brain scans from some languages predicted brain activity in unseen languages, pointing to a shared meaning component across 21 languages.",
+      "area": "mind"
+    },
+    {
+      "text": "In 32 people with PIK3CA-mutant breast cancer, about 70 percent gained new PI3K pathway changes on mutant-selective drugs.",
+      "area": "cancer"
+    },
+    {
+      "text": "A new pipeline made 135 pediatric tumour organoids and 20 new cell lines, with over 3,000 vials ready to share with other labs.",
+      "area": "rare"
+    }
+  ],
+  "top": [
+    {
+      "id": "cilta-cel-enterocolitis",
+      "area": "cancer",
+      "title": "A delayed gut injury after myeloma CAR T therapy is rare but often severe",
+      "gist": "Reviewing 1,308 people treated with cilta-cel, 8 centres confirmed 41 cases of delayed enterocolitis (3.0 percent). Most had severe diarrhoea, and 17 of the 41 died with the condition still active.",
+      "evidence": {
+        "type": "human-observational",
+        "n": "54 suspected cases, 41 confirmed",
+        "limitation": "Retrospective review of cases that clinicians reported. Treatment groups were very small, so the better outcome with combined therapy is only a signal."
+      },
+      "why": "This defines a late toxicity that did not match earlier safety reports, so teams can look for it early. Onset came a median of 75 days after infusion, long after the usual early side effects.",
+      "details": [
+        "The US Multiple Myeloma Immunotherapy Consortium reviewed 54 suspected cases from 8 centres. 41 were confirmed: 31 by a stain that detects the camelid antibody fragment in the CAR, and 10 as probable. The 3.0 percent figure (95% CI 2.1 to 4.1) counts 39 cases among 1,308 recipients through September 2025.",
+        "Grade 3 or higher diarrhoea occurred in 85 percent of those with diarrhoea, and 73 percent (30 of 41) needed nutrition by vein. Duodenal biopsies showed flattened villi and a dense infiltrate of cytotoxic T cells. A single dominant T cell clone was found in 13 of 17 tested.",
+        "Delayed nerve toxicity occurred alongside it in 41 percent (17 of 41). At last follow-up 13 had resolved, 11 had ongoing symptoms and 17 had died with active disease. Combined biologic and T cell directed therapy gave the highest resolution (6 of 11)."
+      ],
+      "didNotShow": "It did not show what causes the injury or which treatment works best, because the groups were small and not randomised.",
+      "terms": [
+        {
+          "term": "Enterocolitis",
+          "def": "Inflammation of the small intestine and the colon, which causes diarrhoea and can stop the gut absorbing food."
+        },
+        {
+          "term": "Cilta-cel",
+          "def": "Short name for ciltacabtagene autoleucel, an engineered immune cell therapy for multiple myeloma that targets the BCMA protein."
+        },
+        {
+          "term": "Cumulative incidence",
+          "def": "The share of treated people who develop a condition over a set period, counting those who die of other causes."
+        },
+        {
+          "term": "T cell clone",
+          "def": "A group of immune cells that all descend from one cell and carry the same receptor."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nature Medicine: enterocolitis after BCMA CAR T therapy",
+          "url": "https://doi.org/10.1038/s41591-026-04783-y",
+          "doi": "10.1038/s41591-026-04783-y"
+        }
+      ],
+      "forYou": "Relevant to immune toxicity of cell therapies."
+    },
+    {
+      "id": "pitstop-prehospital-antibiotics",
+      "area": "other",
+      "title": "Antibiotics given in the ambulance did not lower sepsis deaths in a large trial",
+      "gist": "In 2,048 adults with suspected sepsis, a ceftriaxone shot in the ambulance gave 18.0 percent hospital mortality versus 18.4 percent with placebo (risk ratio 0.97, 95% CI 0.81 to 1.17).",
+      "evidence": {
+        "type": "human-rct",
+        "n": "2,048 analysed (1,026 versus 1,022)",
+        "limitation": "In Ontario, 4 paramedic services. Nearly everyone also got hospital antibiotics, so it tests earlier timing in one system only."
+      },
+      "why": "Early antibiotics are widely thought to save lives in sepsis. This randomised, placebo-controlled test of giving them before hospital arrival finds no benefit in deaths, and all 17 secondary outcomes were similar.",
+      "details": [
+        "Adults with suspected infection, fever of 38.0 C or more and low blood pressure (systolic below 100 mm Hg) were enrolled between March 2020 and August 2025. They received 1 g of intramuscular ceftriaxone or placebo in the ambulance. The trial also randomised fluid strategy, which is reported separately.",
+        "Study drug was given a mean of about 37 to 39 minutes after paramedics reached the patient. Most people in both groups (about 92 percent of those with data) later got antibiotics in hospital, a mean of about 4 hours after paramedic arrival.",
+        "The primary outcome was death before hospital discharge up to day 90: 182 of 1,009 (18.0 percent) with ceftriaxone and 186 of 1,011 (18.4 percent) with placebo. The median age was 75."
+      ],
+      "didNotShow": "It did not show whether earlier antibiotics help in systems with longer transport times or a different mix of patients.",
+      "terms": [
+        {
+          "term": "Sepsis",
+          "def": "A life-threatening reaction to an infection in which the body damages its own organs."
+        },
+        {
+          "term": "Ceftriaxone",
+          "def": "An antibiotic that can be given by injection into muscle or vein."
+        },
+        {
+          "term": "Factorial",
+          "def": "A trial design in which two treatments are tested at once by randomising people separately for each."
+        },
+        {
+          "term": "Risk ratio",
+          "def": "The chance of an event in one group divided by the chance in another. Below 1 means fewer events in the first group."
+        }
+      ],
+      "diagram": {
+        "layout": "compare",
+        "nodes": [
+          {
+            "label": "18.0%",
+            "note": "Hospital deaths, ceftriaxone in ambulance",
+            "key": true
+          },
+          {
+            "label": "18.4%",
+            "note": "Hospital deaths, placebo in ambulance"
+          }
+        ],
+        "caption": "Hospital mortality in the PITSTOP antibiotics trial: the two groups did not differ."
+      },
+      "sources": [
+        {
+          "label": "JAMA: PITSTOP-Antibiotics factorial randomised trial",
+          "url": "https://doi.org/10.1001/jama.2026.25627",
+          "doi": "10.1001/jama.2026.25627"
+        },
+        {
+          "label": "ClinicalTrials.gov NCT03068741",
+          "url": "https://clinicaltrials.gov/study/NCT03068741"
+        }
+      ],
+      "forYou": "Relevant to reading well-run null trials."
+    },
+    {
+      "id": "shared-meaning-21-languages",
+      "area": "mind",
+      "title": "Brain activity for meaning generalises across 21 languages",
+      "gist": "Models trained on fMRI from speakers of some languages predicted brain responses in speakers of languages they had never seen, across 21 languages in 8 families, suggesting a shared meaning component.",
+      "evidence": {
+        "type": "peer-reviewed",
+        "model": "fMRI in speakers of 21 languages",
+        "limitation": "The abstract gives no participant numbers. Predicting brain activity from a model does not show the brain uses the same code as the model."
+      },
+      "why": "Languages differ in sound and grammar. This supports the idea that the brain's language network handles meaning in a shared way, and it shows multilingual AI models can serve as tools to test that idea.",
+      "details": [
+        "The team combined existing fMRI data from 12 languages in 4 families with newly collected data from 9 languages in 4 families. They fitted encoding models that predict the language network's response from the internal representations of multilingual neural networks.",
+        "Models predicted responses reliably within each language. Critically, models trained on one set of languages predicted responses in unseen languages without any exposure to them, and this held across language family, stimulus type and presentation mode."
+      ],
+      "didNotShow": "It did not show what the shared component is made of, or how it is built up from the sounds and words of a language.",
+      "terms": [
+        {
+          "term": "fMRI",
+          "def": "Functional MRI, a scan that tracks changes in blood flow as a stand-in for brain activity."
+        },
+        {
+          "term": "Encoding model",
+          "def": "A statistical model that predicts brain responses from features of the stimulus, such as the meaning of a sentence."
+        },
+        {
+          "term": "Zero-shot",
+          "def": "Tested on cases the model was never trained on."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nature Neuroscience: a shared meaning component across languages",
+          "url": "https://doi.org/10.1038/s41593-026-02523-6",
+          "doi": "10.1038/s41593-026-02523-6"
+        }
+      ],
+      "forYou": "Relevant to computational models of cognition."
+    },
+    {
+      "id": "epigenetic-clocks-childhood-adversity",
+      "area": "mind",
+      "title": "Two newer epigenetic clocks track childhood adversity best in a meta-analysis",
+      "gist": "Pooling 17 studies (10,940 people), GrimAge and DunedinPACE showed the strongest and most consistent links between adverse childhood experiences and faster biological ageing.",
+      "evidence": {
+        "type": "meta-analysis",
+        "n": "17 studies, 10,940 people",
+        "limitation": "The abstract gives no effect sizes. Studies differ in design, tissue and how childhood adversity was measured."
+      },
+      "why": "Researchers choose among many epigenetic clocks. This pooled comparison suggests which ones are worth using in stress biology, and which show the same pattern in both sexes.",
+      "details": [
+        "The search followed PRISMA guidelines and was registered in PROSPERO (CRD420251047805). It covered 8 clocks: Horvath's, Hannum's, PhenoAge, GrimAge, DunedinPACE, DunedinPoAm, Skin and Blood, and PedBE. Estimates came from random-effects models.",
+        "GrimAge and DunedinPACE were most consistently linked to total adverse childhood experience counts and to abuse, neglect and household dysfunction. Only DunedinPACE was robust across strata, with no sex effects."
+      ],
+      "didNotShow": "It did not show that adversity causes faster ageing, or that clock differences predict later disease in a given person.",
+      "terms": [
+        {
+          "term": "Epigenetic clock",
+          "def": "A formula that estimates biological age from chemical tags on a person's DNA."
+        },
+        {
+          "term": "Adverse childhood experiences",
+          "def": "Stressful or traumatic events in childhood, such as abuse, neglect or a troubled household."
+        },
+        {
+          "term": "Meta-analysis",
+          "def": "A study that combines the results of many earlier studies to get one overall estimate."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Molecular Psychiatry: epigenetic clocks and adverse childhood experiences",
+          "url": "https://doi.org/10.1038/s41380-026-03857-0",
+          "doi": "10.1038/s41380-026-03857-0"
+        }
+      ],
+      "forYou": "Relevant to biological ageing readouts."
+    },
+    {
+      "id": "fda-bezuclastinib-gist",
+      "area": "cancer",
+      "title": "FDA approves bezuclastinib with sunitinib for second-line GIST",
+      "gist": "The FDA approved bezuclastinib plus sunitinib for adults with advanced GIST after imatinib, based on the phase 3 PEAK study led by Dana-Farber, per a news summary. Numbers were not read.",
+      "evidence": {
+        "type": "news",
+        "limitation": "Only a news feed summary was read, without trial numbers. The regulator's notice and the PEAK results should be checked."
+      },
+      "why": "GIST is a rare cancer of the gut wall. A new second-line combination after imatinib adds an option where few exist.",
+      "didNotShow": "The summary did not give survival figures, safety data or how much benefit the combination brought.",
+      "terms": [
+        {
+          "term": "GIST",
+          "def": "Gastrointestinal stromal tumour, a rare cancer of the connective tissue in the wall of the gut."
+        },
+        {
+          "term": "Second-line",
+          "def": "A treatment used after a first treatment has stopped working."
+        },
+        {
+          "term": "PEAK",
+          "def": "The name of the phase 3 study of bezuclastinib with sunitinib that the approval is based on."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Medical Xpress: FDA approves bezuclastinib with sunitinib",
+          "url": "https://medicalxpress.com/news/2026-11-fda-bezuclastinib-combination-sunitinib-line.html"
+        }
+      ],
+      "forYou": "Relevant to approvals in rare cancers."
+    },
+    {
+      "id": "pediatric-tumour-model-pipeline",
+      "area": "rare",
+      "title": "A pipeline makes matched organoids, xenografts and cell lines from pediatric tumours",
+      "gist": "A pipeline made patient-matched organoids from 135 pediatric solid tumours, 82 primary cultures and 20 new cell lines. Over 3,000 vials are available to other labs through the Childhood Solid Tumor Network.",
+      "evidence": {
+        "type": "organoid",
+        "model": "Patient-derived organoids, 2D cultures, mouse xenografts",
+        "n": "135 organoid, 82 culture, 20 cell lines",
+        "limitation": "Models were checked against the original tumours in the abstract, but how well they predict drug response in children was not tested there."
+      },
+      "why": "Most pediatric cell lines were made decades ago and matched models are rare. A renewable, shared set helps study rare cancers where patients are few.",
+      "details": [
+        "The set covers rhabdomyosarcoma, osteosarcoma, neuroblastoma, Ewing sarcoma, Wilms tumour and retinoblastoma. When implanted into the matching organ of immunodeficient mice, models kept molecular and cellular features of the original tumour.",
+        "The team ran 365 single-cell and single-nucleus RNA-sequencing experiments covering over 2.2 million cells, to compare cell diversity across each matched triad."
+      ],
+      "didNotShow": "It did not show that the models predict which drugs will work for the child the tumour came from.",
+      "terms": [
+        {
+          "term": "Organoid",
+          "def": "A small three-dimensional cluster of cells grown in a dish that mimics features of a real tissue or tumour."
+        },
+        {
+          "term": "Xenograft",
+          "def": "A human tumour grown in a mouse whose immune system cannot reject it."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nature Communications: scalable pipeline for pediatric tumour models",
+          "url": "https://doi.org/10.1038/s41467-026-79414-8",
+          "doi": "10.1038/s41467-026-79414-8",
+          "access": "open"
+        }
+      ],
+      "forYou": "Relevant to patient-derived organoid and xenograft models."
+    },
+    {
+      "id": "pcos-ivf-bmi-lipids",
+      "area": "women",
+      "title": "In women with PCOS having IVF, higher BMI went with fewer usable embryos",
+      "gist": "In 800 women with PCOS undergoing IVF, higher BMI predicted fewer available embryos (5.0 in obese versus 11.0 in underweight), but the share of embryos that developed was unchanged.",
+      "evidence": {
+        "type": "human-observational",
+        "n": "800",
+        "limitation": "Retrospective single-cohort study, so it shows association only. The compensating role of cholesterol rests on a mediation analysis."
+      },
+      "why": "It suggests the BMI effect in PCOS comes from fewer eggs retrieved, not from poorer development of each egg. That points to where in IVF care to look.",
+      "details": [
+        "The 800 women were grouped by BMI: 29 underweight, 378 normal weight, 287 overweight and 106 obese. Four lipid-related indices rose with BMI. The median number of available embryos fell from 11.0 to 5.0 from underweight to obese (P below 0.001).",
+        "After full adjustment, higher BMI predicted fewer available embryos (beta -0.13, 95% CI -0.21 to -0.06). Total cholesterol acted as an opposing mediator, offsetting part of the effect on high-quality embryos."
+      ],
+      "didNotShow": "It did not show live birth rates, or that changing BMI or lipids would raise embryo numbers.",
+      "terms": [
+        {
+          "term": "PCOS",
+          "def": "Polycystic ovary syndrome, a common hormone condition that affects ovulation and often metabolism."
+        },
+        {
+          "term": "Mediation analysis",
+          "def": "A statistical method that tests how much of one factor's effect on an outcome runs through a third factor."
+        },
+        {
+          "term": "IVF",
+          "def": "In vitro fertilisation, in which eggs are fertilised in a lab dish and the embryos are then transferred to the womb."
+        },
+        {
+          "term": "BMI",
+          "def": "Body mass index, a ratio of weight to height squared used as a rough measure of body size."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Journal of Ovarian Research: lipid indices and IVF outcomes in PCOS",
+          "url": "https://doi.org/10.1186/s13048-026-02246-z",
+          "doi": "10.1186/s13048-026-02246-z",
+          "access": "open"
+        }
+      ],
+      "forYou": "Relevant to metabolic influences on reproduction."
+    }
+  ],
+  "bench": [
+    {
+      "id": "pi3k-acquired-resistance",
+      "area": "cancer",
+      "title": "Clinical acquired resistance to mutant-selective PI3Kα inhibition",
+      "headline": "About 70 percent of 32 breast cancer patients on new mutant-selective PI3K drugs gained new changes in the pathway, and two drug types together curbed resistant cells in the lab.",
+      "authors": "Andreas Varkaris, Ferran Fece de la Cruz, Hitomi S Okuma, et al.",
+      "venue": "Cancer Discovery",
+      "published": "2026-11-23",
+      "evidence": {
+        "type": "human-observational",
+        "n": "32 patients",
+        "model": "Patient blood samples, structural models, cells and mice",
+        "limitation": "Only 32 patients on two drugs. The combination was tested in cell and animal models, not in patients."
+      },
+      "question": "How does breast cancer escape the new PI3Kα inhibitors that target only the mutated protein?",
+      "approach": "The team tracked tumour DNA in the blood over time in people with PIK3CA-mutant, hormone receptor positive metastatic breast cancer on zovegalisib (RLY-2608) or tersolisib (STX-478). They modelled and tested the new mutations, then tried drug combinations.",
+      "model": "Serial blood samples from 32 patients, plus structural modelling and functional assays in vitro and in vivo.",
+      "result": "About 70 percent acquired changes in the PI3K pathway: secondary PIK3CA mutations in 40 percent, PTEN changes in 30 percent and AKT1 mutations in 25 percent. The secondary mutations cluster in the binding pocket and did not cause cross-resistance between the two inhibitor types. The combination suppressed resistant clones with striking synergy in vitro and in vivo.",
+      "limitations": "Small cohort, two drugs and a mix of overlapping changes. Whether the combination is safe or works in patients is not known.",
+      "meaning": "If it holds, trial designers can plan drug pairs and blood tests to catch resistance early in PIK3CA-mutant disease.",
+      "terms": [
+        {
+          "term": "PI3Kα",
+          "def": "An enzyme that sends growth signals inside cells and is often mutated in breast cancer."
+        },
+        {
+          "term": "Allosteric",
+          "def": "Acting at a site on a protein other than its main working site, to change how the protein works."
+        },
+        {
+          "term": "Circulating tumour DNA",
+          "def": "Fragments of tumour DNA found in the blood, used to follow a cancer without a biopsy."
+        },
+        {
+          "term": "Orthosteric",
+          "def": "Acting directly at the main working site of a protein."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cancer Discovery: acquired resistance to mutant-selective PI3Kα inhibition",
+          "url": "https://doi.org/10.1158/2159-8290.cd-26-0390",
+          "doi": "10.1158/2159-8290.cd-26-0390"
+        }
+      ],
+      "forYou": "Relevant to resistance mechanisms and combination design."
+    },
+    {
+      "id": "igfbp2-hybrid-nanomaterial",
+      "area": "cancer",
+      "title": "An Organo-Inorganic Hybrid Nanomaterial to Disrupt Multicellular Communication within Tumor Microenvironment",
+      "headline": "A hybrid nanoparticle that silenced the IGFBP2 gene reduced new blood vessels, stromal activation and tumour traits in preclinical ovarian cancer models.",
+      "authors": "Prasanta Panja, Suresh Kumar Gulla, Yushan Zhang, et al.",
+      "venue": "ACS Nano",
+      "published": "2026-11-24",
+      "evidence": {
+        "type": "animal",
+        "model": "Preclinical ovarian cancer models, in vitro and in vivo",
+        "limitation": "The abstract gives no animal numbers or effect sizes, and the work is preclinical."
+      },
+      "question": "Can a nanoparticle silence a gene that drives communication between cells in the tumour microenvironment?",
+      "approach": "The team built a hybrid nanomaterial designed to silence IGFBP2, a gene linked to crosstalk between tumour and stromal cells. They tested effects on blood vessel growth, stromal activation and tumour cells in vitro and in vivo.",
+      "model": "Ovarian cancer cells and preclinical animal models.",
+      "result": "Silencing IGFBP2 suppressed angiogenesis, stromal activation and tumour cell phenotypes. The hybrid entered cells through the caveolae route, whereas a non-hybrid version used a mix of clathrin and caveolin routes.",
+      "limitations": "Preclinical only, with no human data. Safety, dosing and delivery in larger animals were not addressed in the abstract.",
+      "meaning": "If it holds, hybrid particles that choose an uptake route could help hit gene targets in the tumour microenvironment that lack small molecule drugs.",
+      "terms": [
+        {
+          "term": "Tumour microenvironment",
+          "def": "The cells, vessels and molecules around a tumour that influence how it grows and responds to treatment."
+        },
+        {
+          "term": "IGFBP2",
+          "def": "Insulin-like growth factor binding protein 2, a protein linked to tumour growth and poor outcome in several cancers."
+        },
+        {
+          "term": "Angiogenesis",
+          "def": "The growth of new blood vessels, which tumours use to get nutrients."
+        },
+        {
+          "term": "Caveolae",
+          "def": "Small flask-shaped pits in the cell membrane that cells use to take in material."
+        }
+      ],
+      "diagram": {
+        "layout": "flow",
+        "nodes": [
+          {
+            "label": "Hybrid particle"
+          },
+          {
+            "label": "Caveolae uptake"
+          },
+          {
+            "label": "IGFBP2 silenced"
+          },
+          {
+            "label": "Less angiogenesis"
+          }
+        ],
+        "links": [
+          "enters",
+          "silences",
+          "reduces"
+        ],
+        "caption": "The proposed route from the hybrid nanomaterial to weaker tumour microenvironment signals."
+      },
+      "sources": [
+        {
+          "label": "ACS Nano: hybrid nanomaterial targeting IGFBP2",
+          "url": "https://doi.org/10.1021/acsnano.6c09857",
+          "doi": "10.1021/acsnano.6c09857"
+        }
+      ],
+      "forYou": "Relevant to nanoparticle uptake routes and stromal targeting."
+    },
+    {
+      "id": "hippocampus-word-context",
+      "area": "mind",
+      "title": "Linguistic contextualization in the human hippocampus",
+      "headline": "Single neurons in the human hippocampus tracked a word's place in a clause. Their response to a word also blended in the meaning of earlier words, like attention in language models.",
+      "authors": "Kalman A Katlowitz, James L Belanger, Taha Ismail, et al.",
+      "venue": "Nature Human Behaviour",
+      "published": "2026-11-23",
+      "evidence": {
+        "type": "human-observational",
+        "n": "10 participants",
+        "model": "Single neuron recordings in people",
+        "limitation": "Only 10 participants listening to podcasts. The match to language model attention is a correlation, not proof of the same mechanism."
+      },
+      "question": "How does the brain combine a word with the words around it to build meaning?",
+      "approach": "The team recorded single neuron activity in the human hippocampus while 10 participants listened to podcasts. They tested whether activity tracked word position and a weighted mix of earlier words.",
+      "model": "Single unit recordings in the human hippocampus.",
+      "result": "Neurons encoded word position within a clause, both as ordinal position and in the frequency domain. Responses to a word reflected its own meaning plus a weighted sum of the embeddings of preceding words. The weights correlated with language model self-attention weights.",
+      "limitations": "Small sample, one listening task and a correlation with a model. The abstract gives no effect sizes.",
+      "meaning": "It suggests the medial temporal lobe takes part in language processing and offers a way to test language-model ideas against neurons.",
+      "terms": [
+        {
+          "term": "Hippocampus",
+          "def": "A seahorse-shaped brain region best known for memory that also takes part in language and context."
+        },
+        {
+          "term": "Single unit activity",
+          "def": "The electrical firing of one recorded neuron."
+        },
+        {
+          "term": "Self-attention",
+          "def": "A step in language models that weighs how much each word in a sentence should influence the others."
+        },
+        {
+          "term": "Embedding",
+          "def": "A list of numbers that represents the meaning of a word for a computer model."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nature Human Behaviour: linguistic contextualization in the hippocampus",
+          "url": "https://doi.org/10.1038/s41562-026-02543-z",
+          "doi": "10.1038/s41562-026-02543-z"
+        }
+      ],
+      "forYou": "Relevant to neural coding of context."
+    }
+  ],
+  "method": {
+    "id": "smg-progenitor-organoids",
+    "title": "Isolate airway gland progenitor cells and grow organoids",
+    "gist": "A STAR Protocols method dissociates human airway tissue, grows gland and surface epithelial organoids, and checks them with RT-qPCR, immunostaining and ELISA. Steps summarised from the abstract only.",
+    "field": "other",
+    "useWhen": "You need airway models that include submucosal gland cells, which are often missing from lab respiratory models.",
+    "steps": [
+      {
+        "title": "Dissociate the tissue",
+        "text": "Take human proximal airway tissue and dissociate it to free the progenitor cells of the submucosal glands."
+      },
+      {
+        "title": "Grow organoids",
+        "text": "Generate submucosal gland epithelial organoids, and surface airway epithelial organoids for comparison."
+      },
+      {
+        "title": "Characterise them",
+        "text": "Confirm the cell types with RT-qPCR, immunocytochemistry and ELISA."
+      }
+    ],
+    "pitfalls": [
+      "Reagents, volumes and timings are in the full protocol. This card uses only the abstract, so read the paper before running it.",
+      "Human airway tissue needs ethical approval and consent in place before work starts."
+    ],
+    "safety": "Follow your institution's rules for human tissue, biological materials and ethics approval before starting.",
+    "source": {
+      "label": "STAR Protocols: isolate and culture airway submucosal gland progenitors",
+      "url": "https://doi.org/10.1016/j.xpro.2026.104992",
+      "doi": "10.1016/j.xpro.2026.104992"
+    },
+    "terms": [
+      {
+        "term": "Submucosal glands",
+        "def": "Glands under the lining of the airways that make mucus and help defend and repair the airway."
+      },
+      {
+        "term": "RT-qPCR",
+        "def": "A test that measures how much of a given gene's RNA a sample contains."
+      },
+      {
+        "term": "Immunocytochemistry",
+        "def": "A method that uses antibodies to show which proteins are present in cells."
+      }
+    ],
+    "forYou": "Relevant to organoid culture and characterisation."
+  },
+  "learn": {
+    "question": "Why do cancers stop responding to targeted drugs?",
+    "answer": "A targeted drug kills most cancer cells, but a few that carry a lucky change survive. They regrow, and the drug no longer works on them. This is acquired resistance.",
+    "analogy": "It is like spraying weeds with one weed killer. The few weeds that happen to tolerate it are the ones that seed the next patch.",
+    "body": [
+      "A tumour holds many cells with slightly different DNA. A drug that blocks one protein removes the cells that depend on it. Cells that carry another change, or that start using a different route, are left behind and grow into a new tumour.",
+      "In the PI3K study today, blood tests of tumour DNA found new mutations in the pathway in about 70 percent of 32 people. Knowing the typical changes lets researchers design drug pairs that block both the old and the new forms."
+    ],
+    "diagram": {
+      "layout": "cycle",
+      "nodes": [
+        {
+          "label": "Drug blocks target"
+        },
+        {
+          "label": "Most cells die"
+        },
+        {
+          "label": "Resistant clone survives"
+        },
+        {
+          "label": "Clone regrows"
+        }
+      ],
+      "links": [
+        "kills",
+        "spares",
+        "expands",
+        "meets drug"
+      ],
+      "caption": "How a few resistant cells let a cancer return after a targeted drug works at first."
+    },
+    "seenIn": [
+      "pi3k-acquired-resistance"
+    ],
+    "terms": [
+      {
+        "term": "Acquired resistance",
+        "def": "Resistance that appears during treatment, after the cancer first responded to the drug."
+      },
+      {
+        "term": "Clone",
+        "def": "A group of cells that all descend from one cell and share its DNA changes."
+      },
+      {
+        "term": "Targeted drug",
+        "def": "A medicine designed to block one specific molecule that cancer cells depend on."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Cancer Discovery: acquired resistance to mutant-selective PI3Kα inhibition",
+        "url": "https://doi.org/10.1158/2159-8290.cd-26-0390",
+        "doi": "10.1158/2159-8290.cd-26-0390"
+      }
+    ]
+  },
+  "trials": {
+    "trials": [
+      {
+        "id": "delayed-adjuvant-pdac-phase3",
+        "area": "cancer",
+        "title": "Delayed adjuvant chemotherapy versus observation after pancreatic cancer surgery",
+        "nct": "NCT07953153",
+        "phase": "3",
+        "status": "Not yet recruiting",
+        "change": "new",
+        "what": "Registered on 23 November 2026. It tests whether starting chemotherapy 13 to 24 weeks after surgery beats observation in people who could not start adjuvant therapy on time. Primary outcome is overall survival.",
+        "who": "128 planned people after resection of pancreatic cancer who were ineligible for timely adjuvant therapy",
+        "sponsor": "Vastra Gotaland Region",
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov NCT07953153",
+            "url": "https://clinicaltrials.gov/study/NCT07953153"
+          }
+        ]
+      },
+      {
+        "id": "eeg-music-depression",
+        "area": "mind",
+        "title": "EEG-guided personalised music versus conventional music for depressive symptoms",
+        "nct": "NCT07956897",
+        "phase": "n/a",
+        "status": "Recruiting",
+        "change": "new",
+        "what": "Registered on 24 November 2026. It compares music chosen with feedback from the brain's gamma waves on EEG against conventional music. The primary outcome is change in depression score on the PHQ-9 questionnaire.",
+        "who": "120 planned college students with depressive symptoms",
+        "sponsor": "Jiangsu Province Nanjing Brain Hospital",
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov NCT07956897",
+            "url": "https://clinicaltrials.gov/study/NCT07956897"
+          }
+        ]
+      }
+    ],
+    "funding": []
+  },
+  "chatter": [
+    {
+      "id": "lancet-codeine-retraction",
+      "area": "women",
+      "kind": "retraction",
+      "title": "The Lancet retracts a 2006 case report on codeine and breastfeeding",
+      "where": "Retraction Watch",
+      "signal": "Retracted on 19 November 2026, with a guest post on Retraction Watch on 24 November 2026",
+      "gist": "The Lancet retracted a 2006 case report that linked an infant's death to morphine in breast milk. A guest post by a former co-author says the report lacked toxicology findings and was presented without limits.",
+      "sources": [
+        {
+          "label": "Retraction Watch: guest post on the retracted Lancet case report",
+          "url": "https://retractionwatch.com/2026/11/24/guest-post-parvaz-madadi-reflections-lancet-case-report-codeine-breastfeeding/"
+        }
+      ]
+    },
+    {
+      "id": "nfcore-genome-alignment",
+      "area": "other",
+      "kind": "preprint-buzz",
+      "title": "An nf-core pipeline for aligning whole genomes with each other",
+      "where": "Mastodon #preprint",
+      "signal": "3 favourites and 3 boosts on Mastodon (#preprint)",
+      "gist": "A researcher released a bioRxiv preprint on an nf-core pipeline that aligns whole genomes, built for assembly quality control and comparative genomics. Submitted to a free community journal. Only the post was read.",
+      "sources": [
+        {
+          "label": "Mastodon post",
+          "url": "https://fediscience.org/@charles_plessy/117674314644161065"
+        },
+        {
+          "label": "bioRxiv preprint",
+          "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767494v2"
+        }
+      ]
+    },
+    {
+      "id": "difference-neuron-model",
+      "area": "mind",
+      "kind": "tool",
+      "title": "A new spiking neuron model, the Difference Neuron",
+      "where": "Mastodon #neuroscience",
+      "signal": "4 favourites and 2 boosts on Mastodon (#neuroscience)",
+      "gist": "A researcher shared a Biological Cybernetics paper on a new spiking neuron model called the Difference Neuron, saying it differs from existing models. Only the post and the title were read.",
+      "sources": [
+        {
+          "label": "Biological Cybernetics: the Difference Neuron",
+          "url": "https://link.springer.com/article/10.1007/s00422-026-01052-6"
+        },
+        {
+          "label": "Mastodon post",
+          "url": "https://fediscience.org/@jkanev/117667551071567179"
+        }
+      ]
+    }
+  ],
+  "curiosity": {
+    "id": "cat-eyes-on-faces",
+    "area": "curiosity",
+    "title": "After brain surgery, a man sees his cat's eyes on people's faces",
+    "gist": "A 29-year-old teacher began seeing eyes he had recently looked at appear on other faces after brain surgery in 2024. Researchers describe the case in the December issue of Cortex.",
+    "body": [
+      "Science News reports that the man, who goes by Karl, sees eyes he has just viewed, including his cat's, pasted onto the face in front of him. The condition, in which echoes of an earlier image appear in a new scene, is called palinopsia. Because the echoes distort faces, it is also a form of prosopometamorphopsia.",
+      "The researchers tested his experience by showing him faces and asking him to describe them. He consistently reported distortions in the eye region and in shading and texture. They say items from memory are being pulled up and pasted onto the face he sees."
+    ],
+    "evidence": {
+      "type": "news",
+      "limitation": "A single case from a news report. The Cortex paper itself was not read, so findings and numbers are not confirmed."
+    },
+    "terms": [
+      {
+        "term": "Palinopsia",
+        "def": "A visual condition in which an image seen earlier keeps appearing or reappears in a new scene."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Science News: a man who sees his cat's eyes on faces",
+        "url": "https://www.sciencenews.org/article/man-cats-eyes-faces-brain"
+      }
+    ]
+  },
+  "jobs": [],
+  "note": "The sweep brief was missing, so the run swept first. PubMed abstracts were used because read-paper failed with HTTP 503. Medical Xpress blocked bots, so the FDA item rests on a feed summary. No job could be verified."
+}
