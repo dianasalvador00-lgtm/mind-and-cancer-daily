@@ -1,0 +1,464 @@
+{
+  "date": "2026-11-26",
+  "number": 11,
+  "title": "A glioma collagen barrier, a pancreatic drug carrier and a bone disease in new mothers",
+  "dek": "Acid-built collagen shields brain tumours from T cells in mice, a polymer drug softens pancreatic tumours while it retrains macrophages, and women with pregnancy bone fractures report far worse health.",
+  "palette": "cobalt-saffron",
+  "tldr": [
+    { "text": "In mice, acid-driven collagen around glioma blood vessels kept T cells out; breaking it down helped them in and extended survival.", "area": "cancer" },
+    { "text": "A polymer drug that retrains macrophages also softened pancreatic tumours in mice and let more T cells in.", "area": "cancer" },
+    { "text": "A review of the evidence finds little support so far for the strongest fears about AI harming people.", "area": "mind" },
+    { "text": "Women with pregnancy-related bone fractures scored far lower on physical and mental health than matched controls.", "area": "women" }
+  ],
+  "top": [
+    {
+      "id": "glioma-perivascular-collagen",
+      "area": "cancer",
+      "title": "Collagen around glioma blood vessels keeps T cells out, mouse work suggests",
+      "gist": "A Cancer Cell commentary describes mouse work in which acid and the receptor GPR4 build collagen around glioma vessels. Disrupting this axis let more CD8+ T cells in and prolonged survival.",
+      "evidence": {
+        "type": "commentary",
+        "model": "Commentary on mouse models of high-grade glioma",
+        "limitation": "Read from the commentary abstract only. The underlying paper, its numbers and its sample sizes were not read."
+      },
+      "why": "Brain tumours resist immunotherapy partly because T cells cannot get in. A physical barrier that can be dissolved is a concrete target.",
+      "details": [
+        "The commentary is by Lad, Sati and Aghi and covers a paper by Cheng and colleagues in the same issue of Cancer Cell. It says acid in the tumour switches on GPR4, which drives collagen build-up in the space around blood vessels."
+      ],
+      "didNotShow": "Nothing here is human data. The abstract gives no numbers for survival or T cell counts.",
+      "terms": [
+        { "term": "perivascular space", "def": "The thin tissue space that surrounds a blood vessel wall." },
+        { "term": "GPR4", "def": "A receptor on cell surfaces that senses acid and passes signals into the cell." },
+        { "term": "CD8+ T cells", "def": "Immune cells that can kill tumour cells that show the right marker." },
+        { "term": "high-grade glioma", "def": "A fast-growing brain tumour that arises from supporting brain cells." }
+      ],
+      "sources": [
+        { "label": "Cancer Cell commentary (Lad, Sati, Aghi)", "url": "https://doi.org/10.1016/j.ccell.2026.10.014", "doi": "10.1016/j.ccell.2026.10.014" }
+      ],
+      "forYou": "Relevant to how stroma and matrix barriers limit immune and drug access in dense tumours."
+    },
+    {
+      "id": "aptamer-chitosan-pdac-mice",
+      "area": "cancer",
+      "title": "Aptamer-guided chitosan nanoparticles target pancreatic tumours in mice",
+      "gist": "Nanoparticles made of modified chitosan and carrying a receptor-binding aptamer reached pancreatic tumours in a mouse model and showed antitumour effects with little systemic toxicity.",
+      "evidence": {
+        "type": "animal",
+        "model": "Orthotopic pancreatic cancer mouse model",
+        "limitation": "Abstract gives no sample sizes, effect sizes or survival data. Mouse tumours lack the dense stroma of many human pancreatic cancers."
+      },
+      "why": "Pancreatic tumours are hard to reach with drugs. Particles that combine a pH-sensitive carrier with active targeting are one route to better delivery.",
+      "details": [
+        "The carrier is arginine-modified chitosan, a pH-responsive sugar polymer that helps cells take up cargo and escape endosomes. Two more parts, TPGS and fucoidan, were grafted on. The aptamer AP1153, which binds the cholecystokinin B receptor, was attached by electric charge."
+      ],
+      "didNotShow": "No human data and no head-to-head comparison against current chemotherapy is stated in the abstract.",
+      "terms": [
+        { "term": "aptamer", "def": "A short strand of DNA or RNA that folds to bind a chosen target, like an antibody made from nucleic acid." },
+        { "term": "orthotopic", "def": "Describes a tumour grown in the organ it would arise in, not under the skin." },
+        { "term": "chitosan", "def": "A sugar polymer derived from shellfish shells, used to build biodegradable carriers." },
+        { "term": "endosomal escape", "def": "The step where a cargo leaves the small vesicle that carried it into a cell." }
+      ],
+      "sources": [
+        { "label": "Carbohydrate Polymers", "url": "https://doi.org/10.1016/j.carbpol.2026.126035", "doi": "10.1016/j.carbpol.2026.126035" }
+      ],
+      "forYou": "Relevant to nanoparticle targeting and stromal penetration in pancreatic cancer models."
+    },
+    {
+      "id": "bbb-plasma-proteome-commentary",
+      "area": "mind",
+      "title": "Which blood proteins enter the brain changes in neurodegeneration, a Cell commentary says",
+      "gist": "A Cell commentary says Zhou and colleagues mapped which blood proteins enter the brain and found that this selective transport changes in neurodegeneration.",
+      "evidence": {
+        "type": "commentary",
+        "model": "Commentary on a proteome study",
+        "limitation": "Read from the commentary abstract only. The underlying study, its model and its numbers were not read."
+      },
+      "why": "The blood-brain barrier is the main obstacle for brain drugs. Knowing which proteins pass naturally could guide carriers and show how disease changes the barrier.",
+      "didNotShow": "The abstract does not say which proteins change, in which diseases or how large the changes are.",
+      "terms": [
+        { "term": "blood-brain barrier", "def": "The tight lining of brain blood vessels that blocks many substances from entering brain tissue." },
+        { "term": "proteome", "def": "The full set of proteins found in a sample or tissue." }
+      ],
+      "sources": [
+        { "label": "Cell commentary (Sangster, Bennett, Bennett)", "url": "https://doi.org/10.1016/j.cell.2026.09.025", "doi": "10.1016/j.cell.2026.09.025" }
+      ],
+      "forYou": "Relevant to carrier design for crossing the blood-brain barrier."
+    },
+    {
+      "id": "ai-eight-impacts-review",
+      "area": "mind",
+      "title": "A review finds limited evidence for the strongest fears about AI and people",
+      "gist": "Reviewing user studies, chat logs and simulations, researchers found limited evidence that AI harms thinking, mental health or relationships to the extent feared, but say the field is young.",
+      "evidence": {
+        "type": "review",
+        "limitation": "The abstract says research is still nascent and many uncertainties remain. Review details were not read beyond the abstract."
+      },
+      "why": "About one billion people use AI systems. Public debate about cognitive and mental health harms needs a check against actual studies.",
+      "details": [
+        "The review in Nature Human Behaviour covers eight areas, including effects on cognitive abilities, the information ecosystem, relationships, mental health, persuasion and emotional dependence. It draws on model evaluations, user studies, analysis of consumer chat logs and agent-based simulations."
+      ],
+      "didNotShow": "Limited evidence is not evidence of no harm. The authors state that long-term effects are unresolved.",
+      "terms": [
+        { "term": "agent-based simulation", "def": "A computer model in which many simulated individuals follow simple rules, used to test how a system behaves." }
+      ],
+      "sources": [
+        { "label": "Nature Human Behaviour (Summerfield et al.)", "url": "https://doi.org/10.1038/s41562-026-02615-0", "doi": "10.1038/s41562-026-02615-0" }
+      ]
+    },
+    {
+      "id": "iga-colon-tumours-mice",
+      "area": "cancer",
+      "title": "Mice without the gut antibody IgA develop more than twice as many colon tumours",
+      "gist": "In mice, lacking the antibody IgA led to over twice as many colon tumours. IgA given by mouth removed the extra risk. IgA appears to slow division of gut lining cells.",
+      "evidence": {
+        "type": "news",
+        "model": "Mouse study published in Nature",
+        "limitation": "Read from a ScienceDaily report. The Nature paper, its group sizes and the mechanism details were not read."
+      },
+      "why": "People with IgA deficiency may face a higher colorectal cancer risk. The result suggests a way gut immunity could shape cancer risk.",
+      "didNotShow": "It did not test IgA supplements in people. The link to human IgA deficiency is a suggestion, not shown here.",
+      "terms": [
+        { "term": "IgA", "def": "An antibody class found in large amounts in the gut that binds microbes and some body cells." }
+      ],
+      "sources": [
+        { "label": "ScienceDaily report on the Nature study", "url": "https://www.sciencedaily.com/releases/2026/11/261123005348.htm", "access": "open" }
+      ]
+    },
+    {
+      "id": "plo-quality-of-life",
+      "area": "women",
+      "title": "Women with pregnancy and lactation-associated osteoporosis report much worse physical and mental health",
+      "gist": "In 20 women with pregnancy-related bone fractures and 20 matched controls, the fracture group scored lower on physical function (75 vs 100) and had worse anxiety and depression scores.",
+      "evidence": {
+        "type": "human-observational",
+        "model": "Single-centre case-control with interviews",
+        "n": "20 cases, 20 controls",
+        "limitation": "Small, single centre. Partner interviews were separate from the case-control analysis."
+      },
+      "why": "This rare bone disease is often missed. The study documents pain, lost autonomy and isolation, which supports earlier diagnosis and psychological support.",
+      "details": [
+        "On the SF-36 physical score the median was 75 versus 100 (p = 0.001). On PHQ-4, a short anxiety and depression screen, it was 3.5 versus 0 (p below 0.01). Interviews described chronic pain, delayed return to work, loss of the motherhood experience and strain on relationships. Partners reported stress and difficulty balancing work and family."
+      ],
+      "didNotShow": "It does not give how common the disease is or what causes it.",
+      "terms": [
+        { "term": "lactation-associated osteoporosis", "def": "A rare condition in which bone fractures, often in the spine, occur during pregnancy or breastfeeding." },
+        { "term": "SF-36", "def": "A questionnaire that scores physical and mental health, where higher means better." },
+        { "term": "PHQ-4", "def": "A four-question screen for anxiety and depression, where higher means more symptoms." }
+      ],
+      "sources": [
+        { "label": "Osteoporosis International (Gak et al.)", "url": "https://doi.org/10.1007/s00198-026-08256-3", "doi": "10.1007/s00198-026-08256-3" }
+      ]
+    },
+    {
+      "id": "rare-cancer-phase2-designs",
+      "area": "rare",
+      "title": "Small randomised phase II trials are sturdier than single-arm trials in rare cancers",
+      "gist": "Simulations of trials with up to 100 patients show single-arm designs are fragile if the historical control rate is wrong, while small randomised designs held up.",
+      "evidence": {
+        "type": "computational",
+        "model": "Simulation study with a sarcoma example",
+        "limitation": "Simulations, not real trials. The sarcoma example is only an illustration."
+      },
+      "why": "Rare cancers rely on single-arm trials because patients are few. This shows when a benchmark can mislead and when a small randomised arm pays off.",
+      "details": [
+        "A single-arm trial compares results with a historical control. If that benchmark is uncertain or too low, the chance of calling a drug promising with no real benefit rises. Small randomised designs were largely insensitive to such errors."
+      ],
+      "didNotShow": "It does not say randomised designs are always feasible. The result depends on how well the control rate is known.",
+      "terms": [
+        { "term": "single-arm trial", "def": "A trial in which every patient gets the new treatment and results are compared with past data." },
+        { "term": "historical control", "def": "Outcome data from earlier patients, used as the comparison in place of a control group." }
+      ],
+      "sources": [
+        { "label": "Journal of Clinical Oncology (Ballman)", "url": "https://doi.org/10.1200/jco-26-01504", "doi": "10.1200/jco-26-01504" }
+      ]
+    },
+    {
+      "id": "crat-histone-stress-resilience",
+      "area": "mind",
+      "title": "A mitochondrial acetyl source in the hippocampus supports stress resilience in rodents",
+      "gist": "In rodents, the enzyme CrAT feeds acetyl groups to histones in ventral hippocampus neurons. Chronic stress disrupted this, and exercise plus fluoxetine switched it on in fluoxetine-resistant animals.",
+      "evidence": {
+        "type": "animal",
+        "model": "Rodent models with cell-type specific gene deletion",
+        "limitation": "The abstract gives no sample sizes or effect sizes. Rodent stress behaviour does not equal human depression."
+      },
+      "why": "It links cell energy metabolism to gene regulation in mood circuits and suggests why combined treatments might work where a single drug fails.",
+      "details": [
+        "Removing CrAT from glutamate-releasing neurons in the ventral dentate gyrus lowered histone H3K27 acetylation and impaired activity and behaviour. Raising CrAT or giving acetylcarnitine boosted resilience."
+      ],
+      "didNotShow": "It was not tested in people.",
+      "terms": [
+        { "term": "histone acetylation", "def": "A chemical tag on histone proteins that loosens DNA packing and lets genes switch on." },
+        { "term": "CrAT", "def": "An enzyme that moves acetyl groups between carrier molecules inside mitochondria." },
+        { "term": "ventral dentate gyrus", "def": "A part of the hippocampus involved in mood and memory." }
+      ],
+      "sources": [
+        { "label": "Molecular Psychiatry (Bigio et al.)", "url": "https://doi.org/10.1038/s41380-026-03874-z", "doi": "10.1038/s41380-026-03874-z" }
+      ]
+    }
+  ],
+  "bench": [
+    {
+      "id": "src-kras-pdac-resistance",
+      "area": "cancer",
+      "title": "Temporal Phosphoproteomic Analysis Identifies Src Family Kinases as Key Mediators of Adaptive Resistance to KRAS Inhibition in Pancreatic Cancer",
+      "headline": "Pancreatic cancer cells fight back against KRAS drugs by switching on Src kinases. Blocking Src made the KRAS drugs work better in models.",
+      "authors": "Qingxiang Lin, Bokai Song, Conrad Sander et al.",
+      "venue": "Cancer Research",
+      "published": "2026-11-24",
+      "evidence": {
+        "type": "animal",
+        "model": "KRAS-mutant cell-based and patient-derived PDAC models",
+        "limitation": "Abstract gives no sample sizes or effect sizes. Models are preclinical."
+      },
+      "question": "Why do pancreatic cancers stop responding to KRAS inhibitors, and can that be blocked?",
+      "approach": "The team tracked phosphorylation across the cell over time after treating cells with clinically relevant (K)RAS inhibitors, then tested a Src inhibitor in combination.",
+      "model": "KRAS-mutant PDAC cell-based models and patient-derived models, studied in vitro and in vivo.",
+      "result": "Src family kinases rose consistently after KRAS inhibition. Blocking them improved in vitro and in vivo efficacy in models resistant to KRAS drugs and reduced YAP signalling.",
+      "limitations": "Numbers are not in the abstract. Preclinical data. The YAP link is offered as a possible mechanism, not proof.",
+      "meaning": "It supports testing Src and KRAS inhibitors together as a way to delay resistance in pancreatic cancer.",
+      "terms": [
+        { "term": "phosphoproteomic", "def": "Describes a method that measures which proteins carry phosphate tags, a sign of active signalling." },
+        { "term": "KRAS", "def": "A gene whose mutated form drives about 90 percent of pancreatic cancers." },
+        { "term": "Src family kinases", "def": "Enzymes that add phosphate tags to proteins and push cell growth signals." },
+        { "term": "YAP", "def": "A protein that controls genes for cell growth and survival." }
+      ],
+      "sources": [
+        { "label": "Cancer Research", "url": "https://doi.org/10.1158/0008-5472.can-26-0777", "doi": "10.1158/0008-5472.can-26-0777" }
+      ],
+      "forYou": "Relevant to combination strategies against adaptive resistance in pancreatic cancer."
+    },
+    {
+      "id": "macrophage-ecm-nano-pdac",
+      "area": "cancer",
+      "title": "Coupling Macrophage Reeducation With Mechanical Remodeling of the Tumor Extracellular Matrix to Enhance Pancreatic Cancer Immunotherapy",
+      "headline": "A polymer drug carrying an immune activator went to macrophages in pancreatic tumours, retrained them and softened the tumour so T cells could enter.",
+      "authors": "Chenxi Yin, Muhetaerjiang Mamuti, Dan Zhu et al.",
+      "venue": "Advanced Materials",
+      "published": "2026-11-23",
+      "evidence": {
+        "type": "animal",
+        "model": "Murine pancreatic cancer models",
+        "limitation": "Abstract gives no sample sizes or effect sizes. Mouse tumours only."
+      },
+      "question": "Can one drug fix both the immune barrier and the physical barrier in pancreatic tumours?",
+      "approach": "The authors linked the TLR7/8 agonist resiquimod to soy protein on a multi-arm polymer (mPDPC-RS) and injected it into the blood.",
+      "model": "Murine pancreatic cancer models.",
+      "result": "mPDPC-RS gathered in tumour-associated macrophages, shifted them to an antitumour state, lowered fluid pressure, solid stress and stiffness, and let more CD8+ T cells in. The paper reports strong tumour suppression and longer survival.",
+      "limitations": "Specific numbers were not in the abstract. Whether the stiffness change causes the T cell entry is argued, not isolated here.",
+      "meaning": "It shows how delivery to one cell type can also change tumour mechanics, a design idea for dense-stroma tumours.",
+      "terms": [
+        { "term": "macrophage", "def": "An immune cell that swallows debris and can either fight or help a tumour." },
+        { "term": "resiquimod", "def": "A drug that activates toll-like receptors 7 and 8 to wake up immune cells." },
+        { "term": "interstitial fluid pressure", "def": "The pressure of fluid between cells, which can push drugs back out of a tumour." },
+        { "term": "solid stress", "def": "The physical force that growing cells and matrix exert on each other inside a tumour." }
+      ],
+      "diagram": {
+        "layout": "flow",
+        "nodes": [
+          { "label": "Polymer drug" },
+          { "label": "Macrophages take it up" },
+          { "label": "Tumour softens" },
+          { "label": "T cells enter", "key": true }
+        ],
+        "links": ["targets", "relieves", "admits"],
+        "caption": "The polymer drug reaches macrophages, which retrains them and eases pressure and stiffness so T cells can get in."
+      },
+      "sources": [
+        { "label": "Advanced Materials", "url": "https://doi.org/10.1002/adma.75802", "doi": "10.1002/adma.75802" }
+      ],
+      "forYou": "Relevant to nanoparticle penetration of dense stroma and macrophage targeting."
+    },
+    {
+      "id": "pediatric-tumour-immune-organoids",
+      "area": "cancer",
+      "title": "Pediatric Tumor Immune Organoids Preserve Cellular Compartments and are Suitable for Preclinical Modeling of Emerging Immunotherapies",
+      "headline": "Chunks of childhood tumours grown with their own immune and support cells reacted to CAR T cells much as the tumours do in mice.",
+      "authors": "Naiara Martinez-Velez, Roel Polak, Willian Lee Wang et al.",
+      "venue": "Advanced Science",
+      "published": "2026-11-22",
+      "evidence": {
+        "type": "organoid",
+        "model": "Mouse tumour fragments; one human medulloblastoma",
+        "limitation": "Abstract gives no sample sizes. Most work used mouse tumours. Only one human sample is described."
+      },
+      "question": "Can a simple organoid keep a tumour's immune environment intact for testing immunotherapies?",
+      "approach": "Intact fragments of mouse tumours were grown at an air-liquid interface, keeping tumour, immune and stromal cells together, and treated with immune-targeting agents and CAR T cells.",
+      "model": "Fragments of immunocompetent mouse neuroblastoma, medulloblastoma and osteosarcoma; a patient-derived human medulloblastoma.",
+      "result": "The organoids preserved tumour, immune and stromal cells for extended periods and matched in vivo responses better than 2D cultures. In the human medulloblastoma, GD2-CAR T cells showed potent antitumour activity.",
+      "limitations": "No numbers in the abstract. One human sample cannot show it works across patients.",
+      "meaning": "Cheaper and richer than animal tests, it could speed screening of immunotherapies for childhood solid tumours.",
+      "terms": [
+        { "term": "air-liquid interface", "def": "A culture method where tissue sits on a membrane with medium below and air above." },
+        { "term": "CAR T cells", "def": "Patient T cells engineered to carry a receptor that targets tumour cells." },
+        { "term": "GD2", "def": "A sugar-lipid molecule found on the surface of several childhood tumours." },
+        { "term": "stromal cells", "def": "Support cells that form the tissue framework around tumour cells." }
+      ],
+      "sources": [
+        { "label": "Advanced Science", "url": "https://doi.org/10.1002/advs.78865", "doi": "10.1002/advs.78865" }
+      ],
+      "forYou": "Relevant to organoid platforms that keep tumour microenvironment for therapy testing."
+    }
+  ],
+  "method": {
+    "id": "ovarian-organoid-platinum-resistance",
+    "title": "Testing platinum resistance in patient-derived ovarian cancer organoids",
+    "gist": "A STAR Protocols method that mimics chemotherapy cycles in ovarian cancer organoids and measures how well they regrow afterwards.",
+    "field": "cancer",
+    "useWhen": "You study platinum resistance and want a lab assay closer to clinical chemotherapy cycles than a single short drug exposure.",
+    "steps": [
+      { "title": "Treat with carboplatin", "text": "Expose patient-derived ovarian cancer organoids to carboplatin in a pattern that mimics clinical chemotherapy cycles." },
+      { "title": "Let them recover", "text": "Allow recovery and long-term growth in vitro, as the assay copies the cycle of treatment, recovery and regrowth." },
+      { "title": "Count and size", "text": "Quantify organoid number and organoid size to measure regenerative capacity after treatment." },
+      { "title": "Derive treated lines", "text": "Establish platinum-treated patient-derived organoids from the survivors." },
+      { "title": "Rechallenge", "text": "Rechallenge the treated lines against matched parental organoids to assess acquired platinum resistance." }
+    ],
+    "pitfalls": [
+      "Doses, timings and reagents are not in the abstract, so take them from the full protocol."
+    ],
+    "safety": "Follow your institution's rules for human-derived tissue, cytotoxic drugs such as carboplatin and cell culture before attempting this.",
+    "source": { "label": "STAR Protocols (Reichenbach et al.)", "url": "https://doi.org/10.1016/j.xpro.2026.104961", "doi": "10.1016/j.xpro.2026.104961" },
+    "terms": [
+      { "term": "organoid", "def": "A small three-dimensional cluster of cells grown in a dish that mimics part of an organ or tumour." },
+      { "term": "carboplatin", "def": "A platinum-based chemotherapy drug that damages the DNA of dividing cells." }
+    ],
+    "forYou": "Relevant to organoid drug resistance assays."
+  },
+  "learn": {
+    "question": "Why does a tumour's stiffness keep immune cells out?",
+    "answer": "Tumour matrix can stiffen and build up pressure. This squeezes the space between cells, so immune cells and drugs struggle to get in.",
+    "analogy": "Think of a crowded corridor: if the walls close in and the air is thick, nobody can walk through.",
+    "body": [
+      "A tumour is not only cancer cells. It includes immune cells, blood vessels and the extracellular matrix, a network of proteins that gives tissue its structure. Cancer-associated fibroblasts, a type of support cell, remodel this matrix by making collagen.",
+      "Matrix changes alter the mechanical properties of the tumour. Today's pancreatic study measured three of them: tumour stiffness, solid stress and interstitial fluid pressure. Lowering all three went with more CD8+ T cells entering the tumour in mice.",
+      "So a physical barrier can add to the immune barrier. Drugs that retrain immune cells may need help to reach them."
+    ],
+    "diagram": {
+      "layout": "hub",
+      "nodes": [
+        { "label": "Tumour matrix", "key": true },
+        { "label": "Stiffness" },
+        { "label": "Solid stress" },
+        { "label": "Fluid pressure" },
+        { "label": "Fewer T cells" }
+      ],
+      "caption": "The matrix sets stiffness, solid stress and fluid pressure. In the mouse study, easing all three went with more T cells entering."
+    },
+    "terms": [
+      { "term": "extracellular matrix", "def": "The network of proteins and other molecules that surrounds cells and gives tissue its structure." },
+      { "term": "cancer-associated fibroblasts", "def": "Support cells in a tumour that remodel the matrix by making collagen." }
+    ],
+    "seenIn": ["macrophage-ecm-nano-pdac", "glioma-perivascular-collagen"],
+    "sources": [
+      { "label": "AACR: What is the tumor microenvironment?", "url": "https://www.aacr.org/blog/2026/11/24/what-is-the-tumor-microenvironment/", "access": "open" },
+      { "label": "Advanced Materials (mouse study)", "url": "https://doi.org/10.1002/adma.75802", "doi": "10.1002/adma.75802" }
+    ]
+  },
+  "trials": {
+    "trials": [
+      {
+        "id": "niraparib-pdac-results",
+        "area": "cancer",
+        "title": "Niraparib in pancreatic cancer with DNA repair deficiency",
+        "nct": "NCT03601923",
+        "phase": "2",
+        "status": "Completed",
+        "change": "results-posted",
+        "what": "Results were posted on 24 November 2026. The trial tested the PARP inhibitor niraparib, with 6-month progression-free survival as the primary outcome. The result numbers were not read.",
+        "who": "32 people with pancreatic cancer and homologous recombination repair deficiency",
+        "sponsor": "Dana-Farber Cancer Institute",
+        "sources": [
+          { "label": "ClinicalTrials.gov NCT03601923", "url": "https://clinicaltrials.gov/study/NCT03601923" }
+        ]
+      },
+      {
+        "id": "aticaprant-anhedonia-terminated",
+        "area": "mind",
+        "title": "Aticaprant added to antidepressants for depression with anhedonia",
+        "nct": "NCT06514742",
+        "phase": "3",
+        "status": "Terminated",
+        "change": "terminated",
+        "what": "The trial is terminated and results were posted on 25 November 2026. It was placebo-controlled, with change in depression score at day 43 as the primary outcome. The reason for stopping and the results were not read.",
+        "who": "101 adults with major depression, moderate to severe anhedonia and an inadequate response to treatment",
+        "sponsor": "Janssen Research & Development",
+        "sources": [
+          { "label": "ClinicalTrials.gov NCT06514742", "url": "https://clinicaltrials.gov/study/NCT06514742" }
+        ]
+      },
+      {
+        "id": "ar1001-alzheimers-results",
+        "area": "mind",
+        "title": "AR1001 for mild to moderate Alzheimer's disease, 26 weeks",
+        "nct": "NCT03625622",
+        "phase": "2",
+        "status": "Completed",
+        "change": "results-posted",
+        "what": "Results were posted on 19 November 2026 for this completed placebo-controlled trial of 10 mg and 30 mg AR1001. The results were not read.",
+        "who": "210 people with mild to moderate Alzheimer's disease",
+        "sponsor": "AriBio Co., Ltd.",
+        "sources": [
+          { "label": "ClinicalTrials.gov NCT03625622", "url": "https://clinicaltrials.gov/study/NCT03625622" }
+        ]
+      }
+    ],
+    "funding": []
+  },
+  "chatter": [
+    {
+      "id": "third-dixson-retraction",
+      "area": "other",
+      "kind": "retraction",
+      "title": "Ecology Letters retracts a 2009 clownfish paper on ocean acidification",
+      "where": "Retraction Watch",
+      "signal": "Retraction Watch report of 25 November 2026; the paper was cited 412 times",
+      "gist": "Ecology Letters retracted a 2009 paper on ocean acidification and clownfish behaviour. It is the author's third retraction, after a university found misconduct.",
+      "sources": [
+        { "label": "Retraction Watch", "url": "https://retractionwatch.com/2026/11/25/third-retraction-former-marine-ecologist-ocean-acidification-fish-behavior/" }
+      ]
+    },
+    {
+      "id": "oxford-sex-gender-symposium",
+      "area": "mind",
+      "kind": "conference",
+      "title": "Oxford symposium on sex and gender inclusivity in research",
+      "where": "Mastodon #neuroscience",
+      "signal": "7 favourites and 2 boosts on Mastodon (#neuroscience)",
+      "gist": "A neuroscientist announced a free symposium, Beyond the Binary, on advancing sex and gender inclusivity in research, in Oxford on Friday 27 November.",
+      "sources": [
+        { "label": "Mastodon post", "url": "https://mastodon.social/@rossb_oxford/117676799681564570" }
+      ]
+    },
+    {
+      "id": "dreams-personality-article",
+      "area": "mind",
+      "kind": "debate",
+      "title": "Do dreams reveal personality? A magazine piece reviews the research",
+      "where": "Mastodon #neuroscience",
+      "signal": "2 favourites and 3 boosts on Mastodon (#neuroscience)",
+      "gist": "A science writer shared a BBC Science Focus piece on whether dream content says something about personality. The post is a pointer; the article was not read.",
+      "sources": [
+        { "label": "Mastodon post", "url": "https://ohai.social/@Garwboy/117672685972233413" }
+      ]
+    }
+  ],
+  "curiosity": {
+    "id": "legless-geckos-snake-like",
+    "area": "curiosity",
+    "title": "Australia's legless geckos evolved like snakes, a preprint suggests",
+    "gist": "The 50 species of pygopod geckos grew longer by lengthening both body and tail, and eat a wide range of foods, a pattern closer to snakes than to other legless lizards.",
+    "body": [
+      "Snakes are technically a highly modified group of legless lizards, and many other lizard lineages lost their legs independently. A team gathered DNA from all 50 pygopod species and compared body and tail ratios with data on over 3,100 lizard and snake species. Snakes lengthened their bodies and limbed lizards their tails. Pygopods did both.",
+      "Pygopod diets are as varied as any reptile group except monitor lizards and colubrid snakes. The team suggests they split from other geckos about 50 million years ago and filled the small snake role in Australia before snakes arrived."
+    ],
+    "evidence": {
+      "type": "news",
+      "limitation": "Read through a Science News report. The work is a bioRxiv preprint posted 23 October, so it is not yet peer reviewed."
+    },
+    "sources": [
+      { "label": "Science News", "url": "https://www.sciencenews.org/article/legless-geckos-evolved-like-snakes" }
+    ]
+  },
+  "jobs": [],
+  "note": "The sweep brief was missing, so I ran the sweep first (17 of 112 sources failed). Papers were read from PubMed abstracts, so several cards say what was not read. Chatter was thin and no job could be verified."
+}
