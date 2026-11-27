@@ -1,0 +1,771 @@
+{
+  "date": "2026-11-27",
+  "number": 12,
+  "title": "Tumour borders and architecture, nanoparticle mRNA for T cells, and brain wiring in mice",
+  "dek": "AI maps of breast and colon tumour edges point to new targets, lipid nanoparticles boost T cell therapy in mice, and a phase 3 trial shows a pill can keep chemotherapy on schedule.",
+  "palette": "ocean-ember",
+  "tldr": [
+    {
+      "text": "AI-read pathology slides sorted triple-negative breast cancer borders into five types, and the type predicted survival.",
+      "area": "cancer"
+    },
+    {
+      "text": "In colon cancer, tissue shape and cell state shape each other, and a deep-learning model that reads shape predicts outcome.",
+      "area": "cancer"
+    },
+    {
+      "text": "In 213 people, a pill given with chemotherapy kept 76 percent on schedule versus 39 percent on placebo.",
+      "area": "cancer"
+    },
+    {
+      "text": "Mouse frontal cortex neurons turned out to be as selective for where things appear in the visual field as visual cortex neurons.",
+      "area": "mind"
+    },
+    {
+      "text": "Engineered protein \"glue\" restored chromosome links in aged mouse eggs, per a news report.",
+      "area": "women"
+    }
+  ],
+  "top": [
+    {
+      "id": "tnbc-border-ecosystems",
+      "area": "cancer",
+      "title": "AI sorts the edge of triple-negative breast tumours into five types, three linked to survival",
+      "gist": "An AI tool read tumour slides and found five kinds of tumour border. Three kinds tracked with prognosis, and one fibroblast zone blocked immune cells.",
+      "evidence": {
+        "type": "peer-reviewed",
+        "model": "Human tumour tissue, digital pathology and spatial omics",
+        "limitation": "Read from the abstract only. Sample sizes and effect sizes were not read, and the treatment test details are not stated."
+      },
+      "why": "The invasive edge is where tumours meet the immune system and blood supply. A map of border types could point to treatments aimed at that edge.",
+      "details": [
+        "The study combined AI-based digital pathology with spatial multi-omics, which measures many molecules while keeping their place in the tissue. Immune-infiltrated borders held a triadic immune niche and went with better prognosis and immunotherapy sensitivity.",
+        "Tumour-stroma borders held a MIF+ fibroblast niche that excluded immune cells and suppressed T cells, and predicted poor prognosis. Tumour-adipose borders held an FLT1+ endothelial niche tied to low oxygen, leaky vessels and spread. The abstract says targeting that niche inhibited tumour progression."
+      ],
+      "didNotShow": "The abstract gives no patient numbers, hazard ratios or treatment test model, so how strong the links are is not known from it.",
+      "terms": [
+        {
+          "term": "triple-negative breast cancer",
+          "def": "A breast cancer that lacks three common drug targets, so it has fewer targeted treatments."
+        },
+        {
+          "term": "spatial multi-omics",
+          "def": "Methods that measure many molecules in a tissue slice while keeping track of where each one sits."
+        },
+        {
+          "term": "fibroblast",
+          "def": "A support cell in tissue that builds the surrounding scaffold."
+        },
+        {
+          "term": "endothelial",
+          "def": "Describes the cells that line the inside of blood vessels."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Science",
+          "url": "https://doi.org/10.1126/science.aei6252",
+          "doi": "10.1126/science.aei6252",
+          "access": "paywall"
+        }
+      ],
+      "forYou": "Relevant to stroma and border niches that limit immune and drug access in dense tumours."
+    },
+    {
+      "id": "colon-architecture-heterogeneity",
+      "area": "cancer",
+      "title": "Colon tumour shape and cell states feed each other, and shape predicts outcome",
+      "gist": "A deep-learning model that reads colon tumour shape predicted patient outcome. Tissue fragmentation pressed on cells, switched on YAP and pushed stem-like cell states.",
+      "evidence": {
+        "type": "peer-reviewed",
+        "model": "Patient tumour tissue, spatial transcriptomics and patient-derived organoids",
+        "limitation": "Read from the abstract only. Cohort sizes and accuracy numbers were not read."
+      },
+      "why": "Tumours made of many cell states resist treatment. Showing that physical shape helps create that mix links mechanics to a major barrier to lasting treatment success.",
+      "details": [
+        "The team built a model that measures tissue architecture and nuclear shape at subcellular resolution. Combined with spatial transcriptomics, multiplex immunofluorescence and organoids, it showed that fragmented tissue creates compressive forces that activate YAP.",
+        "YAP activity suppressed classical stem cell programmes and induced fetal-like, regenerative states with partial EMT features. TGF-beta signalling from the stroma then split these into distinct states, and beta-catenin tuned how cells responded. The abstract says the prediction works regardless of mutation status or cancer stage."
+      ],
+      "didNotShow": "The abstract gives no cohort sizes or accuracy figures, and no test of whether changing architecture changes patient outcome.",
+      "terms": [
+        {
+          "term": "YAP",
+          "def": "A protein that turns on genes for growth and regeneration when cells are squeezed or stretched."
+        },
+        {
+          "term": "EMT",
+          "def": "A process in which tissue cells lose their tight links and become more mobile."
+        },
+        {
+          "term": "organoids",
+          "def": "Small three-dimensional cell clusters grown in a dish that mimic part of a tissue or tumour."
+        },
+        {
+          "term": "TGF-beta",
+          "def": "A signalling molecule that cells use to change each other's behaviour."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nature",
+          "url": "https://doi.org/10.1038/s41586-026-11301-0",
+          "doi": "10.1038/s41586-026-11301-0",
+          "access": "paywall"
+        }
+      ],
+      "forYou": "Relevant to how mechanical forces and matrix shape tumour cell states and drug access."
+    },
+    {
+      "id": "car-macrophage-vesicles-neutrophils",
+      "area": "cancer",
+      "title": "Vesicles from CAR macrophages recruit neutrophils against solid tumours in mice",
+      "gist": "Cell-free vesicles from engineered macrophages carried a death signal into glypican-3 tumours. In mouse models they slowed growth and extended survival by drawing in neutrophils.",
+      "evidence": {
+        "type": "animal",
+        "model": "Mouse tumour models and humanized patient-derived xenografts",
+        "limitation": "Read from the abstract only. Numbers for survival and tumour size were not read, and no human data exist yet."
+      },
+      "why": "Cell therapies struggle in solid tumours and can be toxic. A vesicle product avoids living cells and was better tolerated than CAR macrophages in mice.",
+      "details": [
+        "The team built a nanobody-based chimeric antigen receptor against glypican-3 and collected extracellular vesicles from the engineered macrophages (CAR-MEVs). The vesicles displayed the nanobody and gathered in glypican-3-positive tumours.",
+        "They delivered TRAIL, which set off caspase-8 cleavage of BAP31, stress in the endoplasmic reticulum and immunogenic cell death. Danger signals then drew in activated neutrophils. Neutrophil depletion and neutrophil-specific Nos2 deletion lowered the effect, and adding CD47 blockade gave durable control and immune memory in mice."
+      ],
+      "didNotShow": "It did not test the vesicles in people. The abstract does not give tumour sizes, survival numbers or group sizes.",
+      "terms": [
+        {
+          "term": "CAR",
+          "def": "A chimeric antigen receptor: an engineered surface protein that steers an immune cell towards a chosen target."
+        },
+        {
+          "term": "extracellular vesicles",
+          "def": "Tiny membrane bubbles that cells release to carry proteins and other cargo to other cells."
+        },
+        {
+          "term": "glypican-3",
+          "def": "A protein found on the surface of some liver and other tumour cells."
+        },
+        {
+          "term": "TRAIL",
+          "def": "A protein that can trigger programmed death in tumour cells."
+        },
+        {
+          "term": "neutrophils",
+          "def": "The most common white blood cell, a first responder of the immune system."
+        }
+      ],
+      "diagram": {
+        "layout": "flow",
+        "nodes": [
+          {
+            "label": "CAR-MEV"
+          },
+          {
+            "label": "Finds tumour"
+          },
+          {
+            "label": "TRAIL kills cells"
+          },
+          {
+            "label": "Neutrophils arrive"
+          },
+          {
+            "label": "Tumour slows"
+          }
+        ],
+        "links": [
+          "binds GPC3",
+          "delivers",
+          "release signals",
+          "attack"
+        ],
+        "caption": "The vesicle homes in on the tumour, delivers TRAIL, and the dying cells call in neutrophils that slow growth in mice."
+      },
+      "sources": [
+        {
+          "label": "Science Translational Medicine",
+          "url": "https://doi.org/10.1126/scitranslmed.aee2583",
+          "doi": "10.1126/scitranslmed.aee2583"
+        }
+      ],
+      "forYou": "Relevant to nanoscale vesicle delivery and immune cell recruitment in solid tumours."
+    },
+    {
+      "id": "lnp-mrna-il12-tcr-t",
+      "area": "cancer",
+      "title": "Lipid nanoparticles with IL-12 and bispecific mRNA boosted T cell therapy in mice",
+      "gist": "Injecting lipid nanoparticles carrying two mRNAs into a lung tumour raised the effect of TCR T cell therapy in mice. Using both mRNAs together added more benefit.",
+      "evidence": {
+        "type": "animal",
+        "model": "Mouse xenograft of human lung adenocarcinoma",
+        "limitation": "Read from the abstract only. No effect sizes or group sizes were read, and the tumour was injected directly."
+      },
+      "why": "Local delivery of immune signals could help T cell therapy reach solid tumours while keeping doses away from the rest of the body.",
+      "details": [
+        "One mRNA made a membrane-bound single-chain human IL-12 to reprogram the suppressive tumour microenvironment. The other made a mesothelin-CD3 bispecific T cell engager, a protein that links tumour cells to T cells, to cover tumour cells that differ in their targets.",
+        "They used the clinical-stage NY-ESO-1 8F TCR T cell therapy. Each mRNA alone improved efficacy, and the pair gave an additive gain."
+      ],
+      "didNotShow": "It did not test intravenous delivery, human patients or other tumour types. Safety data are not in the abstract.",
+      "terms": [
+        {
+          "term": "lipid nanoparticles",
+          "def": "Tiny fat-based particles that carry fragile molecules such as mRNA into cells."
+        },
+        {
+          "term": "mRNA",
+          "def": "A molecule that carries a gene's instructions so cells can make a protein."
+        },
+        {
+          "term": "TCR",
+          "def": "T cell receptor: the natural surface protein that lets a T cell recognise a target."
+        },
+        {
+          "term": "IL-12",
+          "def": "A signalling protein that switches on immune cells."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Journal of Controlled Release",
+          "url": "https://doi.org/10.1016/j.jconrel.2026.115570",
+          "doi": "10.1016/j.jconrel.2026.115570"
+        }
+      ],
+      "forYou": "Relevant to nanoparticle delivery of immune cargo into tumours."
+    },
+    {
+      "id": "sv2a-excitatory-balance-meta",
+      "area": "mind",
+      "title": "Animal meta-analysis suggests the SV2A PET marker tracks brain resilience, not just synapse count",
+      "gist": "In 30 animal studies of kindling, SV2A-targeting changes cut seizure severity and the odds of reaching kindling. SV2A may also reflect how well circuits stay in balance.",
+      "evidence": {
+        "type": "meta-analysis",
+        "n": "30 animal studies",
+        "model": "Kindling models in animals",
+        "limitation": "Animal studies only, and seizure severity results varied widely between studies (I2 82 percent)."
+      },
+      "why": "SV2A PET is used as a stand-in for synapse numbers in people with schizophrenia. This hints that a low signal may reflect more than missing synapses.",
+      "details": [
+        "Kindling is a method that repeats mild stimulation until the brain becomes lastingly over-excitable. In normal animals, hippocampal SV2A rose, mostly in GABA neurons, and animals with reduced SV2A function were more prone to kindling.",
+        "SV2A-targeting treatments lowered seizure severity (Hedges g of -2.16, 95 percent CI -2.95 to -1.37) and the odds of reaching kindling (odds ratio 0.04, 95 percent CI 0.02 to 0.08)."
+      ],
+      "didNotShow": "It did not study people or psychiatric patients. The link to schizophrenia PET findings is the authors' interpretation.",
+      "terms": [
+        {
+          "term": "SV2A",
+          "def": "A protein in synapses that helps release chemical messengers, used as a PET marker of synapses."
+        },
+        {
+          "term": "PET",
+          "def": "Positron emission tomography: a scan that shows where a tracer molecule gathers in the body."
+        },
+        {
+          "term": "kindling",
+          "def": "A way to make the brain easier to over-excite by repeating mild electrical or chemical stimulation."
+        },
+        {
+          "term": "meta-analysis",
+          "def": "A study that pools results from many earlier studies to give one overall estimate."
+        }
+      ],
+      "sources": [
+        {
+          "label": "JAMA Psychiatry",
+          "url": "https://doi.org/10.1001/jamapsychiatry.2026.3971",
+          "doi": "10.1001/jamapsychiatry.2026.3971",
+          "access": "paywall"
+        }
+      ],
+      "forYou": "Relevant to interpreting imaging markers and excitatory-inhibitory balance."
+    },
+    {
+      "id": "fnirs-neurofeedback-depression",
+      "area": "mind",
+      "title": "Brain-light neurofeedback eased depressive symptoms for three months in those who improved most",
+      "gist": "In 88 adults, 11 sessions of near-infrared neurofeedback eased depressive symptoms only in the 37 who gained most. The benefit held at three months.",
+      "evidence": {
+        "type": "human-rct",
+        "n": "88 adults (59 trained, 29 controls)",
+        "limitation": "Benefit was found only after sorting trained people by how much they improved, so it may overstate the effect. Controls had no sham."
+      },
+      "why": "A noninvasive training method that people practice for a week would be easy to scale, if the benefit holds in a fair comparison.",
+      "details": [
+        "Participants learned to control activity in the right lateral prefrontal cortex while seeing it measured by functional near-infrared spectroscopy. The trained group was then split by how their brain activity changed during training.",
+        "In the high-improvement group, mediation analysis suggested training raised cognitive reappraisal, which raised hedonic capacity, which lowered symptoms. The Psychological Medicine abstract does not give the effect size."
+      ],
+      "didNotShow": "It did not show that neurofeedback beats a sham control, because the controls received no intervention. The split into groups was made after training.",
+      "terms": [
+        {
+          "term": "neurofeedback",
+          "def": "A training method in which a person sees a live reading of their own brain activity and learns to change it."
+        },
+        {
+          "term": "cognitive reappraisal",
+          "def": "A way of managing emotion by rethinking what a situation means."
+        },
+        {
+          "term": "hedonic capacity",
+          "def": "The ability to feel pleasure from rewarding things."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Psychological Medicine",
+          "url": "https://doi.org/10.1017/S0033291726106503",
+          "doi": "10.1017/S0033291726106503"
+        }
+      ],
+      "forYou": "Relevant to near-infrared light methods and how mechanism claims are tested."
+    },
+    {
+      "id": "mouse-frontal-visual-receptive-fields",
+      "area": "mind",
+      "title": "Mouse frontal cortex neurons respond to precise spots in visual space, like visual cortex neurons",
+      "gist": "In awake mice, neurons in frontal cortex had sharply tuned visual receptive fields. They depended on input from primary visual cortex and sent signals back to it.",
+      "evidence": {
+        "type": "animal",
+        "model": "Awake mice",
+        "limitation": "Read from a short abstract with no numbers. Findings are in mice and say nothing yet about human frontal cortex."
+      },
+      "why": "Frontal cortex was thought to handle choices, not fine sensory coding. A direct visual route may change how researchers model attention and perception.",
+      "details": [
+        "The frontal neurons were most sensitive to binocular visual space, the region both eyes see. They needed retinotopically aligned input from the primary visual cortex, V1.",
+        "They also sent functional feedback axons across visual cortex, most strongly to binocular V1. The authors suggest this circuit can control spatial vision from the top down."
+      ],
+      "didNotShow": "It did not test behaviour or human brains. The abstract gives no cell counts or effect sizes.",
+      "terms": [
+        {
+          "term": "receptive field",
+          "def": "The patch of the visual world that makes a given neuron respond when something appears there."
+        },
+        {
+          "term": "binocular",
+          "def": "Seen with both eyes at once."
+        },
+        {
+          "term": "V1",
+          "def": "The primary visual cortex, the first cortical area that receives signals from the eyes."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nature Neuroscience",
+          "url": "https://doi.org/10.1038/s41593-026-02520-9",
+          "doi": "10.1038/s41593-026-02520-9"
+        }
+      ],
+      "forYou": "Relevant to how feedback circuits tune sensory processing."
+    },
+    {
+      "id": "aged-egg-molecular-glue-news",
+      "area": "women",
+      "title": "Engineered molecular glue restores chromosome links in aged mouse eggs, news report says",
+      "gist": "Researchers built a protein system that restored normal chromosome connections in aging mouse eggs, STAT reports. It raises hopes of better IVF outcomes someday.",
+      "evidence": {
+        "type": "news",
+        "limitation": "Read only from the STAT feed summary. The paper, its numbers and its limits were not read."
+      },
+      "why": "Errors in chromosome handling in older eggs are a major cause of failed IVF and miscarriage. A fix that works in mice is a first step, not a treatment.",
+      "didNotShow": "Nothing here is human data. The study itself, its sample sizes and effect sizes were not read, since the report was behind a block.",
+      "terms": [
+        {
+          "term": "STAT",
+          "def": "A health and life sciences news outlet."
+        },
+        {
+          "term": "IVF",
+          "def": "In vitro fertilisation: a treatment in which eggs are fertilised in a lab and the embryo is placed in the uterus."
+        }
+      ],
+      "sources": [
+        {
+          "label": "STAT",
+          "url": "https://www.statnews.com/2026/11/26/fertility-advance-engineered-protein-stabilizes-chromosomes-in-aging-eggs/"
+        }
+      ],
+      "forYou": "Relevant to engineered protein tools that stabilise molecular complexes."
+    }
+  ],
+  "bench": [
+    {
+      "id": "fyn-src-ras-inhibitor-pdac",
+      "area": "cancer",
+      "title": "FYN and Other Src Family Kinases Antagonize Response to RAS Inhibition in Pancreatic Ductal Adenocarcinoma",
+      "headline": "Pancreatic cancer cells escape a RAS drug within a week by switching on FYN. Blocking FYN or its family kept the drug working in mice.",
+      "authors": "Hsiu-Chi Ting, Sun Y Kim, Victoria A Gaeth et al.",
+      "venue": "Cancer Research",
+      "published": "2026-11-24",
+      "evidence": {
+        "type": "animal",
+        "model": "Mouse PDAC models (degron KRAS G12D and Kras G12V)",
+        "limitation": "Abstract gives no sample sizes or effect sizes. Preclinical mouse work only."
+      },
+      "question": "Why do pancreatic tumours stop responding to RAS blockers, and can that be delayed?",
+      "approach": "The team used two mouse models: one where KRAS G12D could be degraded on demand, and one driven by Kras G12V and treated with the RAS(ON) inhibitor RMC-7977. They tracked signalling and cell states over time and tested FYN blockade.",
+      "model": "A degron-regulated KRAS G12D transplant model and a Kras G12V-driven PDAC mouse model.",
+      "result": "Degrading KRAS led to relapse with more wild-type RAS and restored MAPK signalling. RMC-7977 led to RAS-independent resistance within 7 days, with more FYN and a SRC family kinase to YAP axis. Blocking FYN or SFK with the drug prevented the uncoupling of MAPK signalling from growth.",
+      "limitations": "No numbers appear in the abstract. Mouse models only, and the combinations still need clinical testing.",
+      "meaning": "It supports testing SRC family kinase blockers with RAS inhibitors to make KRAS therapy last longer in pancreatic cancer.",
+      "terms": [
+        {
+          "term": "PDAC",
+          "def": "Pancreatic ductal adenocarcinoma: the most common and deadly form of pancreatic cancer."
+        },
+        {
+          "term": "degron",
+          "def": "A tag that lets researchers make a chosen protein break down on command."
+        },
+        {
+          "term": "MAPK",
+          "def": "A chain of proteins that passes growth signals from the cell surface to the nucleus."
+        },
+        {
+          "term": "RAS(ON) inhibitor",
+          "def": "A drug that blocks the active form of RAS proteins, including several mutant types."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cancer Research",
+          "url": "https://doi.org/10.1158/0008-5472.can-26-0691",
+          "doi": "10.1158/0008-5472.can-26-0691"
+        }
+      ],
+      "forYou": "Relevant to resistance and combination strategies in pancreatic cancer."
+    },
+    {
+      "id": "rafutrombopag-cit-phase3",
+      "area": "cancer",
+      "title": "Rafutrombopag for chemotherapy-induced thrombocytopenia in patients with solid tumours: a multicentre, randomised, double-blind, placebo-controlled, phase 3 trial",
+      "headline": "A daily pill that lifts platelets let 76 percent of people stay on planned chemotherapy, against 39 percent on placebo, when taken continuously.",
+      "authors": "Shukui Qin, Jun Ma, Yanqiao Zhang et al.",
+      "venue": "The Lancet Oncology",
+      "published": "2026-11-26",
+      "evidence": {
+        "type": "clinical-trial",
+        "phase": "3",
+        "status": "Complete",
+        "n": "213 adults, 43 sites in China",
+        "limitation": "96 percent were Han Chinese, all sites in China. Safety is read in the context of ongoing chemotherapy.",
+        "conflicts": "Funded by Jiangsu Hengrui Pharmaceuticals."
+      },
+      "question": "Can an oral platelet booster let people with low platelets after platinum chemotherapy keep to their planned cycles?",
+      "approach": "Adults with solid tumours, platelets below 75 x 10^9/L and a chemotherapy delay of at least 7 days were randomly assigned 1:1:1 to continuous rafutrombopag, rafutrombopag only before chemotherapy then placebo (switch), or placebo. Neither patients nor staff knew who got which.",
+      "model": "Human adults, randomised double-blind placebo-controlled phase 3 trial (NCT05864014).",
+      "result": "The composite primary goal was met by 53 of 70 (76 percent) on continuous drug, 35 of 72 (49 percent) on switch and 28 of 71 (39 percent) on placebo. The gain over placebo was 36.2 points (95 percent CI 21.0 to 51.3) for continuous and 9.0 points (-7.2 to 25.1) for switch.",
+      "limitations": "The switch arm did not differ from placebo. Grade 3 or worse events occurred in 26, 37 and 31 percent of the three arms, and serious events in 7, 11 and 14 percent. The sponsor paid for the study.",
+      "meaning": "Continuous platelet support may keep platinum chemotherapy on track for some patients. Survival effects were not reported in the abstract.",
+      "terms": [
+        {
+          "term": "thrombocytopenia",
+          "def": "A low platelet count, which raises bleeding risk and can force chemotherapy to be delayed."
+        },
+        {
+          "term": "thrombopoietin receptor agonist",
+          "def": "A drug that mimics the hormone that tells bone marrow to make platelets."
+        },
+        {
+          "term": "composite response",
+          "def": "A single result that counts as met only when several set conditions are all true."
+        }
+      ],
+      "diagram": {
+        "layout": "compare",
+        "nodes": [
+          {
+            "label": "76%",
+            "note": "Continuous pill, 53 of 70",
+            "key": true
+          },
+          {
+            "label": "49%",
+            "note": "Switch to placebo, 35 of 72"
+          },
+          {
+            "label": "39%",
+            "note": "Placebo, 28 of 71"
+          }
+        ],
+        "caption": "Share of people who met the composite goal: platelet recovery, a completed chemotherapy cycle and no rescue treatment."
+      },
+      "sources": [
+        {
+          "label": "The Lancet Oncology",
+          "url": "https://doi.org/10.1016/S1470-2045(26)00456-0",
+          "doi": "10.1016/S1470-2045(26)00456-0",
+          "access": "paywall"
+        },
+        {
+          "label": "ClinicalTrials.gov NCT05864014",
+          "url": "https://clinicaltrials.gov/study/NCT05864014"
+        }
+      ],
+      "forYou": "Relevant to supportive care that keeps combination chemotherapy on schedule."
+    },
+    {
+      "id": "neurotransmitter-polygenic-brain-adolescents",
+      "area": "mind",
+      "title": "Neurotransmitter pathway-specific polygenic risk for psychiatric disorders and brain morphology in adolescents",
+      "headline": "Splitting genetic risk by brain chemical pathway showed distinct patterns of smaller or larger cortex surface in 8,591 young people aged 9 to 14.",
+      "authors": "Dogukan Koc, Bing Xu, Brandon Toribio Sanzo et al.",
+      "venue": "Molecular Psychiatry",
+      "published": "2026-11-25",
+      "evidence": {
+        "type": "human-observational",
+        "n": "8,591 participants (13,551 scans)",
+        "limitation": "Only participants of European ancestry. Associations are statistical and effect sizes per person are not given in the abstract."
+      },
+      "question": "Does genetic risk for ADHD, schizophrenia and depression act on cortex structure through specific neurotransmitter pathways?",
+      "approach": "The team scored each person's genetic risk for ADHD, schizophrenia and major depression, in total and within glutamate, GABA, dopamine and serotonin pathways. They compared the scores with cortex area and thickness at every point of the brain surface.",
+      "model": "Adolescents (ages 9 to 14) from the ABCD and Generation R cohorts, brain MRI.",
+      "result": "ADHD risk went with smaller surface area over very wide areas (82,508 mm2 genome-wide). Schizophrenia pathway scores gave clusters totalling 4,302 mm2 against 1,129 mm2 genome-wide. The serotonin score went with a smaller lingual gyrus, and the GABA score with larger temporal and cingulate areas. Cortical thickness links were limited.",
+      "limitations": "European ancestry only, so results may not carry over to other groups. Genetic scores explain only a small part of risk, and these are links, not causes.",
+      "meaning": "Pathway-specific scores could help show which brain systems each disorder's genetic risk acts through. They are far from use in diagnosis.",
+      "terms": [
+        {
+          "term": "polygenic score",
+          "def": "A number that adds up many small genetic effects to estimate a person's inherited tendency for a trait."
+        },
+        {
+          "term": "cortical surface area",
+          "def": "The size of the brain's folded outer layer, measured on MRI."
+        },
+        {
+          "term": "GABA",
+          "def": "The brain's main calming chemical messenger."
+        },
+        {
+          "term": "glutamate",
+          "def": "The brain's main exciting chemical messenger."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Molecular Psychiatry",
+          "url": "https://doi.org/10.1038/s41380-026-03962-0",
+          "doi": "10.1038/s41380-026-03962-0"
+        }
+      ],
+      "forYou": "Relevant to genetic partitioning methods and imaging analysis across cohorts."
+    }
+  ],
+  "method": {
+    "id": "tacman-cross-species-scrnaseq",
+    "title": "Cross-species single-cell data integration with TACMAN",
+    "gist": "A STAR Protocols method to line up single-cell RNA data from different species, shown on human and mouse pancreas, even when few genes match one to one.",
+    "field": "cancer",
+    "useWhen": "You want to compare cell types between mouse models and human tissue, for instance pancreas, and the species share few clear one-to-one gene matches.",
+    "steps": [
+      {
+        "title": "Prepare datasets",
+        "text": "Prepare the single-cell RNA datasets from each species, as described in the protocol's dataset preparation section."
+      },
+      {
+        "title": "Map orthologs",
+        "text": "Map genes between species with the protocol's ortholog mapping step."
+      },
+      {
+        "title": "Align across species",
+        "text": "Run the transformer-based alignment of cross-species metapath aggregation network (TACMAN) to align the data."
+      },
+      {
+        "title": "Interpret results",
+        "text": "Interpret the aligned data using the human and mouse pancreas example given in the protocol."
+      }
+    ],
+    "pitfalls": [
+      "Only the abstract was read, so software versions, settings and reagents are not listed. Take them from the full protocol."
+    ],
+    "safety": "This is a computational method. Follow your institution's rules for human and animal data and for any tissue behind the datasets you use.",
+    "source": {
+      "label": "STAR Protocols (Guo et al.)",
+      "url": "https://doi.org/10.1016/j.xpro.2026.104966",
+      "doi": "10.1016/j.xpro.2026.104966"
+    },
+    "terms": [
+      {
+        "term": "ortholog",
+        "def": "A gene in one species that matches a gene in another because both came from the same ancestor gene."
+      },
+      {
+        "term": "scRNA-seq",
+        "def": "Single-cell RNA sequencing: a method that reads which genes are active in each single cell."
+      }
+    ],
+    "forYou": "Relevant to comparing mouse models with human tissue data."
+  },
+  "learn": {
+    "question": "How do nerves help tumours grow?",
+    "answer": "Nerve fibres grow into many tumours and release signals that feed cancer cells and reshape nearby tissue. Drugs that block these signals may become new cancer tools.",
+    "analogy": "Think of a tumour tapping into the body's wiring and using it to send growth orders.",
+    "body": [
+      "The peripheral nervous system carries signals between the brain and the body. A recent review says nerve fibres that enter tumours are now seen as active parts of the tumour microenvironment, not bystanders.",
+      "Tumours recruit and remodel these fibres so they look like nerves that are repairing an injury. The fibres release chemical messengers and other factors that help tumour cells grow, move and survive.",
+      "Nerve signals also change immune responses, reprogram fibroblasts and promote new blood vessels. The authors note that some approved drugs that act on nerve signalling could be repurposed, which still needs testing."
+    ],
+    "diagram": {
+      "layout": "hub",
+      "nodes": [
+        {
+          "label": "Tumour nerves",
+          "key": true
+        },
+        {
+          "label": "Tumour growth"
+        },
+        {
+          "label": "Immune response"
+        },
+        {
+          "label": "Fibroblasts"
+        },
+        {
+          "label": "Blood vessels"
+        }
+      ],
+      "caption": "Nerve fibres in a tumour release signals that affect cancer cells, immune cells, fibroblasts and blood vessels."
+    },
+    "terms": [
+      {
+        "term": "tumour microenvironment",
+        "def": "The mix of cells, vessels and scaffold proteins around and inside a tumour."
+      },
+      {
+        "term": "peripheral nervous system",
+        "def": "The nerves outside the brain and spinal cord."
+      },
+      {
+        "term": "neurites",
+        "def": "Thin outgrowths of a nerve cell, such as its fibres."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Nature Reviews Neuroscience (review)",
+        "url": "https://doi.org/10.1038/s41583-026-01105-6",
+        "doi": "10.1038/s41583-026-01105-6"
+      }
+    ]
+  },
+  "trials": {
+    "trials": [
+      {
+        "id": "gpc100-myeloma-stem-cells-results",
+        "area": "rare",
+        "title": "GPC-100 with propranolol, with or without G-CSF, to collect stem cells in myeloma",
+        "nct": "NCT05561751",
+        "phase": "2",
+        "status": "Completed",
+        "change": "results-posted",
+        "what": "Results posted 19 November 2026. The goal was at least 2 million CD34+ cells per kg in two collection sessions. It was met by 0 of 4 on GPC-100 plus propranolol and 17 of 19 with G-CSF added.",
+        "who": "People with multiple myeloma having an autologous stem cell transplant (28 started)",
+        "sponsor": "GPCR Therapeutics, Inc.",
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov NCT05561751",
+            "url": "https://clinicaltrials.gov/study/NCT05561751"
+          }
+        ]
+      },
+      {
+        "id": "tiragolumab-mss-crc-terminated-results",
+        "area": "cancer",
+        "title": "Atezolizumab, bevacizumab and tiragolumab in microsatellite-stable colorectal cancer",
+        "nct": "NCT06784947",
+        "phase": "2",
+        "status": "Terminated",
+        "change": "terminated",
+        "what": "Stopped because the drugs became unavailable. Results posted 20 November 2026: 3 of 12 people responded (RECIST 1.1) and median progression-free survival was 3.75 months (lower 95 percent limit 2.37).",
+        "who": "12 people with metastatic microsatellite-stable colorectal cancer",
+        "sponsor": "University of Colorado, Denver",
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov NCT06784947",
+            "url": "https://clinicaltrials.gov/study/NCT06784947"
+          }
+        ]
+      }
+    ],
+    "funding": []
+  },
+  "chatter": [
+    {
+      "id": "fingerprint-blood-type-papers",
+      "area": "other",
+      "kind": "retraction",
+      "title": "Two publishers examine papers that claim fingerprints predict blood type",
+      "where": "Retraction Watch",
+      "signal": "Retraction Watch report of 23 November 2026; more than a dozen papers since 2023",
+      "gist": "Researchers say the papers used image sets with no blood type data, so the AI results are not real. Two publishers are investigating, and Elsevier says it is aware.",
+      "sources": [
+        {
+          "label": "Retraction Watch",
+          "url": "https://retractionwatch.com/2026/11/23/two-publishers-investigating-studies-claiming-to-predict-blood-type-from-fingerprints/"
+        }
+      ]
+    },
+    {
+      "id": "hidden-prompts-ai-reviewers",
+      "area": "other",
+      "kind": "correction",
+      "title": "A paper carried a hidden instruction aimed at AI peer reviewers, and was retracted",
+      "where": "Retraction Watch",
+      "signal": "Retraction Watch report of 19 November 2026; found by sleuth Nick Brown",
+      "gist": "A hidden line told an AI reviewer to give the paper a good review. The publisher of Computer Methods in Biomechanics and Biomedical Engineering retracted the paper.",
+      "sources": [
+        {
+          "label": "Retraction Watch",
+          "url": "https://retractionwatch.com/2026/11/19/prompt-injection-ai-llm-peer-review-published-papers/"
+        }
+      ]
+    },
+    {
+      "id": "extracellular-matrix-memory-idea",
+      "area": "mind",
+      "kind": "debate",
+      "title": "Do astrocytes and the matrix around neurons help store memory?",
+      "where": "Mastodon #neuroscience",
+      "signal": "3 boosts and 0 favourites on Mastodon on 26 November 2026",
+      "gist": "A post describes a theory paper that proposes astrocytes and the extracellular matrix help encode memory. The post itself says it is a hypothesis, not proof.",
+      "sources": [
+        {
+          "label": "Mastodon post",
+          "url": "https://mastodon.social/@fusimotors/117683097190978770"
+        }
+      ]
+    }
+  ],
+  "curiosity": {
+    "id": "paralysed-hands-play-snake",
+    "area": "curiosity",
+    "title": "People with paralysed hands played Pong and Snake with single muscle nerve signals",
+    "gist": "People with no hand function after spinal cord injury controlled single motor units in paralysed muscles to play Pong and Snake and steer a virtual wheelchair.",
+    "body": [
+      "Even after a severe cervical spinal cord injury, some nerve links survive. High-density electrodes on the skin could pick up activity from individual motor units, each a nerve cell and the muscle fibres it drives, when people tried to move.",
+      "Participants learned accurate control in a few days of practice, then used three independent control signals to play games and steer a virtual wheelchair. This worked even with spasticity and in one person whose injury was motor complete."
+    ],
+    "evidence": {
+      "type": "peer-reviewed",
+      "n": "Not stated in the abstract",
+      "limitation": "The abstract does not give how many people took part, and the tasks were virtual, not real hand movements."
+    },
+    "terms": [
+      {
+        "term": "motor unit",
+        "def": "One motor nerve cell together with the muscle fibres it controls."
+      },
+      {
+        "term": "spasticity",
+        "def": "Muscle stiffness and involuntary tightening that often follows spinal cord injury."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Nature Human Behaviour",
+        "url": "https://doi.org/10.1038/s41562-026-02626-x",
+        "doi": "10.1038/s41562-026-02626-x"
+      }
+    ]
+  },
+  "jobs": [],
+  "note": "The sweep brief was missing, so I ran the sweep first (14 of 112 sources failed). Papers were read from PubMed abstracts, so several cards say what was not read. No rare disease paper made the cut and no job could be verified."
+}
