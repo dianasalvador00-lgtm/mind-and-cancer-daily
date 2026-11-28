@@ -1,0 +1,776 @@
+{
+  "date": "2026-11-28",
+  "number": 13,
+  "title": "Rucaparib survival result, a 20-year brain implant audit and a partner for KRAS drugs",
+  "dek": "A final survival result for a PARP drug, how long brain implants keep working, a CD4 T cell route to lasting remissions in pancreatic cancer mice, and a plasma marker that tracks Alzheimer's stages.",
+  "palette": "brick-azure",
+  "tldr": [
+    {
+      "text": "Rucaparib beat other prostate cancer drugs on progression, but final survival was about the same in 405 men, with crossover blurring the result.",
+      "area": "cancer"
+    },
+    {
+      "text": "Mice with pancreatic cancer stayed in lasting remission when a KRAS drug was paired with an IL-21 mimic that works through CD4 T cells.",
+      "area": "cancer"
+    },
+    {
+      "text": "Across 14 people and 20 implanted arrays over 20 years, 11 of 14 arrays still decoded movement.",
+      "area": "mind"
+    },
+    {
+      "text": "In 33 people with early Alzheimer's, two weeks of cerebellar magnetic stimulation beat sham on global cognition for 12 weeks.",
+      "area": "mind"
+    },
+    {
+      "text": "A review finds diffuse adenomyosis may lower live birth after frozen embryo transfer, but the evidence is low certainty.",
+      "area": "women"
+    }
+  ],
+  "top": [
+    {
+      "id": "triton3-rucaparib-final-os",
+      "area": "cancer",
+      "title": "Rucaparib gave no survival gain over other drugs in BRCA-mutated prostate cancer",
+      "gist": "In 405 men with advanced prostate cancer, median survival was 22.8 versus 21.7 months with rucaparib versus other drugs. Most men on the other drugs crossed over to rucaparib.",
+      "evidence": {
+        "type": "clinical-trial",
+        "phase": "3",
+        "status": "Final overall survival analysis",
+        "n": "405 men (302 with BRCA mutations)",
+        "limitation": "Open label, and crossover to rucaparib after progression makes the survival comparison hard to read."
+      },
+      "why": "Progression results led to approval. This final analysis shows what happens to survival when most control patients can switch, which matters for reading any trial with crossover.",
+      "details": [
+        "TRITON3 randomised men 2 to 1 to rucaparib or the doctor's choice of docetaxel or a second drug that blocks the androgen receptor. All had cancer that kept growing despite hormone therapy and carried a BRCA or ATM mutation.",
+        "In the 302 men with BRCA mutations, median survival was 23.2 versus 21.2 months (hazard ratio 0.91, 95 percent confidence interval 0.68 to 1.20). In all 405 men it was 22.8 versus 21.7 months (0.99, 0.78 to 1.26). PSA response, a fall in a blood marker of prostate cancer, was 54.7 percent versus 26.7 percent in the BRCA group.",
+        "Of the men eligible to cross over in the BRCA group (53), those who had first had docetaxel gained 6.2 months of progression-free time on rucaparib and those who had first had the other hormone drug gained 18.1 months. Acute myeloid leukaemia or myelodysplastic syndrome occurred in 1 percent."
+      ],
+      "didNotShow": "It did not show a survival benefit. It cannot say whether crossover hid one.",
+      "terms": [
+        {
+          "term": "rucaparib",
+          "def": "A drug that blocks an enzyme used to repair damaged DNA."
+        },
+        {
+          "term": "BRCA",
+          "def": "A gene pair involved in DNA repair. Faulty versions raise cancer risk."
+        },
+        {
+          "term": "crossover",
+          "def": "When control patients are allowed to switch to the trial drug after their disease progresses."
+        },
+        {
+          "term": "hazard ratio",
+          "def": "A number comparing how fast events happen in two groups. Below 1 means fewer events in the first group."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Annals of Oncology: final overall survival from TRITON3",
+          "url": "https://doi.org/10.1016/j.annonc.2026.11.009",
+          "doi": "10.1016/j.annonc.2026.11.009"
+        },
+        {
+          "label": "Same drug class, explained in Learn one thing",
+          "url": "https://doi.org/10.1126/science.aam7344",
+          "doi": "10.1126/science.aam7344"
+        }
+      ],
+      "forYou": "Relevant to reading survival data when control arms cross over, and to DNA repair biology."
+    },
+    {
+      "id": "stopcap-arpi-age-meta-analysis",
+      "area": "cancer",
+      "title": "Adding a hormone-blocking drug cut deaths in advanced prostate cancer, but benefit varied with age",
+      "gist": "Pooling data from 6,467 people in six trials, adding an androgen receptor drug gave a survival hazard ratio of 0.66. Abiraterone helped under-75s far more than those aged 75 and over.",
+      "evidence": {
+        "type": "meta-analysis",
+        "n": "7,778 people in 7 trial comparisons",
+        "limitation": "Individual data covered 66 percent of eligible trials, and age effects came from subgroup tests.",
+        "conflicts": "Funded by the UK Medical Research Council and Prostate Cancer UK."
+      },
+      "why": "Individual patient data let the authors ask who benefits, not only whether the drugs work. The age pattern for abiraterone affects how the drug class is chosen for older people.",
+      "details": [
+        "The STOPCAP team pooled individual participant data from trials that added an androgen receptor pathway inhibitor to standard care in metastatic hormone-sensitive prostate cancer. In the main analysis the drugs improved survival, with a 13 percent absolute gain in 5-year survival.",
+        "No effect differences were seen by docetaxel use, disease volume, Gleason score or performance status. Age did matter: for abiraterone, the absolute 5-year survival gain was about 15 percent under age 75 and about 1 percent at 75 or older. In the older group, abiraterone went with a 12 percent rise in 5-year deaths from causes other than cancer."
+      ],
+      "didNotShow": "It did not give a clear age pattern for the other drug class, because only two trials with 35 percent of eligible people had data.",
+      "terms": [
+        {
+          "term": "individual participant data",
+          "def": "Raw data for each person in a trial, rather than only the published summary numbers."
+        },
+        {
+          "term": "abiraterone",
+          "def": "A drug that lowers the body's production of male sex hormones, which prostate cancer uses to grow."
+        },
+        {
+          "term": "meta-analysis",
+          "def": "A study that statistically combines the results of several earlier studies."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The Lancet: STOPCAP individual participant data meta-analysis",
+          "url": "https://doi.org/10.1016/S0140-6736(26)01483-2",
+          "doi": "10.1016/S0140-6736(26)01483-2"
+        }
+      ],
+      "forYou": "Relevant to subgroup effects and age as a modifier of drug benefit."
+    },
+    {
+      "id": "utah-array-20-year-bci",
+      "area": "mind",
+      "title": "Brain implants kept decoding movement for up to 7 years in most of 14 people",
+      "gist": "Across 14 people and 20 implanted arrays over 20 years, 11 of 14 arrays decoded movement throughout. Electrodes picked up neurons on 35.6 percent of channels, falling 7 points over time.",
+      "evidence": {
+        "type": "human-observational",
+        "n": "14 people, 20 arrays, 2,289 sessions",
+        "limitation": "People in trials only, from one trial programme. Peak performance was not reached by every array.",
+        "conflicts": "Not stated in the abstract."
+      },
+      "why": "Long-term reliability is the main open question for brain-computer interfaces. This is the first large audit across a whole trial programme rather than one or two people.",
+      "details": [
+        "The study analysed neural data from the BrainGate clinical trials. A new measure, decoding signal-to-noise ratio, scores how well recorded activity predicts intended movement. Eleven of 14 arrays had a median score above 1 throughout, and three reached over 70 percent accuracy compared with able-bodied mouse control.",
+        "The score rose roughly with the logarithm of the number of electrodes. That suggests adding electrodes helps, with diminishing returns. Recording lasted longer than in earlier monkey studies, up to 7.3 years."
+      ],
+      "didNotShow": "It did not show that every implant reaches peak performance, and the abstract does not say why some arrays failed.",
+      "terms": [
+        {
+          "term": "brain-computer interface",
+          "def": "A system that reads brain activity and turns it into commands for a computer or device."
+        },
+        {
+          "term": "Utah array",
+          "def": "A small bed of silicon needles that records the electrical activity of nearby neurons."
+        },
+        {
+          "term": "dSNR",
+          "def": "A score of how well recorded neural activity can be used to decode intended movement."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nature Medicine: 20-year performance of intracortical arrays",
+          "url": "https://doi.org/10.1038/s41591-026-04530-3",
+          "doi": "10.1038/s41591-026-04530-3"
+        }
+      ],
+      "forYou": "Relevant to the long-term stability of implanted recording devices and signal quality over time."
+    },
+    {
+      "id": "cerebellar-rtms-alzheimers-rct",
+      "area": "mind",
+      "title": "Magnetic stimulation of the cerebellum improved cognition in early Alzheimer's for 12 weeks",
+      "gist": "In 33 people with mild Alzheimer's, two weeks of 5 Hz magnetic pulses over the cerebellum beat sham on global cognition, and the gap held at week 12.",
+      "evidence": {
+        "type": "human-rct",
+        "n": "33 analysed (17 real, 16 sham)",
+        "limitation": "Very small trial. The abstract gives no effect sizes, and the brain imaging measures blood flow, not neuron firing."
+      },
+      "why": "Most stimulation trials target the cortex. This one asks whether the cerebellum is a better target and gives a possible loop to study, but a 33-person trial only motivates larger tests.",
+      "details": [
+        "Adults with Alzheimer's at the mild impairment or mild dementia stage, confirmed by spinal fluid markers, were randomised to real or sham stimulation over the cerebellar Crus II region on both sides. Tests were done at baseline, right after treatment and at week 12.",
+        "Imaging with functional near-infrared spectroscopy showed more activity in the left frontal pole and left dorsolateral prefrontal cortex after real stimulation, and better network efficiency. The authors say these are blood flow changes, not direct proof of neuron rewiring."
+      ],
+      "didNotShow": "It did not show a clinical benefit in daily life, nor effects beyond 12 weeks. It was registered in a Chinese trial registry.",
+      "terms": [
+        {
+          "term": "rTMS",
+          "def": "Repetitive transcranial magnetic stimulation: magnetic pulses through the scalp that change the activity of nearby brain areas."
+        },
+        {
+          "term": "cerebellum",
+          "def": "The structure at the back of the brain, best known for coordinating movement."
+        },
+        {
+          "term": "fNIRS",
+          "def": "A method that uses near-infrared light through the scalp to track blood oxygen changes in the cortex."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Alzheimer's Research & Therapy: cerebellar rTMS fNIRS trial",
+          "url": "https://doi.org/10.1186/s13195-026-02170-w",
+          "doi": "10.1186/s13195-026-02170-w"
+        }
+      ],
+      "forYou": "Relevant to near-infrared light as a measurement tool in the brain."
+    },
+    {
+      "id": "brainstem-atlas-irbd-atrophy",
+      "area": "mind",
+      "title": "A brainstem atlas links a small pons region to REM sleep behaviour disorder",
+      "gist": "In 98 people with isolated REM sleep behaviour disorder versus 114 controls, one small pons region was smaller, with a moderate effect (Cohen's d 0.44).",
+      "evidence": {
+        "type": "human-observational",
+        "n": "98 patients, 114 controls",
+        "limitation": "Cross-sectional design. The link to lost muscle paralysis in REM sleep came from only 23 patients."
+      },
+      "why": "REM sleep behaviour disorder is an early warning sign of Parkinson's disease and related conditions. Mapping the human brainstem could give earlier biomarkers.",
+      "details": [
+        "The team built an atlas of the human brainstem from high-resolution scans of 10 post-mortem specimens. They checked it by staining for CRHBP, a marker linked to REM-active neurons in rodents.",
+        "Voxel-based morphometry found a cluster of grey matter loss in the dorsal pons. The atlas showed the clearest loss in a nucleus called LDTgV (Bonferroni-corrected P = 0.019). In the 23 patients with sleep recordings, more loss went with more REM sleep without muscle paralysis (partial r = -0.491)."
+      ],
+      "didNotShow": "It did not show that the atrophy causes the disorder, or that the region predicts who will go on to develop Parkinson's.",
+      "terms": [
+        {
+          "term": "REM sleep behaviour disorder",
+          "def": "A sleep problem in which people act out dreams because normal muscle paralysis in REM sleep is lost."
+        },
+        {
+          "term": "voxel-based morphometry",
+          "def": "A way of comparing brain scans point by point to find where tissue volume differs between groups."
+        },
+        {
+          "term": "pons",
+          "def": "A part of the brainstem that relays signals and helps control sleep."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Brain Communications: tegmental atrophy in isolated RBD",
+          "url": "https://doi.org/10.1093/braincomms/fcag379",
+          "doi": "10.1093/braincomms/fcag379"
+        }
+      ],
+      "forYou": "Relevant to imaging small brainstem structures and early markers of neurodegeneration."
+    },
+    {
+      "id": "amine-silica-nanovaccine-cd8",
+      "area": "cancer",
+      "title": "Amine-tuned silica nanoparticles pushed antigen into immune cells and slowed mouse tumours",
+      "gist": "In mice with melanoma or triple-negative breast cancer, silica nanoparticles with tuned surface amines delivered antigen into cell interiors and expanded tumour-specific T cells.",
+      "evidence": {
+        "type": "animal",
+        "model": "Mouse melanoma and triple-negative breast cancer models",
+        "limitation": "Abstract gives no sample sizes or effect sizes. Mouse work only."
+      },
+      "why": "Getting antigen into the cytosol of immune cells is a delivery problem. Here surface chemistry on a nanoparticle is the lever, a design rule other delivery work can test.",
+      "details": [
+        "The team coated mesoporous silica nanoparticles with PEG and tuned the number of primary amines on the surface. A critical amount sent more antigen into the cytosol of antigen-presenting cells in nearby lymph nodes, which expanded antigen-specific CD8 T cells that entered the tumour.",
+        "To keep those T cells going inside the tumour, the authors added iron oxide nanoparticles displaying peptide-MHC and co-stimulatory molecules, acting as artificial antigen-presenting cells. Together they prolonged survival of tumour-bearing mice."
+      ],
+      "didNotShow": "It did not show benefit in people, nor give safety or dose data in the abstract.",
+      "terms": [
+        {
+          "term": "mesoporous silica nanoparticles",
+          "def": "Tiny silica particles full of pores, used to carry drugs or antigens."
+        },
+        {
+          "term": "cytosol",
+          "def": "The fluid inside a cell, outside its compartments."
+        },
+        {
+          "term": "artificial antigen-presenting cells",
+          "def": "Engineered particles that show T cells a target peptide and the signals they need to grow."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Small: cytosol-targeted nano-vaccination with artificial APCs",
+          "url": "https://doi.org/10.1002/smll.76794",
+          "doi": "10.1002/smll.76794",
+          "access": "paywall"
+        }
+      ],
+      "forYou": "Relevant to nanoparticle surface chemistry and delivery to immune cells and tumours."
+    },
+    {
+      "id": "adenomyosis-frozen-embryo-transfer-review",
+      "area": "women",
+      "title": "Diffuse adenomyosis may lower live birth after frozen embryo transfer, a review finds",
+      "gist": "A scoping review found diffuse adenomyosis went with lower implantation and live birth rates and more miscarriage, preterm birth and pregnancy-related high blood pressure. Certainty was low to very low.",
+      "evidence": {
+        "type": "review",
+        "limitation": "Mostly retrospective and observational studies of low to very low certainty."
+      },
+      "why": "Adenomyosis is often missed before fertility treatment. The review argues it should be looked for and described before a frozen transfer, and it shows how little high quality evidence exists.",
+      "details": [
+        "The authors restricted the review to diffuse disease and frozen cycles to reduce confounding from other subtypes and from the hormone levels of fresh transfers. Disease at the junctional zone, the inner layer of the uterine muscle, looked worse than adenomyosis alone.",
+        "Rarer risks included placenta accreta spectrum and uterine rupture. The authors call for prospective studies using standard diagnostic and staging criteria."
+      ],
+      "didNotShow": "It did not show that treating adenomyosis before transfer improves outcomes.",
+      "terms": [
+        {
+          "term": "adenomyosis",
+          "def": "A condition where tissue like the womb lining grows into the womb muscle."
+        },
+        {
+          "term": "frozen embryo transfer",
+          "def": "A fertility treatment in which a stored embryo is thawed and placed in the uterus."
+        },
+        {
+          "term": "scoping review",
+          "def": "A review that maps what research exists on a topic, without pooling results statistically."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Fertility and Sterility: diffuse adenomyosis before frozen embryo transfer",
+          "url": "https://doi.org/10.1016/j.fertnstert.2026.11.024",
+          "doi": "10.1016/j.fertnstert.2026.11.024"
+        }
+      ],
+      "forYou": "Relevant to sex-specific disease and gaps in women's health evidence."
+    }
+  ],
+  "bench": [
+    {
+      "id": "il21-cd4-kras-inhibitor-pdac",
+      "area": "cancer",
+      "title": "CD4 T cells convert transient responses to KRAS inhibition to durable remissions in pancreatic cancer.",
+      "headline": "In pancreatic cancer mice, a KRAS drug plus an IL-21 mimic gave long remissions that needed CD4 T cells, not CD8 T cells.",
+      "authors": "Li Qiang, Megan T Hoffman, Jung-Ho Chun et al.",
+      "venue": "Cell",
+      "published": "2026-11-25",
+      "evidence": {
+        "type": "animal",
+        "model": "Mouse pancreatic cancer models; human tumour pieces ex vivo",
+        "limitation": "Abstract gives no sample sizes or survival numbers. Human data are an ex vivo cytokine readout only."
+      },
+      "question": "KRAS drugs shrink pancreatic tumours, but tumours often return. Can immune help turn short responses into lasting ones?",
+      "approach": "The team modelled response and relapse to a KRAS inhibitor in mice. They compared chemotherapy, checkpoint blockade and an interleukin-21 (IL-21) mimic called 21h10, then removed T cell types to see what the effect needed.",
+      "model": "Mouse pancreatic cancer models treated with a direct KRAS inhibitor, plus ex vivo human pancreatic tumour specimens.",
+      "result": "Only the IL-21 mimic induced long-term durable remissions. The effect needed Th1-type CD4 T cells but not CD8 T cells or MHC class I on tumour cells. Type 2 dendritic cells primed the CD4 T cells, which made interferon gamma and drove macrophages to eat tumour cells. 21h10 also raised interferon gamma from T cells in human tumour specimens.",
+      "limitations": "The abstract reports no numbers for remission rate or duration. Mouse tumours do not capture human disease, and the human evidence is ex vivo.",
+      "meaning": "It points to CD4 T cells and macrophages as a route around the CD8 T cell exhaustion that limits checkpoint drugs in pancreatic cancer, and it gives a combination to test.",
+      "terms": [
+        {
+          "term": "KRAS inhibitor",
+          "def": "A drug that blocks the mutated KRAS protein that drives many pancreatic cancers."
+        },
+        {
+          "term": "interleukin-21",
+          "def": "A signalling protein that helps T cells and other immune cells grow and act."
+        },
+        {
+          "term": "CD4 T cells",
+          "def": "Immune cells that coordinate other immune cells, instead of killing tumour cells directly."
+        },
+        {
+          "term": "type 2 conventional dendritic cells",
+          "def": "Immune cells that take up antigen and show it to T cells to start a response."
+        }
+      ],
+      "diagram": {
+        "layout": "flow",
+        "nodes": [
+          {
+            "label": "KRAS drug shrinks tumour"
+          },
+          {
+            "label": "IL-21 mimic added"
+          },
+          {
+            "label": "Dendritic cells prime CD4"
+          },
+          {
+            "label": "Macrophages eat tumour cells"
+          }
+        ],
+        "links": [
+          "plus",
+          "primes",
+          "releases IFN-gamma"
+        ],
+        "caption": "The route the study found in mice: CD4 T cells, not CD8 T cells, turned a short KRAS drug response into a lasting one."
+      },
+      "sources": [
+        {
+          "label": "Cell: CD4 T cells and KRAS inhibition in pancreatic cancer",
+          "url": "https://doi.org/10.1016/j.cell.2026.08.045",
+          "doi": "10.1016/j.cell.2026.08.045"
+        }
+      ],
+      "forYou": "Relevant to pancreatic tumour microenvironment and combinations with targeted drugs and immunotherapy."
+    },
+    {
+      "id": "plasma-ptau217-longitudinal-adni",
+      "area": "mind",
+      "title": "Longitudinal trajectories of plasma biomarkers, amyloid-β burden and cognitive decline in Alzheimer's disease",
+      "headline": "Over about 5 years, blood p-tau217 rose along with amyloid early on, then tracked memory decline once plaques were established.",
+      "authors": "Yara Yakoub, Ting Qiu, Clémence Peyrot et al.",
+      "venue": "Brain",
+      "published": "2026-11-26",
+      "evidence": {
+        "type": "human-observational",
+        "n": "393 people, mean follow-up 5.4 years",
+        "limitation": "Observational research cohort. Assays and cohort may not reflect routine care, and associations are not causal."
+      },
+      "question": "Blood p-tau217 helps diagnose Alzheimer's, but most evidence is from one time point. How does it change over time?",
+      "approach": "The authors analysed people from the ADNI-FNIH consortium with repeated blood tests across 14 assays, amyloid PET scans and cognitive tests, and fitted models of each person's rate of change.",
+      "model": "393 cognitively unimpaired and impaired adults (mean age 72.7, 49 percent female, 37 percent amyloid PET positive).",
+      "result": "p-tau217 rose across all five assays (standardised beta 0.06 to 0.08). In amyloid PET negative people, bigger rises went with amyloid build-up (0.40 to 0.52). In amyloid positive people, they went with cognitive decline (0.41 to 0.56). p-tau217 change explained 22.2 to 30.6 percent of variance in cognitive change.",
+      "limitations": "The cohort was not drawn to represent the population. Rates are estimated from sparse visits and the study cannot say which change comes first.",
+      "meaning": "A repeat blood test could be used to monitor stage-dependent change, with early rises reflecting amyloid and later rises reflecting symptoms.",
+      "terms": [
+        {
+          "term": "p-tau217",
+          "def": "A form of the tau protein, found in blood, that rises in Alzheimer's disease."
+        },
+        {
+          "term": "amyloid PET",
+          "def": "A brain scan that shows clumps of amyloid protein, a hallmark of Alzheimer's disease."
+        },
+        {
+          "term": "standardised beta",
+          "def": "A measure of how strongly two variables move together, in units of standard deviations."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Brain: plasma biomarker trajectories in Alzheimer's disease",
+          "url": "https://doi.org/10.1093/brain/awag418",
+          "doi": "10.1093/brain/awag418"
+        }
+      ],
+      "forYou": "Relevant to longitudinal biomarker design and staging."
+    },
+    {
+      "id": "fgfr2-pet-nir2-probe-escc",
+      "area": "cancer",
+      "title": "An FGFR2-Targeted PET/NIR-II Dual-Modal Probe for Metastatic Lymph Node Detection and Intraoperative Guidance in Esophageal Squamous Cell Carcinoma.",
+      "headline": "A probe with a radiolabel and a near-infrared dye lit up metastatic lymph nodes 162 percent brighter than the clinical dye in mouse models.",
+      "authors": "Chenyi Xie, Hongrui Qiu, Kunheng Du et al.",
+      "venue": "Advanced Science",
+      "published": "2026-11-26",
+      "evidence": {
+        "type": "animal",
+        "model": "Mouse tumour and node models; human nodes ex vivo",
+        "limitation": "Abstract gives no group sizes. Human tissue was tested ex vivo only, not in patients."
+      },
+      "question": "Surgeons struggle to tell which lymph nodes hold cancer in oesophageal squamous cell carcinoma. Can a targeted two-signal probe help?",
+      "approach": "Single-cell RNA sequencing and multiplex staining pointed to FGFR2 as enriched in metastatic nodes. The team built one molecule that joins an FGFR2-binding peptide, the dye ICG and a radiolabel module, and tested it for PET and near-infrared imaging.",
+      "model": "Mouse models of oesophageal squamous cell carcinoma and metastatic nodes, plus freshly resected human nodes soaked in the probe.",
+      "result": "The tumour-to-background ratio in the second near-infrared window was 3.64 plus or minus 0.23, versus 1.39 plus or minus 0.20 for clinical ICG, 162 percent higher. Competitive blocking supported FGFR2-dependent targeting. Ex vivo human nodes were sorted with an AUC of 0.9167.",
+      "limitations": "No in-patient imaging, no pharmacokinetics or safety data in the abstract, and ex vivo sorting used histology as reference.",
+      "meaning": "It shows how a target found from patient tissue can be turned into a dual-readout probe, with PET for whole-body scans and fluorescence for surgery.",
+      "terms": [
+        {
+          "term": "NIR-II",
+          "def": "A band of near-infrared light, longer than 1,000 nanometres, that passes through tissue with less scatter."
+        },
+        {
+          "term": "FGFR2",
+          "def": "A receptor protein on cell surfaces that is more abundant on some tumour cells."
+        },
+        {
+          "term": "indocyanine green",
+          "def": "A dye already used in surgery that glows under near-infrared light."
+        },
+        {
+          "term": "tumour-to-background ratio",
+          "def": "How much brighter a tumour appears than nearby normal tissue in an image."
+        }
+      ],
+      "diagram": {
+        "layout": "compare",
+        "nodes": [
+          {
+            "label": "3.64",
+            "note": "FGFR2 probe, NIR-II ratio",
+            "key": true
+          },
+          {
+            "label": "1.39",
+            "note": "Clinical ICG, same ratio"
+          }
+        ],
+        "caption": "Tumour-to-background ratio in the second near-infrared window, from the abstract."
+      },
+      "sources": [
+        {
+          "label": "Advanced Science: FGFR2-targeted PET/NIR-II probe",
+          "url": "https://doi.org/10.1002/advs.78806",
+          "doi": "10.1002/advs.78806"
+        }
+      ],
+      "forYou": "Relevant to near-infrared agents, targeting ligands and image-guided surgery."
+    }
+  ],
+  "method": {
+    "id": "human-neural-tube-organoids-order",
+    "title": "Human neural tube organoids with a dorsal-ventral pattern",
+    "gist": "A STAR Protocols method that fuses stem cell aggregates that make BMP and SHH signals at opposite ends of a neural aggregate, to build a top-to-bottom pattern in 11 days.",
+    "field": "mind",
+    "useWhen": "You want a human organoid with a dorsal-ventral axis to study how neuron types are specified, or to compare patterned and unpatterned neural tissue.",
+    "steps": [
+      {
+        "title": "Coat the plates (Day -1)",
+        "text": "Add 50 microlitres of anti-adhesion solution to each well of a U-bottom 96-well plate. Leave 15 minutes at room temperature, then wash with 100 microlitres of DPBS."
+      },
+      {
+        "title": "Make host aggregates (Day -1)",
+        "text": "Dissociate H9 stem cells with Accutase, then seed 5,000 cells per well in mTeSR with Y-27632 (100 cells per microlitre, 50 microlitres). Spin at 400 x g for 5 minutes."
+      },
+      {
+        "title": "Induce neural fate (Days 0 and 2)",
+        "text": "Replace the medium with 100 microlitres of Differentiation Medium 1, made with 0.1 micromolar LDN193189 and 10 micromolar SB431542. Refresh it on Day 2."
+      },
+      {
+        "title": "Make signal aggregates (Day 3)",
+        "text": "Dissociate the iSHH and iBMP4 cell lines and seed 500 cells per well (10 cells per microlitre). Use them for fusion within 24 hours of forming."
+      },
+      {
+        "title": "Switch the host medium (Day 4)",
+        "text": "Aspirate the host aggregates' medium and add 100 microlitres of Differentiation Medium 2 to induce neural tube fate."
+      },
+      {
+        "title": "Fuse the aggregates (Day 4)",
+        "text": "Put one BMP aggregate and one SHH aggregate in a well with one host aggregate, at opposite ends. Incubate at 37 C. Fusion usually takes 12 to 24 hours."
+      },
+      {
+        "title": "Start patterning (Days 6 to 10)",
+        "text": "On Day 6 add Differentiation Medium 3, which contains doxycycline to switch on SHH and BMP4 from the signal aggregates. On Days 8 and 10 use Differentiation Medium 4."
+      },
+      {
+        "title": "Harvest (Day 11 or later)",
+        "text": "Fix in 4 percent PFA at 4 C for 12 to 16 hours. Move to methanol at minus 20 C for staining, or embed in OCT and flash-freeze for cryosections."
+      }
+    ],
+    "pitfalls": [
+      "Signal aggregates older than 24 hours become compact and fuse poorly.",
+      "Vibration that moves the aggregates after placement can spoil the dorsal-ventral pattern.",
+      "Discard host aggregates with rough surfaces, flat shapes or opaque centres."
+    ],
+    "safety": "Follow your institution's rules for human stem cell lines, biosafety and chemical handling (PFA and methanol), and get ethics approval for stem cell work where required.",
+    "source": {
+      "label": "STAR Protocols: construction of human neural tube organoids",
+      "url": "https://doi.org/10.1016/j.xpro.2026.104963",
+      "doi": "10.1016/j.xpro.2026.104963"
+    },
+    "terms": [
+      {
+        "term": "organoid",
+        "def": "A small three-dimensional cell culture that mimics part of an organ."
+      },
+      {
+        "term": "dorsal-ventral",
+        "def": "The axis that runs from the back side of the neural tube to its belly side."
+      },
+      {
+        "term": "BMP",
+        "def": "A family of signalling proteins that pattern the back side of the developing neural tube."
+      }
+    ],
+    "forYou": "Relevant to building organoid models and light-free signalling gradients."
+  },
+  "learn": {
+    "question": "What is synthetic lethality, and why do PARP drugs work on BRCA tumours?",
+    "answer": "Synthetic lethality means two defects together kill a cell while either alone does not. PARP drugs block one DNA repair route, so cells already missing BRCA repair have no backup.",
+    "analogy": "Think of a building with two fire exits. Closing one is fine. Closing both is not.",
+    "body": [
+      "Cells repair DNA damage using several routes. Tumours from people with a faulty BRCA1 or BRCA2 gene have lost one specific kind of repair. Normal cells still have it.",
+      "PARP inhibitors block a second route. Tumour cells that depend on it have no backup and die, while normal cells survive. A 2017 review calls PARP inhibitors the first approved drugs designed around this idea, and notes that resistance arises in advanced disease.",
+      "TRITON3, covered today, shows both sides. Rucaparib raised progression-free time in BRCA-mutated prostate cancer, and the survival comparison was muddied by crossover."
+    ],
+    "diagram": {
+      "layout": "flow",
+      "nodes": [
+        {
+          "label": "DNA damage arises"
+        },
+        {
+          "label": "PARP route blocked"
+        },
+        {
+          "label": "BRCA route is missing"
+        },
+        {
+          "label": "Tumour cell dies"
+        }
+      ],
+      "links": [
+        "drug blocks",
+        "no backup",
+        "cannot repair"
+      ],
+      "caption": "A drug that blocks one repair route is lethal only where the other route is already missing."
+    },
+    "terms": [
+      {
+        "term": "synthetic lethality",
+        "def": "A situation where losing either of two genes is survivable, but losing both kills the cell."
+      },
+      {
+        "term": "PARP inhibitor",
+        "def": "A drug that blocks the enzyme PARP, which helps cells fix broken DNA."
+      },
+      {
+        "term": "DNA repair",
+        "def": "The cell's routes for fixing damage to its genetic code."
+      }
+    ],
+    "seenIn": [
+      "triton3-rucaparib-final-os"
+    ],
+    "sources": [
+      {
+        "label": "Science: PARP inhibitors, synthetic lethality in the clinic",
+        "url": "https://doi.org/10.1126/science.aam7344",
+        "doi": "10.1126/science.aam7344"
+      }
+    ]
+  },
+  "trials": {
+    "trials": [
+      {
+        "id": "alogabat-angelman-children-results",
+        "area": "rare",
+        "title": "Alogabat in children and adolescents with Angelman syndrome (deletion type)",
+        "nct": "NCT05630066",
+        "phase": "2",
+        "status": "Completed",
+        "change": "results-posted",
+        "what": "Results posted 27 November 2026. The 12-week open-label study measured drug exposure and safety, and changes in EEG beta power as a brain activity marker.",
+        "who": "Children and adolescents aged 5 to 17 with deletion Angelman syndrome (48 enrolled)",
+        "sponsor": "Hoffmann-La Roche",
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov NCT05630066",
+            "url": "https://clinicaltrials.gov/study/NCT05630066"
+          }
+        ]
+      },
+      {
+        "id": "azetukalner-mdd-x-nova2-terminated",
+        "area": "mind",
+        "title": "Azetukalner versus placebo in major depressive disorder (X-NOVA2)",
+        "nct": "NCT06775379",
+        "phase": "3",
+        "status": "Terminated",
+        "change": "terminated",
+        "what": "Registry status is terminated, with the study ending 28 October 2026. The stop reason points to company press releases and no results are posted yet.",
+        "who": "Adults aged 18 to 74 with major depressive disorder (357 enrolled). Primary outcome: HAMD-17 score at week 6.",
+        "sponsor": "Xenon Pharmaceuticals",
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov NCT06775379",
+            "url": "https://clinicaltrials.gov/study/NCT06775379"
+          }
+        ]
+      },
+      {
+        "id": "eus-rfa-pdac-halted",
+        "area": "cancer",
+        "title": "Chemotherapy plus endoscopic ultrasound-guided radiofrequency ablation in pancreatic cancer",
+        "nct": "NCT05723107",
+        "phase": "1",
+        "status": "Terminated",
+        "change": "terminated",
+        "what": "Halted prematurely, with 6 people enrolled. This single-arm study tested whether chemotherapy plus ablation through the stomach wall could be completed without serious side effects.",
+        "who": "People with locally advanced pancreatic ductal adenocarcinoma that had progressed on first-line chemotherapy",
+        "sponsor": "NYU Langone Health",
+        "sources": [
+          {
+            "label": "ClinicalTrials.gov NCT05723107",
+            "url": "https://clinicaltrials.gov/study/NCT05723107"
+          }
+        ]
+      }
+    ],
+    "funding": [
+      {
+        "id": "pancan-career-development-award-2027",
+        "area": "cancer",
+        "title": "PanCAN Career Development Award 2027",
+        "funder": "Pancreatic Cancer Action Network",
+        "deadline": "2026-12-09",
+        "amount": "$250,000 over two years",
+        "eligibility": "Doctoral degree and, at 1 June 2027, an assistant professor, instructor or equivalent post, without a first major research grant. About five awards.",
+        "sources": [
+          {
+            "label": "PanCAN award guidelines (PDF)",
+            "url": "https://media.pancan.org/rsa/2027/Pancreatic-Cancer-Action-Network-Career-Development-Award.pdf"
+          }
+        ]
+      }
+    ]
+  },
+  "chatter": [
+    {
+      "id": "near-identical-handwriting-essay",
+      "area": "other",
+      "kind": "retraction",
+      "title": "A 2007 handwriting essay reappeared almost word for word in 2019, and was removed",
+      "where": "Retraction Watch",
+      "signal": "Retraction Watch report of 27 November 2026; the paper was cited as republished 12 years later",
+      "gist": "The original authors found a near-identical paper under another name. After Retraction Watch asked, the journal removed it. The author pointed to a writing service and a university inquiry.",
+      "sources": [
+        {
+          "label": "Retraction Watch",
+          "url": "https://retractionwatch.com/2026/11/27/shameless-cheating-near-identical-version-of-handwriting-essay-published-years-later/"
+        }
+      ]
+    },
+    {
+      "id": "academy-faster-retractions-weekend-reads",
+      "area": "other",
+      "kind": "debate",
+      "title": "A U.S. academy urges faster retractions of flawed research",
+      "where": "Retraction Watch weekend reads",
+      "signal": "Retraction Watch roundup of 21 November 2026; its database now lists over 68,000 retractions",
+      "gist": "The roundup lists a report urging quicker retraction of flawed papers, and notes its release was delayed after a sleuth found reference errors. It also lists a Parkinson's biotech paper retracted for data manipulation, by headline only.",
+      "sources": [
+        {
+          "label": "Retraction Watch weekend reads",
+          "url": "https://retractionwatch.com/2026/11/21/weekend-reads-academy-urges-faster-retractions-spains-number-1-emerging-scientist-loses-papers-nih-asks-if-fauci-secretly-wrote-covid-paper/"
+        }
+      ]
+    },
+    {
+      "id": "dementia-risk-cohort-recall-post",
+      "area": "mind",
+      "kind": "debate",
+      "title": "A post says newer generations reach old age with better memory",
+      "where": "Mastodon #neuroscience",
+      "signal": "3 boosts and 0 favourites on Mastodon on 27 November 2026",
+      "gist": "The post says a University of Oslo team pooled 783,000 word recall tests from 219,000 people, and that dementia risk at a given age is falling by about 13 percent a decade. The underlying paper was not read.",
+      "sources": [
+        {
+          "label": "Mastodon post",
+          "url": "https://universeodon.com/@digyoursoul/117689829837017002"
+        }
+      ]
+    }
+  ],
+  "curiosity": {
+    "id": "eagles-prey-adult-baboons",
+    "area": "curiosity",
+    "title": "Eagles may be able to kill baboons twice the size scientists thought possible",
+    "gist": "Skulls and a shoulder blade from adult male baboons in Chad carry marks the authors link to eagle talons, in animals of about 22 kg. Earlier work set a limit near 20 kg.",
+    "body": [
+      "Researchers surveyed cliffs and rock debris in Chad in 2025 and found remains of nine olive baboons, eight of them adult males averaging 22.2 kg. Two males had punctured eye sockets and one shoulder blade was raked, signs of eagle attack or feeding. A further male of about 26.2 kg found in June 2026 showed similar marks.",
+      "The authors say the marks fit Verreaux's eagles. If confirmed, the limit for bird attacks on primates is too low, and some early human relatives may have faced more attacks from eagles than thought."
+    ],
+    "evidence": {
+      "type": "peer-reviewed",
+      "n": "9 baboons (8 adult males)",
+      "limitation": "A small sample, with no attack observed in the abstract. The authors say the finding holds only if confirmed. The link to human ancestors is an interpretation."
+    },
+    "terms": [
+      {
+        "term": "taphonomic",
+        "def": "Describing marks and changes made to bones after an animal dies, such as damage by predators."
+      },
+      {
+        "term": "hominin",
+        "def": "A member of the human family tree, including early relatives such as Australopithecus."
+      }
+    ],
+    "sources": [
+      {
+        "label": "American Journal of Biological Anthropology",
+        "url": "https://doi.org/10.1002/ajpa.70377",
+        "doi": "10.1002/ajpa.70377"
+      },
+      {
+        "label": "Science News report",
+        "url": "https://www.sciencenews.org/article/eagles-prey-adult-baboon-human-ancestor"
+      }
+    ]
+  },
+  "jobs": [],
+  "note": "The sweep brief was missing, so I swept first (16 of 112 sources failed). Papers came from PubMed abstracts and no helpers were used. No job could be verified, so the list is empty. Rare disease coverage is thin."
+}
